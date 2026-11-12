@@ -1079,6 +1079,33 @@
         "release"
       ],
       "about": "реестр ошибок сходится: у каждой находки есть причина и защита"
+    },
+    "fonts": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**",
+        "design/figma/live/reality.json",
+        "public/fonts/**",
+        "src/styles/fonts-extra.css"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "каждая семья шрифта из макета подключена через @font-face"
     }
   }
 }

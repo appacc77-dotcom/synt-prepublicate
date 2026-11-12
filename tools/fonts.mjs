@@ -89,7 +89,43 @@ if (checkOnly) {
     console.error('скачать: node tools/fonts.mjs');
     process.exit(1);
   }
-  console.log(`шрифты на месте: ${wanted.size} начертаний`);
+  // Шрифты бывают двух сортов: с текстовым стилем (их видит генератор) и
+  // вручную назначенные на слой. Вторые в reality.json не попадают, и текст
+  // молча уезжает на системный Georgia — так заголовок страницы практик
+  // переносился в три строки вместо двух. Поэтому проверяем ещё и семьи,
+  // которые встречаются в спеках: для каждой обязан быть @font-face.
+  const declared = new Set();
+  const readFaces = (file) => {
+    if (!existsSync(file)) return;
+    for (const m of readFileSync(file, 'utf8').matchAll(/font-family:\s*'([^']+)'/g)) declared.add(m[1]);
+  };
+  readFaces(join(root, 'public/fonts/fonts.css'));
+  readFaces(join(root, 'src/styles/fonts-extra.css'));
+
+  const usedInSpecs = new Set();
+  const walkSpecs = (dir) => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = join(dir, entry.name);
+      if (entry.isDirectory()) walkSpecs(full);
+      else if (entry.name === 'spec.json') {
+        const spec = JSON.parse(readFileSync(full, 'utf8'));
+        for (const node of spec.nodes ?? []) {
+          if (node.fontFamily) usedInSpecs.add(node.fontFamily);
+        }
+      }
+    }
+  };
+  walkSpecs(join(root, 'design/figma/pages'));
+
+  const unregistered = [...usedInSpecs].filter((family) => !declared.has(family));
+  if (unregistered.length) {
+    console.error(`шрифт есть в макете, но не подключён (${unregistered.length}): ${unregistered.join(', ')}`);
+    console.error('добавьте @font-face в src/styles/fonts-extra.css (или текстовый стиль в файл)');
+    process.exit(1);
+  }
+
+  console.log(`шрифты на месте: ${wanted.size} начертаний · семей в спеках: ${usedInSpecs.size}`);
   process.exit(0);
 }
 

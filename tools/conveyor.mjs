@@ -194,6 +194,7 @@ const GLOBAL_STEPS = [
   { id: 'stretch', tool: 'check-stretch', kind: 'gate', needsDist: true, about: 'блоки у края тянутся вместе с окном' },
   { id: 'coverage-map', tool: 'page-map', kind: 'gate', needsDist: false, about: 'карта страниц: каждая секция покрыта' },
   { id: 'weight', tool: 'check-weight', kind: 'gate', needsDist: true, about: 'вес картинок и страниц в бюджете' },
+  { id: 'fonts', tool: 'fonts', args: ['--check'], kind: 'gate', needsDist: false, about: 'шрифты из макета подключены' },
   { id: 'issues', tool: 'issues', kind: 'gate', needsDist: false, about: 'реестр ошибок сходится' },
   { id: 'crops', tool: 'check-crops', kind: 'gate', needsDist: true, about: 'фон вырезан как в макете' },
   { id: 'images', tool: 'check-images', kind: 'gate', needsDist: true, about: 'картинки не растянуты' },

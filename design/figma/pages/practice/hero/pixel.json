@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-12T22:09:46.833Z",
-  "reference": "/Users/gleb/Documents/deepseek-harness/default-workspace/syntonia/design/figma/pages/practice/hero/crop.png",
-  "shot": "/Users/gleb/Documents/deepseek-harness/default-workspace/syntonia/.screens/practice-hero.png",
+  "at": "2026-11-12T22:39:21.775Z",
+  "reference": "design/figma/pages/practice/hero/crop.png",
+  "shot": "/tmp/phero2.png",
   "width": 1440,
   "height": 900,
-  "mean": 5.92,
-  "over16": 3.1,
-  "over48": 2.36
+  "mean": 1.72,
+  "over16": 1.04,
+  "over48": 0.23
 }
