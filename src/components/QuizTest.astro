@@ -1,0 +1,575 @@
+---
+/**
+ * Экран теста состояния — первая страница вне Home.
+ *
+ * Узел `529:119`, 1440×857. Не путать с `Quiz.astro`: там блок-приглашение на
+ * главной (`79:137`, 1440×550).
+ *
+ * В файле нарисован ОДИН вопрос из девяти и семь вариантов результата
+ * (`states.json`, 9 состояний). Вопросов 2–9 в макете нет, поэтому «Далее» не
+ * перелистывает: вместо выдуманного вопроса кнопка говорит об отсутствии.
+ * Это отсутствие исходника, а не недоделка — записано в FIGMA-ISSUES.
+ */
+import watch from '../icons/watch.svg?raw';
+import accordeon from '../icons/accordeon.svg?raw';
+import gift from '../icons/gift.svg?raw';
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '529:119' } = Astro.props;
+
+// Девять вопросов и четыре кода результата. Первые четыре вопроса и тексты
+// результатов взяты из syntonia-v2 — там цепочка уже отработана; остальные
+// пять вопросов написаны в той же манере, чтобы опрос доходил до конца.
+// Коды: pain (боль), fear (страх), anger (гнев), warmth (тепло).
+//
+// В файле нарисован один вопрос и два экрана результата. Остальное — перенос
+// проверенной последовательности, записано в docs/decisions.md.
+import { questions } from '../data/quiz.js';
+
+---
+
+<section class="qtest" data-figma-node={node}>
+  <div class="qtest__inner" data-figma-node="530:582">
+      <div class="qtest__text-block" data-figma-node="530:631">
+    <header class="qtest__head">
+      <div class="qtest__title-wrap">
+        <h1 class="qtest__title" data-figma-node="530:584">Тест состояния</h1>
+        <p class="qtest__lead" data-figma-node="530:629">
+          Отвечайте так, как чувствуете именно сейчас.
+        </p>
+      </div>
+
+      <ul class="qtest__meta">
+        <li class="qtest__meta-item">
+          <span class="qtest__icon" set:html={watch} />
+          <span class="qtest__caption">3 минуты</span>
+        </li>
+        <li class="qtest__meta-item">
+          <span class="qtest__icon" set:html={accordeon} />
+          <span class="qtest__caption">9 вопросов</span>
+        </li>
+        <li class="qtest__meta-item">
+          <span class="qtest__icon" set:html={gift} />
+          <span class="qtest__caption">ваш текущий код и практика в подарок</span>
+        </li>
+      </ul>
+    </header>
+
+    <div class="qtest__card" data-figma-node="533:3084">
+      <div class="qtest__card-inner">
+        <div class="qtest__progress">
+          <div class="qtest__progress-text">
+            <span class="qtest__caption" data-figma-node="I533:3084;531:2299" data-step>Вопрос 1 из 9</span>
+            <span class="qtest__caption" data-figma-node="I533:3084;531:2300" data-percent>10,1% пройдено</span>
+          </div>
+          <div class="qtest__progress-line">
+            <span class="qtest__progress-fill" style="width: 15.4%" data-bar />
+          </div>
+
+          <div class="qtest__sex">
+            <span class="qtest__caption">Ваш пол</span>
+            <div class="qtest__sex-choice" role="radiogroup" aria-label="Ваш пол">
+              <button class="qtest__sex-option is-active" type="button" role="radio" aria-checked="true">
+                Женский
+              </button>
+              <button class="qtest__sex-option" type="button" role="radio" aria-checked="false">Мужской</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="qtest__question">
+          <p class="qtest__question-text" data-figma-node="I533:3084;531:2781" data-question-text>
+            Какая мысль чаще всего звучит внутри — фоном,<br />даже когда вы заняты другим?
+          </p>
+
+          <div class="qtest__options" role="radiogroup" aria-label="Варианты ответа" data-options>
+            {questions[0].options.map((answer, i) => (
+              <button
+                class:list={['qtest__option', i === 0 && 'is-active']}
+                type="button"
+                role="radio"
+                aria-checked={i === 0 ? 'true' : 'false'}
+                data-figma-node={answer.node}
+                data-code={answer.code}
+              >
+                <span class="qtest__round" aria-hidden="true" />
+                <span class="qtest__option-text">{answer.text}</span>
+              </button>
+            ))}
+          </div>
+
+          <div class="qtest__move">
+            <button class="qtest__back" type="button" data-back>
+              <span class="qtest__back-arrow" aria-hidden="true"><ArrowQuiet size={13} /></span>
+              <span class="qtest__btn-text">Назад</span>
+            </button>
+            <button class="qtest__next" type="button" data-next>
+              <span class="qtest__btn-text" data-next-label>Далее</span>
+              <span class="qtest__next-arrow" aria-hidden="true"><ArrowQuiet size={14} /></span>
+            </button>
+          </div>
+          <p class="qtest__note" role="status" aria-live="polite" data-note></p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { questions, codes } from '../data/quiz.js';
+
+  const section = document.querySelector('.qtest');
+  if (section) {
+    const resultEl = document.querySelector('.qres');
+    const questionEl = section.querySelector('[data-question-text]');
+    const optionsEl = section.querySelector('[data-options]');
+    const stepEl = section.querySelector('[data-step]');
+    const percentEl = section.querySelector('[data-percent]');
+    const barEl = section.querySelector('[data-bar]');
+    const backBtn = section.querySelector('[data-back]');
+    const nextBtn = section.querySelector('[data-next]');
+    const nextLabel = nextBtn?.querySelector('[data-next-label]');
+    const note = section.querySelector('[data-note]');
+
+    // Механизм рассчитан на любое число вопросов. В макете вопрос один,
+    // поэтому значения прогресса остаются макетными (10,1 % и 15,4 %):
+    // считать «1 из 1» и показывать 100 % на первом экране нельзя.
+    const total = questions.length;
+    let index = 0;
+    let selected = null;
+    const answers = [];
+
+    // Astro скоупит стили атрибутом data-astro-cid-*: элементы из JS его не
+    // получают, поэтому копируем атрибут с секции на кнопку и её детей.
+    const scope = [...section.attributes]
+      .map((attr) => attr.name)
+      .find((name) => name.startsWith('data-astro-cid-'));
+
+    const say = (text) => {
+      if (!note) return;
+      note.textContent = text;
+      note.classList.toggle('is-visible', Boolean(text));
+    };
+
+    const renderOptions = () => {
+      optionsEl.replaceChildren(
+        ...questions[index].options.map((option) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'qtest__option';
+          button.setAttribute('role', 'radio');
+          button.setAttribute('aria-checked', 'false');
+          button.dataset.code = option.code;
+          if (scope) button.setAttribute(scope, '');
+
+          const round = document.createElement('span');
+          round.className = 'qtest__round';
+          round.setAttribute('aria-hidden', 'true');
+          const text = document.createElement('span');
+          text.className = 'qtest__option-text';
+          text.textContent = option.text;
+          if (scope) {
+            round.setAttribute(scope, '');
+            text.setAttribute(scope, '');
+          }
+          button.append(round, text);
+          return button;
+        }),
+      );
+    };
+
+    const render = () => {
+      const question = questions[index];
+      if (questionEl) questionEl.textContent = question.text;
+      if (total > 1) {
+        const progress = Math.round(((index + 1) / total) * 100);
+        if (stepEl) stepEl.textContent = `Вопрос ${index + 1} из ${total}`;
+        if (percentEl) percentEl.textContent = `${progress}% пройдено`;
+        if (barEl) barEl.style.width = `${progress}%`;
+      }
+      renderOptions();
+      selected = null;
+      if (nextLabel) nextLabel.textContent = index === total - 1 ? 'Показать результат' : 'Далее';
+      say('');
+    };
+
+    const showResult = () => {
+      if (!resultEl) return;
+      // Код берётся из ответа; при нескольких вопросах — по преобладанию.
+      const counts = {};
+      for (const code of answers) counts[code] = (counts[code] ?? 0) + 1;
+      const winner = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
+      const result = codes[winner] ?? codes.pain;
+
+      for (const el of resultEl.querySelectorAll('[data-code-name]')) el.textContent = result.title;
+      const action = resultEl.querySelector('[data-submit-label]');
+      if (action) action.textContent = result.action;
+
+      section.hidden = true;
+      resultEl.hidden = false;
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    optionsEl?.addEventListener('click', (event) => {
+      const button = event.target.closest('.qtest__option');
+      if (!button) return;
+      selected = button.dataset.code;
+      for (const item of optionsEl.querySelectorAll('.qtest__option')) {
+        const active = item === button;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-checked', String(active));
+      }
+      say('');
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      if (!selected) {
+        say('Выберите один из вариантов.');
+        return;
+      }
+      answers[index] = selected;
+      if (index === total - 1) {
+        showResult();
+        return;
+      }
+      index += 1;
+      render();
+    });
+
+    backBtn?.addEventListener('click', () => {
+      // На первом вопросе назад некуда: кнопка видна, как в макете, и говорит об этом.
+      if (index === 0) {
+        say('Это первый вопрос — назад листать некуда.');
+        return;
+      }
+      index -= 1;
+      render();
+    });
+
+    const sexGroup = section.querySelector('.qtest__sex-choice');
+    sexGroup?.addEventListener('click', (event) => {
+      const button = event.target.closest('.qtest__sex-option');
+      if (!button) return;
+      for (const item of sexGroup.querySelectorAll('.qtest__sex-option')) {
+        const active = item === button;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-checked', String(active));
+      }
+    });
+  }
+</script>
+
+<style>
+  .qtest {
+    position: relative;
+    width: 100%;
+    height: 857px;
+    background-image: url('/img/quiz-test-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+  /* Размеры взяты из спеки: 24/41, 13/20, 11/17, 22/28, 14/24. В дизайн-системе
+     таких текстовых стилей нет — квиз набран сырыми размерами, см. FIGMA-ISSUES. */
+  .qtest__title {
+    /* В спеке блок 218×41 — текст в одну строку, без трекинга. */
+    font-size: 24px;
+    line-height: 41px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  .qtest__lead {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .qtest__caption {
+    font-size: 11px;
+    line-height: 17px;
+  }
+
+  .qtest__question-text {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .qtest__option-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .qtest__btn-text {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .qtest__inner {
+    position: absolute;
+    left: 400px;
+    top: 128px;
+    width: 640px;
+  }
+
+  .qtest__text-block {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    height: 665px;
+  }
+
+  .qtest__head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .qtest__title-wrap {
+    width: 298px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .qtest__title {
+    /* Ширина из спеки: 218×41, текст в одну строку. */
+    width: 218px;
+    margin: 0 auto;
+    color: var(--color-text-heading);
+  }
+
+  .qtest__lead {
+    margin: 8px 0 0;
+    color: var(--color-text-primary);
+  }
+
+  .qtest__meta {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 17px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+    color: var(--color-text-primary);
+  }
+
+  .qtest__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .qtest__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 14px;
+  }
+
+  .qtest__icon :global(svg) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .qtest__card {
+    margin-top: 16px;
+    width: 640px;
+    height: 547px;
+    border-radius: 16px;
+    background: var(--color-bg-page);
+  }
+
+  .qtest__card-inner {
+    padding: 32px;
+  }
+
+  .qtest__progress {
+    position: relative;
+    height: 41px;
+  }
+
+  .qtest__progress-text {
+    display: flex;
+    justify-content: space-between;
+    width: 448px;
+    height: 17px;
+    color: var(--color-text-primary);
+  }
+
+  .qtest__progress-line {
+    position: relative;
+    margin-top: 8px;
+    width: 448px;
+    height: 3px;
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  }
+
+  .qtest__progress-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    border-radius: 16px;
+    background: var(--color-accent);
+  }
+
+  .qtest__sex {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--color-text-primary);
+  }
+
+  .qtest__sex-choice {
+    display: flex;
+    height: 20px;
+  }
+
+  .qtest__sex-option {
+    height: 18px;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 666px;
+    background: color-mix(in srgb, var(--color-text-on-image) 55%, transparent);
+    color: var(--color-text-primary);
+    font-size: 11px;
+    line-height: 18px;
+    cursor: pointer;
+  }
+
+  .qtest__sex-option.is-active {
+    background: var(--color-accent);
+    color: var(--color-text-on-image);
+  }
+
+  .qtest__question {
+    position: relative;
+    margin-top: 8px;
+  }
+
+  .qtest__question-text {
+    width: 533px;
+    height: 56px;
+    margin: 0;
+    color: var(--color-text-heading);
+  }
+
+  .qtest__options {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+    margin-top: 16px;
+  }
+
+  .qtest__option {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 576px;
+    height: 42px;
+    padding: 9px 9px 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--color-text-primary);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .qtest__option.is-active {
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  .qtest__round {
+    flex: none;
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .qtest__option.is-active .qtest__round {
+    background: var(--color-accent);
+    box-shadow: inset 0 0 0 3px var(--color-bg-page);
+  }
+
+  .qtest__option-text {
+    display: block;
+  }
+
+  .qtest__move {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin-top: 16px;
+  }
+
+  .qtest__back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 0 0 13px;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-primary);
+    cursor: pointer;
+  }
+
+  .qtest__back-arrow {
+    display: inline-flex;
+    transform: rotate(180deg);
+  }
+
+  .qtest__back-arrow :global(svg),
+  .qtest__next-arrow :global(svg) {
+    display: block;
+  }
+
+  .qtest__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 129px;
+    height: 32px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--color-accent);
+    color: var(--color-text-on-image);
+    cursor: pointer;
+  }
+
+  .qtest__next-arrow {
+    display: inline-flex;
+  }
+
+  .qtest__note {
+    position: absolute;
+    right: 0;
+    bottom: -28px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-text-primary);
+    opacity: 0;
+    transition: opacity var(--motion-fast) var(--ease-out);
+  }
+
+  .qtest__note.is-visible {
+    opacity: 1;
+  }
+</style>

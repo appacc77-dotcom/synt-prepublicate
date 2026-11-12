@@ -1,0 +1,154 @@
+{
+  "result": {
+    "id": "79:103",
+    "name": "main",
+    "w": 1440,
+    "h": 10548,
+    "count": 15,
+    "sections": [
+      {
+        "id": "79:105",
+        "name": "hero",
+        "type": "FRAME",
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 780
+      },
+      {
+        "id": "79:114",
+        "name": "banner-founder",
+        "type": "FRAME",
+        "x": 0,
+        "y": 780,
+        "w": 1440,
+        "h": 525
+      },
+      {
+        "id": "79:116",
+        "name": "pain",
+        "type": "FRAME",
+        "x": 0,
+        "y": 1305,
+        "w": 1440,
+        "h": 707
+      },
+      {
+        "id": "79:127",
+        "name": "method",
+        "type": "FRAME",
+        "x": 0,
+        "y": 2012,
+        "w": 1440,
+        "h": 615
+      },
+      {
+        "id": "79:137",
+        "name": "quiz",
+        "type": "FRAME",
+        "x": 0,
+        "y": 2627,
+        "w": 1440,
+        "h": 550
+      },
+      {
+        "id": "79:148",
+        "name": "about-founder",
+        "type": "FRAME",
+        "x": 0,
+        "y": 3177,
+        "w": 1440,
+        "h": 757
+      },
+      {
+        "id": "79:166",
+        "name": "process",
+        "type": "FRAME",
+        "x": 0,
+        "y": 3934,
+        "w": 1440,
+        "h": 1429
+      },
+      {
+        "id": "79:173",
+        "name": "entry",
+        "type": "FRAME",
+        "x": 0,
+        "y": 5363,
+        "w": 1440,
+        "h": 892
+      },
+      {
+        "id": "102:220",
+        "name": "formats",
+        "type": "FRAME",
+        "x": 0,
+        "y": 6255,
+        "w": 1440,
+        "h": 1164
+      },
+      {
+        "id": "116:246",
+        "name": "voices",
+        "type": "FRAME",
+        "x": 0,
+        "y": 7419,
+        "w": 1440,
+        "h": 920
+      },
+      {
+        "id": "148:487",
+        "name": "library",
+        "type": "FRAME",
+        "x": 0,
+        "y": 8339,
+        "w": 1440,
+        "h": 641
+      },
+      {
+        "id": "148:506",
+        "name": "air-photo",
+        "type": "FRAME",
+        "x": 0,
+        "y": 8980,
+        "w": 1440,
+        "h": 400
+      },
+      {
+        "id": "148:508",
+        "name": "faq",
+        "type": "FRAME",
+        "x": 0,
+        "y": 9380,
+        "w": 1440,
+        "h": 807
+      },
+      {
+        "id": "148:561",
+        "name": "footer",
+        "type": "INSTANCE",
+        "x": 0,
+        "y": 10187,
+        "w": 1440,
+        "h": 361
+      },
+      {
+        "id": "79:104",
+        "name": "header",
+        "type": "INSTANCE",
+        "x": 8,
+        "y": 8,
+        "w": 1424,
+        "h": 92
+      }
+    ]
+  },
+  "console": [],
+  "ms": 3,
+  "executed": true,
+  "mode": "statement",
+  "fileContext": {
+    "fileName": "Website Syntonia2",
+    "fileKey": "NInjODHyOOjIitF3lq4Vpe"
+  }
+}

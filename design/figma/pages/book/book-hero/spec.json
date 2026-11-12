@@ -1,0 +1,476 @@
+{
+ "schemaVersion": 1,
+ "file": {
+  "key": null,
+  "name": "Website Syntonia"
+ },
+ "source": "fig-archive",
+ "section": {
+  "id": "1109:1112",
+  "name": "book",
+  "w": 1440,
+  "h": 1866
+ },
+ "nodes": [
+  {
+   "id": "1109:1112",
+   "name": "book",
+   "type": "FRAME",
+   "depth": 0,
+   "visible": true,
+   "x": 5136,
+   "y": 21,
+   "w": 1440,
+   "h": 1866
+  },
+  {
+   "id": "1109:1051",
+   "name": "book-hero",
+   "type": "FRAME",
+   "depth": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1866,
+   "fills": [
+    {
+     "type": "SOLID",
+     "visible": true,
+     "color": {
+      "hex": "#2d2822",
+      "a": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "1109:1052",
+   "name": "container",
+   "type": "FRAME",
+   "depth": 2,
+   "visible": true,
+   "x": 80,
+   "y": 128,
+   "w": 1280,
+   "h": 1674
+  },
+  {
+   "id": "1109:1053",
+   "name": "breadcrumbs",
+   "type": "INSTANCE",
+   "depth": 3,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "w": 359,
+   "h": 19
+  },
+  {
+   "id": "1109:1054",
+   "name": "book-intro",
+   "type": "FRAME",
+   "depth": 3,
+   "visible": true,
+   "x": 0,
+   "y": 51,
+   "w": 1280,
+   "h": 561
+  },
+  {
+   "id": "1109:1055",
+   "name": "book-cover",
+   "type": "FRAME",
+   "depth": 4,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "w": 420,
+   "h": 561,
+   "fills": [
+    {
+     "type": "IMAGE",
+     "visible": true,
+     "imageHash": "f50b99ebc462",
+     "scaleMode": "FILL"
+    }
+   ]
+  },
+  {
+   "id": "1109:1056",
+   "name": "book-info",
+   "type": "FRAME",
+   "depth": 4,
+   "visible": true,
+   "x": 484,
+   "y": 0,
+   "w": 600,
+   "h": 561
+  },
+  {
+   "id": "1124:1714",
+   "name": "eyebrow",
+   "type": "TEXT",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "w": 600,
+   "h": 30,
+   "styleName": "eyebrow",
+   "text": "авторская книга",
+   "fontFamily": "Golos Text",
+   "fontStyle": "Regular",
+   "fontSize": 20,
+   "lineHeight": {
+    "unit": "PERCENT",
+    "value": 150
+   },
+   "letterSpacing": {
+    "unit": "PIXELS",
+    "value": 0.003199999928474426
+   },
+   "font": {
+    "family": "Golos Text",
+    "style": "Regular",
+    "weight": 400,
+    "lineHeight": {
+     "unit": "PERCENT",
+     "value": 150
+    },
+    "tracking": 0.0001599999964237213,
+    "align": 0
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "visible": true,
+     "color": {
+      "hex": "#8a8560",
+      "a": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "1109:1058",
+   "name": "book-hero-title",
+   "type": "TEXT",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 54,
+   "w": 600,
+   "h": 192,
+   "styleName": "H1",
+   "text": "Коды построения реальности. 7 состояний жизни",
+   "fontFamily": "Literata",
+   "fontStyle": "Light",
+   "fontSize": 64,
+   "lineHeight": {
+    "unit": "PERCENT",
+    "value": 100
+   },
+   "letterSpacing": {
+    "unit": "PIXELS",
+    "value": 0
+   },
+   "font": {
+    "family": "Literata",
+    "style": "Light",
+    "weight": 300,
+    "lineHeight": {
+     "unit": "PERCENT",
+     "value": 100
+    },
+    "tracking": 0,
+    "align": 0
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "visible": true,
+     "color": {
+      "hex": "#f3ede0",
+      "a": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "1109:1059",
+   "name": "book-author",
+   "type": "TEXT",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 270,
+   "w": 600,
+   "h": 28,
+   "styleName": "H5",
+   "text": "Екатерина Лебедева",
+   "fontFamily": "Literata",
+   "fontStyle": "Light",
+   "fontSize": 22,
+   "lineHeight": {
+    "unit": "PERCENT",
+    "value": 125
+   },
+   "letterSpacing": {
+    "unit": "PIXELS",
+    "value": 0
+   },
+   "font": {
+    "family": "Literata",
+    "style": "Light",
+    "weight": 300,
+    "lineHeight": {
+     "unit": "PERCENT",
+     "value": 125
+    },
+    "tracking": 0,
+    "align": 0
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "visible": true,
+     "color": {
+      "hex": "#c9bea4",
+      "a": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "1109:1060",
+   "name": "book-hero-desc",
+   "type": "TEXT",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 322,
+   "w": 600,
+   "h": 170,
+   "styleName": "body",
+   "text": "Книга о семи состояниях, которые формируют внутренние сценарии человека и влияют на выбор, отношения и ход жизни. Внутри — авторская система, соединяющая психологию, научные опоры, тонкий план и бережные практики для самостоятельной внутренней работы.",
+   "fontFamily": "Golos Text",
+   "fontStyle": "Regular",
+   "fontSize": 20,
+   "lineHeight": {
+    "unit": "PERCENT",
+    "value": 170
+   },
+   "letterSpacing": {
+    "unit": "PIXELS",
+    "value": 0
+   },
+   "font": {
+    "family": "Golos Text",
+    "style": "Regular",
+    "weight": 400,
+    "lineHeight": {
+     "unit": "PERCENT",
+     "value": 170
+    },
+    "tracking": 0,
+    "align": 0
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "visible": true,
+     "color": {
+      "hex": "#f3ede0",
+      "a": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "1109:1061",
+   "name": "btn-primary",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 516,
+   "w": 200,
+   "h": 45,
+   "fills": [
+    {
+     "type": "IMAGE",
+     "visible": true,
+     "imageHash": "1434b5611dfb",
+     "scaleMode": "FILL"
+    }
+   ]
+  },
+  {
+   "id": "1109:1062",
+   "name": "book-toc",
+   "type": "FRAME",
+   "depth": 3,
+   "visible": true,
+   "x": 0,
+   "y": 644,
+   "w": 1280,
+   "h": 1030
+  },
+  {
+   "id": "1109:1063",
+   "name": "book-toc-title",
+   "type": "TEXT",
+   "depth": 4,
+   "visible": true,
+   "x": 96,
+   "y": 32,
+   "w": 229,
+   "h": 48,
+   "styleName": "H3",
+   "text": "Содержание",
+   "fontFamily": "Literata",
+   "fontStyle": "Light",
+   "fontSize": 38,
+   "lineHeight": {
+    "unit": "PERCENT",
+    "value": 125
+   },
+   "letterSpacing": {
+    "unit": "PIXELS",
+    "value": 0
+   },
+   "font": {
+    "family": "Literata",
+    "style": "Light",
+    "weight": 300,
+    "lineHeight": {
+     "unit": "PERCENT",
+     "value": 125
+    },
+    "tracking": 0,
+    "align": 0
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "visible": true,
+     "color": {
+      "hex": "#c9bea4",
+      "a": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "1109:1064",
+   "name": "book-toc-list",
+   "type": "FRAME",
+   "depth": 4,
+   "visible": true,
+   "x": 96,
+   "y": 104,
+   "w": 1088,
+   "h": 926
+  },
+  {
+   "id": "1118:1184",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1229",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 88,
+   "w": 1088,
+   "h": 222
+  },
+  {
+   "id": "1118:1238",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 318,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1247",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 406,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1256",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 494,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1265",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 582,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1274",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 670,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1283",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 758,
+   "w": 1088,
+   "h": 80
+  },
+  {
+   "id": "1118:1662",
+   "name": "toc-group",
+   "type": "INSTANCE",
+   "depth": 5,
+   "visible": true,
+   "x": 0,
+   "y": 846,
+   "w": 1088,
+   "h": 80
+  }
+ ]
+}

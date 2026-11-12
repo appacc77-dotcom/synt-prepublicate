@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:25.296Z",
+  "section": {
+    "id": "267:451",
+    "name": "library-hero",
+    "w": 1440,
+    "h": 820
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 6,
+  "nodes": 10,
+  "coverage": 100,
+  "markedRatio": 60,
+  "tolerance": 1,
+  "worstDelta": 0
+}

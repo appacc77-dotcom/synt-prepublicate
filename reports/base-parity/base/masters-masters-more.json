@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:31.357Z",
+  "section": {
+    "id": "256:374",
+    "name": "masters-more",
+    "w": 1440,
+    "h": 620
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 8,
+  "nodes": 38,
+  "coverage": 100,
+  "markedRatio": 21.1,
+  "tolerance": 1,
+  "worstDelta": 0
+}

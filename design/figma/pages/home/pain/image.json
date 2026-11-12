@@ -1,0 +1,20 @@
+{
+  "source": "design/figma/assets/img/dde780010048.jpg",
+  "node": "79:116",
+  "fill": {
+    "type": "IMAGE",
+    "imageHash": "dde780010048149f2e7ea1310e9098d556b68439",
+    "scaleMode": "CROP",
+    "scalingFactor": 0.5,
+    "imageTransform": [[0.5261090993881226, 0, -0.00015445028839167207], [0, 0.5976678729057312, 0.171709343791008]],
+    "filters": { "exposure": 0.35, "contrast": 0, "saturation": -0.13, "temperature": 0, "tint": 0, "highlights": 0, "shadows": 0 }
+  },
+  "output": "public/img/pain-bg.jpg",
+  "applied": {
+    "method": "affine sRGB",
+    "affine": [[0.39, 160.7], [0.567, 128.9], [0.721, 112.6]],
+    "fittedFrom": "рендер Figma (crop.png) против снимка страницы, tools/fit-tone.mjs",
+    "why": "формула filters в Figma не описана: 2^exposure даёт выжженные света, а рендер поднимает тени и поджимает светá. Коэффициенты сняты с самого рендера"
+  },
+  "measured": { "mean": 4.14, "over16": 3.43, "over48": 1.91 }
+}

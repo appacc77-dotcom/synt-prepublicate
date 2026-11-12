@@ -1,0 +1,851 @@
+---
+/**
+ * Внутренняя карта: все страницы и секции живого файла со статусами, числами,
+ * счётчиками выгруженного и парой превью «Figma / сделано».
+ *
+ * Данные не пишутся руками — их собирает tools/structure.mjs из артефактов.
+ * noindex: страница для работы, а не для посетителей.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import structure from '../../design/figma/structure.json';
+
+const { pages, totals, assetsTotal, file, at } = structure;
+
+const LABEL = {
+  green: 'зелёный',
+  measured: 'геометрия ок',
+  red: 'красные ворота',
+  exported: 'выгружен',
+  todo: 'не выгружен',
+};
+
+const FILTERS = [
+  { key: 'all', label: 'все' },
+  { key: 'green', label: 'зелёные' },
+  { key: 'exported', label: 'выгружены' },
+  { key: 'todo', label: 'не выгружены' },
+];
+
+const when = new Date(at).toLocaleString('ru-RU', { dateStyle: 'short', timeStyle: 'short' });
+
+const size = (bytes) => {
+  if (!bytes) return '—';
+  if (bytes < 1024) return `${bytes} Б`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} КБ`;
+  return `${(bytes / 1024 / 1024).toFixed(1)} МБ`;
+};
+
+/** Готовая постановка задачи: копируется кнопкой в блоке. */
+function taskText(page, s) {
+  return [
+    `Секция: ${page.title} / ${s.name} — узел ${s.id}`,
+    `Размер: ${s.w}×${s.h}, y ${s.y}`,
+    s.dir ? `Спека: ${s.dir}/spec.json` : 'Спека: не выгружена',
+    s.dir ? `Кроп: ${s.dir}/crop.png` : '',
+    s.assets ? `Выгружено: ${s.assets.nodes} узлов, ${s.assets.images} фото, ${s.assets.svg} svg, ${size(s.assets.bytes)}` : '',
+    s.gate
+      ? `Геометрия: ${s.gate.red === 0 ? '0 нарушений' : `${s.gate.red} нарушений`}, Δ max ${s.gate.worstDelta.toFixed(2)} px, размечено ${s.gate.marked} из ${s.gate.nodes}`
+      : 'Геометрия: не мерилась',
+    s.pixel ? `Пиксель: средняя ${s.pixel.mean}, > 16 ${s.pixel.over16} %, > 48 ${s.pixel.over48} %` : 'Пиксель: не мерился',
+    `Статус: ${LABEL[s.status.key] ?? s.status.key}`,
+    '',
+    'Задача: ',
+  ].filter(Boolean).join('\n');
+}
+
+/** Прямая ссылка на узел в Figma: открывает файл на нужной секции. */
+const figmaUrl = (id) => {
+  const node = id.replace(':', '-');
+  const slug = file.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return `https://www.figma.com/design/${file.key}/${slug}?node-id=${node}`;
+};
+
+const collected = (page) => page.sections.filter((s) => s.images.site).length;
+const exported = (page) => page.sections.filter((s) => s.status.key !== 'todo').length;
+---
+
+<BaseLayout title={`Структура — ${file.name}`} noindex>
+  <main class="map">
+    <header class="head">
+      <div class="head__row">
+        <div>
+          <p class="head__kicker">Внутренняя карта · не индексируется</p>
+          <h1 class="head__title">Структура</h1>
+        </div>
+        <div class="head__file">
+          <span>{file.name}</span>
+          <code>{file.key}</code>
+          <span class="head__when">снято {when}</span>
+        </div>
+      </div>
+
+      <dl class="stats">
+        <div class="stats__item">
+          <dt>в Figma</dt>
+          <dd>{totals.total}</dd>
+        </div>
+        <div class="stats__item">
+          <dt>выгружено</dt>
+          <dd>{totals.total - totals.todo}</dd>
+        </div>
+        <div class="stats__item stats__item--ok">
+          <dt>зелёных</dt>
+          <dd>{totals.green}</dd>
+        </div>
+        <div class="stats__item">
+          <dt>собрано</dt>
+          <dd>{pages.reduce((n, p) => n + collected(p), 0)}</dd>
+        </div>
+        <div class="stats__item">
+          <dt>склад</dt>
+          <dd>{size(assetsTotal.bytes)}</dd>
+          <span class="stats__hint">{assetsTotal.files} файлов без копий</span>
+        </div>
+      </dl>
+    </header>
+
+    <div class="toolbar">
+      <div class="toolbar__filters" role="group" aria-label="Фильтр по статусу">
+        {FILTERS.map((f) => (
+          <button class="chip" type="button" data-filter={f.key} aria-pressed={f.key === 'all' ? 'true' : 'false'}>
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      <label class="search">
+        <input type="search" placeholder="секция, id или страница" data-search />
+        <kbd>⌘K</kbd>
+      </label>
+
+      <span class="toolbar__count" data-count>{totals.total} секций</span>
+    </div>
+
+    <nav class="jump" aria-label="Страницы">
+      {pages.map((page) => (
+        <a class="jump__item" href={`#page-${page.key}`}>
+          {page.title}
+          <span>{exported(page)}/{page.counts.total}</span>
+        </a>
+      ))}
+    </nav>
+
+    {pages.map((page) => (
+      <section class="page" id={`page-${page.key}`} data-page={page.key}>
+        <div class="page__head">
+          <h2 class="page__title">{page.title}</h2>
+          <span class="page__meta">{page.frame.w}×{page.frame.h}</span>
+          <span class="page__sep"></span>
+          <span class="page__meta">в Figma {page.counts.total}</span>
+          <span class="page__meta">выгружено {exported(page)}</span>
+          <span class="page__meta">собрано {collected(page)}</span>
+          <span class="page__meta page__meta--ok">зелёных {page.counts.green ?? 0}</span>
+          {page.built && page.route && (
+            <a class="page__open" href={page.route} target="_blank" rel="noreferrer">
+              открыть страницу ↗
+            </a>
+          )}
+        </div>
+
+        <ol class="blocks">
+          {page.sections.map((s) => (
+            <li
+              class:list={['block', `block--${s.status.key}`]}
+              id={`block-${s.id.replace(':', '-')}`}
+              data-status={s.status.key}
+              data-search-text={`${page.title} ${s.name} ${s.id} ${s.slug ?? ''}`.toLowerCase()}
+            >
+              <div class="block__top">
+                <span class:list={['dot', `dot--${s.status.key}`]} aria-hidden="true"></span>
+                <span class="block__name">{s.name}</span>
+                <span class="block__status">{LABEL[s.status.key] ?? s.status.key}</span>
+                {page.built && page.route && s.images.site && (
+                  <a
+                    class="link link--site"
+                    href={`${page.route}#${s.slug}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="открыть собранный элемент на локальном сервере"
+                    aria-label={`Открыть ${s.name} на сайте`}
+                  >на сайте ↗</a>
+                )}
+                <a
+                  class="link"
+                  href={figmaUrl(s.id)}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="открыть узел в Figma"
+                  aria-label={`Открыть ${s.name} в Figma`}
+                >figma ↗</a>
+                <button
+                  class="copy"
+                  type="button"
+                  title="скопировать постановку задачи"
+                  aria-label={`Скопировать задачу по секции ${s.name}`}
+                  data-task={taskText(page, s)}
+                >копировать</button>
+              </div>
+
+              <p class="block__meta">
+                <code>{s.id}</code>
+                <span>{s.w}×{s.h}</span>
+                <span>y {s.y}</span>
+              </p>
+
+              <div class="block__shots">
+                {s.images.figma ? (
+                  <figure class="shot">
+                    <a href={s.images.figma} target="_blank" rel="noreferrer">
+                      <img src={s.images.figma} alt={`Figma: ${s.name}`} loading="lazy" />
+                    </a>
+                    <figcaption>Figma</figcaption>
+                  </figure>
+                ) : (
+                  <div class="shot shot--empty">нет эталона</div>
+                )}
+
+                {s.images.site ? (
+                  <figure class="shot">
+                    <a href={s.images.site} target="_blank" rel="noreferrer">
+                      <img src={s.images.site} alt={`Сборка: ${s.name}`} loading="lazy" />
+                    </a>
+                    <figcaption>сделано</figcaption>
+                  </figure>
+                ) : (
+                  <div class="shot shot--empty">не собрано</div>
+                )}
+              </div>
+
+              <div class="block__foot">
+                {s.assets && (
+                  <ul class="assets">
+                    <li><b>{s.assets.nodes}</b> узлов</li>
+                    <li><b>{s.assets.images}</b> фото</li>
+                    <li><b>{s.assets.svg}</b> svg</li>
+                    {s.assets.bound > 0 && <li class="assets__figma"><b>{s.assets.bound}</b> на токенах</li>}
+                    {s.assets.effects > 0 && <li class="assets__figma"><b>{s.assets.effects}</b> эффектов</li>}
+                    <li>{size(s.assets.bytes)}</li>
+                  </ul>
+                )}
+                <p class="nums">
+                  {s.gate
+                    ? `Δ ${s.gate.worstDelta.toFixed(2)} px${s.gate.red ? ` · ${s.gate.red} наруш.` : ''}`
+                    : 'геометрия —'}
+                  <span>·</span>
+                  {s.pixel ? `${s.pixel.mean} / ${s.pixel.over16} %` : 'пиксель —'}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <p class="page__empty" data-empty hidden>по этому фильтру на странице ничего нет</p>
+      </section>
+    ))}
+  </main>
+</BaseLayout>
+
+<script>
+  const chips = [...document.querySelectorAll('[data-filter]')];
+  const search = document.querySelector('[data-search]');
+  const counter = document.querySelector('[data-count]');
+  const blocks = [...document.querySelectorAll('.block')];
+  const pageSections = [...document.querySelectorAll('[data-page]')];
+  const jumps = [...document.querySelectorAll('.jump__item')];
+
+  let status = 'all';
+  let query = '';
+
+  function apply() {
+    let shown = 0;
+    for (const block of blocks) {
+      const byStatus = status === 'all' || block.dataset.status === status;
+      const byText = !query || (block.dataset.searchText ?? '').includes(query);
+      const visible = byStatus && byText;
+      block.hidden = !visible;
+      if (visible) shown++;
+    }
+    for (const section of pageSections) {
+      const visible = section.querySelectorAll('.block:not([hidden])').length;
+      section.hidden = visible === 0;
+      const empty = section.querySelector('[data-empty]');
+      if (empty) empty.hidden = visible > 0;
+    }
+    for (const jump of jumps) {
+      const id = jump.getAttribute('href')?.slice(1);
+      jump.hidden = !!document.getElementById(id)?.hidden;
+    }
+    counter.textContent = `${shown} из ${blocks.length}`;
+  }
+
+  for (const chip of chips) {
+    chip.addEventListener('click', () => {
+      status = chip.dataset.filter;
+      for (const c of chips) c.setAttribute('aria-pressed', String(c === chip));
+      apply();
+    });
+  }
+
+  search?.addEventListener('input', () => {
+    query = search.value.trim().toLowerCase();
+    apply();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      search?.focus();
+    }
+    if (event.key === 'Escape' && document.activeElement === search) {
+      search.value = '';
+      query = '';
+      apply();
+      search.blur();
+    }
+  });
+
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.append(ta);
+      ta.select();
+      const ok = document.execCommand('copy');
+      ta.remove();
+      return ok;
+    }
+  }
+
+  for (const button of document.querySelectorAll('[data-task]')) {
+    button.addEventListener('click', async () => {
+      const ok = await copyText(button.dataset.task ?? '');
+      const label = button.textContent;
+      button.textContent = ok ? 'скопировано' : 'не вышло';
+      button.classList.toggle('copy--done', ok);
+      setTimeout(() => {
+        button.textContent = label;
+        button.classList.remove('copy--done');
+      }, 1600);
+    });
+  }
+
+  apply();
+</script>
+
+<style>
+  .map {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+  }
+
+  /* --- шапка --- */
+  .head {
+    margin-bottom: 20px;
+  }
+
+  .head__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+
+  .head__kicker {
+    margin: 0 0 4px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .head__title {
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--color-text-heading);
+  }
+
+  .head__file {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+  }
+
+  .head__file code {
+    font-size: 10px;
+    color: var(--color-text-deep);
+  }
+
+  .head__when {
+    opacity: 0.75;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+  }
+
+  .stats__item {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 5px 12px;
+    background: var(--color-bg-surface);
+    border-radius: 999px;
+  }
+
+  .stats__item dt {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .stats__item dd {
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 17px;
+    color: var(--color-text-heading);
+  }
+
+  .stats__item--ok {
+    background: var(--color-accent);
+  }
+
+  .stats__item--ok dt {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .stats__item--ok dd {
+    color: var(--color-text-on-image);
+  }
+
+  .stats__hint {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+  }
+
+  /* --- панель --- */
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background: color-mix(in srgb, var(--color-bg-page) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .toolbar__filters {
+    display: flex;
+    gap: 3px;
+    padding: 3px;
+    background: var(--color-bg-surface);
+    border-radius: 999px;
+  }
+
+  .chip {
+    padding: 4px 12px;
+    font-size: 12px;
+    color: var(--color-text-deep);
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .chip:hover {
+    color: var(--color-text-heading);
+  }
+
+  .chip[aria-pressed='true'] {
+    color: var(--color-text-on-image);
+    background: var(--color-accent);
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px 4px 14px;
+    background: var(--color-bg-surface);
+    border-radius: 999px;
+  }
+
+  .search input {
+    width: 220px;
+    font: inherit;
+    font-size: 12px;
+    color: var(--color-text-primary);
+    background: transparent;
+    border: 0;
+    outline: none;
+  }
+
+  .search kbd {
+    padding: 1px 5px;
+    font-family: var(--font-golos-text);
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-page);
+    border-radius: 4px;
+  }
+
+  .toolbar__count {
+    margin-left: auto;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-secondary);
+  }
+
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 28px;
+  }
+
+  .jump__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    font-size: 12px;
+    color: var(--color-text-primary);
+    background: var(--color-bg-surface);
+    border-radius: 6px;
+  }
+
+  .jump__item:hover {
+    background: var(--color-bg-muted);
+  }
+
+  .jump__item span {
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-secondary);
+  }
+
+  /* --- страница --- */
+  .page {
+    margin-bottom: 36px;
+    scroll-margin-top: 56px;
+  }
+
+  .page__head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .page__title {
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-text-heading);
+  }
+
+  .page__meta {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+  }
+
+  .page__meta--ok {
+    color: var(--color-accent);
+  }
+
+  .page__open {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-accent-muted);
+  }
+
+  .page__sep {
+    width: 1px;
+    height: 12px;
+    background: var(--color-border);
+  }
+
+  .page__empty {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--color-text-secondary);
+  }
+
+  /* --- блоки --- */
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 12px 8px;
+    background: var(--color-bg-surface);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .block:hover {
+    border-color: var(--color-border);
+  }
+
+  .block--green {
+    background: color-mix(in srgb, var(--color-bg-surface) 70%, var(--color-accent) 8%);
+  }
+
+  .block__top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .dot {
+    flex: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-border);
+  }
+
+  .dot--green {
+    background: var(--color-accent);
+  }
+
+  .dot--red {
+    background: #a4463c;
+  }
+
+  .dot--exported {
+    background: var(--color-accent-muted);
+    opacity: 0.55;
+  }
+
+  .block__name {
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--color-text-heading);
+  }
+
+  .block__status {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .link--site {
+    margin-left: auto;
+    color: var(--color-accent);
+    border-color: var(--color-accent-muted);
+  }
+
+  .link--site:hover {
+    color: var(--color-text-on-image);
+  }
+
+  .link {
+    margin-left: 0;
+    padding: 2px 8px;
+    font-size: 9.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .link:hover {
+    color: var(--color-text-on-image);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .copy {
+    padding: 2px 8px;
+    font-size: 9.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .block:hover .copy,
+  .copy:focus-visible {
+    opacity: 1;
+  }
+
+  .copy:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-accent-muted);
+  }
+
+  .copy--done {
+    color: var(--color-text-on-image);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    opacity: 1;
+  }
+
+  .block__meta {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    font-size: 10.5px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-secondary);
+  }
+
+  .block__meta code {
+    font-family: var(--font-golos-text);
+    color: var(--color-text-deep);
+  }
+
+  .block__shots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-top: 2px;
+  }
+
+  .shot {
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-bg-page);
+    border-radius: 6px;
+  }
+
+  .shot img {
+    display: block;
+    width: 100%;
+    height: 108px;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.25s ease;
+  }
+
+  .shot a:hover img {
+    transform: scale(1.03);
+  }
+
+  .shot figcaption {
+    padding: 3px 7px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .shot--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 108px;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    border: 1px dashed var(--color-border);
+  }
+
+  .block__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 2px;
+  }
+
+  .assets {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+  }
+
+  .assets b {
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .assets__figma {
+    color: var(--color-accent);
+  }
+
+  .assets__figma b {
+    color: var(--color-accent);
+  }
+
+  .nums {
+    margin: 0;
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-deep);
+    white-space: nowrap;
+  }
+
+  .nums span {
+    opacity: 0.4;
+    margin: 0 3px;
+  }
+
+  @media (max-width: 1000px) {
+    .blocks {
+      grid-template-columns: 1fr;
+    }
+
+    .map {
+      padding: 24px 16px 48px;
+    }
+
+    .head__row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .head__file {
+      align-items: flex-start;
+    }
+  }
+</style>

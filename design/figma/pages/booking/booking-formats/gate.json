@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-12T22:03:42.941Z",
+  "section": {
+    "id": "383:761",
+    "name": "booking-formats",
+    "w": 1440,
+    "h": 1546
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 21,
+  "nodes": 130,
+  "coverage": 100,
+  "markedRatio": 16.2,
+  "tolerance": 1,
+  "worstDelta": 0.8000000000000114
+}

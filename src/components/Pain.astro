@@ -1,0 +1,130 @@
+---
+/**
+ * Pain — секция `pain` (79:116) фрейма Home.
+ *
+ * Геометрия с живого узла: 1440×707, контейнер 1280 по центру, паддинг 96/24,
+ * две колонки по 584 с зазором 64, текст по центру по вертикали (401 из 515).
+ * Фон — фото с узла: CROP 0,526×0,598 со сдвигом 0,1717 по вертикали.
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+import ListItem from './ds/list-item.astro';
+
+interface Item {
+  number: string;
+  text: string;
+  nodes: { item: string; row: string; number: string; text: string; divider: string };
+}
+
+interface Props {
+  title: string;
+  lead: string;
+  script: string;
+  ctaLabel: string;
+  ctaHref: string;
+  items: Item[];
+}
+
+const { title, lead, script, ctaLabel, ctaHref, items } = Astro.props;
+---
+
+<section class="pain" id="home-pain" data-figma-node="79:116">
+
+  <div class="pain__container" data-figma-node="79:117">
+    <div class="pain__text" data-figma-node="79:118">
+      <h2 class="pain__title t-h2" data-figma-node="79:119">{title}</h2>
+      <p class="pain__lead t-body" data-figma-node="79:120">{lead}</p>
+
+      <div class="pain__cta" data-figma-node="148:599">
+        <span class="pain__script t-script-m" data-figma-node="148:598">{script}</span>
+        <BtnPrimary
+          href={ctaHref}
+          label={ctaLabel}
+          node="79:121"
+          theme="light"
+          size="L"
+          caps
+        />
+      </div>
+    </div>
+
+    <ul class="pain__list" data-figma-node="79:122">
+      {items.map((item) => <ListItem number={item.number} text={item.text} nodes={item.nodes} />)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .pain {
+    position: relative;
+    min-height: 707px;
+    isolation: isolate;
+  }
+
+  /* Фон — отдельным слоем: filter задел бы и текст. */
+  .pain::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: '';
+    background-image: url('/img/pain-bg.jpg');
+    background-repeat: no-repeat;
+    /* imageTransform: [[0,526, 0, 0], [0, 0,598, 0,1717]] */
+    background-size: 190.07% 167.32%;
+    background-position: 0% 42.68%;
+    /* Настройки заливки (exposure +0,35, saturation −0,13) запечены в сам файл
+       через tools/bake-image.mjs: в CSS они дают другой результат. */
+  }
+
+  .pain__container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3xl);
+    max-width: var(--container-max);
+    min-height: 707px;
+    margin: 0 auto;
+    padding: var(--space-4xl) var(--space-l);
+  }
+
+  .pain__text {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  /* pain-title (79:119) и pain-lead (79:120): ширина FIXED из спеки —
+     539 и 473. С ними переносы строк совпадают с Figma. */
+  .pain__title {
+    width: 539px;
+    max-width: 100%;
+    color: var(--color-text-heading);
+  }
+
+  .pain__lead {
+    width: 473px;
+    max-width: 100%;
+    color: var(--color-text-secondary);
+  }
+
+  /* Строка «Начни + кнопка» обжата по содержимому: 124 + 24 + 214 = 362. */
+  .pain__cta {
+    display: flex;
+    align-self: flex-start;
+    align-items: flex-start;
+    gap: var(--space-l);
+  }
+
+  .pain__script {
+    color: var(--color-text-primary);
+  }
+
+  .pain__list {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: var(--space-xl);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

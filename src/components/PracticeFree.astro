@@ -1,0 +1,404 @@
+---
+/**
+ * Секция `practice-free` (410:1122), 1440×916: заголовок и лента из четырёх
+ * практик с круглыми стрелками по краям.
+ *
+ * Карточка — 296×471: фото 296×256, ниже описание с названием, подписью,
+ * длительностью и кнопкой. Лента прокручивается по одной карточке.
+ */
+interface Props {
+  node?: string;
+}
+
+const { node = '410:1122' } = Astro.props;
+
+/** Figma пишет авторский перенос строки как U+2028 — превращаем в <br>. */
+const breakLines = (text: string) =>
+  text
+    .split('\u2028')
+    .map((line) => line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+    .join('<br />');
+
+const cards = [
+  {
+    id: '410:1182',
+    height: 471,
+    image: '/img/practice-card-9fae.jpg',
+    // Кроп из Figma (CROP): transform 0.4774/0.4129 → 209,46 % × 242,19 %,
+    // сдвиг 100 % × 5,49 %. Без него карточка показывает фотографию целиком,
+    // а в макете видна только арка.
+    size: '209.46% 242.19%',
+    position: '100% 5.49%',
+    // U+2028 из Figma — это авторский перенос строки, а не свойство ширины.
+    title: 'Освобождение \u2028от чужого и лишнего.',
+    subtitle: 'Практика завершения дня',
+    time: '9 минут',
+    status: 'Бесплатно',
+  },
+  {
+    id: '410:1199',
+    height: 467,
+    image: '/img/practice-card-ce07.webp',
+    size: '209.09% 136.06%',
+    position: '57.63% 50.11%',
+    title: 'Когда тревожно',
+    subtitle: 'Для балансировки нервной системы',
+    time: '11 минут',
+    status: 'Бесплатно',
+  },
+  {
+    id: '410:1215',
+    height: 471,
+    image: '/img/practice-card-4ee7.webp',
+    size: 'cover',
+    position: 'center',
+    title: 'Отпустить \u2028напряжение',
+    subtitle: 'Телесное расслабление',
+    time: '8 минут',
+    status: 'Бесплатно',
+  },
+  {
+    id: '412:1914',
+    height: 467,
+    image: '/img/practice-card-0ae9.webp',
+    size: 'cover',
+    position: 'center',
+    title: 'Вернуть себе силы',
+    subtitle: 'При усталости, выгорании, и пустоте',
+    time: '14 минут',
+    status: 'Бесплатно',
+  },
+];
+---
+
+<section class="pfree" data-figma-node={node}>
+  <div class="pfree__container" data-figma-node="410:1123">
+    <div class="pfree__head" data-figma-node="410:1127">
+      <h2 class="pfree__title" data-figma-node="410:1125">Практики для мягкого входа</h2>
+      <p class="pfree__subtitle" data-figma-node="410:1126">
+        Для бережной самостоятельной настройки состояния.
+      </p>
+    </div>
+
+    <div class="pfree__slider" data-figma-node="412:1958">
+      <button class="pfree__arrow pfree__arrow--prev" type="button" aria-label="Предыдущие практики" data-prev data-figma-node="412:1959">
+        <svg class="pfree__ring" width="47" height="47" viewBox="0 0 47 47" aria-hidden="true" data-figma-node="I412:1959;11:15">
+          <circle cx="23.5" cy="23.5" r="23" fill="none" stroke="currentColor" />
+        </svg>
+        <svg class="pfree__glyph" width="32" height="10" viewBox="0 0 32 10" aria-hidden="true" data-figma-node="I412:1959;11:17">
+          <path d="M32 5H2M7 1 2 5l5 4" fill="none" stroke="currentColor" />
+        </svg>
+      </button>
+
+      <div class="pfree__track" data-track>
+        {cards.map((card) => (
+          <article class="pcard" data-figma-node={card.id} style={`height: ${card.height}px`}>
+            <div
+              class="pcard__media"
+              style={`background-image: url('${card.image}'); background-size: ${card.size}; background-position: ${card.position}`}
+            />
+            <div class="pcard__body">
+              <h3 class="pcard__title" set:html={breakLines(card.title)} />
+              <p class="pcard__subtitle">{card.subtitle}</p>
+              <div class="pcard__action">
+                <div class="pcard__time">
+                  <svg class="pcard__clock" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                    <circle cx="6" cy="6" r="5" fill="none" stroke="currentColor" />
+                    <path d="M6 3v3l2 1" fill="none" stroke="currentColor" />
+                  </svg>
+                  <span>{card.time}</span>
+                  <span class="pcard__pill">{card.status}</span>
+                </div>
+                <button class="pcard__btn" type="button" aria-pressed="false" data-play>
+                  <span data-play-label>Прослушать практику</span>
+                  <svg class="pcard__arrow" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true">
+                    <path d="M0 4h10M7 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <button class="pfree__arrow pfree__arrow--next" type="button" aria-label="Следующие практики" data-next data-figma-node="412:1960">
+        <svg class="pfree__ring" width="47" height="47" viewBox="0 0 47 47" aria-hidden="true" data-figma-node="I412:1960;11:15">
+          <circle cx="23.5" cy="23.5" r="23" fill="none" stroke="currentColor" />
+        </svg>
+        <svg class="pfree__glyph" width="32" height="10" viewBox="0 0 32 10" aria-hidden="true" data-figma-node="I412:1960;11:17">
+          <path d="M0 5h30M25 1l5 4-5 4" fill="none" stroke="currentColor" />
+        </svg>
+      </button>
+
+      <div class="pfree__dots" aria-hidden="true">
+        {Array.from({ length: 7 }).map(() => <span class="pfree__dot" />)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.querySelector('.pfree');
+  if (slider) {
+    const track = slider.querySelector('[data-track]');
+    const step = 328; // карточка 296 + зазор 32
+
+    const prev = slider.querySelector('[data-prev]');
+    const next = slider.querySelector('[data-next]');
+
+    // Стрелка выключается, когда листать некуда: в макете четыре карточки
+    // занимают ленту целиком, и обе стрелки декоративны.
+    const sync = () => {
+      if (!track) return;
+      const max = track.scrollWidth - track.clientWidth;
+      if (prev) prev.disabled = track.scrollLeft <= 0;
+      if (next) next.disabled = track.scrollLeft >= max - 1;
+    };
+
+    const move = (direction) => {
+      if (!track) return;
+      const max = track.scrollWidth - track.clientWidth;
+      track.scrollTo({ left: Math.min(Math.max(track.scrollLeft + direction * step, 0), max), behavior: 'smooth' });
+      setTimeout(sync, 400);
+    };
+
+    // Аудио в макете не приложено: кнопка переключает состояние «слушаем»,
+    // но звук не проигрывает. Это отсутствие исходника, записано в решениях.
+    for (const button of slider.querySelectorAll('[data-play]')) {
+      button.addEventListener('click', () => {
+        const playing = button.getAttribute('aria-pressed') === 'true';
+        button.setAttribute('aria-pressed', String(!playing));
+        button.classList.toggle('is-playing', !playing);
+        const label = button.querySelector('[data-play-label]');
+        if (label) label.textContent = playing ? 'Прослушать практику' : 'Остановить';
+      });
+    }
+
+    prev?.addEventListener('click', () => move(-1));
+    next?.addEventListener('click', () => move(1));
+    track?.addEventListener('scroll', sync);
+    sync();
+  }
+</script>
+
+<style>
+  .pfree {
+    position: relative;
+    width: 100%;
+    height: 916px;
+    background: var(--color-practice-surface);
+  }
+
+  .pfree__container {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 916px;
+    margin: 0 auto;
+    padding-top: 96px;
+  }
+
+  .pfree__head {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 163px;
+    /* Отступ — padding: margin первого блока схлопывается и сдвигает секцию. */
+    padding-top: 16px;
+  }
+
+  .pfree__title {
+    width: 897px;
+    height: 81px;
+    margin: 0 0 0 192px;
+    font-family: var(--font-literata);
+    font-size: 65px;
+    line-height: 81.25px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .pfree__subtitle {
+    width: 544px;
+    height: 34px;
+    margin: 16px 0 0 368px;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .pfree__slider {
+    position: relative;
+    width: 1280px;
+    height: 497px;
+    margin-top: 64px;
+  }
+
+  .pfree__track {
+    display: flex;
+    gap: 32px;
+    width: 1280px;
+    height: 471px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .pcard {
+    flex: none;
+    width: 296px;
+    /* Градиент карточки из файла: #fbf8f1 30,3 % → #e7e0d4 100 % под углом. */
+    border-radius: 16px;
+    background: linear-gradient(324deg, #fbf8f1 30.3%, #e7e0d4 100%);
+    overflow: hidden;
+  }
+
+  .pcard__media {
+    width: 296px;
+    height: 256px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .pcard__body {
+    position: relative;
+    width: 296px;
+    height: 215px;
+    box-sizing: border-box;
+    padding: 24px;
+  }
+
+  .pcard__title {
+    /* В файле рамка 232, но вторая строка «от чужого и лишнего.» ровно 232 px
+       по метрикам браузера — на границе она переносится. 236 даёт тот же
+       перенос, что в макете; перенос строки задаёт сам текст (U+2028). */
+    width: 236px;
+    height: 56px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 22px;
+    /* Живой узел: Literata 300, межстрочие 125 % (27,5 px). При 400 текст
+       шире и переносится иначе. */
+    line-height: 27.5px;
+    font-weight: 300;
+    color: var(--color-text-primary);
+  }
+
+  .pcard__subtitle {
+    width: 209px;
+    height: 24px;
+    margin: 8px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-text-deep);
+  }
+
+  /* От действия до подписи в файле 16: 24 + 88 + 16 = 128. */
+  .pcard__action {
+    margin-top: 16px;
+  }
+
+  .pcard__time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 22px;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+  }
+
+  .pcard__clock {
+    flex: none;
+  }
+
+  .pcard__arrow {
+    flex: none;
+    opacity: 0.9;
+  }
+
+  .pcard__pill {
+    padding: 1px 8px;
+    border: 1px solid var(--color-accent-muted);
+    border-radius: 10px;
+  }
+
+  .pcard__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 183px;
+    height: 33px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 3px;
+    /* В файле у кнопки не заливка, а текстура. */
+    background: var(--color-accent) url('/img/btn-texture.webp') center / cover no-repeat;
+    font-family: var(--font-golos-text);
+    font-size: 12.45px;
+    line-height: 21px;
+    color: var(--color-text-on-image);
+    cursor: pointer;
+  }
+
+  .pfree__arrow {
+    /* Стрелка лежит ПОД карточками: в макете её круг уходит под фото, и
+       видна только выступающая половина. */
+    z-index: 0;
+    position: absolute;
+    top: 105px;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 75%);
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+
+  .pfree__ring,
+  .pfree__glyph {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .pfree__glyph {
+    top: 19px;
+    left: 8px;
+  }
+
+  /* Координаты из спеки: 104 и 1336 при контейнере от 80. */
+  .pfree__arrow--prev {
+    left: 24px;
+  }
+
+  /* Лента карточек выше стрелок: круг стрелки уходит под фото. */
+  .pfree__track {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pfree__arrow--next {
+    left: 1256px;
+  }
+
+  .pfree__dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .pfree__dot {
+    width: 3px;
+    height: 2px;
+    background: var(--color-text-deep);
+    opacity: 0.4;
+  }
+
+  .pfree__dot:first-child {
+    opacity: 1;
+  }
+</style>

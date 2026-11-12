@@ -1,0 +1,81 @@
+---
+/**
+ * Заглушка 404.
+ *
+ * Нужна потому, что часть ссылок в макете ведёт в никуда: страницы «О проекте»,
+ * «Понять себя», оферты и политики в файле не нарисованы. Молчаливый переход
+ * на главную или на `#` прячет это — лучше сказать прямо.
+ *
+ * Стилистика та же, что у сайта: токены, типографические классы, шапка и подвал.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BtnPrimary from '../components/ds/btn-primary.astro';
+import BtnQuiet from '../components/ds/btn-quiet.astro';
+---
+
+<BaseLayout
+  title="Страница не найдена — Syntonia"
+  description="Такой страницы пока нет."
+  noindex
+>
+  <main class="page">
+    <Header />
+    <section class="nf">
+      <div class="nf__inner">
+        <p class="nf__code t-caption">404</p>
+        <h1 class="nf__title t-h1">Такой страницы пока нет</h1>
+        <p class="nf__text t-body">
+          Раздел ещё не написан: в макете он есть, а страницы под него нет.
+          Начните с главной или посмотрите форматы работы.
+        </p>
+        <div class="nf__actions">
+          <BtnPrimary href="/" label="На главную" theme="light" size="L" />
+          <BtnQuiet href="/booking.html" label="Форматы работы" />
+        </div>
+      </div>
+    </section>
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+
+  .nf {
+    display: flex;
+    justify-content: center;
+    min-height: 720px;
+    padding: 160px 80px 120px;
+    background: var(--color-bg-page);
+  }
+
+  .nf__inner {
+    width: 720px;
+  }
+
+  .nf__code {
+    margin: 0 0 24px;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.16em;
+  }
+
+  .nf__title {
+    margin: 0 0 24px;
+    color: var(--color-text-primary);
+  }
+
+  .nf__text {
+    margin: 0 0 40px;
+    color: var(--color-text-secondary);
+  }
+
+  .nf__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+</style>

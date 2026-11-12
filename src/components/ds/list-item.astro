@@ -1,0 +1,59 @@
+---
+/**
+ * list-item — набор Figma `list-item` (42:76).
+ *
+ * Строка: номер скриптовым шрифтом + текст, под ней линия.
+ * Высота не задаётся: 78 + 16 + 1 = 95 для двух строк, 117 + 16 + 1 = 134
+ * для трёх — поэтому высота следует за числом строк сама.
+ */
+interface Props {
+  number: string;
+  text: string;
+  nodes?: {
+    item?: string;
+    row?: string;
+    number?: string;
+    text?: string;
+    divider?: string;
+  };
+}
+
+const { number, text, nodes = {} } = Astro.props;
+---
+
+<li class="list-item" data-figma-node={nodes.item}>
+  <div class="list-item__row" data-figma-node={nodes.row}>
+    <span class="list-item__number t-script-xl" data-figma-node={nodes.number}>{number}</span>
+    <span class="list-item__text t-h4" data-figma-node={nodes.text}>{text}</span>
+  </div>
+  <span class="list-item__divider" data-figma-node={nodes.divider}></span>
+</li>
+
+<style>
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+  }
+
+  .list-item__row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-l);
+  }
+
+  .list-item__number {
+    flex: none;
+    color: var(--color-accent-muted);
+  }
+
+  .list-item__text {
+    color: var(--color-text-primary);
+  }
+
+  .list-item__divider {
+    display: block;
+    height: 1px;
+    background: var(--color-accent-muted);
+  }
+</style>

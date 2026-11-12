@@ -1,0 +1,189 @@
+---
+/**
+ * Секция `library-journal` (272:1017), 1440×570: тёмный блок про журнал.
+ *
+ * Слева подпись, название и описание; справа фото с карточкой актуального
+ * выпуска внизу. Фото — CROP, поэтому вырез считается, а не берётся cover.
+ */
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '272:1017' } = Astro.props;
+---
+
+<section class="ljr" data-figma-node={node}>
+  <div class="ljr__container" data-figma-node="272:1018">
+    <div class="ljr__content" data-figma-node="272:1020">
+      <span class="ljr__eyebrow" data-figma-node="272:1022">журнал</span>
+      <h2 class="ljr__title" data-figma-node="272:1025">Syntonia.Life</h2>
+      <p class="ljr__desc" data-figma-node="272:1027">
+        Выпуски, собранные вокруг того, что действительно волнует и сопровождает жизнь: внутренние состояния, отношения,
+        выбор, опора, перемены, практика и смысл.
+      </p>
+    </div>
+
+    <div class="ljr__image" data-figma-node="272:1019">
+      <div class="ljr__latest" data-figma-node="281:532">
+        <span class="ljr__latest-label" data-figma-node="281:533">актуальный выпуск</span>
+        <div class="ljr__latest-name" data-figma-node="862:2538">
+          <span class="ljr__latest-number" data-figma-node="281:545">№02</span>
+          <span class="ljr__latest-title" data-figma-node="862:2539">Тело и состояние</span>
+        </div>
+        <a class="ljr__btn" href="/book.html" data-figma-node="281:578">
+          <span class="ljr__btn-label" data-figma-node="I281:578;854:2501">читать выпуск</span>
+          <ArrowQuiet size={14} />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ljr {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    background: var(--color-bg-dark);
+    box-sizing: border-box;
+    /* Отступ секции — padding: margin первого блока схлопывается. */
+    padding-top: 64px;
+  }
+
+  .ljr__container {
+    position: relative;
+    box-sizing: border-box;
+    width: 1280px;
+    height: 442px;
+    margin: 0 auto;
+  }
+
+  .ljr__content {
+    width: 493px;
+    height: 442px;
+  }
+
+  .ljr__eyebrow {
+    display: block;
+    width: 106px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-accent-muted);
+  }
+
+  .ljr__title {
+    width: 493px;
+    height: 60px;
+    margin: 32px 0 0;
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+    color: var(--color-thread);
+  }
+
+  .ljr__desc {
+    width: 493px;
+    height: 136px;
+    margin: 32px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-dark);
+  }
+
+  .ljr__image {
+    position: absolute;
+    left: 557px;
+    top: 0;
+    width: 723px;
+    height: 442px;
+    /* CROP: размер 1/масштаб, позиция e/(1−a). */
+    /* CROP из спеки (I281:665;272:1076): 1/0,684 = 146,2 %, 1/0,977 = 102,4 %,
+       сдвиг 44,4 % × 47,6 %. Прежние 122,8 % были сняты со старой версии файла. */
+    background: url('/img/issue-3aa9.webp') 44.4% 47.6% / 146.2% 102.4% no-repeat;
+  }
+
+  .ljr__latest {
+    position: absolute;
+    left: 16px;
+    top: 311px;
+    box-sizing: border-box;
+    width: 217px;
+    height: 115px;
+    padding: 16px;
+    background: var(--color-bg-page);
+  }
+
+  .ljr__latest-label {
+    display: block;
+    width: 185px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-accent-muted);
+  }
+
+  .ljr__latest-name {
+    display: flex;
+    gap: 4px;
+    width: 175px;
+    /* Номер 37 px, дальше название ровно 134. */
+    height: 20px;
+    margin-top: 8px;
+  }
+
+  .ljr__latest-number {
+    flex: none;
+    width: 37px;
+  }
+
+  .ljr__latest-title {
+    flex: none;
+    width: 134px;
+  }
+
+  .ljr__latest-number,
+  .ljr__latest-title {
+    font-size: 16px;
+    line-height: 20px;
+    white-space: nowrap;
+    color: var(--color-text-primary);
+  }
+
+  .ljr__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-sizing: border-box;
+    width: 131px;
+    height: 27px;
+    margin-top: 8px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: var(--color-accent) url('/img/btn-texture.webp') center / cover no-repeat;
+    text-decoration: none;
+  }
+
+  .ljr__btn-label {
+    flex: none;
+    width: 97px;
+    font-size: 11px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: var(--color-text-on-image);
+  }
+
+  .ljr__btn :global(svg) {
+    display: block;
+    color: var(--color-text-on-image);
+  }
+</style>

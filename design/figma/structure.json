@@ -1,0 +1,2252 @@
+{
+  "at": "2026-11-12T19:38:23.023Z",
+  "file": {
+    "name": "Website Syntonia2",
+    "key": "NInjODHyOOjIitF3lq4Vpe"
+  },
+  "totals": {
+    "total": 46,
+    "green": 46,
+    "measured": 0,
+    "red": 0,
+    "exported": 0,
+    "todo": 0
+  },
+  "assetsTotal": {
+    "files": 155,
+    "bytes": 113339463
+  },
+  "pages": [
+    {
+      "key": "home",
+      "id": "2:3",
+      "route": "/",
+      "built": true,
+      "title": "Home",
+      "frame": {
+        "id": "79:103",
+        "name": "main",
+        "w": 1440,
+        "h": 10548
+      },
+      "sections": [
+        {
+          "id": "79:105",
+          "name": "hero",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 780,
+          "slug": "home-hero",
+          "dir": "design/figma/pages/home/hero",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 8,
+            "nodes": 14,
+            "coverage": 100,
+            "worstDelta": 0.11000000000001364,
+            "at": "2026-11-08T13:21:15.209Z"
+          },
+          "pixel": {
+            "mean": 1.76,
+            "over16": 0.99,
+            "over48": 0.56,
+            "at": "2026-11-11T16:49:21.772Z"
+          },
+          "assets": {
+            "nodes": 14,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 2,
+            "bytes": 75031,
+            "bound": 11,
+            "effects": 0,
+            "fills": 2
+          },
+          "images": {
+            "figma": "/structure/home-hero-figma.png",
+            "site": "/structure/home-hero-site.png"
+          }
+        },
+        {
+          "id": "79:114",
+          "name": "banner-founder",
+          "type": "FRAME",
+          "x": 0,
+          "y": 780,
+          "w": 1440,
+          "h": 525,
+          "slug": "home-banner-founder",
+          "dir": "design/figma/pages/home/banner-founder",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 5,
+            "nodes": 5,
+            "coverage": 100,
+            "worstDelta": 0.29000000000002046,
+            "at": "2026-11-08T13:21:09.131Z"
+          },
+          "pixel": {
+            "mean": 3.06,
+            "over16": 2.02,
+            "over48": 0.66,
+            "at": "2026-11-09T20:31:00.417Z"
+          },
+          "assets": {
+            "nodes": 5,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 179207,
+            "bound": 5,
+            "effects": 0,
+            "fills": 2
+          },
+          "images": {
+            "figma": "/structure/home-banner-founder-figma.png",
+            "site": "/structure/home-banner-founder-site.png"
+          }
+        },
+        {
+          "id": "79:116",
+          "name": "pain",
+          "type": "FRAME",
+          "x": 0,
+          "y": 1305,
+          "w": 1440,
+          "h": 707,
+          "slug": "home-pain",
+          "dir": "design/figma/pages/home/pain",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 29,
+            "nodes": 34,
+            "coverage": 100,
+            "worstDelta": 0.730000000000004,
+            "at": "2026-11-08T13:21:18.239Z"
+          },
+          "pixel": {
+            "mean": 4.14,
+            "over16": 3.43,
+            "over48": 1.91,
+            "at": "2026-11-09T20:31:02.133Z"
+          },
+          "assets": {
+            "nodes": 34,
+            "images": 2,
+            "png": 1,
+            "jpg": 1,
+            "svg": 1,
+            "bytes": 2883055,
+            "bound": 31,
+            "effects": 0,
+            "fills": 20
+          },
+          "images": {
+            "figma": "/structure/home-pain-figma.png",
+            "site": "/structure/home-pain-site.png"
+          }
+        },
+        {
+          "id": "79:127",
+          "name": "method",
+          "type": "FRAME",
+          "x": 0,
+          "y": 2012,
+          "w": 1440,
+          "h": 615,
+          "slug": "home-method",
+          "dir": "design/figma/pages/home/method",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 11,
+            "nodes": 16,
+            "coverage": 100,
+            "worstDelta": 0.9199999999999875,
+            "at": "2026-11-11T15:20:38.791Z"
+          },
+          "pixel": {
+            "mean": 1.23,
+            "over16": 1.1,
+            "over48": 0.49,
+            "at": "2026-11-11T15:19:46.097Z"
+          },
+          "assets": {
+            "nodes": 16,
+            "images": 0,
+            "png": 0,
+            "jpg": 0,
+            "svg": 1,
+            "bytes": 3781,
+            "bound": 13,
+            "effects": 0,
+            "fills": 4
+          },
+          "images": {
+            "figma": "/structure/home-method-figma.png",
+            "site": "/structure/home-method-site.png"
+          }
+        },
+        {
+          "id": "79:137",
+          "name": "quiz",
+          "type": "FRAME",
+          "x": 0,
+          "y": 2627,
+          "w": 1440,
+          "h": 550,
+          "slug": "home-quiz",
+          "dir": "design/figma/pages/home/quiz",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 12,
+            "nodes": 17,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:20.258Z"
+          },
+          "pixel": {
+            "mean": 2.2,
+            "over16": 2.53,
+            "over48": 1.75,
+            "at": "2026-11-09T20:31:02.545Z"
+          },
+          "assets": {
+            "nodes": 17,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 1,
+            "bytes": 63778,
+            "bound": 14,
+            "effects": 0,
+            "fills": 4
+          },
+          "images": {
+            "figma": "/structure/home-quiz-figma.png",
+            "site": "/structure/home-quiz-site.png"
+          }
+        },
+        {
+          "id": "79:148",
+          "name": "about-founder",
+          "type": "FRAME",
+          "x": 0,
+          "y": 3177,
+          "w": 1440,
+          "h": 757,
+          "slug": "home-about-founder",
+          "dir": "design/figma/pages/home/about-founder",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 16,
+            "nodes": 21,
+            "coverage": 100,
+            "worstDelta": 0.5,
+            "at": "2026-11-08T13:21:07.092Z"
+          },
+          "pixel": {
+            "mean": 1.24,
+            "over16": 1.52,
+            "over48": 0.45,
+            "at": "2026-11-09T20:31:00.072Z"
+          },
+          "assets": {
+            "nodes": 21,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 1,
+            "bytes": 1963959,
+            "bound": 19,
+            "effects": 0,
+            "fills": 4
+          },
+          "images": {
+            "figma": "/structure/home-about-founder-figma.png",
+            "site": "/structure/home-about-founder-site.png"
+          }
+        },
+        {
+          "id": "79:166",
+          "name": "process",
+          "type": "FRAME",
+          "x": 0,
+          "y": 3934,
+          "w": 1440,
+          "h": 1429,
+          "slug": "home-process",
+          "dir": "design/figma/pages/home/process",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 25,
+            "nodes": 25,
+            "coverage": 100,
+            "worstDelta": 0.5,
+            "at": "2026-11-11T15:19:02.159Z"
+          },
+          "pixel": {
+            "mean": 2.56,
+            "over16": 5.46,
+            "over48": 1.94,
+            "at": "2026-11-11T15:19:46.315Z"
+          },
+          "assets": {
+            "nodes": 25,
+            "images": 3,
+            "png": 3,
+            "jpg": 0,
+            "svg": 0,
+            "bytes": 3751718,
+            "bound": 21,
+            "effects": 0,
+            "fills": 11
+          },
+          "images": {
+            "figma": "/structure/home-process-figma.png",
+            "site": "/structure/home-process-site.png"
+          }
+        },
+        {
+          "id": "79:173",
+          "name": "entry",
+          "type": "FRAME",
+          "x": 0,
+          "y": 5363,
+          "w": 1440,
+          "h": 892,
+          "slug": "home-entry",
+          "dir": "design/figma/pages/home/entry",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 17,
+            "nodes": 23,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:10.150Z"
+          },
+          "pixel": {
+            "mean": 5.1,
+            "over16": 11.24,
+            "over48": 1.15,
+            "at": "2026-11-09T20:31:00.613Z"
+          },
+          "assets": {
+            "nodes": 23,
+            "images": 2,
+            "png": 1,
+            "jpg": 1,
+            "svg": 1,
+            "bytes": 2944546,
+            "bound": 21,
+            "effects": 0,
+            "fills": 6
+          },
+          "images": {
+            "figma": "/structure/home-entry-figma.png",
+            "site": "/structure/home-entry-site.png"
+          }
+        },
+        {
+          "id": "102:220",
+          "name": "formats",
+          "type": "FRAME",
+          "x": 0,
+          "y": 6255,
+          "w": 1440,
+          "h": 1164,
+          "slug": "home-formats",
+          "dir": "design/figma/pages/home/formats",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 24,
+            "nodes": 77,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-11T18:24:29.119Z"
+          },
+          "pixel": {
+            "mean": 3.71,
+            "over16": 4.98,
+            "over48": 1.65,
+            "at": "2026-11-11T16:06:03.529Z"
+          },
+          "assets": {
+            "nodes": 77,
+            "images": 3,
+            "png": 3,
+            "jpg": 0,
+            "svg": 3,
+            "bytes": 6728910,
+            "bound": 72,
+            "effects": 0,
+            "fills": 23
+          },
+          "images": {
+            "figma": "/structure/home-formats-figma.png",
+            "site": "/structure/home-formats-site.png"
+          }
+        },
+        {
+          "id": "116:246",
+          "name": "voices",
+          "type": "FRAME",
+          "x": 0,
+          "y": 7419,
+          "w": 1440,
+          "h": 920,
+          "slug": "home-voices",
+          "dir": "design/figma/pages/home/voices",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 35,
+            "nodes": 70,
+            "coverage": 100,
+            "worstDelta": 0.5300000000000011,
+            "at": "2026-11-11T18:24:47.511Z"
+          },
+          "pixel": {
+            "mean": 13.23,
+            "over16": 23.3,
+            "over48": 6.43,
+            "at": "2026-11-11T16:06:05.700Z"
+          },
+          "assets": {
+            "nodes": 70,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 5,
+            "bytes": 1994001,
+            "bound": 52,
+            "effects": 0,
+            "fills": 8
+          },
+          "images": {
+            "figma": "/structure/home-voices-figma.png",
+            "site": "/structure/home-voices-site.png"
+          }
+        },
+        {
+          "id": "148:487",
+          "name": "library",
+          "type": "FRAME",
+          "x": 0,
+          "y": 8339,
+          "w": 1440,
+          "h": 641,
+          "slug": "home-library",
+          "dir": "design/figma/pages/home/library",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 15,
+            "nodes": 18,
+            "coverage": 100,
+            "worstDelta": 0.5,
+            "at": "2026-11-08T13:21:16.213Z"
+          },
+          "pixel": {
+            "mean": 1.48,
+            "over16": 1.04,
+            "over48": 0.5,
+            "at": "2026-11-09T20:31:01.784Z"
+          },
+          "assets": {
+            "nodes": 18,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 1,
+            "bytes": 2716934,
+            "bound": 16,
+            "effects": 0,
+            "fills": 4
+          },
+          "images": {
+            "figma": "/structure/home-library-figma.png",
+            "site": "/structure/home-library-site.png"
+          }
+        },
+        {
+          "id": "148:506",
+          "name": "air-photo",
+          "type": "FRAME",
+          "x": 0,
+          "y": 8980,
+          "w": 1440,
+          "h": 400,
+          "slug": "home-air-photo",
+          "dir": "design/figma/pages/home/air-photo",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 1,
+            "nodes": 1,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:08.107Z"
+          },
+          "pixel": {
+            "mean": 5.91,
+            "over16": 0.38,
+            "over48": 0,
+            "at": "2026-11-09T20:31:00.236Z"
+          },
+          "assets": {
+            "nodes": 1,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 77325,
+            "bound": 0,
+            "effects": 0,
+            "fills": 0
+          },
+          "images": {
+            "figma": "/structure/home-air-photo-figma.png",
+            "site": "/structure/home-air-photo-site.png"
+          }
+        },
+        {
+          "id": "148:508",
+          "name": "faq",
+          "type": "FRAME",
+          "x": 0,
+          "y": 9380,
+          "w": 1440,
+          "h": 807,
+          "slug": "home-faq",
+          "dir": "design/figma/pages/home/faq",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 32,
+            "nodes": 52,
+            "coverage": 100,
+            "worstDelta": 0.4399999999999977,
+            "at": "2026-11-11T18:24:47.478Z"
+          },
+          "pixel": {
+            "mean": 5.41,
+            "over16": 2.89,
+            "over48": 1.82,
+            "at": "2026-11-11T16:06:02.424Z"
+          },
+          "assets": {
+            "nodes": 52,
+            "images": 2,
+            "png": 2,
+            "jpg": 0,
+            "svg": 3,
+            "bytes": 4464005,
+            "bound": 33,
+            "effects": 0,
+            "fills": 20
+          },
+          "images": {
+            "figma": "/structure/home-faq-figma.png",
+            "site": "/structure/home-faq-site.png"
+          }
+        },
+        {
+          "id": "148:561",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 10187,
+          "w": 1440,
+          "h": 361,
+          "slug": "home-footer",
+          "dir": "design/figma/pages/home/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-08T13:21:12.186Z"
+          },
+          "pixel": {
+            "mean": 1.04,
+            "over16": 1.22,
+            "over48": 0.44,
+            "at": "2026-11-09T20:31:00.972Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/home-footer-figma.png",
+            "site": "/structure/home-footer-site.png"
+          }
+        },
+        {
+          "id": "79:104",
+          "name": "header",
+          "type": "INSTANCE",
+          "x": 8,
+          "y": 8,
+          "w": 1424,
+          "h": 92,
+          "slug": "home-header",
+          "dir": "design/figma/pages/home/header",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 29,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:18.317Z"
+          },
+          "pixel": {
+            "mean": 3.83,
+            "over16": 5.94,
+            "over48": 1.97,
+            "at": "2026-11-09T20:31:01.393Z"
+          },
+          "assets": {
+            "nodes": 29,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2791320,
+            "bound": 22,
+            "effects": 1,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/home-header-figma.png",
+            "site": "/structure/home-header-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 15,
+        "green": 15,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    },
+    {
+      "key": "masters",
+      "id": "190:487",
+      "route": "/masters.html",
+      "built": true,
+      "title": "Masters",
+      "frame": {
+        "id": "217:237",
+        "name": "main",
+        "w": 1440,
+        "h": 3886
+      },
+      "sections": [
+        {
+          "id": "217:238",
+          "name": "founder-hero",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 839,
+          "slug": "masters-founder-hero",
+          "dir": "design/figma/pages/masters/founder-hero",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 15,
+            "nodes": 70,
+            "coverage": 100,
+            "worstDelta": 0.6999999999999993,
+            "at": "2026-11-11T16:10:05.362Z"
+          },
+          "pixel": {
+            "mean": 12.15,
+            "over16": 33.31,
+            "over48": 3.02,
+            "at": "2026-11-11T16:06:04.565Z"
+          },
+          "assets": {
+            "nodes": 70,
+            "images": 3,
+            "png": 2,
+            "jpg": 1,
+            "svg": 3,
+            "bytes": 6513060,
+            "bound": 59,
+            "effects": 2,
+            "fills": 18
+          },
+          "images": {
+            "figma": "/structure/masters-founder-hero-figma.png",
+            "site": "/structure/masters-founder-hero-site.png"
+          }
+        },
+        {
+          "id": "217:345",
+          "name": "masters-team",
+          "type": "FRAME",
+          "x": 0,
+          "y": 839,
+          "w": 1440,
+          "h": 2066,
+          "slug": "masters-masters-team",
+          "dir": "design/figma/pages/masters/masters-team",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 12,
+            "nodes": 56,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:32.338Z"
+          },
+          "pixel": {
+            "mean": 1.82,
+            "over16": 2.18,
+            "over48": 0.65,
+            "at": "2026-11-09T20:31:04.810Z"
+          },
+          "assets": {
+            "nodes": 56,
+            "images": 3,
+            "png": 3,
+            "jpg": 0,
+            "svg": 3,
+            "bytes": 7410571,
+            "bound": 45,
+            "effects": 2,
+            "fills": 14
+          },
+          "images": {
+            "figma": "/structure/masters-masters-team-figma.png",
+            "site": "/structure/masters-masters-team-site.png"
+          }
+        },
+        {
+          "id": "256:374",
+          "name": "masters-more",
+          "type": "FRAME",
+          "x": 0,
+          "y": 2905,
+          "w": 1440,
+          "h": 620,
+          "slug": "masters-masters-more",
+          "dir": "design/figma/pages/masters/masters-more",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 8,
+            "nodes": 38,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:31.357Z"
+          },
+          "pixel": {
+            "mean": 4.18,
+            "over16": 2.88,
+            "over48": 1.13,
+            "at": "2026-11-09T20:31:04.519Z"
+          },
+          "assets": {
+            "nodes": 38,
+            "images": 3,
+            "png": 0,
+            "jpg": 3,
+            "svg": 1,
+            "bytes": 210468,
+            "bound": 32,
+            "effects": 0,
+            "fills": 19
+          },
+          "images": {
+            "figma": "/structure/masters-masters-more-figma.png",
+            "site": "/structure/masters-masters-more-site.png"
+          }
+        },
+        {
+          "id": "233:401",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 3525,
+          "w": 1440,
+          "h": 361,
+          "slug": "masters-footer",
+          "dir": "design/figma/pages/masters/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-09T04:26:11.014Z"
+          },
+          "pixel": {
+            "mean": 1.04,
+            "over16": 1.22,
+            "over48": 0.44,
+            "at": "2026-11-09T20:31:03.993Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/masters-footer-figma.png",
+            "site": "/structure/masters-footer-site.png"
+          }
+        },
+        {
+          "id": "217:261",
+          "name": "header",
+          "type": "INSTANCE",
+          "x": 8,
+          "y": 8,
+          "w": 1424,
+          "h": 92,
+          "slug": "masters-header",
+          "dir": "design/figma/pages/masters/header",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 29,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:19.575Z"
+          },
+          "pixel": {
+            "mean": 3.82,
+            "over16": 5.99,
+            "over48": 1.9,
+            "at": "2026-11-09T20:31:04.332Z"
+          },
+          "assets": {
+            "nodes": 29,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2791332,
+            "bound": 22,
+            "effects": 1,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/masters-header-figma.png",
+            "site": "/structure/masters-header-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 5,
+        "green": 5,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    },
+    {
+      "key": "library",
+      "id": "261:446",
+      "route": "/library.html",
+      "built": true,
+      "title": "Library",
+      "frame": {
+        "id": "267:450",
+        "name": "main",
+        "w": 1440,
+        "h": 3188
+      },
+      "sections": [
+        {
+          "id": "267:451",
+          "name": "library-hero",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 820,
+          "slug": "library-library-hero",
+          "dir": "design/figma/pages/library/library-hero",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 6,
+            "nodes": 10,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:25.296Z"
+          },
+          "pixel": {
+            "mean": 2.17,
+            "over16": 2.7,
+            "over48": 0.4,
+            "at": "2026-11-09T20:31:03.475Z"
+          },
+          "assets": {
+            "nodes": 10,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 1,
+            "bytes": 2300561,
+            "bound": 8,
+            "effects": 0,
+            "fills": 2
+          },
+          "images": {
+            "figma": "/structure/library-library-hero-figma.png",
+            "site": "/structure/library-library-hero-site.png"
+          }
+        },
+        {
+          "id": "267:953",
+          "name": "library-book",
+          "type": "FRAME",
+          "x": 0,
+          "y": 820,
+          "w": 1440,
+          "h": 882,
+          "slug": "library-library-book",
+          "dir": "design/figma/pages/library/library-book",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 11,
+            "nodes": 15,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:24.324Z"
+          },
+          "pixel": {
+            "mean": 2.9,
+            "over16": 3,
+            "over48": 1.2,
+            "at": "2026-11-09T20:31:03.266Z"
+          },
+          "assets": {
+            "nodes": 15,
+            "images": 2,
+            "png": 1,
+            "jpg": 1,
+            "svg": 1,
+            "bytes": 2873483,
+            "bound": 13,
+            "effects": 0,
+            "fills": 6
+          },
+          "images": {
+            "figma": "/structure/library-library-book-figma.png",
+            "site": "/structure/library-library-book-site.png"
+          }
+        },
+        {
+          "id": "272:1017",
+          "name": "library-journal",
+          "type": "FRAME",
+          "x": 0,
+          "y": 1702,
+          "w": 1440,
+          "h": 570,
+          "slug": "library-library-journal",
+          "dir": "design/figma/pages/library/library-journal",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 18,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:27.268Z"
+          },
+          "pixel": {
+            "mean": 11.17,
+            "over16": 19.36,
+            "over48": 8.91,
+            "at": "2026-11-09T20:31:03.831Z"
+          },
+          "assets": {
+            "nodes": 18,
+            "images": 2,
+            "png": 1,
+            "jpg": 1,
+            "svg": 1,
+            "bytes": 6410115,
+            "bound": 16,
+            "effects": 0,
+            "fills": 5
+          },
+          "images": {
+            "figma": "/structure/library-library-journal-figma.png",
+            "site": "/structure/library-library-journal-site.png"
+          }
+        },
+        {
+          "id": "272:1044",
+          "name": "library-issues",
+          "type": "FRAME",
+          "x": 0,
+          "y": 2272,
+          "w": 1440,
+          "h": 555,
+          "slug": "library-library-issues",
+          "dir": "design/figma/pages/library/library-issues",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 11,
+            "nodes": 63,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:26.281Z"
+          },
+          "pixel": {
+            "mean": 6.76,
+            "over16": 15.68,
+            "over48": 3.49,
+            "at": "2026-11-09T20:31:03.661Z"
+          },
+          "assets": {
+            "nodes": 63,
+            "images": 4,
+            "png": 0,
+            "jpg": 4,
+            "svg": 1,
+            "bytes": 3915417,
+            "bound": 48,
+            "effects": 0,
+            "fills": 21
+          },
+          "images": {
+            "figma": "/structure/library-library-issues-figma.png",
+            "site": "/structure/library-library-issues-site.png"
+          }
+        },
+        {
+          "id": "282:759",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 2827,
+          "w": 1440,
+          "h": 361,
+          "slug": "library-footer",
+          "dir": "design/figma/pages/library/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-09T04:26:10.384Z"
+          },
+          "pixel": {
+            "mean": 3.16,
+            "over16": 1.26,
+            "over48": 0.44,
+            "at": "2026-11-09T20:31:02.939Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/library-footer-figma.png",
+            "site": "/structure/library-footer-site.png"
+          }
+        },
+        {
+          "id": "267:923",
+          "name": "header",
+          "type": "INSTANCE",
+          "x": 8,
+          "y": 8,
+          "w": 1424,
+          "h": 92,
+          "slug": "library-header",
+          "dir": "design/figma/pages/library/header",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 29,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:18.949Z"
+          },
+          "pixel": {
+            "mean": 4.47,
+            "over16": 5.8,
+            "over48": 1.93,
+            "at": "2026-11-09T20:31:03.069Z"
+          },
+          "assets": {
+            "nodes": 29,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2791330,
+            "bound": 22,
+            "effects": 1,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/library-header-figma.png",
+            "site": "/structure/library-header-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 6,
+        "green": 6,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    },
+    {
+      "key": "practice",
+      "id": "262:446",
+      "route": "/practice.html",
+      "built": true,
+      "title": "Practice",
+      "frame": {
+        "id": "408:241",
+        "name": "practice-page",
+        "w": 1440,
+        "h": 9291
+      },
+      "sections": [
+        {
+          "id": "409:243",
+          "name": "hero",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "slug": "practice-hero",
+          "dir": "design/figma/pages/practice/hero",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 18,
+            "nodes": 33,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:20.854Z"
+          },
+          "pixel": {
+            "mean": 5.46,
+            "over16": 3.07,
+            "over48": 2.36,
+            "at": "2026-11-09T20:31:06.068Z"
+          },
+          "assets": {
+            "nodes": 33,
+            "images": 2,
+            "png": 2,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 4982039,
+            "bound": 25,
+            "effects": 1,
+            "fills": 4
+          },
+          "images": {
+            "figma": "/structure/practice-hero-figma.png",
+            "site": "/structure/practice-hero-site.png"
+          }
+        },
+        {
+          "id": "410:1122",
+          "name": "practice-free",
+          "type": "FRAME",
+          "x": 0,
+          "y": 900,
+          "w": 1440,
+          "h": 916,
+          "slug": "practice-practice-free",
+          "dir": "design/figma/pages/practice/practice-free",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 16,
+            "nodes": 112,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:42.436Z"
+          },
+          "pixel": {
+            "mean": 9.13,
+            "over16": 10.42,
+            "over48": 6.86,
+            "at": "2026-11-09T20:31:06.758Z"
+          },
+          "assets": {
+            "nodes": 112,
+            "images": 5,
+            "png": 4,
+            "jpg": 1,
+            "svg": 5,
+            "bytes": 10234758,
+            "bound": 88,
+            "effects": 0,
+            "fills": 18
+          },
+          "images": {
+            "figma": "/structure/practice-practice-free-figma.png",
+            "site": "/structure/practice-practice-free-site.png"
+          }
+        },
+        {
+          "id": "410:1365",
+          "name": "quiz",
+          "type": "FRAME",
+          "x": 0,
+          "y": 1816,
+          "w": 1440,
+          "h": 550,
+          "slug": "practice-quiz",
+          "dir": "design/figma/pages/practice/quiz",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 15,
+            "nodes": 19,
+            "coverage": 100,
+            "worstDelta": 0.04999999999999716,
+            "at": "2026-11-08T13:21:45.553Z"
+          },
+          "pixel": {
+            "mean": 2.41,
+            "over16": 1.97,
+            "over48": 1.39,
+            "at": "2026-11-09T20:31:07.533Z"
+          },
+          "assets": {
+            "nodes": 19,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 1,
+            "bytes": 63786,
+            "bound": 12,
+            "effects": 0,
+            "fills": 1
+          },
+          "images": {
+            "figma": "/structure/practice-quiz-figma.png",
+            "site": "/structure/practice-quiz-site.png"
+          }
+        },
+        {
+          "id": "410:1414",
+          "name": "practice-pay",
+          "type": "FRAME",
+          "x": 0,
+          "y": 2366,
+          "w": 1440,
+          "h": 2001,
+          "slug": "practice-practice-pay",
+          "dir": "design/figma/pages/practice/practice-pay",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 16,
+            "nodes": 249,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:44.500Z"
+          },
+          "pixel": {
+            "mean": 12.36,
+            "over16": 32.8,
+            "over48": 3.64,
+            "at": "2026-11-09T20:31:07.360Z"
+          },
+          "assets": {
+            "nodes": 249,
+            "images": 8,
+            "png": 2,
+            "jpg": 6,
+            "svg": 3,
+            "bytes": 17451645,
+            "bound": 177,
+            "effects": 0,
+            "fills": 31
+          },
+          "images": {
+            "figma": "/structure/practice-practice-pay-figma.png",
+            "site": "/structure/practice-practice-pay-site.png"
+          }
+        },
+        {
+          "id": "414:1970",
+          "name": "kody-practice-pay",
+          "type": "FRAME",
+          "x": 0,
+          "y": 4367,
+          "w": 1440,
+          "h": 2078,
+          "slug": "practice-kody-practice-pay",
+          "dir": "design/figma/pages/practice/kody-practice-pay",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 16,
+            "nodes": 249,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:41.403Z"
+          },
+          "pixel": {
+            "mean": 11.85,
+            "over16": 31.43,
+            "over48": 3.21,
+            "at": "2026-11-09T20:31:06.566Z"
+          },
+          "assets": {
+            "nodes": 249,
+            "images": 8,
+            "png": 1,
+            "jpg": 7,
+            "svg": 3,
+            "bytes": 4188672,
+            "bound": 177,
+            "effects": 0,
+            "fills": 31
+          },
+          "images": {
+            "figma": "/structure/practice-kody-practice-pay-figma.png",
+            "site": "/structure/practice-kody-practice-pay-site.png"
+          }
+        },
+        {
+          "id": "414:2107",
+          "name": "practice-package",
+          "type": "FRAME",
+          "x": 0,
+          "y": 6445,
+          "w": 1440,
+          "h": 1533,
+          "slug": "practice-practice-package",
+          "dir": "design/figma/pages/practice/practice-package",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 9,
+            "nodes": 119,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:43.457Z"
+          },
+          "pixel": {
+            "mean": 10.91,
+            "over16": 23.96,
+            "over48": 6.27,
+            "at": "2026-11-09T20:31:07.018Z"
+          },
+          "assets": {
+            "nodes": 119,
+            "images": 2,
+            "png": 2,
+            "jpg": 0,
+            "svg": 5,
+            "bytes": 4752671,
+            "bound": 92,
+            "effects": 3,
+            "fills": 27
+          },
+          "images": {
+            "figma": "/structure/practice-practice-package-figma.png",
+            "site": "/structure/practice-practice-package-site.png"
+          }
+        },
+        {
+          "id": "435:423",
+          "name": "info-section",
+          "type": "FRAME",
+          "x": 0,
+          "y": 7978,
+          "w": 1440,
+          "h": 952,
+          "slug": "practice-info-section",
+          "dir": "design/figma/pages/practice/info-section",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 16,
+            "nodes": 35,
+            "coverage": 100,
+            "worstDelta": 1,
+            "at": "2026-11-08T13:21:40.397Z"
+          },
+          "pixel": {
+            "mean": 9.81,
+            "over16": 11.06,
+            "over48": 3.82,
+            "at": "2026-11-09T20:31:06.281Z"
+          },
+          "assets": {
+            "nodes": 35,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2728218,
+            "bound": 25,
+            "effects": 0,
+            "fills": 5
+          },
+          "images": {
+            "figma": "/structure/practice-info-section-figma.png",
+            "site": "/structure/practice-info-section-site.png"
+          }
+        },
+        {
+          "id": "414:2262",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 8930,
+          "w": 1440,
+          "h": 361,
+          "slug": "practice-footer",
+          "dir": "design/figma/pages/practice/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-09T04:26:12.309Z"
+          },
+          "pixel": {
+            "mean": 1.04,
+            "over16": 1.22,
+            "over48": 0.44,
+            "at": "2026-11-09T20:31:05.829Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/practice-footer-figma.png",
+            "site": "/structure/practice-footer-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 8,
+        "green": 8,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    },
+    {
+      "key": "quiz",
+      "id": "262:447",
+      "route": "/quiz.html",
+      "built": true,
+      "title": "Quiz",
+      "frame": {
+        "id": "529:118",
+        "name": "quiz",
+        "w": 1440,
+        "h": 1218
+      },
+      "sections": [
+        {
+          "id": "529:119",
+          "name": "quiz-section",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 857,
+          "slug": "quiz-quiz-section",
+          "dir": "design/figma/pages/quiz/quiz-section",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 16,
+            "nodes": 83,
+            "coverage": 100,
+            "worstDelta": 0.5,
+            "at": "2026-11-09T16:17:07.670Z"
+          },
+          "pixel": {
+            "mean": 3.22,
+            "over16": 3.27,
+            "over48": 1.77,
+            "at": "2026-11-09T20:31:08.269Z"
+          },
+          "assets": {
+            "nodes": 83,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 6,
+            "bytes": 2181867,
+            "bound": 61,
+            "effects": 0,
+            "fills": 6
+          },
+          "images": {
+            "figma": "/structure/quiz-quiz-section-figma.png",
+            "site": "/structure/quiz-quiz-section-site.png"
+          }
+        },
+        {
+          "id": "530:552",
+          "name": "header",
+          "type": "INSTANCE",
+          "x": 8,
+          "y": 10,
+          "w": 1424,
+          "h": 92,
+          "slug": "quiz-header",
+          "dir": "design/figma/pages/quiz/header",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 29,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:21.468Z"
+          },
+          "pixel": {
+            "mean": 3.77,
+            "over16": 5.64,
+            "over48": 1.86,
+            "at": "2026-11-09T20:31:07.824Z"
+          },
+          "assets": {
+            "nodes": 29,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2791330,
+            "bound": 22,
+            "effects": 1,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/quiz-header-figma.png",
+            "site": "/structure/quiz-header-site.png"
+          }
+        },
+        {
+          "id": "531:142",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 857,
+          "w": 1440,
+          "h": 361,
+          "slug": "quiz-footer",
+          "dir": "design/figma/pages/quiz/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-09T04:26:12.930Z"
+          },
+          "pixel": {
+            "mean": 1.04,
+            "over16": 1.22,
+            "over48": 0.44,
+            "at": "2026-11-09T20:31:07.699Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/quiz-footer-figma.png",
+            "site": "/structure/quiz-footer-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 3,
+        "green": 3,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    },
+    {
+      "key": "booking",
+      "id": "263:448",
+      "route": "/booking.html",
+      "built": true,
+      "title": "Booking",
+      "frame": {
+        "id": "383:286",
+        "name": "main",
+        "w": 1440,
+        "h": 2416
+      },
+      "sections": [
+        {
+          "id": "383:287",
+          "name": "booking-hero",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 509,
+          "slug": "booking-booking-hero",
+          "dir": "design/figma/pages/booking/booking-hero",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 5,
+            "nodes": 5,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T13:21:04.128Z"
+          },
+          "pixel": {
+            "mean": 3.87,
+            "over16": 4.08,
+            "over48": 0.34,
+            "at": "2026-11-09T20:30:59.597Z"
+          },
+          "assets": {
+            "nodes": 5,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 0,
+            "bytes": 3114278,
+            "bound": 5,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/booking-booking-hero-figma.png",
+            "site": "/structure/booking-booking-hero-site.png"
+          }
+        },
+        {
+          "id": "383:761",
+          "name": "booking-formats",
+          "type": "FRAME",
+          "x": 0,
+          "y": 509,
+          "w": 1440,
+          "h": 1546,
+          "slug": "booking-booking-formats",
+          "dir": "design/figma/pages/booking/booking-formats",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 21,
+            "nodes": 144,
+            "coverage": 100,
+            "worstDelta": 0.8000000000000114,
+            "at": "2026-11-11T19:10:16.920Z"
+          },
+          "pixel": {
+            "mean": 9.28,
+            "over16": 10.18,
+            "over48": 8.59,
+            "at": "2026-11-11T16:06:06.536Z"
+          },
+          "assets": {
+            "nodes": 144,
+            "images": 0,
+            "png": 0,
+            "jpg": 0,
+            "svg": 2,
+            "bytes": 34311,
+            "bound": 137,
+            "effects": 0,
+            "fills": 56
+          },
+          "images": {
+            "figma": "/structure/booking-booking-formats-figma.png",
+            "site": "/structure/booking-booking-formats-site.png"
+          }
+        },
+        {
+          "id": "383:1101",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 2055,
+          "w": 1440,
+          "h": 361,
+          "slug": "booking-footer",
+          "dir": "design/figma/pages/booking/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-09T04:26:09.105Z"
+          },
+          "pixel": {
+            "mean": 1.04,
+            "over16": 1.22,
+            "over48": 0.44,
+            "at": "2026-11-09T20:30:59.755Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/booking-footer-figma.png",
+            "site": "/structure/booking-footer-site.png"
+          }
+        },
+        {
+          "id": "387:1464",
+          "name": "header",
+          "type": "INSTANCE",
+          "x": 8,
+          "y": 8,
+          "w": 1424,
+          "h": 92,
+          "slug": "booking-header",
+          "dir": "design/figma/pages/booking/header",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 29,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:17.670Z"
+          },
+          "pixel": {
+            "mean": 4.08,
+            "over16": 5.77,
+            "over48": 1.93,
+            "at": "2026-11-09T20:30:59.886Z"
+          },
+          "assets": {
+            "nodes": 29,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2791330,
+            "bound": 22,
+            "effects": 1,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/booking-header-figma.png",
+            "site": "/structure/booking-header-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 4,
+        "green": 4,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    },
+    {
+      "key": "method",
+      "id": "263:449",
+      "route": "/method.html",
+      "built": true,
+      "title": "Method",
+      "frame": {
+        "id": "323:422",
+        "name": "main",
+        "w": 1440,
+        "h": 2737
+      },
+      "sections": [
+        {
+          "id": "323:423",
+          "name": "method-hero",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 800,
+          "slug": "method-method-hero",
+          "dir": "design/figma/pages/method/method-hero",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 4,
+            "nodes": 4,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T17:18:58.450Z"
+          },
+          "pixel": {
+            "mean": 1.11,
+            "over16": 0.7,
+            "over48": 0.22,
+            "at": "2026-11-09T20:31:05.673Z"
+          },
+          "assets": {
+            "nodes": 4,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 0,
+            "bytes": 1886434,
+            "bound": 4,
+            "effects": 0,
+            "fills": 2
+          },
+          "images": {
+            "figma": "/structure/method-method-hero-figma.png",
+            "site": "/structure/method-method-hero-site.png"
+          }
+        },
+        {
+          "id": "323:871",
+          "name": "method-about",
+          "type": "FRAME",
+          "x": 0,
+          "y": 800,
+          "w": 1440,
+          "h": 1077,
+          "slug": "method-method-about",
+          "dir": "design/figma/pages/method/method-about",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 18,
+            "nodes": 18,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T17:20:55.798Z"
+          },
+          "pixel": {
+            "mean": 3.9,
+            "over16": 4.48,
+            "over48": 3.16,
+            "at": "2026-11-11T16:06:01.380Z"
+          },
+          "assets": {
+            "nodes": 18,
+            "images": 0,
+            "png": 0,
+            "jpg": 0,
+            "svg": 0,
+            "bytes": 0,
+            "bound": 18,
+            "effects": 0,
+            "fills": 8
+          },
+          "images": {
+            "figma": "/structure/method-method-about-figma.png",
+            "site": "/structure/method-method-about-site.png"
+          }
+        },
+        {
+          "id": "334:992",
+          "name": "method-cta",
+          "type": "FRAME",
+          "x": 0,
+          "y": 1877,
+          "w": 1440,
+          "h": 499,
+          "slug": "method-method-cta",
+          "dir": "design/figma/pages/method/method-cta",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 8,
+            "nodes": 14,
+            "coverage": 100,
+            "worstDelta": 0,
+            "at": "2026-11-08T17:22:45.665Z"
+          },
+          "pixel": {
+            "mean": 1.75,
+            "over16": 1.75,
+            "over48": 0.7,
+            "at": "2026-11-09T20:31:05.472Z"
+          },
+          "assets": {
+            "nodes": 14,
+            "images": 2,
+            "png": 2,
+            "jpg": 0,
+            "svg": 0,
+            "bytes": 5091940,
+            "bound": 12,
+            "effects": 0,
+            "fills": 4
+          },
+          "images": {
+            "figma": "/structure/method-method-cta-figma.png",
+            "site": "/structure/method-method-cta-site.png"
+          }
+        },
+        {
+          "id": "335:1020",
+          "name": "footer",
+          "type": "INSTANCE",
+          "x": 0,
+          "y": 2376,
+          "w": 1440,
+          "h": 361,
+          "slug": "method-footer",
+          "dir": "design/figma/pages/method/footer",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 31,
+            "nodes": 31,
+            "coverage": 100,
+            "worstDelta": 0.9799999999999969,
+            "at": "2026-11-09T04:26:11.624Z"
+          },
+          "pixel": {
+            "mean": 1.04,
+            "over16": 1.22,
+            "over48": 0.44,
+            "at": "2026-11-09T20:31:04.967Z"
+          },
+          "assets": {
+            "nodes": 31,
+            "images": 1,
+            "png": 0,
+            "jpg": 1,
+            "svg": 0,
+            "bytes": 205035,
+            "bound": 28,
+            "effects": 0,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/method-footer-figma.png",
+            "site": "/structure/method-footer-site.png"
+          }
+        },
+        {
+          "id": "323:872",
+          "name": "header",
+          "type": "INSTANCE",
+          "x": 8,
+          "y": 8,
+          "w": 1424,
+          "h": 92,
+          "slug": "method-header",
+          "dir": "design/figma/pages/method/header",
+          "status": {
+            "key": "green",
+            "label": "зелёный"
+          },
+          "gate": {
+            "ok": true,
+            "red": 0,
+            "marked": 14,
+            "nodes": 29,
+            "coverage": 100,
+            "worstDelta": 0.8899999999999864,
+            "at": "2026-11-09T04:34:20.173Z"
+          },
+          "pixel": {
+            "mean": 3.75,
+            "over16": 5.84,
+            "over48": 1.93,
+            "at": "2026-11-09T20:31:05.095Z"
+          },
+          "assets": {
+            "nodes": 29,
+            "images": 1,
+            "png": 1,
+            "jpg": 0,
+            "svg": 4,
+            "bytes": 2791330,
+            "bound": 22,
+            "effects": 1,
+            "fills": 3
+          },
+          "images": {
+            "figma": "/structure/method-header-figma.png",
+            "site": "/structure/method-header-site.png"
+          }
+        }
+      ],
+      "counts": {
+        "total": 5,
+        "green": 5,
+        "measured": 0,
+        "red": 0,
+        "exported": 0,
+        "todo": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1427 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:58:16.348Z"
+  },
+  "section": {
+    "id": "435:423",
+    "name": "info-section",
+    "w": 1440,
+    "h": 952
+  },
+  "fingerprint": "e073ea2c",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 35,
+    "images": 1,
+    "icons": 4,
+    "iconInstances": 5,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "a2a0739be6ff9e29f9358b6af045e747d9bea77b",
+        "file": "design/figma/assets/img/a2a0739be6ff.png",
+        "bytes": 2713154,
+        "usedBy": "info-section"
+      }
+    ],
+    "icons": [
+      {
+        "node": "435:479",
+        "component": "arrow-quiet 180",
+        "variant": {},
+        "file": "design/figma/assets/svg/arrow-quiet-180.svg",
+        "bytes": 3760
+      },
+      {
+        "node": "I435:479;144:75",
+        "component": "arrow-quiet 90/Variant2",
+        "variant": {},
+        "file": "design/figma/assets/svg/arrow-quiet-90-variant2.svg",
+        "bytes": 3761
+      },
+      {
+        "node": "I435:479;144:75;144:72",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "accent",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-accent-right.svg",
+        "bytes": 3760
+      },
+      {
+        "node": "435:562",
+        "component": "arrow-quiet 90",
+        "variant": {
+          "white arrow": "white"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-90-white.svg",
+        "bytes": 3783
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "435:423",
+      "name": "info-section",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 7978,
+      "w": 1440,
+      "h": 952,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              0.3441390097141266,
+              0,
+              0.6341789960861206
+            ],
+            [
+              0,
+              0.6766412854194641,
+              0.07555388659238815
+            ]
+          ],
+          "imageHash": "a2a0739be6ff9e29f9358b6af045e747d9bea77b",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          64,
+          0,
+          64,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:11",
+        "paddingTop": "VariableID:2:12",
+        "paddingBottom": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "435:424",
+      "name": "tittle-block-practice",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 64,
+      "w": 1280,
+      "h": 197,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          16,
+          0,
+          16,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "435:425",
+      "name": "Бережная практика",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 330,
+      "y": 16,
+      "w": 620,
+      "h": 81,
+      "text": "Бережная практика",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 65,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "435:426",
+      "name": "Перед началом уделите минуту своему состоянию. Практику можно остановить в любой момент — ориентируйтесь на своё самочувствие и не продолжайте через сильное напряжение.",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 66,
+      "y": 113,
+      "w": 1148,
+      "h": 68,
+      "text": "Перед началом уделите минуту своему состоянию. Практику можно остановить в любой момент — ориентируйтесь \nна своё самочувствие и не продолжайте через сильное напряжение.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "435:428",
+      "name": "accordeon-info",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 309,
+      "w": 1280,
+      "h": 579,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16",
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "435:485",
+      "name": "tittle",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 1,
+      "y": 1,
+      "w": 1278,
+      "h": 119,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#f8f8f2",
+            "a": 1
+          },
+          "variable": "practice-surface"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:9",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:9",
+        "fills": [
+          "VariableID:412:1763"
+        ],
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "435:486",
+      "name": "name",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 24,
+      "y": 24,
+      "w": 349,
+      "h": 70,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "435:429",
+      "name": "01",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 8,
+      "w": 42,
+      "h": 55,
+      "text": "01",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "435:430",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 58,
+      "y": 0,
+      "w": 1,
+      "h": 70,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "435:431",
+      "name": "С заботой о тебе",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 75,
+      "y": 15,
+      "w": 274,
+      "h": 41,
+      "text": "С заботой о тебе",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 35,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:479",
+      "name": "arrow-quiet 180",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 1229,
+      "y": 46,
+      "w": 25,
+      "h": 25,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I435:479;144:75",
+      "name": "arrow-quiet 90/Variant2",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 25,
+      "y": 25,
+      "w": 25,
+      "h": 25,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "rotation": -180
+    },
+    {
+      "id": "I435:479;144:75;144:72",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 25,
+      "y": 0,
+      "w": 25,
+      "h": 25,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 2.5704827308654785,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "rotation": -90,
+      "props": {
+        "color": "accent",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I435:479;144:75;144:72;967:2244",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 6,
+      "visible": true,
+      "x": 2,
+      "y": 4,
+      "w": 21,
+      "h": 17
+    },
+    {
+      "id": "I435:479;144:75;144:72;10:4",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 2,
+      "y": 10,
+      "w": 10,
+      "h": 5,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 2.6976702213287354,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I435:479;144:75;144:72;10:7",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 14,
+      "y": 4,
+      "w": 9,
+      "h": 17,
+      "radius": 1.2852413654327393,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 5.395340442657471,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "435:527",
+      "name": "full-list",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 1,
+      "y": 120,
+      "w": 1278,
+      "h": 326,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:9",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "435:522",
+      "name": "list",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 24,
+      "y": 24,
+      "w": 1163,
+      "h": 278,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "435:515",
+      "name": "Перед началом оцени своё состояние по шкале 0–10. Если напряжение выше 6/10 — отложи практику или сделай  её с поддержкой.",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1163,
+      "h": 68,
+      "text": "Перед началом оцени своё состояние по шкале 0–10. Если напряжение выше 6/10 — отложи практику или сделай  её с поддержкой.",
+      "styleName": null,
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontMixed": true,
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Перед началом оцени своё состояние по шкале 0–10. Если напряжение выше 6/10 — отложи практику или сделай ",
+        "её с поддержкой."
+      ],
+      "segments": [
+        {
+          "text": "Перед началом оцени своё состояние по шкале 0–10. ",
+          "style": "body",
+          "font": "Golos Text",
+          "size": 20,
+          "color": "#433d34"
+        },
+        {
+          "text": "Если напряжение выше 6/10 — отложи практику или сделай  её с поддержкой.",
+          "style": null,
+          "font": "Golos Text",
+          "size": 20,
+          "color": "#433d34"
+        }
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:523",
+      "name": "Поставь мягкий таймер на 10–15 минут, держи рядом воду и плед.",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 78,
+      "w": 683,
+      "h": 34,
+      "text": "Поставь мягкий таймер на 10–15 минут, держи рядом воду и плед.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:524",
+      "name": "Сообщи близкому, что ты в практике, или договорись о «якоре поддержки»",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 122,
+      "w": 779,
+      "h": 34,
+      "text": "Сообщи близкому, что ты в практике, или договорись о «якоре поддержки»",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:525",
+      "name": "Если в процессе становится хуже — остановись, открой глаза, сделай три длинных выдоха и сделай паузу.",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 166,
+      "w": 1084,
+      "h": 34,
+      "text": "Если в процессе становится хуже — остановись, открой глаза, сделай три длинных выдоха и сделай паузу.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:526",
+      "name": "Если у тебя есть диагнозы, влияющие на психику, выраженная тревога/депрессия, частые флэшбэки или ты  принимаешь психотропные препараты — выполняй практики только с поддержкой специалиста.",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 210,
+      "w": 1110,
+      "h": 68,
+      "text": "Если у тебя есть диагнозы, влияющие на психику, выраженная тревога/депрессия, частые флэшбэки или ты  принимаешь психотропные препараты — выполняй практики только с поддержкой специалиста.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Если у тебя есть диагнозы, влияющие на психику, выраженная тревога/депрессия, частые флэшбэки или ты ",
+        "принимаешь психотропные препараты — выполняй практики только с поддержкой специалиста."
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:528",
+      "name": "tittle",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 1,
+      "y": 446,
+      "w": 1278,
+      "h": 132,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:9",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:9",
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "435:529",
+      "name": "name",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 24,
+      "y": 25,
+      "w": 861,
+      "h": 83,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "435:530",
+      "name": "02",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 14,
+      "w": 51,
+      "h": 55,
+      "text": "02",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "435:531",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 67,
+      "y": 7,
+      "w": 1,
+      "h": 70,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "435:549",
+      "name": "tittle-short",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 84,
+      "y": 0,
+      "w": 777,
+      "h": 83,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "435:532",
+      "name": "SOS-алгоритм",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 243,
+      "h": 41,
+      "text": "SOS-алгоритм",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 35,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:548",
+      "name": "Короткий SOS-алгоритм, чтобы вернуться в контакт с собой и пространством.",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 49,
+      "w": 777,
+      "h": 34,
+      "text": "Короткий SOS-алгоритм, чтобы вернуться в контакт с собой и пространством.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "435:562",
+      "name": "arrow-quiet 90",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 1228,
+      "y": 54,
+      "w": 26,
+      "h": 26,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "props": {
+        "white arrow": "white"
+      }
+    },
+    {
+      "id": "I435:562;72:125",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 26,
+      "y": 0,
+      "w": 26,
+      "h": 26,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 2.6144635677337646,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "rotation": -90,
+      "props": {
+        "color": "accent",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I435:562;72:125;967:2244",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 5,
+      "visible": true,
+      "x": 2,
+      "y": 4,
+      "w": 22,
+      "h": 18
+    },
+    {
+      "id": "I435:562;72:125;10:4",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 2,
+      "y": 10,
+      "w": 10,
+      "h": 5,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 2.7438271045684814,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I435:562;72:125;10:7",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 15,
+      "y": 4,
+      "w": 9,
+      "h": 18,
+      "radius": 1.3072317838668823,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 5.487654209136963,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    }
+  ]
+}

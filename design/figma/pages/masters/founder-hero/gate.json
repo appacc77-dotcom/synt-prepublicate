@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-12T22:03:44.032Z",
+  "section": {
+    "id": "217:238",
+    "name": "founder-hero",
+    "w": 1440,
+    "h": 839
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 15,
+  "nodes": 66,
+  "coverage": 100,
+  "markedRatio": 22.7,
+  "tolerance": 1,
+  "worstDelta": 0.6999999999999993
+}

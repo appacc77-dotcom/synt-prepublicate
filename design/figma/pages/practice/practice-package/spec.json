@@ -1,0 +1,4791 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:58:31.391Z"
+  },
+  "section": {
+    "id": "414:2107",
+    "name": "practice-package",
+    "w": 1440,
+    "h": 1533
+  },
+  "fingerprint": "620a876f",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 119,
+    "images": 2,
+    "icons": 5,
+    "iconInstances": 15,
+    "states": 2
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "4112a7406758c92d2d31f0ed18085709ac5140b6",
+        "file": "design/figma/assets/img/4112a7406758.png",
+        "bytes": 1954589,
+        "usedBy": "practice-package"
+      },
+      {
+        "hash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+        "file": "design/figma/assets/img/1434b5611dfb.png",
+        "bytes": 2781852,
+        "usedBy": "btn-primary"
+      }
+    ],
+    "icons": [
+      {
+        "node": "427:1171",
+        "component": "accordeon",
+        "variant": {},
+        "file": "design/figma/assets/svg/accordeon.svg",
+        "bytes": 920
+      },
+      {
+        "node": "427:1185",
+        "component": "arrow-quiet 180",
+        "variant": {},
+        "file": "design/figma/assets/svg/arrow-quiet-180.svg",
+        "bytes": 3774
+      },
+      {
+        "node": "I427:1185;144:75",
+        "component": "arrow-quiet 90/Variant2",
+        "variant": {},
+        "file": "design/figma/assets/svg/arrow-quiet-90-variant2.svg",
+        "bytes": 3774
+      },
+      {
+        "node": "I427:1185;144:75;144:72",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "accent",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-accent-right.svg",
+        "bytes": 3774
+      },
+      {
+        "node": "I427:1232;14:128",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-right.svg",
+        "bytes": 3988
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "414:2107",
+      "name": "practice-package",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 6445,
+      "w": 1440,
+      "h": 1533,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              0.48003965616226196,
+              0,
+              0.22410182654857635
+            ],
+            [
+              0,
+              0.9021134972572327,
+              0.07301487028598785
+            ]
+          ],
+          "imageHash": "4112a7406758c92d2d31f0ed18085709ac5140b6",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          64,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "paddingBottom": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "414:2108",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 0,
+      "w": 1280,
+      "h": 1469,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 64,
+        "pad": [
+          64,
+          0,
+          64,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:12",
+        "paddingTop": "VariableID:2:12",
+        "paddingBottom": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "414:2109",
+      "name": "tittle-block-practice",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 64,
+      "w": 1280,
+      "h": 163,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          16,
+          0,
+          16,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "414:2110",
+      "name": "Пакеты",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 521,
+      "y": 16,
+      "w": 239,
+      "h": 81,
+      "text": "Пакеты",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 65,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "414:2111",
+      "name": "Тщательно подобранные варианты доступа к практикам и состояниям, чтобы вы могли выбрать свой ритм и глубину.",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 60,
+      "y": 113,
+      "w": 1160,
+      "h": 34,
+      "text": "Тщательно подобранные варианты доступа к практикам и состояниям, чтобы вы могли выбрать свой ритм и глубину.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "414:2112",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 291,
+      "w": 1280,
+      "h": 1114,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "414:2244",
+      "name": "practice-package-card",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 405,
+      "h": 818,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 16,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "offset": {
+            "x": 2,
+            "y": 4
+          },
+          "color": {
+            "hex": "#6b6357",
+            "a": 0.35
+          },
+          "spread": 4
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "itemSpacing": "VariableID:2:9",
+        "paddingLeft": "VariableID:2:10",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:10",
+        "paddingBottom": "VariableID:2:10",
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18",
+        "effects": [
+          "VariableID:2:9"
+        ]
+      }
+    },
+    {
+      "id": "427:1193",
+      "name": "tittle",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 32,
+      "w": 341,
+      "h": 150,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "427:1147",
+      "name": "Коды построения реальности",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 341,
+      "h": 78,
+      "text": "Коды построения реальности",
+      "styleName": "H4",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 29,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 133.00000429153442
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "427:1148",
+      "name": "7 глубоких состояний для внутренней работы и изменений.",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 102,
+      "w": 341,
+      "h": 48,
+      "text": "7 глубоких состояний для внутренней \nработы и изменений.",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1150",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 206,
+      "w": 341,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "427:1191",
+      "name": "accord",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 231,
+      "w": 341,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "427:1192",
+      "name": "list",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 135,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "427:1171",
+      "name": "accordeon",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 12,
+      "w": 22,
+      "h": 10,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "I427:1171;427:1167",
+      "name": "accordeon",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 22,
+      "h": 10,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1149",
+      "name": "7 практик",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 38,
+      "y": 0,
+      "w": 97,
+      "h": 34,
+      "text": "7 практик",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1185",
+      "name": "arrow-quiet 180",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 327,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I427:1185;144:75",
+      "name": "arrow-quiet 90/Variant2",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 14,
+      "y": 14,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "rotation": -180
+    },
+    {
+      "id": "I427:1185;144:75;144:72",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 14,
+      "y": 0,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "rotation": -90,
+      "props": {
+        "color": "accent",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I427:1185;144:75;144:72;967:2244",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 8,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I427:1185;144:75;144:72;10:4",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I427:1185;144:75;144:72;10:7",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "427:1202",
+      "name": "full-list",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 289,
+      "w": 256,
+      "h": 248,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "427:1194",
+      "name": "Код Тепла. Активация",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 161,
+      "h": 20,
+      "text": "Код Тепла. Активация",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1195",
+      "name": "Код Боли. Возвращение к себе",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 28,
+      "w": 218,
+      "h": 20,
+      "text": "Код Боли. Возвращение к себе",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1196",
+      "name": "Код Страха. Право двигаться вперёд",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 56,
+      "w": 256,
+      "h": 20,
+      "text": "Код Страха. Право двигаться вперёд",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1197",
+      "name": "Код Гнева. Сила без борьбы",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 84,
+      "w": 199,
+      "h": 20,
+      "text": "Код Гнева. Сила без борьбы",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1198",
+      "name": "Код Негодования.  Перестать спорить с прошлым",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 112,
+      "w": 216,
+      "h": 40,
+      "text": "Код Негодования.  Перестать спорить с прошлым",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Код Негодования. ",
+        "Перестать спорить с прошлым"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1199",
+      "name": "Код Гордыни.  Выход из внутреннего холода",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 160,
+      "w": 212,
+      "h": 40,
+      "text": "Код Гордыни.  Выход из внутреннего холода",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Код Гордыни. ",
+        "Выход из внутреннего холода"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1200",
+      "name": "Код Растерянности.  Возвращение ясности",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 208,
+      "w": 163,
+      "h": 40,
+      "text": "Код Растерянности.  Возвращение ясности",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Код Растерянности. ",
+        "Возвращение ясности"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1201",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 561,
+      "w": 341,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "427:1204",
+      "name": "Доступ на 12 месяцев",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 586,
+      "w": 215,
+      "h": 34,
+      "text": "Доступ на 12 месяцев",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1209",
+      "name": "price",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 644,
+      "w": 300,
+      "h": 57,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "427:1205",
+      "name": "160 $",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 110,
+      "h": 57,
+      "text": "160 $",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1206",
+      "name": "вместо 214 $",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 134,
+      "y": 9,
+      "w": 166,
+      "h": 39,
+      "text": "вместо 214 $",
+      "styleName": "H4",
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontMixed": true,
+      "fontSize": 29,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 133.00000429153442
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1232",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 725,
+      "w": 341,
+      "h": 61,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          16,
+          24,
+          16,
+          24
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Открыть пространство",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I427:1232;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 59,
+      "y": 16,
+      "w": 202,
+      "h": 29,
+      "text": "Открыть пространство",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I427:1232;14:128",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 269,
+      "y": 24,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I427:1232;14:128;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 6,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I427:1232;14:128;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I427:1232;14:128;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "427:1247",
+      "name": "practice-package-card",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 437,
+      "y": 0,
+      "w": 405,
+      "h": 774,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#fbf8f1",
+                "a": 1
+              }
+            },
+            {
+              "position": 1,
+              "color": {
+                "hex": "#ebe1ce",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.20342952013015747,
+              0.8030112981796265,
+              -0.006290508899837732
+            ],
+            [
+              -0.8030112981796265,
+              0.7924454212188721,
+              0.5115396976470947
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 16,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "offset": {
+            "x": 2,
+            "y": 4
+          },
+          "color": {
+            "hex": "#7a756d",
+            "a": 0.35
+          },
+          "spread": 4
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "itemSpacing": "VariableID:2:9",
+        "paddingLeft": "VariableID:2:10",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:10",
+        "paddingBottom": "VariableID:2:10",
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18",
+        "fills": [
+          "VariableID:2:21"
+        ]
+      }
+    },
+    {
+      "id": "427:1248",
+      "name": "tittle",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 32,
+      "w": 341,
+      "h": 106,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "427:1249",
+      "name": "Живая жизнь",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 193,
+      "h": 34,
+      "text": "Живая жизнь",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 29,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "427:1250",
+      "name": "7 глубоких практик для более живого контакта с собой.",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 58,
+      "w": 341,
+      "h": 48,
+      "text": "7 глубоких практик для более живого контакта с собой.",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1251",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 162,
+      "w": 341,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "427:1252",
+      "name": "accord",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 187,
+      "w": 341,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "427:1253",
+      "name": "list",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 135,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "427:1254",
+      "name": "accordeon",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 12,
+      "w": 22,
+      "h": 10,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "I427:1254;427:1167",
+      "name": "accordeon",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 22,
+      "h": 10,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1255",
+      "name": "7 практик",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 38,
+      "y": 0,
+      "w": 97,
+      "h": 34,
+      "text": "7 практик",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1256",
+      "name": "arrow-quiet 180",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 327,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I427:1256;144:75",
+      "name": "arrow-quiet 90/Variant2",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 14,
+      "y": 14,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "rotation": -180
+    },
+    {
+      "id": "I427:1256;144:75;144:72",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 14,
+      "y": 0,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "rotation": -90,
+      "props": {
+        "color": "accent",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I427:1256;144:75;144:72;967:2244",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 8,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I427:1256;144:75;144:72;10:4",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I427:1256;144:75;144:72;10:7",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "427:1257",
+      "name": "full-list",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 245,
+      "w": 332,
+      "h": 248,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "427:1258",
+      "name": "Жизнь на разрыве. Найти выход",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 227,
+      "h": 20,
+      "text": "Жизнь на разрыве. Найти выход",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1260",
+      "name": "Разрешить себе больше. Деньги, реализация,  масштаб",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 28,
+      "w": 317,
+      "h": 40,
+      "text": "Разрешить себе больше. Деньги, реализация,  масштаб",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Разрешить себе больше. Деньги, реализация, ",
+        "масштаб"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1261",
+      "name": "Возвращение близости. Внутренние преграды в отношениях",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 76,
+      "w": 320,
+      "h": 40,
+      "text": "Возвращение близости. Внутренние преграды в отношениях",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Возвращение близости. Внутренние преграды",
+        "в отношениях"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1262",
+      "name": "Держаться — это работа. Стоять — это состояние",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 124,
+      "w": 332,
+      "h": 20,
+      "text": "Держаться — это работа. Стоять — это состояние",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1263",
+      "name": "Тело не молчит. Услышать внутренний смысл",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 152,
+      "w": 310,
+      "h": 20,
+      "text": "Тело не молчит. Услышать внутренний смысл",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1259",
+      "name": "Связь с Высшим проявлением",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 180,
+      "w": 213,
+      "h": 20,
+      "text": "Связь с Высшим проявлением",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1264",
+      "name": "Вернуться к радости",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 208,
+      "w": 154,
+      "h": 20,
+      "text": "Вернуться к радости",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1265",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 517,
+      "w": 341,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "427:1266",
+      "name": "Доступ на 12 месяцев",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 542,
+      "w": 215,
+      "h": 34,
+      "text": "Доступ на 12 месяцев",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1267",
+      "name": "price",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 600,
+      "w": 305,
+      "h": 57,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "427:1268",
+      "name": "240 $",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 114,
+      "h": 57,
+      "text": "240 $",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1269",
+      "name": "вместо 314 $",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 138,
+      "y": 9,
+      "w": 167,
+      "h": 39,
+      "text": "вместо 314 $",
+      "styleName": "H4",
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontMixed": true,
+      "fontSize": 29,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 133.00000429153442
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1270",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 681,
+      "w": 341,
+      "h": 61,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          16,
+          24,
+          16,
+          24
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Открыть пространство",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I427:1270;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 59,
+      "y": 16,
+      "w": 202,
+      "h": 29,
+      "text": "Открыть пространство",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I427:1270;14:128",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 269,
+      "y": 24,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I427:1270;14:128;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 6,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I427:1270;14:128;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I427:1270;14:128;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "427:1280",
+      "name": "practice-package-card",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 875,
+      "y": 0,
+      "w": 405,
+      "h": 1114,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#f4eee3",
+                "a": 1
+              }
+            },
+            {
+              "position": 1,
+              "color": {
+                "hex": "#dfcba6",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.09901375323534012,
+              0.9092609286308289,
+              0.0014573719818145037
+            ],
+            [
+              -0.9092609286308289,
+              0.7345292568206787,
+              0.6825936436653137
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 16,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "offset": {
+            "x": 2,
+            "y": 4
+          },
+          "color": {
+            "hex": "#7a756d",
+            "a": 0.35
+          },
+          "spread": 4
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "grow": 1,
+      "bound": {
+        "itemSpacing": "VariableID:2:9",
+        "paddingLeft": "VariableID:2:10",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:10",
+        "paddingBottom": "VariableID:2:10",
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18",
+        "fills": [
+          "VariableID:2:22"
+        ]
+      }
+    },
+    {
+      "id": "427:1281",
+      "name": "tittle",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 32,
+      "w": 341,
+      "h": 182,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "427:1282",
+      "name": "Пространство практик Syntonia",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 341,
+      "h": 78,
+      "text": "Пространство \nпрактик Syntonia",
+      "styleName": "H4",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 29,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 133.00000429153442
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a3323",
+            "a": 1
+          },
+          "variable": "bg-inverse"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:24"
+        ]
+      }
+    },
+    {
+      "id": "427:1283",
+      "name": "Все платные практики + эксклюзив и только в этом пакете практика: «Войти в своё желаемое будущее»",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 110,
+      "w": 341,
+      "h": 72,
+      "text": "Все платные практики + эксклюзив и только в этом пакете практика: \n«Войти в своё желаемое будущее»",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1284",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 238,
+      "w": 341,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "427:1285",
+      "name": "accord",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 263,
+      "w": 341,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "427:1286",
+      "name": "list",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 145,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "427:1287",
+      "name": "accordeon",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 12,
+      "w": 22,
+      "h": 10,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "I427:1287;427:1167",
+      "name": "accordeon",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 22,
+      "h": 10,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1288",
+      "name": "15 практик",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 38,
+      "y": 0,
+      "w": 107,
+      "h": 34,
+      "text": "15 практик",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1289",
+      "name": "arrow-quiet 180",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 327,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I427:1289;144:75",
+      "name": "arrow-quiet 90/Variant2",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 14,
+      "y": 14,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "rotation": -180
+    },
+    {
+      "id": "I427:1289;144:75;144:72",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 14,
+      "y": 0,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "rotation": -90,
+      "props": {
+        "color": "accent",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I427:1289;144:75;144:72;967:2244",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 8,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I427:1289;144:75;144:72;10:4",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I427:1289;144:75;144:72;10:7",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "427:1290",
+      "name": "full-list",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 321,
+      "w": 332,
+      "h": 512,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "427:1291",
+      "name": "Войти в своё желаемое будущее",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 230,
+      "h": 20,
+      "text": "Войти в своё желаемое будущее",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Medium",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1321",
+      "name": "Код Тепла. Активация",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 28,
+      "w": 161,
+      "h": 20,
+      "text": "Код Тепла. Активация",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1292",
+      "name": "Код Боли. Возвращение к себе",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 56,
+      "w": 218,
+      "h": 20,
+      "text": "Код Боли. Возвращение к себе",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1293",
+      "name": "Код Страха. Право двигаться вперёд",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 84,
+      "w": 256,
+      "h": 20,
+      "text": "Код Страха. Право двигаться вперёд",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1294",
+      "name": "Код Гнева. Сила без борьбы",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 112,
+      "w": 199,
+      "h": 20,
+      "text": "Код Гнева. Сила без борьбы",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1295",
+      "name": "Код Негодования.  Перестать спорить с прошлым",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 140,
+      "w": 216,
+      "h": 40,
+      "text": "Код Негодования.  Перестать спорить с прошлым",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Код Негодования. ",
+        "Перестать спорить с прошлым"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1296",
+      "name": "Код Гордыни.  Выход из внутреннего холода",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 188,
+      "w": 212,
+      "h": 40,
+      "text": "Код Гордыни.  Выход из внутреннего холода",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Код Гордыни. ",
+        "Выход из внутреннего холода"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1297",
+      "name": "Код Растерянности.  Возвращение ясности",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 236,
+      "w": 163,
+      "h": 40,
+      "text": "Код Растерянности.  Возвращение ясности",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Код Растерянности. ",
+        "Возвращение ясности"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1313",
+      "name": "Жизнь на разрыве. Найти выход",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 284,
+      "w": 227,
+      "h": 20,
+      "text": "Жизнь на разрыве. Найти выход",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1314",
+      "name": "Разрешить себе больше. Деньги, реализация,  масштаб",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 312,
+      "w": 317,
+      "h": 40,
+      "text": "Разрешить себе больше. Деньги, реализация,  масштаб",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Разрешить себе больше. Деньги, реализация, ",
+        "масштаб"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1315",
+      "name": "Возвращение близости. Внутренние преграды в отношениях",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 360,
+      "w": 320,
+      "h": 40,
+      "text": "Возвращение близости. Внутренние преграды в отношениях",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "lines": [
+        "Возвращение близости. Внутренние преграды",
+        "в отношениях"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1316",
+      "name": "Держаться — это работа. Стоять — это состояние",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 408,
+      "w": 332,
+      "h": 20,
+      "text": "Держаться — это работа. Стоять — это состояние",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1317",
+      "name": "Тело не молчит. Услышать внутренний смысл",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 436,
+      "w": 310,
+      "h": 20,
+      "text": "Тело не молчит. Услышать внутренний смысл",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1318",
+      "name": "Связь с Высшим проявлением",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 464,
+      "w": 213,
+      "h": 20,
+      "text": "Связь с Высшим проявлением",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1319",
+      "name": "Вернуться к радости",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 492,
+      "w": 154,
+      "h": 20,
+      "text": "Вернуться к радости",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1298",
+      "name": "divine",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 857,
+      "w": 341,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "427:1299",
+      "name": "Доступ на 12 месяцев",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 882,
+      "w": 215,
+      "h": 34,
+      "text": "Доступ на 12 месяцев",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1300",
+      "name": "price",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 940,
+      "w": 314,
+      "h": 57,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "427:1301",
+      "name": "360 $",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 116,
+      "h": 57,
+      "text": "360 $",
+      "styleName": null,
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1302",
+      "name": "вместо 460 $",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 140,
+      "y": 9,
+      "w": 174,
+      "h": 39,
+      "text": "вместо 460 $",
+      "styleName": "H4",
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontMixed": true,
+      "fontSize": 29,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 133.00000429153442
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "427:1303",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 1021,
+      "w": 341,
+      "h": 61,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          16,
+          24,
+          16,
+          24
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Открыть пространство",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I427:1303;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 59,
+      "y": 16,
+      "w": 202,
+      "h": 29,
+      "text": "Открыть пространство",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I427:1303;14:128",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 269,
+      "y": 24,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I427:1303;14:128;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 6,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I427:1303;14:128;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I427:1303;14:128;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

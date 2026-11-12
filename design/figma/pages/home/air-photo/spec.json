@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:56:43.119Z"
+  },
+  "section": {
+    "id": "148:506",
+    "name": "air-photo",
+    "w": 1440,
+    "h": 400
+  },
+  "fingerprint": "153e41e5",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 1,
+    "images": 1,
+    "icons": 0,
+    "iconInstances": 0,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "c87c32a2177fee8aae9a43ade3f6e3df003feb3a",
+        "file": "design/figma/assets/img/c87c32a2177f.jpg",
+        "bytes": 77325,
+        "usedBy": "air-photo"
+      }
+    ],
+    "icons": []
+  },
+  "nodes": [
+    {
+      "id": "148:506",
+      "name": "air-photo",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 8980,
+      "w": 1440,
+      "h": 400,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "c87c32a2177fee8aae9a43ade3f6e3df003feb3a",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG"
+      }
+    }
+  ]
+}

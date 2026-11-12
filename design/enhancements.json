@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "note": "Реестр дополнений студии — слой 2. Каждое дополнение: зачем, откуда, кем согласовано, что затрагивает, что ему разрешено менять в основе, как отключается и какие проверки его принимают. `invented.json` остаётся реестром изобретённых элементов внутри секции и ссылается сюда полем enhancement.",
+  "enhancements": {
+    "header-dropdown": {
+      "layer": "enhancements",
+      "why": "в макете выпадающее меню есть, но состояние раскрытия не показано",
+      "origin": "studio",
+      "approvedBy": 76,
+      "status": "active",
+      "scope": [
+        "src/components/Header.astro"
+      ],
+      "allowedChanges": [],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "interactive"
+      ]
+    },
+    "header-mobile-panel": {
+      "layer": "enhancements",
+      "why": "мобильное меню: макетов 390 в файле нет",
+      "origin": "studio",
+      "approvedBy": 166,
+      "status": "active",
+      "scope": [
+        "src/components/Header.astro"
+      ],
+      "allowedChanges": [],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "interactive"
+      ]
+    },
+    "pay-note": {
+      "layer": "enhancements",
+      "why": "оплата не подключена — говорим об этом, а не молчим",
+      "origin": "studio",
+      "approvedBy": 292,
+      "status": "active",
+      "scope": [
+        "src/components/PracticePayCard.astro"
+      ],
+      "allowedChanges": [
+        "видимость подсказки"
+      ],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "interactive"
+      ]
+    },
+    "package-note": {
+      "layer": "enhancements",
+      "why": "покупка пакета не подключена — говорим об этом",
+      "origin": "studio",
+      "approvedBy": 292,
+      "status": "active",
+      "scope": [
+        "src/components/PracticePackage.astro"
+      ],
+      "allowedChanges": [
+        "видимость подсказки"
+      ],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "interactive"
+      ]
+    },
+    "form-behaviour": {
+      "layer": "enhancements",
+      "why": "форма не отправляется: подсказка вместо молчания",
+      "origin": "studio",
+      "approvedBy": 362,
+      "status": "active",
+      "scope": [
+        "src/components/BookingFormats.astro"
+      ],
+      "allowedChanges": [
+        "видимость подсказки"
+      ],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "interactive"
+      ]
+    },
+    "quiz-play-note": {
+      "layer": "enhancements",
+      "why": "аудиофайла в макете нет: кнопка говорит об этом",
+      "origin": "studio",
+      "approvedBy": 362,
+      "status": "active",
+      "scope": [
+        "src/components/QuizResult.astro"
+      ],
+      "allowedChanges": [
+        "видимость подсказки"
+      ],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "interactive"
+      ]
+    },
+    "motion": {
+      "layer": "enhancements",
+      "why": "переходы и анимации, которых нет в статичном макете",
+      "origin": "studio",
+      "approvedBy": 114,
+      "status": "active",
+      "scope": [
+        "src/styles/motion.css",
+        "src/styles/*.css"
+      ],
+      "allowedChanges": [],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "motion",
+        "motion-manifest"
+      ]
+    },
+    "mobile-layout": {
+      "layer": "enhancements",
+      "why": "макетов 390/768 в файле нет — адаптив не изобретается без решения владельца",
+      "origin": "studio",
+      "approvedBy": null,
+      "status": "not-started",
+      "scope": [],
+      "allowedChanges": [
+        "перестройка сетки на ширине < 768"
+      ],
+      "offSwitch": "data-enhancements=off",
+      "checks": [
+        "layout",
+        "stretch",
+        "images"
+      ]
+    }
+  }
+}

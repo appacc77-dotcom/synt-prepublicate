@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-12T22:03:43.848Z",
+  "section": {
+    "id": "272:1044",
+    "name": "library-issues",
+    "w": 1440,
+    "h": 555
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 11,
+  "nodes": 59,
+  "coverage": 100,
+  "markedRatio": 18.6,
+  "tolerance": 1,
+  "worstDelta": 0
+}

@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:57:32.030Z"
+  },
+  "section": {
+    "id": "267:451",
+    "name": "library-hero",
+    "w": 1440,
+    "h": 820
+  },
+  "fingerprint": "b76bee7b",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 10,
+    "images": 1,
+    "icons": 1,
+    "iconInstances": 1,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "58359d129e7bd13adc296ccfb52a20992ab9049d",
+        "file": "design/figma/assets/img/58359d129e7b.png",
+        "bytes": 2296577,
+        "usedBy": "library-hero"
+      }
+    ],
+    "icons": [
+      {
+        "node": "I267:911;14:128",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-right.svg",
+        "bytes": 3984
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "267:451",
+      "name": "library-hero",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 820,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "58359d129e7bd13adc296ccfb52a20992ab9049d",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        },
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.11999999731779099,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "primary": "MIN",
+        "counter": "MAX"
+      },
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingLeft": "VariableID:2:13",
+        "paddingTop": "VariableID:2:13",
+        "paddingRight": "VariableID:2:13",
+        "paddingBottom": "VariableID:2:13",
+        "fills": [
+          "VariableID:706:447"
+        ]
+      }
+    },
+    {
+      "id": "267:908",
+      "name": "hero-content",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 96,
+      "y": 419,
+      "w": 538,
+      "h": 305,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "267:909",
+      "name": "library-hero-title",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 538,
+      "h": 128,
+      "text": "Библиотека Syntonia",
+      "styleName": "H1",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "267:910",
+      "name": "library-hero-desc",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 160,
+      "w": 538,
+      "h": 68,
+      "text": "Ответьте на несколько вопросов, чтобы лучше понять своё текущее состояние и то, что стоит за ним.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "267:911",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 260,
+      "w": 440,
+      "h": 45,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16",
+        "fills": [
+          "VariableID:2:31"
+        ]
+      },
+      "props": {
+        "text#30:0": "Увидеть, из чего строится ваша реальность",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I267:911;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 386,
+      "h": 29,
+      "text": "Увидеть, из чего строится ваша реальность",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I267:911;14:128",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 410,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I267:911;14:128;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 4,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I267:911;14:128;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I267:911;14:128;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

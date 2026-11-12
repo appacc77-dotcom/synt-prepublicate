@@ -1,0 +1,168 @@
+---
+/**
+ * Quiz — секция `quiz` (79:137), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×550, фон-фотография, заголовок, лид из двух
+ * стилей и кнопка с метаданными.
+ *
+ * Раскладка из спеки:
+ *   quiz        — HORIZONTAL, pad 0, MIN/MIN
+ *   quiz-inner  — HORIZONTAL, pad 0/24, CENTER/CENTER, заливка изображением
+ *   container   — VERTICAL, gap 10, MIN/MIN, 1280
+ *   quiz-content— VERTICAL, gap 32, MIN/MIN
+ *   quiz-cta    — HORIZONTAL, gap 24, CENTER/CENTER
+ *   meta        — HORIZONTAL, gap 4, CENTER/CENTER
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+
+interface Segment {
+  text: string;
+  style?: string | null;
+}
+
+interface Props {
+  title: string;
+  /** Лид состоит из кусков с разными стилями: рукописное слово и обычный текст. */
+  segments: Segment[];
+  ctaLabel: string;
+  meta: string[];
+  ctaHref?: string;
+}
+
+const { title, segments, ctaLabel, meta, ctaHref = '/quiz.html' } = Astro.props;
+---
+
+<section class="quiz" id="home-quiz" data-figma-node="79:137">
+  <div class="quiz__inner" data-figma-node="79:138">
+    <div class="quiz__container" data-figma-node="699:364">
+      <div class="quiz__content" data-figma-node="79:139">
+        <h2 class="quiz__title t-h2" data-figma-node="79:140">{title}</h2>
+
+        <p class="quiz__lead" data-figma-node="79:141">
+          {segments.map((segment) =>
+            segment.style === 'script-l' ? (
+              <span class="quiz__lead-script t-script-l">{segment.text}</span>
+            ) : (
+              <span class="quiz__lead-body t-body">{segment.text}</span>
+            ),
+          )}
+        </p>
+
+        <div class="quiz__cta" data-figma-node="79:142">
+          <BtnPrimary
+            href={ctaHref}
+            label={ctaLabel}
+            theme="light"
+            size="L"
+            caps
+            compact
+            outlined
+            node="79:143"
+          />
+
+          <div class="quiz__meta" data-figma-node="79:144">
+            {meta.map((item, index) => (
+              <>
+                {index > 0 && <span class="quiz__dot" aria-hidden="true" data-figma-node="79:146"></span>}
+                <span
+                  class="quiz__meta-item t-caption"
+                  data-figma-node={index === 0 ? '79:145' : '79:147'}
+                >{item}</span>
+              </>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quiz {
+    display: flex;
+  }
+
+  /* quiz-inner (79:138): scaleMode CROP, m11 = 0.8718 →
+     высота 100/0.8718 = 114.7 %, сдвиг по y 0.00034/(1−0.8718) = 0.27 %. */
+  .quiz__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 550px;
+    padding: 0 var(--space-l);
+    background-color: var(--color-bg-inverse);
+    background-image: url('/img/quiz-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 114.7%;
+    background-position: 0% 0.27%;
+  }
+
+  .quiz__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: var(--container-max);
+  }
+
+  .quiz__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+  }
+
+  .quiz__title {
+    color: var(--color-text-on-image);
+  }
+
+  /* quiz-lead (79:141): два стиля в одной строке — рукописный и обычный. */
+  /* Узел 520×96 — две строки по 48. Рукописный сегмент 48 px в стиле
+     script-l идёт с интерлиньяжем 82 и растягивал строку: ставим 48 из спеки. */
+  /* Узел 520×96. Высота из спеки: браузер добавляет 3 px — глифы Great Vibes
+     при 48 px занимают 60 px и раздувают строку. Перелив не виден на фото. */
+  .quiz__lead {
+    margin: 0;
+    width: 520px;
+    max-width: 100%;
+    height: 96px;
+    line-height: 48px;
+    color: var(--color-text-on-image);
+  }
+
+  /* t-script-l задаёт интерлиньяж 82 — переопределяем на 48 из спеки,
+     иначе первая строка выше остальных. */
+  .quiz__lead-script {
+    line-height: 48px;
+    color: var(--color-text-on-image);
+  }
+
+  .quiz__lead-body {
+    color: var(--color-text-on-image);
+  }
+
+  .quiz__cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-l);
+  }
+
+  .quiz__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .quiz__meta-item {
+    color: var(--color-text-on-image);
+  }
+
+  /* Точка-разделитель 2×2 из спеки. */
+  .quiz__dot {
+    width: 2px;
+    height: 2px;
+    background: var(--color-text-on-image);
+    border-radius: 50%;
+  }
+</style>

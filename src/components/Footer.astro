@@ -1,0 +1,228 @@
+---
+/**
+ * Footer — секция `footer` (148:561), подвал страницы.
+ *
+ * Геометрия с живого узла: 1440×361.
+ *   footer          — VERTICAL, pad 64/0/24/0, CENTER/CENTER; две заливки:
+ *                     фото (CROP, imageTransform) + bg-header 85 %
+ *   footer-inner    — VERTICAL, gap 16, pad 0/64, maxW 1280 (container-max)
+ *   footer-top      — HORIZONTAL, gap 96, pad 0/0/16/0, 713×220
+ *   footer-brand    — VERTICAL, gap 32: логотип 168×60 + подпись 276×19
+ *   footer-col      — VERTICAL, gap 24: заголовок + список ссылок (gap 8)
+ *   footer-divider  — линия 1 px цветом thread, тянется на всю ширину
+ *   footer-bottom   — HORIZONTAL, SPACE_BETWEEN: копирайт + юридические ссылки
+ *
+ * Содержимое (пункты навигации, контакты, юридические ссылки) — данные подвала,
+ * а не раскладка: компонент не знает, на какой странице стоит.
+ */
+
+interface FooterLink {
+  text: string;
+  href: string;
+  node: string;
+}
+
+/**
+ * Ссылки подвала. В макете адресов нет — только подписи, поэтому адрес
+ * выбирается здесь: если страница существует, ведём на неё; если нет —
+ * на заглушку /404.html (решение 414). Заглушка — не «ошибка», а честный
+ * ответ: страницы пока нет.
+ */
+const navigation: FooterLink[] = [
+  { text: 'О проекте', href: '/#home-about-founder', node: 'I148:561;148:425' },
+  { text: 'Практики', href: '/practice.html', node: 'I148:561;148:426' },
+  { text: 'Библиотека', href: '/library.html', node: 'I148:561;148:427' },
+  { text: 'Форматы работы', href: '/booking.html', node: 'I148:561;148:428' },
+  { text: 'Отзывы', href: '/#home-voices', node: 'I148:561;148:429' },
+  { text: 'Вопросы и ответы', href: '/#home-faq', node: 'I148:561;148:430' },
+];
+
+const contacts: FooterLink[] = [
+  // Соцсетей и почты в проекте нет: адреса ведут на заглушку, пока заказчик
+  // не даст реальные. Почту можно было бы сделать mailto, но её тоже не
+  // подтвердили — врать ссылкой хуже, чем показать заглушку.
+  { text: 'Telegram', href: '/404.html', node: 'I148:561;148:435' },
+  { text: 'Instagram', href: '/404.html', node: 'I148:561;148:436' },
+  { text: 'YouTube', href: '/404.html', node: 'I148:561;148:437' },
+  { text: 'hello@syntonia.com', href: '/404.html', node: 'I148:561;148:438' },
+];
+
+const legal: FooterLink[] = [
+  { text: 'Публичная оферта', href: '/404.html', node: 'I148:561;148:445' },
+  { text: 'Политика конфиденциальности', href: '/404.html', node: 'I148:561;148:446' },
+  { text: 'Согласие на обработку персональных данных', href: '/404.html', node: 'I148:561;148:447' },
+  { text: 'Cookie settings', href: '/404.html', node: 'I148:561;148:448' },
+];
+---
+
+<footer class="footer" id="home-footer" data-figma-node="148:561">
+  <div class="footer__inner" data-figma-node="I148:561;146:404">
+    <div class="footer__top" data-figma-node="I148:561;148:442">
+      <div class="footer__brand" data-figma-node="I148:561;146:405">
+        <img
+          class="footer__logo"
+          data-figma-node="I148:561;147:417 I148:561;147:417;28:2051"
+          src="/svg/logo-evolution.svg"
+          alt="Syntonia"
+          width="168"
+          height="60"
+        />
+        <p class="footer__tagline t-body-s" data-figma-node="I148:561;147:421">
+          Состояние, из которого строится жизнь
+        </p>
+      </div>
+
+      <nav class="footer__col" data-figma-node="I148:561;146:406" aria-label="Навигация в подвале">
+        <p class="footer__title t-eyebrow-xs" data-figma-node="I148:561;147:422">навигация</p>
+        <div class="footer__links" data-figma-node="I148:561;148:431">
+          {navigation.map((link) => (
+            <a class="footer__link t-caption" href={link.href} data-figma-node={link.node}>{link.text}</a>
+          ))}
+        </div>
+      </nav>
+
+      <nav class="footer__col" data-figma-node="I148:561;148:432" aria-label="Контакты">
+        <p class="footer__title t-eyebrow-xs" data-figma-node="I148:561;148:433">контакты</p>
+        <div class="footer__links" data-figma-node="I148:561;148:434">
+          {contacts.map((link) => (
+            <a class="footer__link t-caption" href={link.href} data-figma-node={link.node}>{link.text}</a>
+          ))}
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__divider" data-figma-node="I148:561;148:441"></div>
+
+    <div class="footer__bottom" data-figma-node="I148:561;148:443">
+      <p class="footer__copy t-caption" data-figma-node="I148:561;148:444">© Syntonia, 2026</p>
+      <div class="footer__legal" data-figma-node="I148:561;148:449">
+        {legal.map((link) => (
+          <a class="footer__link t-caption" href={link.href} data-figma-node={link.node}>{link.text}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* footer (148:561): VERTICAL, gap 0, pad 64/0/24/0, CENTER/CENTER.
+     Две заливки узла — фото и bg-header 85 % — слоями фона, а не псевдоэлементом:
+     псевдоэлемент с абсолютным позиционированием лёг бы поверх текста.
+     background-origin: border-box — Figma кладёт фото в рамку узла целиком,
+     а по умолчанию проценты CSS считаются от padding box (здесь он ниже на 88 px). */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3xl) 0 var(--space-l);
+    background-color: var(--color-bg-inverse);
+    background-image:
+      linear-gradient(var(--color-bg-header), var(--color-bg-header)),
+      url('/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    /* imageTransform [[0,5184, 0, 0,0001], [0, 0,3309, −0,0002]]:
+       100/0,5184 = 192,88 %, 100/0,3309 = 302,20 %;
+       позиция m02/(1−m00) = 0,023 %, m12/(1−m11) = −0,023 %. */
+    background-size: 100% 100%, 192.88% 302.2%;
+    background-position: 0 0, 0.023% -0.023%;
+    /* Обводка узла: один пиксель thread сверху. В кропе линия есть только
+       по верхней кромке (строка 0), поэтому inset-тень, а не border:
+       рамка сдвинула бы содержимое на пиксель вниз. */
+    box-shadow: inset 0 1px 0 var(--color-thread);
+    color: var(--color-text-on-dark);
+  }
+
+  /* footer-inner (I148:561;146:404): VERTICAL, gap 16, pad 0/64, maxW 1280. */
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-m);
+    width: 100%;
+    max-width: var(--container-max);
+    padding: 0 var(--space-3xl);
+  }
+
+  /* footer-top (I148:561;148:442): HORIZONTAL, gap 96, pad 0/0/16/0. */
+  .footer__top {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4xl);
+    padding-bottom: var(--space-m);
+  }
+
+  /* footer-brand (I148:561;146:405): VERTICAL, gap 32. */
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+  }
+
+  .footer__logo {
+    width: 168px;
+    height: 60px;
+  }
+
+  /* footer-tagline (I148:561;147:421): HUG 276×19. Ширина из узла: браузер
+     набирает строку на доли пикселя шире, а от неё считается ширина колонки
+     и позиции соседних. Без nowrap строка ломается на два ряда. */
+  .footer__tagline {
+    width: 276px;
+    white-space: nowrap;
+  }
+
+  /* footer-col (I148:561;146:406 / 148:432): VERTICAL, gap 24. */
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-l);
+  }
+
+  /* footer-links (I148:561;148:431 / 148:434): VERTICAL, gap 8. */
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  /* Текстовые узлы — HUG: ширину даёт текст, а не колонка (её задаёт
+     align-items: flex-start на колонке). Ссылка не переносится: в узле одна
+     строка, а перенос сдвинул бы соседей по колонке. */
+  .footer__link {
+    white-space: nowrap;
+  }
+
+  /* footer-divider (I148:561;148:441): VECTOR 1152×1, цвет thread. */
+  .footer__divider {
+    align-self: stretch;
+    height: 1px;
+    background: var(--color-thread);
+  }
+
+  /* footer-bottom (I148:561;148:443): HORIZONTAL, gap 10, SPACE_BETWEEN.
+     gap 10 не из токенов и при space-between не работает: свободное место
+     делится между двумя детьми. */
+  .footer__bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+
+  /* footer-legal (I148:561;148:449): HORIZONTAL, gap 24, MIN/CENTER, 790×20.
+     Ширина из узла: браузер набирает четыре ссылки в сумме на 1,6 px уже
+     эталона, а блок прижат к правому краю — без ширины из узла уезжает x
+     и собственные позиции ссылок. */
+  .footer__legal {
+    display: flex;
+    align-items: center;
+    gap: var(--space-l);
+    flex: none;
+    width: 790px;
+  }
+</style>

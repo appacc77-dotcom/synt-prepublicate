@@ -1,0 +1,35 @@
+---
+/**
+ * Каркас страницы. Стили — только сгенерированные токены и базовый слой.
+ */
+import '../styles/tokens.css';
+import '../styles/typography.css';
+import '../styles/base.css';
+import '../styles/motion.css';
+import '../styles/mobile.css';
+import { enhancementsOn } from '../lib/flags.mjs';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Внутренние страницы (структура, дизайн-система) не должны попадать в поиск. */
+  noindex?: boolean;
+}
+
+const { title, description, noindex = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru" data-enhancements={enhancementsOn ? 'on' : 'off'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

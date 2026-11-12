@@ -1,0 +1,29 @@
+---
+/**
+ * Страница форматов. Узлы: booking-hero `383:287`, booking-formats `383:761`,
+ * header `387:1464`, footer `383:1101`.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import BookingHero from '../components/BookingHero.astro';
+import BookingFormats from '../components/BookingFormats.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Форматы работы — Syntonia"
+  description="Форматы различаются по глубине запроса, длительности и степени сопровождения."
+>
+  <main class="page">
+    <Header />
+    <BookingHero />
+    <BookingFormats />
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+</style>

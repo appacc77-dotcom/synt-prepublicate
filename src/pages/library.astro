@@ -1,0 +1,34 @@
+---
+/**
+ * Страница библиотеки. Узлы: library-hero `267:451`, library-book `267:953`,
+ * library-journal `272:1017`, library-issues `272:1044`,
+ * header `267:923`, footer `282:759`.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import LibraryHero from '../components/LibraryHero.astro';
+import LibraryBook from '../components/LibraryBook.astro';
+import LibraryJournal from '../components/LibraryJournal.astro';
+import LibraryIssues from '../components/LibraryIssues.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Библиотека — Syntonia"
+  description="Ответьте на несколько вопросов, чтобы лучше понять своё текущее состояние."
+>
+  <main class="page">
+    <Header node="267:923" />
+    <LibraryHero />
+    <LibraryBook />
+    <LibraryJournal />
+    <LibraryIssues />
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+</style>

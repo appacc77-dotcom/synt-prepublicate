@@ -1,0 +1,214 @@
+---
+/**
+ * Секция `kody-practice-pay` (414:1970), 1440×2078: «Коды состояний» —
+ * те же карточки, что в `practice-pay`, другие данные и другой заголовок.
+ *
+ * Седьмая карточка одна в последнем ряду: в файле у неё нет пары.
+ */
+import PracticePayCard from './PracticePayCard.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '414:1970' } = Astro.props;
+
+// У последнего ряда высота 435, у остальных 371 — так в файле.
+const rows = [
+  { node: '414:1975', height: 371 },
+  { node: '414:1978', height: 371 },
+  { node: '414:1981', height: 371 },
+  { node: '414:1984', height: 435 },
+];
+
+const cards = [
+  {
+    id: '414:1976',
+    titleHeight: 56,
+    titleWidth: 130,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 163,
+    image: '/img/kody-a9c0.jpg',
+    title: ['Код Тепла.', 'Активация'],
+    text: ['Внутреннее тепло', 'как источник силы.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '414:1977',
+    titleHeight: 56,
+    titleWidth: 230,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 191,
+    image: '/img/kody-feb2.jpg',
+    title: ['Код Боли.', 'Возвращение к себе'],
+    text: ['Мягкое принятие боли', 'и путь к целостности.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '414:1979',
+    titleHeight: 56,
+    titleWidth: 281,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 203,
+    image: '/img/kody-a304.jpg',
+    title: ['Код Страха.', 'Право двигаться вперёд'],
+    text: ['Освободиться от страха', 'и вернуть движение.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '414:1980',
+    titleHeight: 56,
+    titleWidth: 191,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 194,
+    image: '/img/kody-5934.jpg',
+    title: ['Код Гнева.', 'Сила без борьбы'],
+    text: ['Энергия гнева —', 'в созидание и ясность.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '414:1982',
+    titleHeight: 84,
+    titleWidth: 227,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 246,
+    image: '/img/kody-e4c8.jpg',
+    title: ['Код Негодования.', 'Перестать спорить', 'с прошлым'],
+    text: ['Отпустить внутренний спор', 'и освободиться от прошлого.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '414:1983',
+    titleHeight: 84,
+    titleWidth: 265,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 285,
+    image: '/img/kody-55ca.jpg',
+    title: ['Код Гордыни.', 'Выход из внутреннего', 'холода'],
+    text: ['Смягчить внутреннюю дистанцию', 'и вернуть живой контакт.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '414:1985',
+    titleHeight: 84,
+    titleWidth: 258,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 221,
+    image: '/img/kody-726f.jpg',
+    title: ['Код Растерянности.', 'Возвращение ясности', ''],
+    text: ['Собрать внимание', 'и увидеть следующий шаг.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+];
+---
+
+<section class="pkody" data-figma-node={node}>
+  <div class="pkody__container" data-figma-node="414:1971">
+    <div class="pkody__head" data-figma-node="414:1972">
+      <h2 class="pkody__title" data-figma-node="414:1973">Коды состояний</h2>
+      <p class="pkody__subtitle" data-figma-node="414:1974">
+        Для более глубокой самостоятельной работы с тем состоянием, которое сильнее всего влияет на жизнь сейчас.
+      </p>
+    </div>
+
+    <div class="pkody__grid">
+      {rows.map((row, rowIndex) => (
+        <div class="pkody__row" data-figma-node={row.node} style={`height: ${row.height}px`}>
+          {cards.slice(rowIndex * 2, rowIndex * 2 + 2).map((card) => <PracticePayCard card={card} />)}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector('.pkody');
+  if (section) {
+    for (const button of section.querySelectorAll('[data-play]')) {
+      button.addEventListener('click', () => {
+        const playing = button.getAttribute('aria-pressed') === 'true';
+        button.setAttribute('aria-pressed', String(!playing));
+        button.classList.toggle('is-playing', !playing);
+      });
+    }
+    for (const button of section.querySelectorAll('.pay__buy')) {
+      button.addEventListener('click', () => {
+        const note = document.getElementById(button.getAttribute('aria-describedby'));
+        if (note) note.hidden = !note.hidden;
+      });
+    }
+  }
+</script>
+
+<style>
+  .pkody {
+    position: relative;
+    width: 100%;
+    height: 2078px;
+    background: var(--color-practice-surface);
+  }
+
+  .pkody__container {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 2078px;
+    margin: 0 auto;
+    padding-top: 96px;
+  }
+
+  .pkody__head {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 176px;
+    padding-top: 16px;
+  }
+
+  .pkody__title {
+    width: 588px;
+    height: 94px;
+    margin: 0 0 0 346px;
+    font-family: var(--font-literata);
+    font-size: 75px;
+    line-height: 93.75px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .pkody__subtitle {
+    width: 1114px;
+    height: 34px;
+    margin: 16px 0 0 83px;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .pkody__grid {
+    width: 1280px;
+    margin-top: 64px;
+  }
+
+  .pkody__row {
+    display: flex;
+    gap: 32px;
+    width: 1280px;
+  }
+
+  .pkody__row + .pkody__row {
+    margin-top: 64px;
+  }
+</style>

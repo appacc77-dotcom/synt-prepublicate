@@ -1,0 +1,28 @@
+{
+  "$comment": "Контракт мастерской и выпуска (решение 397). Здесь сказано, что уезжает на хостинг. Мастерская — весь репозиторий; выпуск — только этот набор. Менять только решением.",
+  "schemaVersion": 1,
+  "build": "npm run build",
+  "publish": "dist",
+  "include": [
+    "src/**",
+    "public/img/**",
+    "public/fonts/**",
+    "public/svg/**",
+    "astro.config.mjs",
+    "tsconfig.json",
+    "package.json",
+    "package-lock.json",
+    ".gitignore"
+  ],
+  "exclude": [
+    "src/pages/structure.astro",
+    "src/pages/ds.astro",
+    "public/structure/**"
+  ],
+  "notForRelease": {
+    "src/pages/structure.astro": "студийная карта секций, тянет design/figma/structure.json",
+    "src/pages/ds.astro": "студийная страница дизайн-системы, тянет design/figma/live/ds.json",
+    "public/structure/**": "превью «Figma / сделано» для студийной карты"
+  },
+  "mirror": "https://github.com/appacc77-dotcom/appacc77-dotcom.github.io.git"
+}

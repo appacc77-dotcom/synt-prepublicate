@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T17:20:55.798Z",
+  "section": {
+    "id": "323:871",
+    "name": "method-about",
+    "w": 1440,
+    "h": 1077
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 18,
+  "nodes": 18,
+  "coverage": 100,
+  "markedRatio": 100,
+  "tolerance": 1,
+  "worstDelta": 0
+}

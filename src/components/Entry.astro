@@ -1,0 +1,196 @@
+---
+/**
+ * Entry — секция `entry` (79:173), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×892, градиентный фон, слева текст с кнопками,
+ * справа фото с подписью рукописным шрифтом.
+ *
+ * Раскладка из спеки:
+ *   entry        — VERTICAL, gap 48, pad 96/24, MIN/CENTER
+ *   heading-block— VERTICAL, gap 8, MIN/CENTER
+ *   container    — HORIZONTAL, gap 0, MIN/CENTER, 1280
+ *   entry-text   — VERTICAL, gap 32, pad 32/64, MIN/MIN, тянется
+ *   meta         — HORIZONTAL, gap 8, MIN/CENTER
+ *   entry-photo  — pad 48/96, MIN/MIN, заливка изображением
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+import BtnSecondary from './ds/btn-secondary.astro';
+
+interface Props {
+  title: string;
+  lead: string;
+  name: string;
+  desc: string;
+  meta: string[];
+  ctaLabel: string;
+  secondaryLabel: string;
+  photoText: string[];
+}
+
+const { title, lead, name, desc, meta, ctaLabel, secondaryLabel, photoText } = Astro.props;
+---
+
+<section class="entry" id="home-entry" data-figma-node="79:173">
+  <div class="entry__heading" data-figma-node="79:174">
+    <h2 class="entry__title t-h2" data-figma-node="79:175">{title}</h2>
+    <p class="entry__lead t-body" data-figma-node="79:176">{lead}</p>
+  </div>
+
+  <div class="entry__container" data-figma-node="79:177">
+    <div class="entry__text" data-figma-node="79:178">
+      <h3 class="entry__name t-h3" data-figma-node="79:180">{name}</h3>
+      <p class="entry__desc t-body" data-figma-node="79:183">{desc}</p>
+
+      <div class="entry__meta" data-figma-node="816:2246">
+        {meta.map((item, index) => (
+          <>
+            {index > 0 && <span class="entry__dot" aria-hidden="true" data-figma-node="816:2249"></span>}
+            <span
+              class="entry__meta-item t-body"
+              data-figma-node={index === 0 ? '816:2247' : '816:2248'}
+            >{item}</span>
+          </>
+        ))}
+      </div>
+
+      <div class="entry__buttons" data-figma-node="79:184">
+        {/* props из спеки: theme light, caps false, size L */}
+        <BtnPrimary href="/quiz.html" label={ctaLabel} theme="light" size="L" compact node="79:185" />
+        <BtnSecondary href="/quiz.html" label={secondaryLabel} node="79:186" />
+      </div>
+    </div>
+
+    <div class="entry__photo" data-figma-node="79:187">
+      <p class="entry__photo-text" data-figma-node="79:189">
+        {photoText.map((line, index) => (
+          <>{index > 0 && <br />}{line}</>
+        ))}
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* entry (79:173): градиент из заливки — стопы и направление сняты с
+     gradientTransform [[-0.944, 0.113, 0.904], [-0.113, -0.362, 0.742]],
+     угол 276.78deg. */
+  .entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xl);
+    padding: var(--space-4xl) var(--space-l);
+    background-image: linear-gradient(276.78deg, #efe7d7 0%, #fcf9f2 49.4%, #fffcf6 100%);
+  }
+
+  .entry__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-s);
+    text-align: center;
+  }
+
+  .entry__title {
+    color: var(--color-text-heading);
+  }
+
+  /* Лид в макете 563×34 — одна строка. Браузер набирает ту же строку на 2 px
+     шире (565), и с max-width она ломалась на две. Ширину берём из спеки,
+     строку не переносим: перелив 1 px с каждой стороны не виден. */
+  .entry__lead {
+    width: 563px;
+    max-width: 100%;
+    white-space: nowrap;
+    color: var(--color-text-primary);
+  }
+
+  .entry__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: var(--container-max);
+  }
+
+  /* entry-text (79:178): паддинг 32/64, содержимое от левого края. */
+  .entry__text {
+    display: flex;
+    /* flex-basis 50 %: при border-box база не может быть меньше паддинга
+       (128 у текста, 192 у фото), и остаток делился поровну — выходило
+       608/672 вместо 640/640. */
+    flex: 1 1 50%;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+    padding: var(--space-xl) var(--space-3xl);
+  }
+
+  .entry__name {
+    color: var(--color-text-heading);
+  }
+
+  .entry__desc {
+    max-width: 512px;
+    color: var(--color-text-primary);
+  }
+
+  .entry__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    width: 100%;
+  }
+
+  .entry__meta-item {
+    color: var(--color-text-secondary);
+  }
+
+  /* Точка-разделитель 3×3 из спеки. */
+  .entry__dot {
+    width: 3px;
+    height: 3px;
+    background: var(--color-text-secondary);
+    border-radius: 50%;
+  }
+
+  .entry__buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+  }
+
+  /* entry-photo (79:193): изображение 87.27 % высоты по центру, под ним чёрная
+     заливка — она видна сверху и снизу, поэтому не убираем. */
+  .entry__photo {
+    display: flex;
+    flex: 1 1 50%;
+    min-width: 0;
+    align-items: flex-start;
+    min-height: 550px;
+    padding: var(--space-2xl) var(--space-4xl);
+    /* Заливка из спеки: SOLID #000000 под изображением. Токена на чистый
+       чёрный нет — overlay-dark это rgba(0,0,0,0.12), он давал светлую полосу. */
+    background-color: #000000;
+    background-image: url('/img/entry-photo.jpg');
+    background-repeat: no-repeat;
+    /* scaleMode FILL: размер = m × 100 %, а не 100/m как у CROP.
+       transform [[1, 0, 0], [0, 1.1458, -0.0729]] → 100 % × 114.58 %.
+       Сдвиг — та же формула, что у CROP: ty/(1−m11) = 50 %. Проверено:
+       при 57.3 % расхождение росло с 5,10 до 6,35. */
+    background-size: 100% 114.58%;
+    background-position: 0% 50%;
+  }
+
+  /* entry-photo-text (79:194): Great Vibes 42, интерлиньяж 55 и трекинг 5 %
+     заданы на узле поверх стиля script-m (42/71) — берём из спеки. */
+  .entry__photo-text {
+    width: 100%;
+    margin: 0;
+    font-family: var(--font-great-vibes);
+    font-size: 42px;
+    line-height: 55px;
+    letter-spacing: 0.05em;
+    color: var(--color-text-on-image);
+  }
+</style>

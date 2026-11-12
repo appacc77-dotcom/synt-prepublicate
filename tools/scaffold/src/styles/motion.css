@@ -1,0 +1,162 @@
+/**
+ * Слой движения: длительности и кривые в одном месте.
+ *
+ * В макете анимаций нет — там только состояния покоя. Значит движение не
+ * переносится, а закладывается: у каждого интерактивного блока оно должно быть
+ * уже при сдаче, иначе блок остаётся картинкой.
+ *
+ * Правила:
+ *   - длительность берётся отсюда, а не числом в компоненте;
+ *   - двигаем только `transform` и `opacity` — они не вызывают пересчёт
+ *     раскладки; `flex-grow` — исключение для раскрывающейся вкладки;
+ *   - `prefers-reduced-motion` отключает всё разом.
+ */
+
+:root {
+  /* Быстрое — отклик на курсор: точки, ссылки, иконки. */
+  --motion-fast: 160ms;
+  /* Основное — раскрытие меню, смена вкладки, появление описания. */
+  --motion-base: 260ms;
+  /* Медленное — лента слайдера, крупные перемещения. */
+  --motion-slow: 450ms;
+
+  /* Вход и выход: мягкий разгон, мягкое торможение. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Базовый слой ---------------------------------------------------------
+   Сайт не должен быть статичным по умолчанию. Любой интерактивный элемент
+   получает плавную смену цвета и прозрачности, даже если компонент об этом
+   не подумал.
+
+   Двигаются только свойства, не влияющие на раскладку: цвет, прозрачность,
+   тень, заливка. Геометрия (width, height, padding, margin) — никогда, иначе
+   поедет вёрстка и замер.
+
+   Собственный `transition` компонента (класс-селектор) перебивает это правило
+   по специфичности — так и задумано: блок уточняет, а не подчиняется. */
+
+a,
+button,
+summary,
+[role='tab'],
+[role='button'],
+input,
+select,
+textarea {
+  transition-property: color, background-color, border-color, opacity, box-shadow, fill, stroke;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-out);
+}
+
+/* Появление снизу: меню, подсказки, всплывающие панели. */
+@keyframes motion-rise {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Появление содержимого: описание вкладки, ответ в аккордеоне. */
+@keyframes motion-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* --- Взаимодействие: курсор и клавиатура ---------------------------------
+   Один язык на весь сайт: ссылка отвечает цветом, кнопка — подъёмом на 1 px
+   и мягкой тенью, фокус — кольцом. Длительность и кривая берутся из токенов
+   выше, поэтому отклик одинаковый везде.
+
+   Всё это живёт только в слое дополнений: в макете состояний наведения нет,
+   и в сборке «только из макета» поведение выключено целиком. */
+
+/* Ссылка отвечает прозрачностью — без подчёркивания и без смены цвета:
+   подчёркивание при наведении читалось как черновик, а цвет наведения
+   зависит от фона (на тёмном подвале акцент давал тёмное на тёмном). */
+[data-enhancements='on'] a[href] {
+  transition-property: opacity;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-out);
+}
+
+[data-enhancements='on'] a[href]:hover {
+  opacity: 0.72;
+}
+
+/* Нажимаемое отвечает тенью, но не двигается: подъём трогал даже строки
+   аккордеона и читался как дрожь. */
+[data-enhancements='on'] button:not(:disabled),
+[data-enhancements='on'] [role='button']:not([aria-disabled='true']) {
+  transition-property: box-shadow, background-color, border-color, color, opacity;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-out);
+}
+
+[data-enhancements='on'] button:not(:disabled):hover,
+[data-enhancements='on'] [role='button']:not([aria-disabled='true']):hover {
+  box-shadow: 0 6px 18px rgb(45 40 34 / 0.1);
+}
+
+[data-enhancements='on'] button:not(:disabled):active,
+[data-enhancements='on'] [role='button']:active {
+  box-shadow: none;
+}
+
+/* Клавиатура: кольцо вместо смены цвета. Видно всегда, на любом фоне. */
+[data-enhancements='on'] :focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Карточки с действием отвечают тенью, без сдвига. */
+[data-enhancements='on'] .jcard:hover,
+[data-enhancements='on'] .pcard:hover,
+[data-enhancements='on'] .fmt:hover {
+  box-shadow: 0 10px 28px rgb(45 40 34 / 0.1);
+}
+
+[data-enhancements='on'] .jcard,
+[data-enhancements='on'] .pcard,
+[data-enhancements='on'] .fmt {
+  transition-property: box-shadow, background-color;
+  transition-duration: var(--motion-base);
+  transition-timing-function: var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * Слой дополнений выключен в сборке «только из макета»: в макете анимаций
+ * нет, значит и переходов быть не должно. Токены остаются — их читают
+ * компоненты, — но само движение выключено.
+ */
+[data-enhancements='off'] *,
+[data-enhancements='off'] *::before,
+[data-enhancements='off'] *::after {
+  transition-duration: 0s !important;
+  animation-duration: 0s !important;
+  animation-iteration-count: 1 !important;
+}

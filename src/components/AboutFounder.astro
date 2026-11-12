@@ -1,0 +1,168 @@
+---
+/**
+ * About-founder — секция `about-founder` (79:148), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×757, карточка 1184×565 из фото и текста.
+ *
+ * Раскладка из спеки:
+ *   about-founder — HORIZONTAL, pad 96/24, CENTER/MIN
+ *   container     — VERTICAL, gap 0, MIN/CENTER, 1280
+ *   about-card    — HORIZONTAL, gap 0, MIN/CENTER, радиус 12
+ *   about-photo   — 548×565, заливка изображением CROP
+ *   about-text    — VERTICAL, gap 32, pad 32/96, CENTER/CENTER, фон bg-muted
+ *   about-content — VERTICAL, gap 32, CENTER/MIN (шире паддинга — так в макете)
+ */
+import BtnQuiet from './ds/btn-quiet.astro';
+
+interface MetaItem {
+  text: string;
+  /** Ширина узла из спеки: браузер набирает текст на доли пикселя уже. */
+  w: number;
+}
+
+interface Props {
+  name: string;
+  meta: MetaItem[];
+  quote: string;
+  ctaLabel: string;
+}
+
+const { name, meta, quote, ctaLabel } = Astro.props;
+---
+
+<section class="about" id="home-about-founder" data-figma-node="79:148">
+  <div class="about__container" data-figma-node="700:252">
+    <div class="about__card" data-figma-node="171:542">
+      <div class="about__photo" data-figma-node="79:149"></div>
+
+      <div class="about__text" data-figma-node="79:150">
+        <div class="about__content" data-figma-node="79:151">
+          <div class="about__head" data-figma-node="79:152">
+            <h2 class="about__name t-h2" data-figma-node="79:153">{name}</h2>
+
+            <div class="about__meta" data-figma-node="79:154">
+              {meta.map((item, index) => (
+                <>
+                  {index > 0 && <span class="about__dot" aria-hidden="true" data-figma-node={index === 1 ? '79:156' : '79:158'}></span>}
+                  <span
+                    class="about__meta-item t-body"
+                    style={`width:${item.w}px`}
+                    data-figma-node={index === 0 ? '79:155' : index === 1 ? '79:157' : '79:159'}
+                  >{item.text}</span>
+                </>
+              ))}
+            </div>
+          </div>
+
+          <blockquote class="about__quote t-quote-l" data-figma-node="79:161">{quote}</blockquote>
+
+          <BtnQuiet href="/booking.html" label={ctaLabel} node="79:163" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--space-4xl) var(--space-l);
+    background: var(--color-bg-page);
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: var(--container-max);
+  }
+
+  /* about-card (171:542): фото и текст вплотную, скругление 12. */
+  .about__card {
+    display: flex;
+    align-items: center;
+    width: 1184px;
+    max-width: 100%;
+    min-height: 565px;
+    overflow: hidden;
+    border-radius: var(--radius-m);
+  }
+
+  /* about-photo (79:149): CROP, m00 = 0.5459 → ширина 100/0.5459 = 183.2 %,
+     сдвиг по x 0.2713/(1−0.5459) = 59.76 %. Высота 100 % — сдвига нет. */
+  .about__photo {
+    flex: none;
+    width: 548px;
+    align-self: stretch;
+    background-color: var(--color-bg-muted);
+    background-image: url('/img/about-founder.webp');
+    background-repeat: no-repeat;
+    background-size: 183.2% 100%;
+    background-position: 59.76% 0;
+  }
+
+  /* about-text (79:150): паддинг 32/96, содержимое по центру. */
+  .about__text {
+    display: flex;
+    /* Ширина фиксированная: содержимое 473 шире внутренней области 444
+       и выходит за паддинг — так в макете. С flex: 1 колонка растягивалась. */
+    flex: none;
+    width: 636px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    padding: var(--space-xl) var(--space-4xl);
+    background: var(--color-bg-muted);
+  }
+
+  /* about-content (79:151): 473 при внутренней ширине 444 — в макете блок
+     шире паддинга и выходит за него на 14.5 с каждой стороны. */
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+    /* flex: none — иначе элемент сжимается до 444 и текст ломается иначе. */
+    flex: none;
+    width: 473px;
+    max-width: none;
+  }
+
+  .about__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .about__name {
+    color: var(--color-text-heading);
+  }
+
+  .about__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    padding: 0 var(--space-xs);
+  }
+
+  .about__meta-item {
+    color: var(--color-text-secondary);
+  }
+
+  /* Точка-разделитель 3×3 из спеки. */
+  .about__dot {
+    width: 3px;
+    height: 3px;
+    background: var(--color-text-secondary);
+    border-radius: 50%;
+  }
+
+  .about__quote {
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+</style>

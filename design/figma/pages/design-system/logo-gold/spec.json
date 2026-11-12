@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:56:37.108Z"
+  },
+  "section": {
+    "id": "29:2054",
+    "name": "logo-gold",
+    "w": 400,
+    "h": 143
+  },
+  "fingerprint": "cc11d049",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 2,
+    "images": 0,
+    "icons": 1,
+    "iconInstances": 0,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [],
+    "icons": [
+      {
+        "node": "24:1871",
+        "component": "logo-gold",
+        "variant": null,
+        "file": "design/figma/assets/svg/logo-gold.svg",
+        "bytes": 29023
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "29:2054",
+      "name": "logo-gold",
+      "type": "COMPONENT",
+      "depth": 0,
+      "visible": true,
+      "x": 498,
+      "y": -234,
+      "w": 400,
+      "h": 143,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "24:1871",
+      "name": "logo-gold",
+      "type": "VECTOR",
+      "depth": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 400,
+      "h": 143,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e2ad54",
+            "a": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-11T18:24:29.119Z",
+  "section": {
+    "id": "102:220",
+    "name": "formats",
+    "w": 1440,
+    "h": 1164
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 24,
+  "nodes": 77,
+  "coverage": 100,
+  "markedRatio": 31.2,
+  "tolerance": 1,
+  "worstDelta": 1
+}

@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:32.338Z",
+  "section": {
+    "id": "217:345",
+    "name": "masters-team",
+    "w": 1440,
+    "h": 2066
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 12,
+  "nodes": 56,
+  "coverage": 100,
+  "markedRatio": 21.4,
+  "tolerance": 1,
+  "worstDelta": 1
+}

@@ -1,0 +1,15 @@
+{
+  "about": "Секции, которые генератор собирает как черновик (решение 388). Калибровка по шести классам — docs/GEN-CALIBRATION.md, её витрина удалена.",
+  "sections": [
+    {
+      "unit": "home/method",
+      "class": "разметка",
+      "minCoverage": 0.85
+    },
+    {
+      "unit": "home/process",
+      "class": "разметка",
+      "minCoverage": 0.85
+    }
+  ]
+}

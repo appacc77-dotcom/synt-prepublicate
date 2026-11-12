@@ -1,0 +1,122 @@
+---
+/**
+ * Method — секция `method` (79:127), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×615, градиентный фон, три строки:
+ * вступление, поворот и призыв справа.
+ *
+ * Раскладка из спеки:
+ *   method      — HORIZONTAL, gap 48, pad 96/0, CENTER/CENTER
+ *   container   — VERTICAL, gap 32, pad 0/24, MIN/MIN
+ *   method-turn — VERTICAL, MIN/CENTER (текст по центру)
+ *   method-cta  — VERTICAL, gap 16, MIN/MAX (блок прижат вправо)
+ */
+import BtnQuiet from './ds/btn-quiet.astro';
+
+interface Props {
+  eyebrow: string;
+  lead: string;
+  turn: string;
+  title: string;
+  ctaLabel: string;
+}
+
+const { eyebrow, lead, turn, title, ctaLabel } = Astro.props;
+---
+
+<section class="method" id="home-method" data-figma-node="79:127">
+  <div class="method__container" data-figma-node="79:128">
+    <div class="method__intro" data-figma-node="79:129">
+      <p class="method__eyebrow t-eyebrow" data-figma-node="79:130">{eyebrow}</p>
+      <p class="method__lead t-lead" data-figma-node="79:131">{lead}</p>
+    </div>
+
+    <div class="method__turn" data-figma-node="79:132">
+      <p class="method__turn-text t-lead" data-figma-node="79:133">{turn}</p>
+    </div>
+
+    <div class="method__cta" data-figma-node="79:134">
+      <div class="method__cta-inner" data-figma-node="698:1992">
+        <h2 class="method__title t-h2" data-figma-node="79:135">{title}</h2>
+        <BtnQuiet href="/masters.html" label={ctaLabel} node="79:136" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* method (79:127): градиент из gradientStops и gradientTransform
+     [[1.0008, 0.0508, −0.0307], [−0.0508, 0.1995, 0.4071]] → угол 87.1deg. */
+  .method {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2xl);
+    padding: var(--space-4xl) 0;
+    background-image: linear-gradient(87.1deg, #efe7d7 0%, #fbf8f1 52%, #fffcf6 100%);
+  }
+
+  .method__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+    width: 100%;
+    max-width: var(--container-max);
+    padding: 0 var(--space-l);
+  }
+
+  .method__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+    max-width: 438px;
+  }
+
+  .method__eyebrow {
+    margin: 0;
+    color: var(--color-accent-muted);
+  }
+
+  .method__lead {
+    margin: 0;
+    color: var(--color-text-deep);
+  }
+
+  /* method-turn (79:132): текст по центру полосы. */
+  .method__turn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .method__turn-text {
+    margin: 0;
+    max-width: 608px;
+    text-align: center;
+    color: var(--color-text-primary);
+  }
+
+  /* method-cta (79:134): блок прижат вправо. */
+  .method__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .method__cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-m);
+    max-width: 467px;
+  }
+
+  .method__title {
+    margin: 0;
+    color: var(--color-text-heading);
+  }
+</style>

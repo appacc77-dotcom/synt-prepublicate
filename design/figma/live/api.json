@@ -1,0 +1,49 @@
+{
+  "name": "Website Syntonia2",
+  "version": "2418696346917289452",
+  "lastModified": "2026-11-06T09:56:24Z",
+  "editorType": "figma",
+  "role": "owner",
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Design system"
+    },
+    {
+      "id": "2:2",
+      "name": "_______________________"
+    },
+    {
+      "id": "2:3",
+      "name": "Home"
+    },
+    {
+      "id": "190:487",
+      "name": "Masters"
+    },
+    {
+      "id": "261:446",
+      "name": "Library"
+    },
+    {
+      "id": "262:446",
+      "name": "Practice"
+    },
+    {
+      "id": "262:447",
+      "name": "Quiz"
+    },
+    {
+      "id": "263:448",
+      "name": "Booking"
+    },
+    {
+      "id": "263:449",
+      "name": "Method"
+    },
+    {
+      "id": "2:4",
+      "name": "______________________"
+    }
+  ]
+}

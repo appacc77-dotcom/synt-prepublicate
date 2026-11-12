@@ -1,0 +1,3343 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:58:49.446Z"
+  },
+  "section": {
+    "id": "529:119",
+    "name": "quiz-section",
+    "w": 1440,
+    "h": 857
+  },
+  "fingerprint": "fb419dbf",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 83,
+    "images": 1,
+    "icons": 6,
+    "iconInstances": 11,
+    "states": 9
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "eef4eeb98fd5308860279b0f6d49696da837259f",
+        "file": "design/figma/assets/img/eef4eeb98fd5.png",
+        "bytes": 2168891,
+        "usedBy": "quiz-section"
+      }
+    ],
+    "icons": [
+      {
+        "node": "530:642",
+        "component": "watch",
+        "variant": {},
+        "file": "design/figma/assets/svg/watch.svg",
+        "bytes": 3445
+      },
+      {
+        "node": "530:645",
+        "component": "accordeon",
+        "variant": {},
+        "file": "design/figma/assets/svg/accordeon.svg",
+        "bytes": 1074
+      },
+      {
+        "node": "530:657",
+        "component": "gift",
+        "variant": {},
+        "file": "design/figma/assets/svg/gift.svg",
+        "bytes": 3772
+      },
+      {
+        "node": "I533:3084;533:2853;531:2818",
+        "component": "round",
+        "variant": {
+          "Property 1": "choice-round"
+        },
+        "file": "design/figma/assets/svg/round-choice-round.svg",
+        "bytes": 386
+      },
+      {
+        "node": "I533:3084;533:2859;533:2827",
+        "component": "round",
+        "variant": {
+          "Property 1": "whithout-choice"
+        },
+        "file": "design/figma/assets/svg/round-whithout-choice.svg",
+        "bytes": 323
+      },
+      {
+        "node": "I533:3084;533:2955",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-right.svg",
+        "bytes": 3976
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "529:119",
+      "name": "quiz-section",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 857,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "eef4eeb98fd5308860279b0f6d49696da837259f",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          128,
+          0,
+          64,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingTop": "VariableID:2:14",
+        "paddingBottom": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "530:582",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 400,
+      "y": 128,
+      "w": 640,
+      "h": 665,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "530:631",
+      "name": "text-block",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 665,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "531:51",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 171,
+      "y": 0,
+      "w": 298,
+      "h": 69,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "530:623",
+      "name": "text-tittle",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 40,
+      "y": 0,
+      "w": 218,
+      "h": 41,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "530:584",
+      "name": "Тест состояния",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 218,
+      "h": 41,
+      "text": "Тест состояния",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "UPPER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "530:628",
+      "name": "text-ad",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 49,
+      "w": 298,
+      "h": 20,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "530:629",
+      "name": "Отвечайте так, как чувствуете именно сейчас.",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 298,
+      "h": 20,
+      "text": "Отвечайте так, как чувствуете именно сейчас.",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "530:633",
+      "name": "text-logos",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 106,
+      "y": 85,
+      "w": 428,
+      "h": 17,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "530:660",
+      "name": "time",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 65,
+      "h": 17,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 4,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:6"
+      }
+    },
+    {
+      "id": "530:642",
+      "name": "watch",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 10,
+      "h": 11,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "I530:642;446:1717",
+      "name": "Vector",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 10,
+      "h": 11,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "530:634",
+      "name": "3 минуты",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 14,
+      "y": 0,
+      "w": 51,
+      "h": 17,
+      "text": "3 минуты",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#6b6357",
+            "a": 1
+          },
+          "variable": "text-deep"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:53"
+        ]
+      }
+    },
+    {
+      "id": "530:661",
+      "name": "question",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 89,
+      "y": 0,
+      "w": 83,
+      "h": 17,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 4,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:6"
+      }
+    },
+    {
+      "id": "530:645",
+      "name": "accordeon",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 5,
+      "w": 18,
+      "h": 8,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "I530:645;427:1167",
+      "name": "accordeon",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 18,
+      "h": 8,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "530:636",
+      "name": "9 вопросов",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 22,
+      "y": 0,
+      "w": 61,
+      "h": 17,
+      "text": "9 вопросов",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#6b6357",
+            "a": 1
+          },
+          "variable": "text-deep"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:53"
+        ]
+      }
+    },
+    {
+      "id": "530:662",
+      "name": "gift-practice",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 196,
+      "y": 0,
+      "w": 232,
+      "h": 17,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 4,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:6"
+      }
+    },
+    {
+      "id": "530:657",
+      "name": "gift",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 2,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": false,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "clips": false
+    },
+    {
+      "id": "I530:657;530:650",
+      "name": "gift",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 14,
+      "h": 14,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "530:638",
+      "name": "ваш текущий код и практика в подарок",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 18,
+      "y": 0,
+      "w": 214,
+      "h": 17,
+      "text": "ваш текущий код и практика в подарок",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#6b6357",
+            "a": 1
+          },
+          "variable": "text-deep"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:53"
+        ]
+      }
+    },
+    {
+      "id": "533:3084",
+      "name": "quiz-card",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 118,
+      "w": 640,
+      "h": 547,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "radius": 16,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:10",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:10",
+        "paddingBottom": "VariableID:2:10",
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18",
+        "fills": [
+          "VariableID:2:21"
+        ]
+      },
+      "props": {
+        "question#533:2": "Какая мысль чаще всего звучит внутри — фоном, \nдаже когда вы заняты другим?",
+        "progress#533:1": "10,1% пройдено",
+        "question-number#533:0": "Вопрос 1 из 9"
+      }
+    },
+    {
+      "id": "I533:3084;531:2298",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 32,
+      "y": 32,
+      "w": 576,
+      "h": 483,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;531:2303",
+      "name": "quiz-progress",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 576,
+      "h": 41,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "I533:3084;531:2780",
+      "name": "progress",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 448,
+      "h": 28,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "clips": false
+    },
+    {
+      "id": "I533:3084;531:2304",
+      "name": "progress-text",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 448,
+      "h": 17,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I533:3084;531:2299",
+      "name": "Вопрос 1 из 9",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 73,
+      "h": 17,
+      "text": "Вопрос 1 из 9",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#7a756d",
+            "a": 1
+          },
+          "variable": "text-secondary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:27"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;531:2300",
+      "name": "10,1% пройдено",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 362,
+      "y": 0,
+      "w": 86,
+      "h": 17,
+      "text": "10,1% пройдено",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;531:2302",
+      "name": "progress-line",
+      "type": "RECTANGLE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 25,
+      "w": 448,
+      "h": 3,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.30000001192092896,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          }
+        }
+      ],
+      "radius": 16,
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18"
+      }
+    },
+    {
+      "id": "I533:3084;533:3145",
+      "name": "progress-line",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 25,
+      "w": 69,
+      "h": 3,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          }
+        }
+      ],
+      "radius": 16,
+      "absolute": true,
+      "bound": {
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18"
+      }
+    },
+    {
+      "id": "I533:3084;531:2305",
+      "name": "sex",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 480,
+      "y": 0,
+      "w": 96,
+      "h": 41,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 4,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:6"
+      }
+    },
+    {
+      "id": "I533:3084;531:2779",
+      "name": "text-tittle",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 17,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I533:3084;531:2306",
+      "name": "Ваш пол",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 17,
+      "text": "Ваш пол",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;531:2778",
+      "name": "choice-sex",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 21,
+      "w": 96,
+      "h": 20,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 10.666666984558105,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "strokeWeight": 0.6666666865348816,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;531:2772",
+      "name": "female",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 1,
+      "y": 1,
+      "w": 50,
+      "h": 18,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.6666667461395264,
+          5.333333492279053,
+          2.6666667461395264,
+          5.333333492279053
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 666,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;531:2773",
+      "name": "Женский",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 5,
+      "y": 3,
+      "w": 39,
+      "h": 13,
+      "text": "Женский",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 8.666666984558105,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;531:2775",
+      "name": "male",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 50,
+      "y": 1,
+      "w": 45,
+      "h": 18,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.6666667461395264,
+          2.6666667461395264,
+          2.6666667461395264,
+          2.6666667461395264
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 666,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I533:3084;531:2776",
+      "name": "Мужской",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 3,
+      "y": 3,
+      "w": 40,
+      "h": 13,
+      "text": "Мужской",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 8.666666984558105,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2915",
+      "name": "quiz-question",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 49,
+      "w": 576,
+      "h": 435,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "I533:3084;531:2782",
+      "name": "question",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 533,
+      "h": 56,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I533:3084;531:2781",
+      "name": "Какая мысль чаще всего звучит внутри — фоном, даже когда вы заняты другим?",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 533,
+      "h": 56,
+      "text": "Какая мысль чаще всего звучит внутри — фоном, \nдаже когда вы заняты другим?",
+      "styleName": "H5",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 22,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2914",
+      "name": "quiz-options",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 72,
+      "w": 576,
+      "h": 315,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 4,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:6"
+      }
+    },
+    {
+      "id": "I533:3084;533:2853",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 576,
+      "h": 42,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.10000000149011612,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body2#533:6": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "Property 1": "Default"
+      }
+    },
+    {
+      "id": "I533:3084;533:2853;532:2822",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 296,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2853;531:2818",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "choice-round"
+      }
+    },
+    {
+      "id": "I533:3084;533:2853;531:2818;531:2806",
+      "name": "white-round",
+      "type": "ELLIPSE",
+      "depth": 10,
+      "visible": true,
+      "x": 2,
+      "y": 2,
+      "w": 7,
+      "h": 7,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2853;532:2821",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 276,
+      "h": 24,
+      "text": "«Я не понимаю, чего хочу и куда идти». ",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "nbsp": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2859",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 46,
+      "w": 576,
+      "h": 42,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body2#533:6": "«Так не должно было быть. Это несправедливо».  ",
+        "Property 1": "Variant2"
+      }
+    },
+    {
+      "id": "I533:3084;533:2859;533:2826",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 358,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2859;533:2827",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "whithout-choice"
+      }
+    },
+    {
+      "id": "I533:3084;533:2859;533:2828",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 338,
+      "h": 24,
+      "text": "«Так не должно было быть. Это несправедливо».  ",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2865",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 91,
+      "w": 576,
+      "h": 42,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body2#533:6": "«Это уже не вернуть. Всё было зря».",
+        "Property 1": "Variant2"
+      }
+    },
+    {
+      "id": "I533:3084;533:2865;533:2826",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 273,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2865;533:2827",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "whithout-choice"
+      }
+    },
+    {
+      "id": "I533:3084;533:2865;533:2828",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 253,
+      "h": 24,
+      "text": "«Это уже не вернуть. Всё было зря».",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2871",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 137,
+      "w": 576,
+      "h": 42,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body2#533:6": "«Всё вокруг раздражает — люди, ситуации, мелочи». ",
+        "Property 1": "Variant2"
+      }
+    },
+    {
+      "id": "I533:3084;533:2871;533:2826",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 386,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2871;533:2827",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "whithout-choice"
+      }
+    },
+    {
+      "id": "I533:3084;533:2871;533:2828",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 366,
+      "h": 24,
+      "text": "«Всё вокруг раздражает — люди, ситуации, мелочи». ",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2877",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 182,
+      "w": 576,
+      "h": 42,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body2#533:6": "«Справлюсь со всем без чьей-либо помощи». ",
+        "Property 1": "Variant2"
+      }
+    },
+    {
+      "id": "I533:3084;533:2877;533:2826",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 333,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2877;533:2827",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "whithout-choice"
+      }
+    },
+    {
+      "id": "I533:3084;533:2877;533:2828",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 313,
+      "h": 24,
+      "text": "«Справлюсь со всем без чьей-либо помощи». ",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2883",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 228,
+      "w": 576,
+      "h": 42,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body2#533:6": "«А вдруг снова не получится».",
+        "Property 1": "Variant2"
+      }
+    },
+    {
+      "id": "I533:3084;533:2883;533:2826",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 231,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2883;533:2827",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "whithout-choice"
+      }
+    },
+    {
+      "id": "I533:3084;533:2883;533:2828",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 211,
+      "h": 24,
+      "text": "«А вдруг снова не получится».",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2889",
+      "name": "option-item",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 273,
+      "w": 576,
+      "h": 42,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          }
+        }
+      ],
+      "strokeWeight": 0.75,
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text-body#533:3": "«Я не понимаю, чего хочу и куда идти». ",
+        "text-body2#533:6": "«Мне хорошо с собой — и этого достаточно». ",
+        "Property 1": "Variant2"
+      }
+    },
+    {
+      "id": "I533:3084;533:2889;533:2826",
+      "name": "text-question",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 9,
+      "y": 9,
+      "w": 330,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2889;533:2827",
+      "name": "round",
+      "type": "INSTANCE",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 6,
+      "w": 12,
+      "h": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#fbf8f1",
+            "a": 1
+          },
+          "variable": "bg-page"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925,
+          2.206345319747925
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 137.75868225097656,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 0.1378965824842453,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingTop": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "fills": [
+          "VariableID:2:21"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "Property 1": "whithout-choice"
+      }
+    },
+    {
+      "id": "I533:3084;533:2889;533:2828",
+      "name": "«Я не понимаю, чего хочу и куда идти». ",
+      "type": "TEXT",
+      "depth": 9,
+      "visible": true,
+      "x": 20,
+      "y": 0,
+      "w": 310,
+      "h": 24,
+      "text": "«Мне хорошо с собой — и этого достаточно». ",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      }
+    },
+    {
+      "id": "I533:3084;533:2959",
+      "name": "move",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 403,
+      "w": 576,
+      "h": 32,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 4,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I533:3084;533:2916",
+      "name": "return",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 4,
+      "w": 64,
+      "h": 24,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I533:3084;533:2960",
+      "name": "arrow-quiet",
+      "type": "FRAME",
+      "depth": 8,
+      "visible": true,
+      "x": 13,
+      "y": 7,
+      "w": 13,
+      "h": 10,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "rotation": -180
+    },
+    {
+      "id": "I533:3084;533:2961",
+      "name": "Vector 1",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2962",
+      "name": "Vector 2",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 7,
+      "y": 0,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2917",
+      "name": "Назад",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 21,
+      "y": 0,
+      "w": 43,
+      "h": 24,
+      "text": "Назад",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2918",
+      "name": "next",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 447,
+      "y": 0,
+      "w": 129,
+      "h": 32,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          4,
+          32,
+          4,
+          32
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:10",
+        "paddingTop": "VariableID:2:16",
+        "paddingRight": "VariableID:2:10",
+        "paddingBottom": "VariableID:2:16",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16",
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2919",
+      "name": "Далее",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 32,
+      "y": 4,
+      "w": 43,
+      "h": 24,
+      "text": "Далее",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2955",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 8,
+      "visible": true,
+      "x": 83,
+      "y": 9,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I533:3084;533:2955;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 9,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I533:3084;533:2955;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 10,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I533:3084;533:2955;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 10,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

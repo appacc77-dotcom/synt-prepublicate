@@ -1,0 +1,249 @@
+---
+/**
+ * Внутренняя страница дизайн-системы: каждый собранный компонент во всех
+ * вариантах, рядом — наборы из файла, которые ещё не собраны.
+ *
+ * Зачем: компонент проверяется отдельно от секции. Пока он живёт только внутри
+ * блока, ошибку видно лишь по кропу всего блока, и непонятно, чья она.
+ *
+ * noindex: страница для работы, а не для посетителей.
+ * Список наборов — из живого файла (`design/figma/live/ds.json`), собранные
+ * компоненты — из `src/components/ds/`. Расхождение и есть покрытие.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BtnPrimary from '../components/ds/btn-primary.astro';
+import BtnSecondary from '../components/ds/btn-secondary.astro';
+import BtnQuiet from '../components/ds/btn-quiet.astro';
+import ArrowQuiet from '../components/ds/arrow-quiet.astro';
+import Play from '../components/ds/play.astro';
+import ListItem from '../components/ds/list-item.astro';
+import LogoGold from '../components/ds/logo-gold.astro';
+import ds from '../../design/figma/live/ds.json';
+
+const sets = (ds.components ?? []).map((c) => (typeof c === 'string' ? c : c.name));
+const built = ['btn-primary', 'btn-secondary', 'btn-quiet', 'arrow-quiet', 'play', 'list-item', 'logo-gold'];
+const missing = sets.filter((name) => !built.includes(name));
+const coverage = Math.round((built.length / Math.max(1, sets.length)) * 100);
+
+const primaryVariants = [
+  { label: 'light / L', theme: 'light', size: 'L' },
+  { label: 'dark / L', theme: 'dark', size: 'L' },
+  { label: 'muted / L', theme: 'muted', size: 'L' },
+  { label: 'light / S', theme: 'light', size: 'S' },
+  { label: 'caps', theme: 'light', size: 'L', caps: true },
+  { label: 'с обводкой', theme: 'light', size: 'L', outlined: true },
+  { label: 'compact', theme: 'light', size: 'L', caps: true, compact: true },
+] as const;
+---
+
+<BaseLayout title="Дизайн-система" noindex>
+  <main class="ds">
+    <header class="head">
+      <h1>Дизайн-система</h1>
+      <p class="head__lead">
+        Собрано {built.length} из {sets.length} наборов — {coverage} %. Ниже каждый
+        собранный компонент во всех вариантах; в конце — чего ещё нет.
+      </p>
+      <p class="head__meta">
+        Источник списка: <code>design/figma/live/ds.json</code> ·
+        страница собирается из кода, руками не правится
+      </p>
+    </header>
+
+    <section class="block">
+      <h2>logo-gold</h2>
+      <p class="block__meta">компонент <code>logo-gold</code> · 400×143</p>
+      <div class="row">
+        <div class="cell">
+          <LogoGold />
+          <span class="cell__label">logo-gold</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>btn-primary</h2>
+      <p class="block__meta">набор <code>btn-primary</code> · тема / размер / caps / обводка</p>
+      <div class="row">
+        {primaryVariants.map((v) => (
+          <div class="cell">
+            <BtnPrimary href="#" label="Личная встреча" {...v} />
+            <span class="cell__label">{v.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>btn-secondary</h2>
+      <p class="block__meta">набор <code>btn-secondary</code></p>
+      <div class="row">
+        <div class="cell">
+          <BtnSecondary href="#" label="Узнать подробнее" />
+          <span class="cell__label">по умолчанию</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>btn-quiet</h2>
+      <p class="block__meta">набор <code>btn-quiet</code> · со стрелкой</p>
+      <div class="row">
+        <div class="cell">
+          <BtnQuiet href="#" label="Открыть библиотеку" />
+          <span class="cell__label">по умолчанию</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>arrow-quiet</h2>
+      <p class="block__meta">набор <code>arrow-quiet</code> · размеры из файла: 14 и 19</p>
+      <div class="row">
+        <div class="cell">
+          <span class="arrow-demo"><ArrowQuiet size={14} /></span>
+          <span class="cell__label">14 px</span>
+        </div>
+        <div class="cell">
+          <span class="arrow-demo"><ArrowQuiet size={19} /></span>
+          <span class="cell__label">19 px</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>play</h2>
+      <p class="block__meta">набор <code>play</code> · кнопка воспроизведения</p>
+      <div class="row">
+        <div class="cell">
+          <Play />
+          <span class="cell__label">47×47</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>list-item</h2>
+      <p class="block__meta">набор <code>list-item</code> · номер и текст</p>
+      <div class="column">
+        <ListItem number="01" text="Если жизнь идёт, а всё будто стоит на месте" />
+        <ListItem number="02" text="Повторяются одни и те же сценарии" />
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Чего нет</h2>
+      <p class="block__meta">{missing.length} наборов из файла ещё не собраны</p>
+      <ul class="missing">
+        {missing.map((name) => <li>{name}</li>)}
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .ds {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4xl);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-4xl) var(--space-l);
+    color: var(--color-text-primary);
+    font-family: var(--font-golos-text);
+  }
+
+  .head h1 {
+    margin: 0 0 var(--space-s);
+    font-family: var(--font-literata);
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 400;
+    color: var(--color-text-heading);
+  }
+
+  .head__lead {
+    margin: 0 0 var(--space-xs);
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .head__meta {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-muted, var(--color-text-primary));
+    opacity: 0.7;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    padding-top: var(--space-l);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .block h2 {
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 400;
+    color: var(--color-text-heading);
+  }
+
+  .block__meta {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+    opacity: 0.7;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--space-xl);
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    max-width: 640px;
+  }
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .cell__label {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .arrow-demo {
+    display: inline-flex;
+    color: var(--color-accent);
+  }
+
+  .missing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s) var(--space-m);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.75;
+  }
+</style>

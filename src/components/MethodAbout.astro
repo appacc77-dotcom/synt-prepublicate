@@ -1,0 +1,157 @@
+---
+/**
+ * Секция `method-about` (323:871), 1440×1077: три уровня метода столбцом.
+ *
+ * Раскладка из спеки:
+ *   method-about — 1440×1077, градиент 0° #eae6d9 → #fbf8f1 (50 %) → #ecdcc5
+ *   container    — 80, 96, 1280×885
+ *   list         — 249, 0, 783×885, VERTICAL: три блока с шагом 339
+ *   block        — 783×275: строка с номером и заголовком (534×73), затем текст
+ *   number       — Literata 55, заголовок — Literata 48, текст — Golos 20/34
+ */
+interface Props {
+  node?: string;
+}
+
+const { node = '323:871' } = Astro.props;
+
+const items = [
+  {
+    num: '01',
+    title: 'Глубинный уровень',
+    text: 'В основе метода лежит работа с устойчивыми метапрограммами, состояниями и внутренними кодами, которые закрепляются в психике, теле, восприятии, энергетическом поле, генетической памяти и во внутреннем устройстве человека. Именно этот глубинный уровень влияет на чувства, реакции, выбор, отношения и повторяющиеся сценарии.',
+    head: '337:1055',
+    numW: 42,
+    titleW: 460,
+    numNode: '337:1053',
+    titleNode: '330:946',
+    textNode: '330:947',
+    block: '330:945',
+  },
+  {
+    num: '02',
+    title: 'Целостный подход',
+    text: 'Syntonia соединяет психологическую точность, коучинговую направленность, работу с эмоциональным и телесным опытом, внимание к подсознательным причинам, тонкому плану и внутренней духовной природе человека. Такой подход позволяет работать не только с тем, что проявлено на поверхности, но и с той внутренней структурой, из которой это возникает.',
+    head: '773:1657',
+    numW: 47,
+    titleW: 441,
+    numNode: '773:1658',
+    titleNode: '773:1659',
+    textNode: '773:1660',
+    block: '773:1656',
+  },
+  {
+    num: '03',
+    title: 'Практический результат',
+    text: 'В практике это означает не только понимание причины, но и постепенную перенастройку глубинного внутреннего устройства человека, включая слои подсознания, которые лежат в основе восприятия, выбора и жизненного пути.',
+    head: '773:1668',
+    numW: 46,
+    titleW: 579,
+    numNode: '773:1669',
+    titleNode: '773:1670',
+    textNode: '773:1671',
+    block: '773:1667',
+  },
+];
+---
+
+<section class="mabout" data-figma-node={node}>
+  <div class="mabout__container" data-figma-node="329:902">
+    <div class="mabout__list" data-figma-node="330:938">
+      {items.map((item) => (
+        <article class="mabout__block" data-figma-node={item.block}>
+          <div class="mabout__head" data-figma-node={item.head}>
+            <span class="mabout__num" style={`width: ${item.numW}px`} data-figma-node={item.numNode}>
+              {item.num}
+            </span>
+            <h2 class="mabout__title" style={`width: ${item.titleW}px`} data-figma-node={item.titleNode}>
+              {item.title}
+            </h2>
+          </div>
+          <p class="mabout__text" data-figma-node={item.textNode}>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .mabout {
+    position: relative;
+    width: 100%;
+    height: 1077px;
+    /* Верх — #eae6d9, середина — #fbf8f1, низ — #ecdcc5: проверено
+       цветом кропа (y=10 → 234,230,217; y=1000 → 239,225,204). */
+    background: linear-gradient(180deg, #eae6d9 0%, #fbf8f1 50%, #ecdcc5 100%);
+  }
+
+  .mabout__container {
+    position: absolute;
+    left: 80px;
+    top: 96px;
+    width: 1280px;
+    height: 885px;
+  }
+
+  .mabout__list {
+    position: absolute;
+    left: 249px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 783px;
+  }
+
+  .mabout__block {
+    width: 783px;
+  }
+
+  /* Ширина строки — по содержимому: номер + 32 + заголовок. У каждого блока
+     свои ширины (534, 520, 657), поэтому фиксировать нельзя. */
+  .mabout__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    /* fit-content: иначе строка растягивается на всю ширину блока (783),
+       а в макете она по содержимому — 534, 520 и 657. */
+    width: fit-content;
+    height: 73px;
+  }
+
+  /* Номер набран Great Vibes (рукописный), а не Literata: в макете это
+     другой шрифт и цвет accent-muted. */
+  .mabout__num {
+    flex: none;
+    height: 69px;
+    margin-top: 4px;
+    font-family: var(--font-great-vibes);
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 69px;
+    color: var(--color-accent-muted);
+  }
+
+  .mabout__title {
+    flex: none;
+    height: 60px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0;
+    color: var(--color-text-heading);
+  }
+
+  .mabout__text {
+    width: 783px;
+    /* Высота по содержимому: у третьего блока текста на три строки (102),
+       у первых двух на пять (170) — фиксировать нельзя. */
+    height: auto;
+    margin: 32px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+</style>

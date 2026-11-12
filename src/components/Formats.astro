@@ -1,0 +1,469 @@
+---
+/**
+ * Formats — секция `formats` (102:220), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×1164, фон-фотография, панель со слайдером
+ * и пятью вкладками форматов.
+ *
+ * Раскладка из спеки:
+ *   formats       — VERTICAL, gap 48, pad 96/24, MIN/CENTER
+ *   heading-block — VERTICAL, gap 8, CENTER/CENTER
+ *   formats-panel — VERTICAL, gap 8, pad 8, радиус 16, фон bg-surface
+ *   formats-slider— HORIZONTAL, pad 32/24, SPACE_BETWEEN/CENTER, радиус 12
+ *   formats-tabs  — HORIZONTAL, gap 0
+ *   format-tab    — активная: VERTICAL gap 16 pad 16, белая; остальные:
+ *                   VERTICAL gap 48 pad 16/8, SPACE_BETWEEN
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+
+interface TabNodes {
+  desc?: string;
+  meta?: string;
+  duration?: string;
+  dot?: string;
+  price?: string;
+  cta?: string;
+  button?: string;
+}
+
+interface Tab {
+  node?: string;
+  nodes?: TabNodes;
+  number: string;
+  title: string;
+  duration: string;
+  price: string;
+  desc?: string;
+  active?: boolean;
+  divider?: boolean;
+}
+
+interface Slide {
+  image: string;
+  /** background-size и position, посчитанные из imageTransform узла. */
+  size: string;
+  position: string;
+}
+
+interface Props {
+  title: string;
+  lead: string;
+  note: string;
+  slide: string;
+  tabs: Tab[];
+  /** Картинки слайдера по порядку вкладок: у каждого формата своя. */
+  slides?: Slide[];
+}
+
+const { title, lead, note, slide, tabs, slides = [] } = Astro.props;
+---
+
+<section class="formats" id="home-formats" data-figma-node="102:220">
+  <div class="formats__heading" data-figma-node="102:221">
+    <h2 class="formats__title t-h2" data-figma-node="102:222">{title}</h2>
+    <p class="formats__lead t-body" data-figma-node="102:223">{lead}</p>
+  </div>
+
+  <div class="formats__panel" data-figma-node="102:224">
+    <div class="formats__slider" data-figma-node="102:225">
+      {/* По слою на формат: в файле у каждого инстанса секции своя картинка.
+          Переключение — кросс-фейд, а не подмена фона. */}
+      <div class="formats__slides">
+        {slides.map((item, index) => (
+          <div
+            class:list={['formats__slide', index === 0 && 'formats__slide--active']}
+            data-slide={index}
+            style={`background-image:url('${item.image}');background-size:${item.size};background-position:${item.position}`}
+          ></div>
+        ))}
+      </div>
+
+      <button class="formats__arrow" type="button" aria-label="Предыдущий слайд" data-figma-node="102:228">
+        <img src="/svg/slider-arrow-prev.svg" alt="" width="48" height="48" />
+      </button>
+
+      <span class="formats__counter" data-figma-node="102:226">
+        <span class="formats__counter-text t-quote" data-figma-node="102:227">{slide}</span>
+      </span>
+
+      <button class="formats__arrow" type="button" aria-label="Следующий слайд" data-figma-node="102:229">
+        <img src="/svg/slider-arrow-next.svg" alt="" width="48" height="48" />
+      </button>
+    </div>
+
+    <div class="formats__tabs" data-figma-node="102:230">
+      {tabs.map((tab) => (
+        <article
+          class:list={['format-tab', tab.active && 'format-tab--active', tab.divider && 'format-tab--divided']}
+          data-figma-node={tab.node}
+          data-tab
+        >
+          <div class="format-tab__head" data-tab-head>
+            <span class="format-tab__number t-number">{tab.number}</span>
+            <h3 class:list={['format-tab__title', tab.active ? 't-h5' : 't-h6']}>{tab.title}</h3>
+          </div>
+
+          {tab.desc && (
+            <p class="format-tab__desc t-body-s" data-figma-node={tab.nodes?.desc}>{tab.desc}</p>
+          )}
+
+          {/* Порядок из макета: метаданные на y=199, кнопка на y=235. */}
+          <div class="format-tab__meta" data-figma-node={tab.nodes?.meta}>
+            <span class="format-tab__pill">
+              <span class="format-tab__duration t-caption" data-figma-node={tab.nodes?.duration}>{tab.duration}</span>
+            </span>
+            {tab.active && <span class="format-tab__dot" aria-hidden="true" data-figma-node={tab.nodes?.dot}></span>}
+            <span class="format-tab__price t-caption" data-figma-node={tab.nodes?.price}>{tab.price}</span>
+          </div>
+
+          <div class="format-tab__cta" data-figma-node={tab.nodes?.cta}>
+            {/* caps false: в макете кнопка набрана обычным регистром. */}
+            <BtnPrimary href="/booking.html" label="Перейти к записи" theme="light" size="L" compact node={tab.nodes?.button} />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <div class="formats__note" data-figma-node="741:1194">
+    <p class="formats__note-text t-body" data-figma-node="741:1196">{note}</p>
+  </div>
+</section>
+
+<style>
+  /* formats (102:220): фон-фотография и вертикальный поток. */
+  .formats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xl);
+    padding: var(--space-4xl) var(--space-l);
+    background-image: url('/img/formats-bg.webp');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* heading-block (102:221): align STRETCH — на всю ширину секции. */
+  .formats__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-s);
+    width: 100%;
+    text-align: center;
+  }
+
+  .formats__title {
+    color: var(--color-text-heading);
+  }
+
+  .formats__lead {
+    max-width: 842px;
+    color: var(--color-text-primary);
+  }
+
+  /* formats-panel (102:224) */
+  .formats__panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--container-max);
+    gap: var(--space-s);
+    padding: var(--space-s);
+    background: var(--color-bg-surface);
+    border-radius: var(--radius-l);
+  }
+
+  /* formats-slider (102:225): фото внутри, стрелки по краям, счётчик по центру. */
+  .formats__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 420px;
+    padding: var(--space-xl) var(--space-l);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+  }
+
+  /* Слои картинок лежат друг на друге; виден только активный. */
+  .formats__slides {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-m);
+    overflow: hidden;
+  }
+
+  .formats__slide {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity var(--motion-slow) var(--ease-out);
+  }
+
+  .formats__slide--active {
+    opacity: 1;
+  }
+
+  /* Стрелки и счётчик — над слоями. */
+  .formats__arrow {
+    position: relative;
+    z-index: 1;
+  }
+
+  .formats__arrow {
+    display: block;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .formats__arrow img {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* slide-counter (102:226): ABSOLUTE — стоит по координатам из спеки,
+     а не в потоке: 608,359 внутри слайдера. */
+  .formats__counter {
+    position: absolute;
+    top: 359px;
+    left: 608px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs) var(--space-s);
+    background: var(--color-text-on-image);
+    border-radius: 999px;
+  }
+
+  .formats__counter-text {
+    color: var(--color-accent);
+  }
+
+  /* formats-tabs (102:234): пять вкладок вплотную. */
+  /* formats-tabs (102:230): высота 296 из спеки, вкладки тянутся. */
+  .formats__tabs {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 296px;
+  }
+
+  /* Высота фиксированная, как в макете: у всех пяти активных вариантов 296,
+     хотя описания разной длины. Значит длинный текст обрезается — это
+     поведение файла, а не наше решение (см. docs/FIGMA-ISSUES.md). */
+  .format-tab {
+    position: relative;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    /* Ширина через flex-basis, а не width: тогда раскрытие активной вкладки
+       анимируется переходом flex-grow, а не прыжком. */
+    flex: 0 0 232px;
+    height: 296px;
+    padding: var(--space-m) var(--space-s);
+    transition:
+      flex-grow var(--motion-base) var(--ease-in-out),
+      background-color var(--motion-base) var(--ease-out);
+  }
+
+  /* Активная вкладка шире, с описанием и кнопкой. */
+  .format-tab--active {
+    flex: 1 1 0;
+    gap: var(--space-m);
+    justify-content: flex-start;
+    padding: var(--space-m);
+    /* Заливка в узле — bg-glass (#ffffff @ 0.55), не непрозрачный белый. */
+    background: var(--color-bg-glass);
+    border-radius: var(--radius-m);
+  }
+
+  /* Разделитель между вкладками: линия 1 px с отступом 10 px сверху и снизу. */
+  .format-tab--divided::before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    width: 1px;
+    content: '';
+    background: var(--color-line-on-dark);
+    opacity: 0.6;
+  }
+
+  .format-tab__head {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .format-tab__number {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-bg-page);
+    border-radius: 999px;
+    color: var(--color-accent);
+  }
+
+  /* Ширина из узлов: 129 у активной (две строки), 176 у остальных. */
+  /* Ширина — по содержимому, но не шире свободного места: в макете у короткого
+     «Точка входа» 129, у длинного «Индивидуальная мастер-сессия» 263.
+     Высота задана: 50 у обычных, 56 у активной — иначе съезжает всё ниже. */
+  .format-tab__title {
+    height: 50px;
+    color: var(--color-text-heading);
+  }
+
+  .format-tab--active .format-tab__title {
+    height: 56px;
+  }
+
+  /* t-h6 у неактивных, t-h5 у активной — класс ставит и снимает скрипт,
+     но начальное состояние задано и без него. */
+  .format-tab--active .format-tab__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  /* Описание и кнопка есть у всех вкладок, но видны только у активной:
+     без этого переключение по клику невозможно — разметки нет. */
+  .format-tab__desc {
+    display: none;
+    margin: 0;
+    /* 95 px — высота узла описания в макете. */
+    max-height: 95px;
+    overflow: hidden;
+    color: var(--color-text-primary);
+  }
+
+  .format-tab__cta {
+    display: none;
+    align-self: flex-start;
+  }
+
+  /* Высота 95 — из узла tab-desc: описание занимает её независимо от длины. */
+  .format-tab--active .format-tab__desc {
+    display: block;
+    height: 95px;
+    animation: format-fade var(--motion-base) var(--ease-out) both;
+  }
+
+  /* Появление описания: display переключить нельзя, анимируем прозрачность. */
+  @keyframes format-fade {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .format-tab--active .format-tab__desc {
+      animation: none;
+    }
+  }
+
+  .format-tab--active .format-tab__cta {
+    display: flex;
+  }
+
+  /* Ширина по содержимому: в макете 87 (активная) и 104 (остальные). */
+  .format-tab__meta {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: var(--space-s);
+  }
+
+  .format-tab--active .format-tab__meta {
+    gap: var(--space-s);
+  }
+
+  /* Точка между длительностью и ценой: 2×2 в узле I709:1504;708:1415. */
+  .format-tab__dot {
+    flex: none;
+    width: 2px;
+    height: 2px;
+    background: var(--color-text-secondary);
+    border-radius: 50%;
+  }
+
+  /* У узла tab-meta есть радиус 999, но заливки нет: в макете это просто
+     строка «30 мин · $50» без плашки. Плашка была выдумкой. */
+  .format-tab__pill {
+    display: flex;
+    align-items: center;
+  }
+
+  .format-tab__duration,
+  .format-tab__price {
+    color: var(--color-text-primary);
+  }
+
+  /* formats-note (741:1194): align STRETCH, без ограничения ширины. */
+  .formats__note {
+    width: 100%;
+  }
+
+  .formats__note-text {
+    margin: 0;
+    color: var(--color-text-secondary);
+  }
+</style>
+
+<script>
+  // Вкладки форматов: клик и стрелки переключают активную, счётчик показывает
+  // позицию. Описание и кнопка есть у всех вкладок, показ решает класс.
+  const section = document.querySelector('.formats');
+  if (section) {
+    const tabs = [...section.querySelectorAll('[data-tab]')];
+    const counter = section.querySelector('.formats__counter-text');
+    const [prev, next] = section.querySelectorAll('.formats__arrow');
+    let index = tabs.findIndex((tab) => tab.classList.contains('format-tab--active'));
+    if (index < 0) index = 0;
+
+    const slides = [...section.querySelectorAll('[data-slide]')];
+
+    const render = () => {
+      slides.forEach((slide, i) => slide.classList.toggle('formats__slide--active', i === index));
+      tabs.forEach((tab, i) => {
+        const active = i === index;
+        tab.classList.toggle('format-tab--active', active);
+        const title = tab.querySelector('.format-tab__title');
+        title.classList.toggle('t-h5', active);
+        title.classList.toggle('t-h6', !active);
+      });
+      if (counter) counter.textContent = `${index + 1}/${tabs.length}`;
+    };
+
+    const go = (delta) => {
+      index = (index + delta + tabs.length) % tabs.length;
+      render();
+    };
+
+    tabs.forEach((tab, i) =>
+      tab.addEventListener('click', () => {
+        index = i;
+        render();
+      }),
+    );
+    prev?.addEventListener('click', () => go(-1));
+    next?.addEventListener('click', () => go(1));
+    render();
+  }
+</script>

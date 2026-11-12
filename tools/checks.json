@@ -1,0 +1,1084 @@
+{
+  "version": 1,
+  "note": "Контракт проверки: что она проверяет, к какому слою относится, какие входы читает, от чего зависит и в каких профилях обязательна. Конвейер строит граф по этим записям; сами инструменты остаются самостоятельными и про этот файл не знают.",
+  "layers": {
+    "base": "воспроизведение исходника: компоненты, тексты, состояния и свойства из файла Figma",
+    "enhancements": "дополнения студии: адаптив, движение, поведение, интеграции",
+    "integration": "совместимость слоёв: дополнения не ломают защищённые свойства основы",
+    "common": "общая корректность: сборка, реестры, переносимость"
+  },
+  "profiles": {
+    "local": "изменённая единица и её зависимости, без живого моста",
+    "regression": "контрольный набор секций и зависимости",
+    "accept-stage1": "полная приёмка основы по обязательствам слоя 1",
+    "accept-stage2": "дополнения слоя 2 и их совместимость с основой",
+    "sources-live": "сверка выгрузки с текущим состоянием Figma",
+    "release": "выпуск: набор файлов сайта, манифест и связь с зелёным прогоном"
+  },
+  "checks": {
+    "build": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/**",
+        "astro.config.mjs",
+        "package.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [
+        "dist/**"
+      ],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "sources": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/live/snapshot.json",
+        "design/figma/pages/**",
+        "design/figma/project.json"
+      ],
+      "dependsOn": [],
+      "resources": [
+        "figma-bridge"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [
+          "E_TIMEOUT",
+          "E_NO_ANSWER"
+        ],
+        "attempts": 2
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "sources-live",
+        "accept-stage2"
+      ],
+      "offlineArgs": [
+        "--offline"
+      ],
+      "note": "В accept-stage1 сверяется со снимком (--offline); с живым файлом — только в sources-live."
+    },
+    "changes": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/live/snapshot.json",
+        "changes/**"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "assets": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/assets/**",
+        "public/**",
+        "design/figma/pages/**/spec.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "tokens": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/styles/tokens.css",
+        "src/styles/typography.css",
+        "src/**/*.astro"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "invented": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/**/*.astro",
+        "design/figma/invented.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "registry": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/invented.json",
+        "design/enhancements.json",
+        "docs/debts.json",
+        "docs/decisions.md"
+      ],
+      "dependsOn": [
+        "invented"
+      ],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "portability": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "tools/**",
+        "skills/**"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "scaffold": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "tools/scaffold/**",
+        "tools/**"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "bindings": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**/spec.json"
+      ],
+      "dependsOn": [],
+      "resources": [
+        "figma-bridge"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [
+          "E_TIMEOUT",
+          "E_NO_ANSWER"
+        ],
+        "attempts": 2
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "sources-live"
+      ],
+      "note": "Нужен живой мост: сверяет цвета в спеках со значениями переменных файла. В офлайн-приёмке основы не участвует."
+    },
+    "states": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**/states.json",
+        "design/figma/pages/**/spec.json",
+        "design/figma/live/structure.json",
+        "design/figma/project.json",
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "interactive": {
+      "layers": [
+        "enhancements"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/**/*.astro",
+        "design/figma/project.json",
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 180000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "motion": {
+      "layers": [
+        "enhancements"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/styles/motion.css",
+        "src/**/*.astro",
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage2"
+      ]
+    },
+    "motion-manifest": {
+      "layers": [
+        "enhancements"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/motion/motion.json",
+        "src/**/*.astro"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "accept-stage2"
+      ]
+    },
+    "layout": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "dist/**",
+        "design/figma/project.json"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "stretch": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "dist/**",
+        "src/styles/base.css"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "images": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "dist/**",
+        "public/img/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "measure": {
+      "layers": [
+        "base"
+      ],
+      "scope": "section",
+      "inputs": [
+        "design/figma/pages/**/spec.json",
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 180000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [
+        "design/figma/pages/**/gate.json"
+      ],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ],
+      "note": "Коды: 0 — зелёные, 1 — дефект геометрии, 3 — не проверено (страницы нет в сборке или корень не размечен)."
+    },
+    "shot": {
+      "layers": [
+        "base"
+      ],
+      "scope": "section",
+      "inputs": [
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 120000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [
+        ".screens/**"
+      ],
+      "mandatoryFor": []
+    },
+    "visual": {
+      "layers": [
+        "base"
+      ],
+      "scope": "section",
+      "inputs": [
+        "design/figma/pages/**/crop.png",
+        ".screens/**"
+      ],
+      "dependsOn": [
+        "shot"
+      ],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": []
+    },
+    "contracts": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "tools/checks.json",
+        "tools/conveyor.mjs"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2",
+        "sources-live"
+      ]
+    },
+    "enhancement-off": {
+      "layers": [
+        "integration"
+      ],
+      "scope": "project",
+      "inputs": [
+        "dist/**",
+        "src/components/**",
+        "src/lib/flags.mjs"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist"
+      ],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage2"
+      ]
+    },
+    "enhancements": {
+      "layers": [
+        "enhancements"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/enhancements.json",
+        "design/figma/invented.json",
+        "tools/checks.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2"
+      ]
+    },
+    "base-parity": {
+      "layers": [
+        "integration"
+      ],
+      "scope": "section",
+      "inputs": [
+        "design/figma/pages/**",
+        "design/enhancements.json",
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "dist",
+        "browser"
+      ],
+      "timeoutMs": 300000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [
+        "reports/base-parity/**"
+      ],
+      "mandatoryFor": [
+        "accept-stage2"
+      ]
+    },
+    "tokens-dtcg": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/tokens.json",
+        "src/styles/tokens.css"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1"
+      ]
+    },
+    "overflow": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "dist/**",
+        "design/figma/project.json"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [
+        "browser"
+      ],
+      "timeoutMs": 180000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "accept-stage1"
+      ],
+      "about": "содержимое не вылезает за блоки и не заходит на соседние секции"
+    },
+    "spec-bounds": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**/spec.json",
+        "design/figma/bounds-exceptions.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2",
+        "sources-live"
+      ],
+      "about": "координаты спеки сходятся: содержимое лежит внутри рамки секции"
+    },
+    "spec-contract": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**/spec.json",
+        "design/figma/spec-exceptions.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "accept-stage2",
+        "sources-live"
+      ],
+      "about": "спека по контракту: версия схемы, поля, типографика текста"
+    },
+    "designer-report": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "docs/debts.json",
+        "docs/FIGMA-ISSUES.md"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1"
+      ],
+      "about": "отчёт дизайнеру совпадает с реестром долгов"
+    },
+    "gen-drift": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/gen/**",
+        "src/components/_gen/**",
+        "design/figma/pages/**/spec.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression"
+      ],
+      "about": "сгенерированные файлы совпадают с пересборкой",
+      "note": "Черновик разметки (решение 388): держит воспроизводимость, в приёмку сайта не входит."
+    },
+    "gen-coverage": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/gen/**",
+        "src/components/_gen/**",
+        "design/figma/pages/**/spec.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression"
+      ],
+      "about": "генератор берёт не меньше узлов, чем порог",
+      "note": "Черновик разметки (решение 388): держит воспроизводимость, в приёмку сайта не входит."
+    },
+    "gen-overrides": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/gen/**",
+        "src/components/_gen/**",
+        "design/figma/pages/**/spec.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression"
+      ],
+      "about": "у каждого пропуска генератора есть причина и решение",
+      "note": "Черновик разметки (решение 388): держит воспроизводимость, в приёмку сайта не входит."
+    },
+    "publish": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/pages/**",
+        "dist/**"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1"
+      ],
+      "about": "в публикации нет отладочных страниц, служебные с noindex"
+    },
+    "lib-purity": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "tools/lib/**"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 15000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1"
+      ],
+      "about": "tools/lib — чистые функции формата, без зависимостей от проекта"
+    },
+    "site-clean": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "site-files.json",
+        "src/**",
+        "public/**",
+        "package.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 180000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "выпуск собирается без design/ и docs/, студийных страниц нет"
+    },
+    "site-contract": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "site-manifest.json",
+        "site-files.json",
+        "reports/runs/**"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "release"
+      ],
+      "about": "выпуск связан с зелёным прогоном и не устарел"
+    },
+    "weight": {
+      "layers": [
+        "base"
+      ],
+      "scope": "project",
+      "inputs": [
+        "public/img/**",
+        "public/fonts/**",
+        "dist/**",
+        "design/figma/weight-exceptions.json"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "картинка ≤ 300 КБ, страница ≤ 8 МБ"
+    },
+    "coverage-map": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**",
+        "design/figma/map-exceptions.json",
+        "src/**"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [
+        "docs/PAGE-MAP.md"
+      ],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "у каждой секции есть кроп, замер и пиксель (или запись об отступлении)"
+    },
+    "links": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "src/**",
+        "dist/**",
+        "design/links-exceptions.json"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [],
+      "timeoutMs": 30000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "каждая внутренняя ссылка ведёт на существующую страницу"
+    },
+    "crops": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "design/figma/pages/**",
+        "dist/**",
+        "design/figma/project.json"
+      ],
+      "dependsOn": [
+        "build"
+      ],
+      "resources": [],
+      "timeoutMs": 60000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "фон показывает вырезанную часть фото, как в макете"
+    },
+    "issues": {
+      "layers": [
+        "common"
+      ],
+      "scope": "project",
+      "inputs": [
+        "docs/issues.json",
+        "tools/checks.json"
+      ],
+      "dependsOn": [],
+      "resources": [],
+      "timeoutMs": 15000,
+      "retryPolicy": {
+        "codes": [],
+        "attempts": 1
+      },
+      "outputs": [
+        "docs/ISSUES.md"
+      ],
+      "mandatoryFor": [
+        "local",
+        "regression",
+        "accept-stage1",
+        "release"
+      ],
+      "about": "реестр ошибок сходится: у каждой находки есть причина и защита"
+    }
+  }
+}

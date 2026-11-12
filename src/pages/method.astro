@@ -1,0 +1,30 @@
+---
+/**
+ * Страница метода — собирается заново по конвейеру.
+ *
+ * Пока собрана первая секция: `method-hero` (323:423). Остальные две
+ * (`method-about` 323:871, `method-cta` 334:992) в работе.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import MethodHero from '../components/MethodHero.astro';
+import MethodAbout from '../components/MethodAbout.astro';
+import MethodCta from '../components/MethodCta.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Метод Syntonia" description="Страница пересобирается.">
+  <main class="page">
+    <Header />
+    <MethodHero />
+    <MethodAbout />
+    <MethodCta />
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+</style>

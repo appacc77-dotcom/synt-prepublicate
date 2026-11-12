@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:18.239Z",
+  "section": {
+    "id": "79:116",
+    "name": "pain",
+    "w": 1440,
+    "h": 707
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 29,
+  "nodes": 34,
+  "coverage": 100,
+  "markedRatio": 85.3,
+  "tolerance": 1,
+  "worstDelta": 0.730000000000004
+}

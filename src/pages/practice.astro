@@ -1,0 +1,41 @@
+---
+/**
+ * Страница практик. Узлы: hero `409:243`, practice-free `410:1122`,
+ * quiz `410:1365`, practice-pay `410:1414`, kody-practice-pay `414:1970`,
+ * practice-package `414:2107`, info-section `435:423`, footer `414:2262`.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import PracticeHero from '../components/PracticeHero.astro';
+import PracticeFree from '../components/PracticeFree.astro';
+import PracticeQuiz from '../components/PracticeQuiz.astro';
+import PracticePay from '../components/PracticePay.astro';
+import PracticeKody from '../components/PracticeKody.astro';
+import PracticePackage from '../components/PracticePackage.astro';
+import InfoSection from '../components/InfoSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Пространство практики — Syntonia"
+  description="Практики для самостоятельной внутренней работы и восстановления состояния."
+>
+  <main class="page">
+    <PracticeHero>
+      <Header node="410:1381" offsetTop={10} />
+    </PracticeHero>
+    <PracticeFree />
+    <PracticeQuiz />
+    <PracticePay />
+    <PracticeKody />
+    <PracticePackage />
+    <InfoSection />
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+</style>

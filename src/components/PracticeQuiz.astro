@@ -1,0 +1,170 @@
+---
+/**
+ * Секция `quiz` страницы практик (410:1365), 1440×550.
+ *
+ * Не путать с блоком на главной (`79:137`): другая раскладка и другой текст.
+ * Фон — CROP [[1, 0, ~0], [0, 0.8718, 0.0003]]: 100 % × 114,7 %, по вертикали
+ * почти от верха.
+ */
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '410:1365' } = Astro.props;
+---
+
+<section class="pquiz" data-figma-node={node}>
+  <div class="pquiz__bg" data-figma-node="410:1366" />
+  <div class="pquiz__content" data-figma-node="410:1367">
+    <div class="pquiz__desc" data-figma-node="410:1412">
+      <h2 class="pquiz__title" data-figma-node="410:1368">Не знаешь, с чего начать?</h2>
+      <p class="pquiz__lead" data-figma-node="410:1369">
+        Пройди короткий тест и узнай свой код — состояние, которое сильнее всего влияет на твою жизнь сейчас.
+      </p>
+    </div>
+
+    <div class="pquiz__action" data-figma-node="410:1413">
+      <p class="pquiz__gift" data-figma-node="410:1411">Практика по твоему коду — в подарок.</p>
+      <div class="pquiz__do" data-figma-node="410:1370">
+        <a class="pquiz__btn" href="/quiz.html" data-figma-node="410:1371">
+          <span class="pquiz__btn-label" data-figma-node="I410:1371;4:16">Пройти тест</span>
+          <ArrowQuiet size={14} />
+        </a>
+        <div class="pquiz__explaine" data-figma-node="410:1372">
+          <span class="pquiz__meta" data-figma-node="410:1373">Бесплатно</span>
+          <span class="pquiz__meta-dot" data-figma-node="410:1374" aria-hidden="true" />
+          <span class="pquiz__meta" data-figma-node="410:1375">2-3 минуты</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pquiz {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: var(--color-text-on-image);
+    overflow: hidden;
+  }
+
+  .pquiz__bg {
+    position: absolute;
+    inset: 0;
+    /* CROP: 100 % × 114,7 %, позиция 0 % 0,3 %. */
+    background-image: url('/img/quiz-bg.jpg');
+    background-size: 100% 114.7%;
+    background-position: 0% 0.3%;
+    background-repeat: no-repeat;
+  }
+
+  .pquiz__content {
+    position: absolute;
+    left: 128px;
+    top: 126px;
+    width: 701px;
+    height: 298px;
+  }
+
+  .pquiz__desc {
+    width: 701px;
+    height: 144px;
+  }
+
+  .pquiz__title {
+    width: 593px;
+    height: 60px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+    color: var(--color-text-on-image);
+  }
+
+  .pquiz__lead {
+    width: 701px;
+    height: 68px;
+    margin: 16px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-image);
+  }
+
+  .pquiz__action {
+    width: 427px;
+    height: 122px;
+    margin-top: 32px;
+  }
+
+  .pquiz__gift {
+    width: 427px;
+    height: 61px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-image);
+  }
+
+  .pquiz__do {
+    position: relative;
+    width: 336px;
+    height: 45px;
+    margin-top: 16px;
+  }
+
+  /* Строка «Бесплатно · 2-3 минуты» стоит справа от кнопки. */
+  .pquiz__explaine {
+    position: absolute;
+    left: 186px;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 20px;
+  }
+
+  .pquiz__meta {
+    font-size: 13px;
+    line-height: 20px;
+    white-space: nowrap;
+    color: var(--color-text-on-image);
+  }
+
+  .pquiz__meta-dot {
+    flex: none;
+    width: 2px;
+    height: 2px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background: var(--color-text-on-image);
+  }
+
+  .pquiz__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    width: 162px;
+    height: 45px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: var(--color-accent-muted);
+    text-decoration: none;
+  }
+
+  .pquiz__btn-label {
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: var(--color-text-on-image);
+  }
+
+  .pquiz__btn :global(svg) {
+    display: block;
+    color: var(--color-text-on-image);
+  }
+</style>

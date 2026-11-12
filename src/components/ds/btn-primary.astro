@@ -1,0 +1,149 @@
+---
+/**
+ * btn-primary — набор Figma `btn-primary` (5:19).
+ *
+ * API повторяет пропсы набора: theme × caps × size.
+ *   theme: light (текстура) | dark (светлая) | muted (оливковая, всегда 45 px)
+ *   caps:  заглавные, стиль button-caps
+ *   size:  L — паддинг 16/24 (высота 61), S — 4/8 (высота 27)
+ *
+ * Ширина не задаётся никогда: в hero 303 px — это 16 + 249 + 8 + 14 + 16,
+ * в pain 214 px — 24 + 144 + 8 + 14 + 24.
+ */
+import ArrowQuiet from './arrow-quiet.astro';
+
+interface Props {
+  href: string;
+  label: string;
+  /** id инстанса в Figma — по нему элемент находит замер. */
+  node?: string;
+  theme?: 'light' | 'dark' | 'muted';
+  size?: 'L' | 'S';
+  caps?: boolean;
+  /**
+   * Переопределение паддинга, которое встречается в файле: в шапке инстанс
+   * `light/caps/L` обжат с 16/24 до 8/16 (высота 45 вместо 61). Это не вариант
+   * набора, а правка инстанса — поэтому отдельный проп, а не селектор снаружи.
+   */
+  compact?: boolean;
+  /**
+   * Обводка инстанса: в `quiz` у кнопки stroke 1 px цветом thread (#c9bea4),
+   * хотя у набора её нет. Переопределение инстанса, поэтому проп.
+   */
+  outlined?: boolean;
+  /**
+   * Горизонтальный паддинг инстанса. В файле встречаются правки инстансов:
+   * у кнопки «С чего начать» паддинг 8/24 вместо 8/16. Это не вариант набора,
+   * поэтому проп, а не селектор снаружи.
+   */
+  padX?: number;
+}
+
+const {
+  href,
+  label,
+  node,
+  theme = 'muted',
+  size = 'L',
+  caps = false,
+  compact = false,
+  outlined = false,
+  padX,
+} = Astro.props;
+
+const labelClass =
+  size === 'S' ? (caps ? 't-button-s-caps' : 't-button-s') : caps ? 't-button-caps' : 't-button';
+---
+
+<a
+  class:list={[
+    'btn-primary',
+    `btn-primary--${theme}`,
+    `btn-primary--${size.toLowerCase()}`,
+    compact && 'btn-primary--compact',
+    outlined && 'btn-primary--outlined',
+    padX && 'btn-primary--padx',
+  ]}
+  href={href}
+  data-figma-node={node}
+  style={padX ? `--btn-pad-x: ${padX}px` : undefined}
+>
+  <span class:list={['btn-primary__label', labelClass]}>{label}</span>
+  <ArrowQuiet />
+</a>
+
+<style>
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-s);
+    border-radius: var(--radius-s);
+    color: var(--color-text-on-image);
+    transition: filter var(--motion-fast) var(--ease-out), transform var(--motion-fast) var(--ease-out);
+  }
+
+  .btn-primary__label {
+    display: block;
+  }
+
+  /* Размеры — из набора: L паддинг 16/24, S — 4/8. */
+  .btn-primary--l {
+    padding: var(--space-m) var(--space-l);
+  }
+
+  .btn-primary--s {
+    padding: var(--space-xs) var(--space-s);
+  }
+
+  /* Обжатый инстанс: паддинг 8/16 при любом size. */
+  .btn-primary--compact {
+    padding: var(--space-s) var(--space-m);
+  }
+
+  .btn-primary--padx {
+    /* Фолбэк обязателен: без него var() не определён и правило отбрасывается. */
+    padding-left: var(--btn-pad-x, var(--space-m));
+    padding-right: var(--btn-pad-x, var(--space-m));
+  }
+
+  /* Обводка инстанса: inset-тень, чтобы не растить высоту. */
+  .btn-primary--outlined {
+    box-shadow: inset 0 0 0 1px var(--color-thread);
+  }
+
+  /* muted по файлу всегда 45 px: паддинг 8/16 независимо от size. */
+  .btn-primary--muted {
+    padding: var(--space-s) var(--space-m);
+    background: var(--color-accent-muted);
+  }
+
+  .btn-primary--dark {
+    background: var(--color-bg-page);
+    color: var(--color-text-primary);
+  }
+
+  .btn-primary--light {
+    background-image: url('/img/btn-texture.webp');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Отклик на курсор — не из макета: в файле только состояние покоя. */
+  .btn-primary:hover {
+    filter: brightness(1.08);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.985);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-primary {
+      transition: none;
+    }
+
+    .btn-primary:active {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,891 @@
+---
+import { figmaOnly } from '../lib/flags.mjs';
+/**
+ * Секция `booking-formats` (383:761), 1440×1546: шкала, список пяти форматов,
+ * панель выбранного формата и форма заявки.
+ *
+ * Тексты выбранного формата для пунктов 2–5 в спеке не лежат: в файле открыт
+ * первый. Они взяты из `states.json` — пять состояний, по одному на выбранный
+ * формат.
+ *
+ * Координаты в спеке относительны родителю: контейнер стоит на x=80, поэтому
+ * панель (x=673) начинается на 753, а разделитель (x=640) — на 720.
+ */
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '383:761' } = Astro.props;
+
+const formats = [
+  {
+    num: '01',
+    title: 'Точка входа',
+    desc: 'Короткая встреча для прояснения запроса и понимания направления.',
+    duration: '30 минут',
+    price: '$50',
+    meetingLabel: 'На встрече:',
+    about:
+      'Точка входа — первая встреча, когда важно не начинать сразу с глубокой работы, а спокойно разобраться, что происходит сейчас и куда лучше двигаться дальше.\nЗа короткое время мы обозначаем основной запрос, смотрим на текущее состояние и определяем, какой следующий шаг может быть наиболее точным.',
+    list: 'проясняем запрос и то, что сейчас действительно важно;\nопределяем основное направление работы;\nсмотрим, какой формат может подойти дальше.',
+  },
+  {
+    num: '02',
+    title: 'Индивидуальная мастер-сессия',
+    desc: 'Глубокая индивидуальная работа с одним запросом или конкретной темой.',
+    duration: '2 часа',
+    price: '$230',
+    meetingLabel: 'В работе:',
+    about:
+      'Мастер-сессия — полноценная индивидуальная встреча для работы с конкретным запросом, состоянием или повторяющейся ситуацией.\nВ центре внимания не только то, что происходит внешне, но и внутреннее основание реакции: состояние, привычный сценарий и причины, которые могут поддерживать его глубже уровня обычного понимания.',
+    list: 'исследуем один ключевой запрос;\nидём от проявления к внутренней причине;\nработаем с тем, что поддерживает привычную реакцию;\nформируем более ясную внутреннюю точку для дальнейшего движения.',
+  },
+  {
+    num: '03',
+    title: 'Программа 3 встречи',
+    desc: 'Последовательная работа с запросом в трёх индивидуальных встречах.',
+    duration: '3 × 2 часа',
+    price: '$560',
+    meetingLabel: 'В программе:',
+    about:
+      'Три встречи дают возможность не ограничиваться одной точкой работы, а увидеть запрос в развитии: начать с основной причины, продолжить работу с тем, что раскрывается дальше, и закрепить изменения.\nЭтот формат подходит, когда одной встречи недостаточно и важна последовательность, но пока не требуется длительное сопровождение.',
+    list: '3 индивидуальные мастер-сессии по 2 часа;\nпоследовательная работа с одним направлением;\nвозможность идти глубже по мере раскрытия запроса;\nзакрепление того, что меняется между встречами.',
+  },
+  {
+    num: '04',
+    title: 'Программа 5 встреч',
+    desc: 'Более глубокий цикл для системной работы и интеграции изменений.',
+    duration: '5 × 2 часа',
+    price: '$1050',
+    meetingLabel: 'В программе:',
+    about:
+      'Пять встреч создают пространство для более глубокой и последовательной работы, когда запрос затрагивает не одну ситуацию, а связан с устойчивыми внутренними сценариями или несколькими областями жизни.\nЗдесь появляется возможность не спешить, возвращаться к тому, что проявляется между встречами, и постепенно работать с более глубокими слоями запроса.',
+    list: '5 индивидуальных мастер-сессий по 2 часа;\nсистемная работа с основным запросом;\nисследование связанных состояний и повторяющихся сценариев;\nвремя на интеграцию изменений между встречами;\nпостепенное углубление работы по мере необходимости.',
+  },
+  {
+    num: '05',
+    title: 'Сопровождение',
+    desc: 'Поддерживающая встреча для продолжения процесса и текущих изменений.',
+    duration: '60 минут',
+    price: '$110',
+    meetingLabel: 'На встрече:',
+    about:
+      'Сопровождение — более компактный формат для тех случаев, когда глубокая основная работа уже началась и важно сохранить контакт с процессом, разобрать то, что проявилось в жизни, или скорректировать дальнейшее движение.\nЭто не новая работа «с нуля», а пространство для продолжения, уточнения и интеграции происходящих изменений.',
+    list: 'разбираем то, что проявилось после предыдущей работы;\nуточняем текущее состояние и новые вопросы;\nподдерживаем интеграцию изменений в повседневной жизни;\nопределяем следующий шаг.',
+  },
+];
+
+const fields = [
+  // У первых трёх полей в макете видна точка-маркер, а «ОПЦИОНАЛЬНО» скрыто
+  // (field-optional visible: false). У комментария наоборот.
+  { name: 'name', label: 'Имя', required: true, placeholder: 'Как к вам обращаться', type: 'text', height: 54 },
+  { name: 'email', label: 'Email', required: true, placeholder: 'ваш@email.com', type: 'email', height: 54 },
+  { name: 'phone', label: 'Телефон', required: true, placeholder: '+1 (___) ___ ___ ___', type: 'tel', height: 54 },
+  { name: 'comment', label: 'комментарий', optional: true, placeholder: 'Что важно знать заранее, ваш запрос или вопросы...', type: 'textarea', height: 86 },
+];
+---
+
+<section class="bformats" data-figma-node={node}>
+  <div class="bformats__container" data-figma-node="383:768">
+    <div class="bformats__scale" data-figma-node="383:787">
+      <span class="bformats__scale-label" data-figma-node="383:769">первый шаг</span>
+      <span class="bformats__scale-line" />
+      <span class="bformats__scale-label" data-figma-node="383:770">глубокое сопровождение</span>
+    </div>
+
+    <div class="bformats__layout" data-figma-node="383:822">
+      <div class="bformats__list" data-figma-node="383:882">
+        {formats.map((f, i) => (
+          <button
+            class:list={['fmt', i === 0 && 'is-active']}
+            type="button"
+            data-format={i}
+            aria-pressed={i === 0 ? 'true' : 'false'}
+          >
+            <span class="fmt__num">{f.num}</span>
+            <span class="fmt__body">
+              <span class="fmt__title">{f.title}</span>
+              <span class="fmt__desc">{f.desc}</span>
+              <span class="fmt__meta">
+                <span>{f.duration}</span>
+                <span class="fmt__dot" aria-hidden="true" />
+                <span>{f.price}</span>
+              </span>
+            </span>
+            <span class="fmt__circle" aria-hidden="true">
+              {/* В макете у выбранного формата внутри круга галочка. */}
+              <svg class="fmt__check" width="16" height="16" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7.2 5.4 10.6 12 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+        ))}
+
+        <div class="bformats__hint" data-figma-node="383:1062">
+          <p class="bformats__hint-text" data-figma-node="383:1063">Не уверены, какой формат выбрать?</p>
+          <p class="bformats__hint-text" data-figma-node="383:1064">Начните с Точки входа.</p>
+          <button class="bformats__hint-btn" type="button" data-pick-first>
+            <span>Выбрать Точку входа</span>
+            {/* Иконка в макете 16×13 — на 14 она выглядит тоньше. */}
+            <ArrowQuiet size={16} />
+          </button>
+        </div>
+      </div>
+
+      <span class="bformats__divider" aria-hidden="true" />
+
+      <div class="bformats__panel" data-figma-node="383:824">
+        <div class="bformats__details" data-figma-node="804:349">
+          {formats.map((f, i) => (
+            <div class="bformats__view" data-view={i} hidden={i !== 0}>
+              <div class="bformats__details-head">
+                <span class="bformats__details-label" data-figma-node={i === 0 ? 'I804:349;383:1252' : undefined}>
+                  Выбранный формат
+                </span>
+                <div class="bformats__details-meta">
+                  <span class="bformats__details-title" data-figma-node={i === 0 ? 'I804:349;383:1253' : undefined}>
+                    {f.title}
+                  </span>
+                  {/* Точка живёт вместе со своим значением: иначе при
+                      переносе она остаётся в конце строки одна. */}
+                  {/* Хвост «· длительность · цена» неразрывен: иначе при
+                      переносе он рвётся посередине и строка начинается
+                      с точки. */}
+                  <span class="bformats__meta-tail">
+                    <span class="bformats__meta-item">
+                      <span class="bformats__dot" aria-hidden="true" />
+                      <span class="bformats__details-title">{f.duration}</span>
+                    </span>
+                    <span class="bformats__meta-item">
+                      <span class="bformats__dot" aria-hidden="true" />
+                      <span class="bformats__details-title">{f.price}</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="bformats__about">
+                <span class="bformats__about-label" data-figma-node={i === 0 ? 'I804:349;383:1260' : undefined}>
+                  О формате
+                </span>
+                {/* Два абзаца с просветом: в макете между ними пустая строка
+                    (paragraphSpacing), выгрузка его не несёт. */}
+                <div class="bformats__about-text" data-figma-node={i === 0 ? 'I804:349;383:1261' : undefined}>
+                  {f.about.split('\n').map((line) => (
+                    <p class="bformats__about-paragraph">{line}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div class="bformats__meeting">
+                <span class="bformats__meeting-label" data-figma-node={i === 0 ? 'I804:349;383:1262' : undefined}>
+                  {f.meetingLabel}
+                </span>
+                {/* Список — маркированный: в макете это буллиты, а не строки
+                    через перевод. Выгрузка маркеров не несёт, поэтому разметка
+                    задаёт их сама. */}
+                <ul class="bformats__meeting-list" data-figma-node={i === 0 ? 'I804:349;383:1265' : undefined}>
+                  {f.list.split('\n').map((line) => (
+                    <li>{line}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <span class="bformats__panel-divider" aria-hidden="true" />
+
+        {/* Форма пока не отправляется: сервиса форм больше нет (Netlify
+            отключён, решение 415). Врать «ушло» нельзя — показываем подсказку
+            под кнопкой, как в решении 362. */}
+        <form class="bformats__form" data-figma-node="806:372" novalidate>
+          {fields.map((f) => (
+            <label class="bfield">
+              <span class="bfield__head">
+                <span class="bfield__label">{f.label}</span>
+                {f.required && <span class="bfield__dot" aria-hidden="true" />}
+                {f.optional && <span class="bfield__optional">ОПЦИОНАЛЬНО</span>}
+              </span>
+              {f.type === 'textarea' ? (
+                <textarea class="bfield__box bfield__box--area" name={f.name} placeholder={f.placeholder} rows={3} />
+              ) : (
+                <input class="bfield__box" type={f.type} name={f.name} placeholder={f.placeholder} required={f.required} />
+              )}
+            </label>
+          ))}
+
+          <button class="bformats__submit" type="submit" data-submit>
+            <span>Отправить заявку</span>
+          </button>
+          <p class="bformats__consent">
+            Нажимая “Отправить заявку”, вы соглашаетесь с условиями обработки данных.
+          </p>
+          {!figmaOnly && (
+            <p class="bformats__note" data-invented="booking-form-not-sent" role="status" aria-live="polite" data-note></p>
+          )}
+
+          <div class="bformats__legal">
+            <span class="bformats__legal-title" data-figma-node="385:1344">Правовая информация</span>
+            <p class="bformats__legal-text" data-figma-node="385:1370">
+              Материалы и сессии носят консультативный характер и не являются медицинской услугой.
+            </p>
+            <p class="bformats__legal-links">
+              <a href="/404.html">Публичная оферта</a>
+              <a href="/404.html">Политика конфиденциальности</a>
+              <a href="/404.html">Согласие на обработку персональных данных</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Дополнение слоя 2: в режиме «только из макета» поведение выключено
+  // целиком — не только разметка, но и обработчики.
+  if (document.documentElement.dataset.enhancements === 'on') {
+    const section = document.querySelector('.bformats');
+    if (section) {
+      // Поле комментария растёт под текст. field-sizing есть не везде,
+      // поэтому дублируем скриптом: scrollHeight — это и есть нужная высота.
+      const area = section.querySelector('.bfield__box--area');
+      if (area && !CSS.supports('field-sizing', 'content')) {
+        const grow = () => {
+          area.style.height = 'auto';
+          area.style.height = `${area.scrollHeight}px`;
+        };
+        area.addEventListener('input', grow);
+        grow();
+      }
+      const options = [...section.querySelectorAll('[data-format]')];
+      const pick = (index) => {
+        for (const option of options) {
+          const active = Number(option.dataset.format) === index;
+          option.classList.toggle('is-active', active);
+          option.setAttribute('aria-pressed', active ? 'true' : 'false');
+        }
+        // Все варианты лежат в разметке: переключаем видимость, а не текст.
+        for (const view of section.querySelectorAll('[data-view]')) {
+          view.hidden = Number(view.dataset.view) !== index;
+        }
+      };
+
+      for (const option of options) {
+        option.addEventListener('click', () => pick(Number(option.dataset.format)));
+      }
+      section.querySelector('[data-pick-first]')?.addEventListener('click', () => pick(0));
+
+      // Отправлять некуда: говорим об этом подсказкой, которая исчезает сама,
+      // иначе человек решит, что заявка ушла (решение 362/415).
+      const note = section.querySelector('[data-note]');
+      section.querySelector('[data-submit]')?.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (!note) return;
+        note.textContent = 'Пока не работает: отправка появится позже';
+        note.classList.add('is-visible');
+        clearTimeout(note.hideTimer);
+        note.hideTimer = setTimeout(() => note.classList.remove('is-visible'), 3200);
+      });
+
+    }
+  }
+</script>
+
+<style>
+  .bformats {
+    position: relative;
+    width: 100%;
+    /* Высота минимальная: при выборе «Сопровождения» карточка и панель
+       становятся выше макета, и с фиксированной высотой низ формы уходил
+       на подвал. */
+    min-height: 1546px;
+    background: var(--color-bg-page);
+  }
+
+  .bformats__container {
+    box-sizing: border-box;
+    width: 1280px;
+    min-height: 1546px;
+    /* padding, а не margin у первого блока: иначе отступ схлопывается
+       с секцией и всё съезжает на 64 px. */
+    padding-top: 64px;
+    /* Нижний отступ в 64 px держит зазор до подвала и при выросшей секции:
+       без него подвал прилипал к низу формы. */
+    padding-bottom: 64px;
+    margin: 0 auto;
+  }
+
+  .bformats__scale {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  .bformats__scale-label {
+    display: block;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    /* Трекинг из файла: 16 % от 13 px = 0,16em. Ширины 107 и 239 заданы
+       узлами, поэтому коробки фиксированы, а не по тексту. */
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .bformats__scale-label:first-child {
+    width: 107px;
+  }
+
+  .bformats__scale-label:last-child {
+    width: 239px;
+    text-align: right;
+  }
+
+  .bformats__scale-line {
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+
+  .bformats__layout {
+    position: relative;
+    /* Две колонки в потоке: высота секции — по самой высокой. Панель была
+       абсолютной с height 1350, её содержимое росло мимо секции и наезжало
+       на подвал при выборе «Сопровождения». */
+    display: flex;
+    align-items: flex-start;
+    gap: 65px;
+    min-height: 1350px;
+    margin-top: 48px;
+  }
+
+  .bformats__list {
+    flex: none;
+    width: 608px;
+    min-height: 1280px;
+  }
+
+  .fmt {
+    position: relative;
+    display: flex;
+    width: 608px;
+    /* Высота минимальная, а не фиксированная: у активной карточки колонка
+       текста уже (421), и длинное описание «Сопровождения» занимает три
+       строки. С фиксированной высотой оно вылезало за карточку. */
+    min-height: 209px;
+    padding: 32px;
+    border: 0;
+    border-radius: 16px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    color: var(--color-text-primary);
+  }
+
+  .fmt + .fmt {
+    margin-top: 16px;
+  }
+
+  .fmt.is-active {
+    background: color-mix(in srgb, var(--color-accent-muted) 25%, transparent);
+  }
+
+  .fmt__num {
+    width: 60px;
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 60px;
+    color: var(--color-text-deep);
+  }
+
+  .fmt__body {
+    display: flex;
+    flex-direction: column;
+    width: 476px;
+    margin-left: 8px;
+  }
+
+  .fmt__title {
+    font-family: var(--font-literata);
+    font-size: 29px;
+    line-height: 39px;
+    color: var(--color-text-primary);
+  }
+
+  .fmt__desc {
+    width: 476px;
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--color-text-primary);
+  }
+
+  /* У активной карточки колонка текста уже (421 против 476): в макете так
+     у выбранного формата, потому что справа стоит кружок с галочкой. Было
+     привязано к первой карточке, и при выборе любой другой галочка ложилась
+     на текст. */
+  .fmt.is-active .fmt__desc {
+    width: 421px;
+  }
+
+  .fmt__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-deep);
+  }
+
+  .fmt__dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .fmt__circle {
+    position: absolute;
+    right: 32px;
+    /* Центр круга в макете на y=236 от верха секции; при top 53 он стоял на
+       32 px выше — ворота этого не видят, круг не размечен. */
+    top: 85px;
+    width: 39px;
+    height: 39px;
+    border: 1px solid var(--color-text-on-image);
+    border-radius: 50%;
+    /* У невыбранных карточек кружок в макете скрыт (visible: false):
+       белая обводка на светлой карточке читалась бледным кольцом. */
+    display: none;
+  }
+
+  .fmt.is-active .fmt__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-text-on-image);
+  }
+
+  .fmt__check {
+    display: none;
+  }
+
+  .fmt.is-active .fmt__check {
+    display: block;
+  }
+
+  .bformats__hint {
+    box-sizing: border-box;
+    width: 608px;
+    height: 155px;
+    /* Тексты стоят на 24 px ниже верха блока — это padding, а не margin. */
+    padding-top: 24px;
+    margin-top: 16px;
+  }
+
+  .bformats__hint-text {
+    margin: 0;
+    height: 27px;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--color-text-primary);
+  }
+
+  .bformats__hint-text:first-child {
+    width: 362px;
+  }
+
+  .bformats__hint-text + .bformats__hint-text {
+    width: 231px;
+    margin-top: 8px;
+  }
+
+  .bformats__hint-btn {
+    margin-top: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    /* В макете подпись набрана Golos Text 17 (I383:1084;16:50), а не Literata:
+       засечный шрифт делал ссылку визуально легче макета. */
+    font-family: var(--font-golos-text);
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    /* В макете трекинг 3 % (letterSpacing PERCENT 3): без него строка
+       на 16 px короче макета. */
+    letter-spacing: 0.03em;
+    line-height: 29px;
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+
+  .bformats__hint-btn :global(svg) {
+    display: block;
+  }
+
+  .bformats__divider {
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 1px;
+    height: 1350px;
+    background: var(--color-border);
+  }
+
+  .bformats__panel {
+    flex: none;
+    width: 608px;
+    min-height: 1350px;
+  }
+
+  .bformats__details {
+    position: relative;
+    /* Высота минимальная, а не фиксированная: у «Индивидуальной
+       мастер-сессии» строка формата переносится и панель выше 487 px.
+       С фиксированной высотой текст вылезал на форму регистрации. */
+    min-height: 487px;
+  }
+
+  .bformats__view {
+    position: relative;
+  }
+
+  .bformats__view[hidden] {
+    display: none;
+  }
+
+  .bformats__details-label {
+    display: block;
+    width: 273px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    /* В макете строка одна. Без запрета переноса текст шире коробки и
+       вылезает на заголовок: высота фиксирована 30 px. */
+    white-space: nowrap;
+    color: var(--color-text-secondary);
+  }
+
+  .bformats__details-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    /* Высота не фиксирована: у длинного названия («Индивидуальная
+       мастер-сессия») строка не влезает в 608 px и переносится. С height
+       39 px она вылезала на «О формате» и на форму регистрации. */
+    min-height: 39px;
+    margin-top: 24px;
+  }
+
+  .bformats__meta-tail {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .bformats__meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+  }
+
+  .bformats__details-title {
+    font-family: var(--font-literata);
+    /* Стиль H4 в макете — Light. Без веса браузер берёт 400, и строка
+       выглядит тяжелее и шире. */
+    font-weight: 300;
+    font-size: 29px;
+    line-height: 38.6px;
+    color: var(--color-text-primary);
+  }
+
+  .bformats__dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-text-secondary);
+  }
+
+  .bformats__about {
+    margin-top: 24px;
+  }
+
+  .bformats__about-label {
+    display: block;
+    width: 110px;
+    height: 23px;
+    /* То же: 110 px уже текста с трекингом, вторая строка падала на абзац. */
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .bformats__about-text {
+    width: 608px;
+    /* Высота минимальная: у разных форматов абзац занимает разное число
+       строк. С фиксированной 178 px длинный текст вылезал на форму. */
+    min-height: 178px;
+    margin: 8px 0 0;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--color-text-primary);
+  }
+
+  /* Просвет между абзацами 16 px: 6 строк по 27 + 16 = 178, как в спеке. */
+  .bformats__about-paragraph {
+    margin: 0;
+  }
+
+  .bformats__about-paragraph + .bformats__about-paragraph {
+    margin-top: 16px;
+  }
+
+  .bformats__meeting {
+    margin-top: 24px;
+  }
+
+  .bformats__meeting-label {
+    display: block;
+    width: 608px;
+    height: 27px;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--color-text-primary);
+  }
+
+  .bformats__meeting-list {
+    box-sizing: border-box;
+    width: 608px;
+    /* Список «В работе» тоже разной длины: у мастер-сессии четыре пункта
+       вместо трёх, и с height 102 px последний пункт налезал на форму. */
+    min-height: 102px;
+    margin: 8px 0 0;
+    /* Текст строки в макете начинается на 31 px от левого края блока
+       (784 при блоке 753): маркер стоит на 765, текст — за ним. Было 12 px,
+       и весь список стоял на 15 px левее макета. */
+    padding: 0 0 0 30px;
+    list-style: disc;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  /* Маркер в макете мельче текста: точка около 4 px при кегле 20. */
+  .bformats__meeting-list ::marker {
+    font-size: 13px;
+  }
+
+  .bformats__panel-divider {
+    display: block;
+    width: 608px;
+    height: 1px;
+    margin-top: 24px;
+    background: var(--color-border);
+  }
+
+  .bformats__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 608px;
+    /* Высота из спеки: у фрейма формы фиксированные 814. */
+    height: 814px;
+    margin-top: 24px;
+  }
+
+  .bfield {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .bfield__head {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  /* В макете «КОММЕНТАРИЙ  ОПЦИОНАЛЬНО» стоят рядом слева, а не по краям:
+     у метки textCase UPPER и трекинг 16 %, у подписи — свой. */
+  .bfield__label {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  /* Точка-маркер обязательного поля: 3×3, на уровне верха строки. */
+  .bfield__dot {
+    width: 3px;
+    height: 3px;
+    margin-top: 1px;
+    border-radius: 50%;
+    background: var(--color-text-heading);
+  }
+
+  .bfield__optional {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .bfield__box {
+    box-sizing: border-box;
+    width: 608px;
+    height: 54px;
+    padding: 0 17px;
+    /* Обводка полей в макете — accent-muted (#8a8560), а не светлая
+       color-border: с ней поля выглядели почти без рамок. */
+    border: 1px solid var(--color-accent-muted);
+    border-radius: 4px;
+    background: var(--color-bg-page);
+    font-family: var(--font-golos-text);
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+  }
+
+  .bfield__box--area {
+    /* Поле растёт под текст: в макете высота 86 px, но написанное в нём
+       не должно прятаться за границей. field-sizing — нативно, высота по
+       содержимому; запасной путь — скрипт ниже, который считает scrollHeight. */
+    field-sizing: content;
+    /* height: auto обязательно: базовая .bfield__box задаёт 54 px, и это
+       перебивает field-sizing — поле не росло. */
+    height: auto;
+    min-height: 86px;
+    padding: 17px;
+    resize: none;
+  }
+
+  .bformats__submit {
+    /* flex: none — иначе при содержимом выше 814 px форма сжимает кнопку
+       (было 36 вместо 60). */
+    flex: none;
+    width: 608px;
+    height: 60px;
+    /* Отступ даёт поле выше (margin-bottom 24), второй не нужен: с ним
+       правовой блок уезжал на 24 px вниз. */
+    margin-top: 0;
+    border: 0;
+    border-radius: 4px;
+    background: var(--color-accent);
+    font-family: var(--font-literata);
+    /* В макете Literata Light 22: без веса браузер берёт 400, и надпись
+       выглядит крупнее и тяжелее. */
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--color-text-on-image);
+    cursor: pointer;
+  }
+
+  .bformats__consent {
+    margin: 14px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  /* Ловушка для ботов: место в раскладке не занимает, иначе сдвигает
+     кнопку и ломает геометрию формы. */
+  .bfield--trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .bformats__note {
+    /* Подсказка не занимает место в потоке: иначе её удаление в сборке
+       «только из макета» сдвигало бы правовой блок и ломало замер. */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+    opacity: 0;
+    transition: opacity var(--motion-fast) var(--ease-out);
+    /* Подсказка не двигает форму: она всплывает над строкой согласия. */
+    pointer-events: none;
+  }
+
+  .bformats__note.is-visible {
+    opacity: 1;
+  }
+
+  .bformats__legal {
+    margin-top: 42px;
+    padding: 16px;
+    /* Рамка правового блока в макете тоже accent-muted. */
+    border: 1px solid var(--color-accent-muted);
+    border-radius: 8px;
+  }
+
+  .bformats__legal-title {
+    display: block;
+    width: 209px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-accent);
+  }
+
+  .bformats__legal-text {
+    width: 574px;
+    height: 40px;
+    margin: 32px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  .bformats__legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    /* В макете ссылки стоят через 8 px по горизонтали (x=0 и x=128 при
+       ширине первой 120), а не через 16. */
+    gap: 8px;
+    margin: 16px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .bformats__legal-links a {
+    color: var(--color-text-secondary);
+    /* В макете все три ссылки подчёркнуты (textDecoration UNDERLINE). */
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>

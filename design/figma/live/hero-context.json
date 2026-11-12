@@ -1,0 +1,137 @@
+{
+  "schema": "context/1",
+  "nodeId": "79:105",
+  "nodes": [
+    {
+      "id": "79:105",
+      "name": "hero",
+      "type": "FRAME",
+      "depth": 0,
+      "parentId": null,
+      "visible": true,
+      "layout": {
+        "layoutMode": "HORIZONTAL",
+        "sizingH": "FIXED",
+        "sizingV": "FIXED",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "w": 1440,
+        "h": 780,
+        "x": 0,
+        "y": 0
+      },
+      "bindings": {
+        "itemSpacing": "VariableID:2:8"
+      },
+      "childCount": 1,
+      "css": {
+        "display": "flex",
+        "width": "1440px",
+        "height": "780px",
+        "justify-content": "flex-end",
+        "align-items": "flex-start",
+        "gap": "var(--space-m, 16px)"
+      }
+    },
+    {
+      "id": "79:106",
+      "name": "hero-video",
+      "type": "FRAME",
+      "depth": 1,
+      "parentId": "79:105",
+      "visible": true,
+      "layout": {
+        "layoutMode": "HORIZONTAL",
+        "sizingH": "FILL",
+        "sizingV": "FILL",
+        "gap": 32,
+        "padding": [
+          64,
+          64,
+          64,
+          64
+        ],
+        "w": 1440,
+        "h": 780,
+        "x": 0,
+        "y": 0
+      },
+      "bindings": {
+        "paddingLeft": "VariableID:2:12",
+        "paddingTop": "VariableID:2:12",
+        "paddingRight": "VariableID:2:12",
+        "paddingBottom": "VariableID:2:12"
+      },
+      "childCount": 3,
+      "css": {
+        "display": "flex",
+        "padding": "var(--space-3xl, 64px)",
+        "justify-content": "space-between",
+        "align-items": "flex-end",
+        "flex": "1 0 0",
+        "align-self": "stretch",
+        "background": "url(<path-to-image>) lightgray 50% / cover no-repeat"
+      },
+      "collapsed": {
+        "descendants": 12,
+        "types": {
+          "INSTANCE": 3,
+          "VECTOR": 3,
+          "FRAME": 1,
+          "GROUP": 1,
+          "TEXT": 3,
+          "RECTANGLE": 1
+        },
+        "readErrors": 0
+      }
+    }
+  ],
+  "refs": {
+    "variables": {
+      "VariableID:2:8": {
+        "name": "space-m",
+        "collection": "Spacing",
+        "modeCount": 1
+      },
+      "VariableID:2:12": {
+        "name": "space-3xl",
+        "collection": "Spacing",
+        "modeCount": 1
+      }
+    },
+    "styles": {},
+    "components": {}
+  },
+  "budget": {
+    "requestedBytes": 262144,
+    "estimatedBytes": 1153,
+    "visited": 2,
+    "emitted": 2,
+    "omitted": {
+      "budget": 0,
+      "deadline": 0
+    },
+    "partial": 0,
+    "frontier": [],
+    "frontierTotal": 0,
+    "complete": true,
+    "walkMs": 14,
+    "cssMs": 14,
+    "batches": 2,
+    "refsBytes": 192,
+    "finalBytes": 1366,
+    "refsMs": 0,
+    "changeBatchesDuringWalk": 0,
+    "timeoutMs": 60000
+  },
+  "targetSource": "explicit",
+  "fileContext": {
+    "fileName": "Website Syntonia2",
+    "fileKey": "NInjODHyOOjIitF3lq4Vpe"
+  }
+}

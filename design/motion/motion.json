@@ -1,0 +1,279 @@
+{
+  "version": 1,
+  "note": "Каждая анимация и переход в src/ описаны здесь. status: invented:baseline — общий слой, invented — точечное решение, invented:tool — внутренняя страница, figma — из макета. decision — номер записи в docs/decisions.md.",
+  "entries": [
+    {
+      "file": "src/components/BookingFormats.astro",
+      "selector": ".bformats__note",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 239
+    },
+    {
+      "file": "src/components/Faq.astro",
+      "selector": ".faq__icon-down, .faq__icon-up",
+      "declaration": "transition: opacity var(--motion-base) var(--ease-out)",
+      "status": "invented",
+      "decision": 161
+    },
+    {
+      "file": "src/components/Faq.astro",
+      "selector": ".faq__item--open .faq__answer",
+      "declaration": "animation: motion-fade var(--motion-base) var(--ease-out) both",
+      "status": "invented",
+      "decision": 161
+    },
+    {
+      "file": "src/components/Formats.astro",
+      "selector": ".formats__slide",
+      "declaration": "transition: opacity var(--motion-slow) var(--ease-out)",
+      "status": "invented",
+      "decision": 141
+    },
+    {
+      "file": "src/components/Formats.astro",
+      "selector": ".format-tab",
+      "declaration": "transition:\n      flex-grow var(--motion-base) var(--ease-in-out),\n      background-color var(--motion-base) var(--ease-out)",
+      "status": "invented",
+      "decision": 141
+    },
+    {
+      "file": "src/components/Formats.astro",
+      "selector": ".format-tab--active .format-tab__desc",
+      "declaration": "animation: format-fade var(--motion-base) var(--ease-out) both animation: none",
+      "status": "invented",
+      "decision": 141
+    },
+    {
+      "file": "src/components/FounderHero.astro",
+      "selector": ".founder__note",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 228
+    },
+    {
+      "file": "src/components/FounderHero.astro",
+      "selector": ".bio__title, .bio__num, .bio__mark",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 228
+    },
+    {
+      "file": "src/components/FounderHero.astro",
+      "selector": ".bio__body",
+      "declaration": "transition: max-height var(--motion-base) var(--ease-out)",
+      "status": "invented",
+      "decision": 223
+    },
+    {
+      "file": "src/components/Header.astro",
+      "selector": ".header__chevron",
+      "declaration": "transition: transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 166
+    },
+    {
+      "file": "src/components/Header.astro",
+      "selector": ".header__menu",
+      "declaration": "animation: motion-rise var(--motion-base) var(--ease-out) both",
+      "status": "invented",
+      "decision": 166
+    },
+    {
+      "file": "src/components/Header.astro",
+      "selector": ".header__mobile",
+      "declaration": "animation: panel-rise var(--motion-base) var(--ease-out) both",
+      "status": "invented",
+      "decision": 166
+    },
+    {
+      "file": "src/components/Header.astro",
+      "selector": ".header__mobile-link",
+      "declaration": "transition:\n      background-color var(--motion-fast) var(--ease-out),\n      opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 166
+    },
+    {
+      "file": "src/components/Header.astro",
+      "selector": ".header__line",
+      "declaration": "transition:\n      transform var(--motion-base) var(--ease-out),\n      opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 166
+    },
+    {
+      "file": "src/components/Hero.astro",
+      "selector": ".hero__toast",
+      "declaration": "transition:\n      opacity var(--motion-fast) var(--ease-out),\n      transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 176
+    },
+    {
+      "file": "src/components/InfoSection.astro",
+      "selector": ".info__arrow",
+      "declaration": "transition: transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 304
+    },
+    {
+      "file": "src/components/MastersTeam.astro",
+      "selector": ".master__note",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 224
+    },
+    {
+      "file": "src/components/PracticePackage.astro",
+      "selector": ".pack__accord-arrow",
+      "declaration": "transition: transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 301
+    },
+    {
+      "file": "src/components/QuizResult.astro",
+      "selector": ".qres__play-note",
+      "declaration": "transition:\n      opacity var(--motion-fast) var(--ease-out),\n      transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 362
+    },
+    {
+      "file": "src/components/QuizTest.astro",
+      "selector": ".qtest__note",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 213
+    },
+    {
+      "file": "src/components/Voices.astro",
+      "selector": ".voices__track",
+      "declaration": "transition: transform var(--motion-slow) var(--ease-in-out)",
+      "status": "invented",
+      "decision": 197
+    },
+    {
+      "file": "src/components/Voices.astro",
+      "selector": ".voices__dot",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 197
+    },
+    {
+      "file": "src/components/Voices.astro",
+      "selector": ".voices__dot::after",
+      "declaration": "transition: opacity var(--motion-base) var(--ease-out)",
+      "status": "invented",
+      "decision": 197
+    },
+    {
+      "file": "src/components/Voices.astro",
+      "selector": ".voices__arrow",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out), transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 197
+    },
+    {
+      "file": "src/components/ds/btn-primary.astro",
+      "selector": "<style> .btn-primary",
+      "declaration": "transition: filter var(--motion-fast) var(--ease-out), transform var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 380
+    },
+    {
+      "file": "src/components/ds/btn-primary.astro",
+      "selector": ".btn-primary",
+      "declaration": "transition: none",
+      "status": "invented:baseline",
+      "decision": 180
+    },
+    {
+      "file": "src/components/ds/btn-quiet.astro",
+      "selector": "<style> .btn-quiet",
+      "declaration": "transition: opacity var(--motion-fast) var(--ease-out)",
+      "status": "invented",
+      "decision": 380
+    },
+    {
+      "file": "src/components/ds/btn-quiet.astro",
+      "selector": ".btn-quiet",
+      "declaration": "transition: none",
+      "status": "invented:baseline",
+      "decision": 180
+    },
+    {
+      "file": "src/pages/structure.astro",
+      "selector": ".chip",
+      "declaration": "transition: background 0.15s ease, color 0.15s ease",
+      "status": "invented:tool",
+      "decision": 206
+    },
+    {
+      "file": "src/pages/structure.astro",
+      "selector": ".block",
+      "declaration": "transition: border-color 0.15s ease, transform 0.15s ease",
+      "status": "invented:tool",
+      "decision": 206
+    },
+    {
+      "file": "src/pages/structure.astro",
+      "selector": ".link",
+      "declaration": "transition: color 0.15s ease, border-color 0.15s ease",
+      "status": "invented:tool",
+      "decision": 206
+    },
+    {
+      "file": "src/pages/structure.astro",
+      "selector": ".copy",
+      "declaration": "transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease",
+      "status": "invented:tool",
+      "decision": 206
+    },
+    {
+      "file": "src/pages/structure.astro",
+      "selector": ".shot img",
+      "declaration": "transition: transform 0.25s ease",
+      "status": "invented:tool",
+      "decision": 206
+    },
+    {
+      "file": "src/styles/motion.css",
+      "selector": "a, button, summary, [role='tab'], [role='button'], input, select, textarea",
+      "declaration": "transition-property: color, background-color, border-color, opacity, box-shadow, fill, stroke transition-duration: var(--motion-fast)",
+      "status": "invented",
+      "decision": 180
+    },
+    {
+      "file": "src/styles/motion.css",
+      "selector": "[data-enhancements='on'] a[href]",
+      "declaration": "transition-property: opacity transition-duration: var(--motion-fast)",
+      "status": "invented",
+      "decision": 380
+    },
+    {
+      "file": "src/styles/motion.css",
+      "selector": "[data-enhancements='on'] button:not(:disabled), [data-enhancements='on'] [role='button']:not([aria-disabled='true'])",
+      "declaration": "transition-property: box-shadow, background-color, border-color, color, opacity transition-duration: var(--motion-fast)",
+      "status": "invented",
+      "decision": 380
+    },
+    {
+      "file": "src/styles/motion.css",
+      "selector": "[data-enhancements='on'] .jcard, [data-enhancements='on'] .pcard, [data-enhancements='on'] .fmt",
+      "declaration": "transition-property: box-shadow, background-color transition-duration: var(--motion-base)",
+      "status": "invented",
+      "decision": 380
+    },
+    {
+      "file": "src/styles/motion.css",
+      "selector": "*, *::before, *::after",
+      "declaration": "animation-duration: 0.01ms !important transition-duration: 0.01ms !important",
+      "status": "invented",
+      "decision": 180
+    },
+    {
+      "file": "src/styles/motion.css",
+      "selector": "[data-enhancements='off'] *, [data-enhancements='off'] *::before, [data-enhancements='off'] *::after",
+      "declaration": "transition-duration: 0s !important animation-duration: 0s !important",
+      "status": "invented",
+      "decision": 369
+    }
+  ]
+}

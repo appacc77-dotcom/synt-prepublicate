@@ -1,0 +1,23 @@
+---
+/**
+ * Логотип `logo-gold` (29:2054), 400×143 — один вектор.
+ *
+ * В файле это компонент с вектором внутри; SVG выгружен экспортёром
+ * (`assets/svg/logo-gold.svg`, 401×143) и вставляется как изображение.
+ */
+interface Props {
+  node?: string;
+}
+
+const { node = '29:2054' } = Astro.props;
+---
+
+<img class="ds-logo-gold" src="/svg/logo-gold.svg" alt="Syntonia" width="400" height="143" data-figma-node={`${node} 24:1871`} />
+
+<style>
+  .ds-logo-gold {
+    display: block;
+    width: 400px;
+    height: 143px;
+  }
+</style>

@@ -1,0 +1,217 @@
+---
+/**
+ * Секция `practice-pay` (410:1414), 1440×2001: заголовок и семь карточек
+ * платных практик в две колонки.
+ *
+ * Восьмая карточка в файле скрыта (`visible: false`), поэтому на экране семь.
+ * Карточка — отдельный компонент `PracticePayCard`, он же используется в
+ * секции «Коды состояний».
+ */
+import PracticePayCard from './PracticePayCard.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '410:1414' } = Astro.props;
+
+const rows = [{ node: '412:1664' }, { node: '412:1815' }, { node: '412:1848' }, { node: '412:1881' }];
+
+const cards = [
+  {
+    id: '412:1782',
+    titleHeight: 76,
+    titleWidth: 301,
+    titleSize: 32,
+    titleLine: 37.8,
+    textWidth: 300,
+    image: '/img/pay-f331.webp',
+    title: ['Жизнь на разрыве.', 'Найти выход'],
+    text: ['Когда кажется, что сил больше нет.', 'Как найти опору и выйти из тупика.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '412:1799',
+    titleHeight: 84,
+    titleWidth: 286,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 268,
+    image: '/img/pay-368e.webp',
+    crop: [[0.6352710127830505, 0, 0.23606911301612854], [0, 1, 0]],
+    title: ['Разрешить себе больше.', 'Деньги, реализация,', 'масштаб'],
+    text: ['Снять внутренние ограничения', 'и открыть поток возможностей.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '412:1816',
+    titleHeight: 84,
+    titleWidth: 284,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 275,
+    image: '/img/pay-f9a8.jpg',
+    title: ['Возвращение близости.', 'Внутренние преграды', 'в отношениях'],
+    text: ['Увидеть и отпустить, что мешает', 'быть рядом и быть собой.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '412:1817',
+    titleHeight: 76,
+    titleWidth: 303,
+    titleSize: 25,
+    titleLine: 37.5,
+    textWidth: 247,
+    image: '/img/pay-4170.webp',
+    title: ['Держаться — это работа.', 'Стоять — это состояние'],
+    text: ['Научиться опираться на себя', 'и сохранять устойчивость.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '412:1849',
+    titleHeight: 84,
+    titleWidth: 273,
+    titleSize: 24,
+    titleLine: 28.3,
+    textWidth: 309,
+    image: '/img/pay-8edd.jpg',
+    crop: [[0.3573399484157562, 0, 0.5327919125556946], [0, 1, 0]],
+    title: ['Тело не молчит.', 'Услышать внутренний', 'смысл'],
+    text: ['Понять сигналы тела и восстановить', 'диалог с собой.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '412:1850',
+    titleHeight: 76,
+    titleWidth: 258,
+    titleSize: 32,
+    titleLine: 37.8,
+    textWidth: 304,
+    image: '/img/hero.jpg',
+    crop: [[0.3573399484157562, 0, 0.44216540455818176], [0, 1, 0]],
+    title: ['Связь с Высшим', 'проявлением'],
+    text: ['Практика соединения с источником', 'поддержки и смысла.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+  {
+    id: '412:1882',
+    titleHeight: 76,
+    titleWidth: 167,
+    titleSize: 32,
+    titleLine: 37.8,
+    textWidth: 253,
+    image: '/img/pay-9cc2.webp',
+    title: ['Вернуться', 'к радости'],
+    text: ['Найти то, что вдохновляет,', 'и позволить себе жить в этом.'],
+    time: '52 минуты',
+    price: '$39',
+  },
+];
+---
+
+<section class="ppay" data-figma-node={node}>
+  <div class="ppay__container" data-figma-node="410:1415">
+    <div class="ppay__head" data-figma-node="410:1416">
+      <h2 class="ppay__title" data-figma-node="410:1417">Практики для глубокой работы</h2>
+      <p class="ppay__subtitle" data-figma-node="410:1418">
+        Для более глубокой самостоятельной работы с тем состоянием, которое сильнее всего влияет на жизнь сейчас.
+      </p>
+    </div>
+
+    <div class="ppay__grid">
+      {rows.map((row, rowIndex) => (
+        <div class="ppay__row" data-figma-node={row.node}>
+          {cards.slice(rowIndex * 2, rowIndex * 2 + 2).map((card) => <PracticePayCard card={card} />)}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector('.ppay');
+  if (section) {
+    // Звука и оплаты в макете нет: кнопки переключают состояние, но ничего
+    // не покупают и не играют — это отсутствие исходника, не дефект.
+    for (const button of section.querySelectorAll('[data-play]')) {
+      button.addEventListener('click', () => {
+        const playing = button.getAttribute('aria-pressed') === 'true';
+        button.setAttribute('aria-pressed', String(!playing));
+        button.classList.toggle('is-playing', !playing);
+      });
+    }
+    for (const button of section.querySelectorAll('.pay__buy')) {
+      button.addEventListener('click', () => {
+        const note = document.getElementById(button.getAttribute('aria-describedby'));
+        if (note) note.hidden = !note.hidden;
+      });
+    }
+  }
+</script>
+
+<style>
+  .ppay {
+    position: relative;
+    width: 100%;
+    height: 2001px;
+    background: var(--color-practice-surface);
+  }
+
+  .ppay__container {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 2001px;
+    margin: 0 auto;
+    padding-top: 96px;
+  }
+
+  .ppay__head {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 163px;
+    /* Отступ — padding: margin первого блока схлопывается и двигает секцию. */
+    padding-top: 16px;
+  }
+
+  .ppay__title {
+    width: 983px;
+    height: 81px;
+    margin: 0 0 0 149px;
+    font-family: var(--font-literata);
+    font-size: 65px;
+    line-height: 81.25px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .ppay__subtitle {
+    width: 1114px;
+    height: 34px;
+    margin: 16px 0 0 83px;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .ppay__grid {
+    width: 1280px;
+    margin-top: 64px;
+  }
+
+  .ppay__row {
+    display: flex;
+    gap: 32px;
+    width: 1280px;
+    height: 371px;
+  }
+
+  .ppay__row + .ppay__row {
+    margin-top: 64px;
+  }
+</style>

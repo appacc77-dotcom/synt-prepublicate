@@ -1,0 +1,278 @@
+---
+/**
+ * Секция `info-section` (435:423), 1440×952: «Бережная практика» и аккордеон
+ * из двух пунктов.
+ *
+ * Раскладка фиксированная, поэтому элементы стоят по координатам из спеки:
+ * поток здесь только мешает — отступы схлопываются и тянут за собой блоки.
+ *
+ * У второго пункта в файле нет раскрытого содержимого: кнопка честно говорит
+ * об этом, а не раскрывает пустоту.
+ */
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '435:423' } = Astro.props;
+
+// Строки списка: y и высота из спеки (435:515, 523, 524, 525, 526).
+const listItems = [
+  { y: 0, h: 68, text: 'Перед началом оцени своё состояние по шкале 0–10. Если напряжение выше 6/10 — отложи практику или сделай её с поддержкой.' },
+  { y: 78, h: 34, text: 'Поставь мягкий таймер на 10–15 минут, держи рядом воду и плед.' },
+  { y: 122, h: 34, text: 'Сообщи близкому, что ты в практике, или договорись о «якоре поддержки»' },
+  { y: 166, h: 34, text: 'Если в процессе становится хуже — остановись, открой глаза, сделай три длинных выдоха и сделай паузу.' },
+  { y: 210, h: 68, text: 'Если у тебя есть диагнозы, влияющие на психику, выраженная тревога/депрессия, частые флэшбэки или ты принимаешь психотропные препараты — выполняй практики только с поддержкой специалиста.' },
+];
+---
+
+<section class="info" data-figma-node={node}>
+  <div class="info__head" data-figma-node="435:424"></div>
+  <h2 class="info__title" data-figma-node="435:425">Бережная практика</h2>
+  <p class="info__lead" data-figma-node="435:426">
+    Перед началом уделите минуту своему состоянию. Практику можно остановить в любой момент — ориентируйтесь
+    на своё самочувствие и не продолжайте через сильное напряжение.
+  </p>
+
+  <div class="info__acc" data-figma-node="435:428"></div>
+
+  <button class="info__row" type="button" aria-expanded="true" data-accord data-figma-node="435:485">
+    <span class="info__num" data-figma-node="435:429">01</span>
+    <span class="info__name" data-figma-node="435:431">С заботой о тебе</span>
+    <span class="info__arrow" data-figma-node="435:479"><ArrowQuiet size={25} direction="up" /></span>
+  </button>
+
+  <div class="info__body" data-figma-node="435:527" data-list>
+    <ul class="info__list" data-figma-node="435:522">
+      {listItems.map((item) => <li style={`top: ${item.y}px; height: ${item.h}px`}>{item.text}</li>)}
+    </ul>
+  </div>
+
+  <button class="info__row info__row--second" type="button" aria-expanded="false" data-accord data-figma-node="435:528">
+    <span class="info__num info__num--second" data-figma-node="435:530">02</span>
+    <span class="info__name info__name--second" data-figma-node="435:532">SOS-алгоритм</span>
+    <span class="info__sub" data-figma-node="435:548">
+      Короткий SOS-алгоритм, чтобы вернуться в контакт с собой и пространством.
+    </span>
+    <span class="info__arrow info__arrow--second" data-figma-node="435:562"><ArrowQuiet size={26} direction="down" /></span>
+  </button>
+
+  <p class="info__empty" data-empty hidden>Второй пункт в макете не раскрыт: содержимого нет.</p>
+</section>
+
+<script>
+  const section = document.querySelector('.info');
+  if (section) {
+    for (const button of section.querySelectorAll('[data-accord]')) {
+      button.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        const body = section.querySelector('[data-list]');
+        const empty = section.querySelector('[data-empty]');
+        // Раскрывать умеет только первый пункт: у второго содержимого нет.
+        if (button.classList.contains('info__row--second')) {
+          // open — прежнее состояние: если был раскрыт, подсказку прячем.
+          if (empty) empty.hidden = open;
+          return;
+        }
+        if (body) body.hidden = open;
+      });
+    }
+  }
+</script>
+
+<style>
+  .info {
+    position: relative;
+    width: 100%;
+    height: 952px;
+    /* Фон — фото с вырезом: размер 1/масштаб, позиция e/(1−a). */
+    background: url('/img/library-bg.webp') 96.63% 23.36% / 290.58% 147.79% no-repeat;
+  }
+
+  .info__head,
+  .info__acc {
+    position: absolute;
+    left: 80px;
+  }
+
+  .info__head {
+    top: 64px;
+    width: 1280px;
+    height: 197px;
+  }
+
+  .info__acc {
+    top: 309px;
+    width: 1280px;
+    height: 579px;
+  }
+
+  .info__title {
+    position: absolute;
+    left: 410px;
+    top: 80px;
+    width: 620px;
+    height: 81px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 65px;
+    line-height: 81.25px;
+    font-weight: 400;
+    color: var(--color-bg-inverse);
+  }
+
+  .info__lead {
+    position: absolute;
+    left: 146px;
+    top: 177px;
+    width: 1148px;
+    height: 68px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-bg-inverse);
+  }
+
+  /* Заголовок пункта — кнопка: рамка 1 px, фон practice-surface. */
+  .info__row {
+    position: absolute;
+    left: 80px;
+    top: 309px;
+    box-sizing: border-box;
+    width: 1278px;
+    height: 119px;
+    padding: 0;
+    border: 1px solid var(--color-accent-muted);
+    background: var(--color-practice-surface);
+    cursor: pointer;
+  }
+
+  .info__row--second {
+    top: 754px;
+    height: 132px;
+    background: transparent;
+  }
+
+  .info__num {
+    position: absolute;
+    left: 24px;
+    top: 32px;
+    width: 42px;
+    height: 55px;
+    font-family: var(--font-great-vibes);
+    font-size: 55px;
+    /* Межстрочный из спеки — 125 % от 55. */
+    line-height: 68.75px;
+    text-align: left;
+    color: var(--color-accent-muted);
+  }
+
+  .info__name {
+    position: absolute;
+    left: 99px;
+    top: 39px;
+    width: 274px;
+    height: 41px;
+    font-family: var(--font-literata);
+    font-size: 35px;
+    line-height: 41px;
+    text-align: left;
+    color: var(--color-bg-inverse);
+  }
+
+  .info__num--second {
+    top: 39px;
+    width: 51px;
+  }
+
+  .info__name--second {
+    left: 108px;
+    top: 25px;
+    width: 243px;
+  }
+
+  .info__sub {
+    position: absolute;
+    left: 108px;
+    top: 74px;
+    width: 777px;
+    height: 34px;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: left;
+    color: var(--color-text-primary);
+  }
+
+  .info__arrow {
+    position: absolute;
+    left: 1229px;
+    top: 46px;
+    width: 25px;
+    height: 25px;
+    color: var(--color-bg-inverse);
+    /* Направление задаёт сам вариант вектора, а не поворот CSS. */
+    transition: transform var(--motion-fast) var(--ease-out);
+  }
+
+  .info__arrow--second {
+    left: 1228px;
+    top: 54px;
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Раскрытый пункт показывает стрелку вниз, закрытый — вверх: меняем знак
+     поворотом на 180°, потому что это один и тот же вектор 90/Variant2. */
+  .info__row[aria-expanded='true'] .info__arrow {
+    transform: rotate(180deg);
+  }
+
+  .info__body {
+    position: absolute;
+    left: 80px;
+    top: 428px;
+    box-sizing: border-box;
+    width: 1278px;
+    height: 326px;
+    background: var(--color-bg-page);
+  }
+
+  .info__list {
+    position: relative;
+    width: 1163px;
+    height: 278px;
+    margin: 24px 0 0 24px;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .info__list li {
+    position: absolute;
+    left: 0;
+    width: 1163px;
+    padding-left: 14px;
+    overflow: hidden;
+  }
+
+  .info__list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+  }
+
+  .info__empty {
+    position: absolute;
+    left: 80px;
+    top: 895px;
+    width: 1278px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+</style>

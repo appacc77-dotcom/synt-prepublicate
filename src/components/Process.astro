@@ -1,0 +1,156 @@
+---
+/**
+ * Process — секция `process` (79:166), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×1429, заголовок и три карточки-этапа.
+ *
+ * Раскладка из спеки:
+ *   process     — VERTICAL, gap 64, pad 96/24, MIN/CENTER
+ *   container   — VERTICAL, gap 48, MIN/CENTER, 1280
+ *   stage-card  — HORIZONTAL, gap 32, pad 0/48, CENTER/CENTER, 1080
+ *   stage-content— VERTICAL, gap 24, MIN/MIN, 407
+ *   stage-body  — HORIZONTAL, gap 16, MIN/CENTER, линия 1 px + текст 390
+ *
+ * Карточки чередуются свойством `order`: text-first / image-first.
+ * Фотографии — CROP, у каждой свой масштаб и сдвиг (см. STAGES).
+ */
+
+interface Stage {
+  order: 'text-first' | 'image-first';
+  title: string;
+  text: string;
+  image: string;
+  /** background-size и background-position, посчитанные из imageTransform. */
+  size: string;
+  position: string;
+  nodes: { card: string; content: string; title: string; body: string; line: string; text: string; image: string };
+}
+
+interface Props {
+  title: string;
+  stages: Stage[];
+}
+
+const { title, stages } = Astro.props;
+---
+
+<section class="process" id="home-process" data-figma-node="79:166">
+  <div class="process__heading" data-figma-node="79:167">
+    <h2 class="process__title t-h2" data-figma-node="79:168">{title}</h2>
+  </div>
+
+  <div class="process__container" data-figma-node="79:169">
+    {stages.map((stage) => (
+      <article class="stage" data-order={stage.order} data-figma-node={stage.nodes.card}>
+        <div class="stage__content" data-figma-node={stage.nodes.content}>
+          <h4 class="stage__title t-h4" data-figma-node={stage.nodes.title}>{stage.title}</h4>
+
+          <div class="stage__body" data-figma-node={stage.nodes.body}>
+            <span class="stage__line" aria-hidden="true" data-figma-node={stage.nodes.line}></span>
+            <p class="stage__text t-body" data-figma-node={stage.nodes.text}>{stage.text}</p>
+          </div>
+        </div>
+
+        <div
+          class="stage__image"
+          data-figma-node={stage.nodes.image}
+          style={`background-image:url('${stage.image}');background-size:${stage.size};background-position:${stage.position}`}
+        ></div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .process {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3xl);
+    padding: var(--space-4xl) var(--space-l);
+  }
+
+  .process__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .process__title {
+    color: var(--color-text-heading);
+  }
+
+  .process__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xl);
+    width: 100%;
+    max-width: var(--container-max);
+  }
+
+  /* stage-card (79:170): 1080, паддинг по 48, содержимое по центру. */
+  .stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    width: 1080px;
+    max-width: 100%;
+    min-height: 339px;
+    padding: 0 var(--space-2xl);
+  }
+
+  /* Чередование сторон: в макете свойство `order` компонента. */
+  .stage[data-order='image-first'] .stage__image {
+    order: -1;
+  }
+
+  .stage__content {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-l);
+    width: 407px;
+  }
+
+  /* Заголовок этапа фиксированной ширины 395 (в спеке sizing только по
+     вертикали — значит по горизонтали FIXED), а не по содержимому. */
+  .stage__title {
+    margin: 0;
+    width: 395px;
+    color: var(--color-text-heading);
+  }
+
+  /* stage-body (I79:170;61:76): вертикальная линия и текст. */
+  .stage__body {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    width: 100%;
+  }
+
+  /* stage-line: полоска 1 px цвета accent-muted на всю высоту текста. */
+  .stage__line {
+    flex: none;
+    align-self: stretch;
+    width: 1px;
+    background: var(--color-accent-muted);
+  }
+
+  .stage__text {
+    margin: 0;
+    width: 390px;
+    color: var(--color-text-primary);
+  }
+
+  /* stage-image (I79:170;61:79): 545×339, заливка изображением CROP. */
+  .stage__image {
+    flex: none;
+    width: 545px;
+    height: 339px;
+    background-color: var(--color-bg-muted);
+    background-repeat: no-repeat;
+  }
+</style>

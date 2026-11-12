@@ -1,0 +1,27 @@
+{
+  "note": "Набор регрессии: быстрый прогон по секциям разного типа. Не заменяет полный — заменяет ежедневную проверку «ничего не поехало».",
+  "units": [
+    "home/hero",
+    "home/pain",
+    "home/formats",
+    "home/voices",
+    "home/faq",
+    "home/header",
+    "home/footer",
+    "masters/founder-hero",
+    "masters/masters-team",
+    "library/library-hero",
+    "library/library-book",
+    "library/library-journal",
+    "practice/hero",
+    "practice/practice-free",
+    "practice/practice-pay",
+    "practice/practice-package",
+    "quiz/quiz-section",
+    "quiz/quiz-result",
+    "booking/booking-hero",
+    "booking/booking-formats",
+    "method/method-hero",
+    "method/method-cta"
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "result": {
+    "root": "79:105",
+    "count": 14,
+    "nodes": [
+      {
+        "id": "79:105",
+        "name": "hero",
+        "type": "FRAME",
+        "depth": 0,
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 780,
+        "autoLayout": {
+          "mode": "HORIZONTAL",
+          "gap": 16,
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "primary": "MAX",
+          "counter": "MIN"
+        }
+      },
+      {
+        "id": "79:106",
+        "name": "hero-video",
+        "type": "FRAME",
+        "depth": 1,
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 780,
+        "fills": [
+          {
+            "type": "IMAGE",
+            "visible": true,
+            "opacity": 1,
+            "color": null,
+            "imageRef": null,
+            "scaleMode": "FILL",
+            "gradientStops": null
+          }
+        ],
+        "autoLayout": {
+          "mode": "HORIZONTAL",
+          "gap": 32,
+          "pad": [
+            64,
+            64,
+            64,
+            64
+          ],
+          "primary": "SPACE_BETWEEN",
+          "counter": "MAX"
+        }
+      },
+      {
+        "id": "767:2219",
+        "name": "hero-overlay",
+        "type": "RECTANGLE",
+        "depth": 2,
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 780,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.11999999731779099,
+            "color": {
+              "hex": "#000000",
+              "a": 1
+            },
+            "imageRef": null,
+            "scaleMode": null,
+            "gradientStops": null
+          }
+        ]
+      },
+      {
+        "id": "79:107",
+        "name": "hero-content",
+        "type": "FRAME",
+        "depth": 2,
+        "visible": true,
+        "x": 64,
+        "y": 347,
+        "w": 600,
+        "h": 369,
+        "autoLayout": {
+          "mode": "VERTICAL",
+          "gap": 32,
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "primary": "MIN",
+          "counter": "MIN"
+        }
+      },
+      {
+        "id": "79:108",
+        "name": "hero-title",
+        "type": "TEXT",
+        "depth": 3,
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 192,
+        "text": "Состояние, из которого строится жизнь",
+        "styleName": "H1",
+        "fontSize": 64,
+        "lineHeight": {
+          "unit": "PERCENT",
+          "value": 100
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "color": {
+              "hex": "#ffffff",
+              "a": 1
+            },
+            "imageRef": null,
+            "scaleMode": null,
+            "gradientStops": null
+          }
+        ]
+      },
+      {
+        "id": "79:109",
+        "name": "hero-lead",
+        "type": "TEXT",
+        "depth": 3,
+        "visible": true,
+        "x": 0,
+        "y": 224,
+        "w": 600,
+        "h": 68,
+        "text": "Когда меняется внутреннее основание, меняются выборы, отношения, энергия и жизнь.",
+        "styleName": "body",
+        "fontSize": 20,
+        "lineHeight": {
+          "unit": "PERCENT",
+          "value": 170.00000476837158
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "color": {
+              "hex": "#ffffff",
+              "a": 1
+            },
+            "imageRef": null,
+            "scaleMode": null,
+            "gradientStops": null
+          }
+        ]
+      },
+      {
+        "id": "79:110",
+        "name": "btn-primary",
+        "type": "INSTANCE",
+        "depth": 3,
+        "visible": true,
+        "x": 0,
+        "y": 324,
+        "w": 303,
+        "h": 45,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "color": {
+              "hex": "#8a8560",
+              "a": 1
+            },
+            "imageRef": null,
+            "scaleMode": null,
+            "gradientStops": null
+          }
+        ],
+        "autoLayout": {
+          "mode": "HORIZONTAL",
+          "gap": 8,
+          "pad": [
+            8,
+            16,
+            8,
+            16
+          ],
+          "primary": "CENTER",
+          "counter": "CENTER"
+        },
+        "radius": 4
+      },
+      {
+        "id": "I79:110;695:1531",
+        "name": "btn-label",
+        "type": "TEXT",
+        "depth": 4,
+        "visible": true,
+        "x": 16,
+        "y": 8,
+        "w": 249,
+        "h": 29,
+        "text": "Узнать свой код реальности",
+        "styleName": "button",
+        "fontSize": 17,
+        "lineHeight": {
+          "unit": "PERCENT",
+          "value": 170.00000476837158
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "color": {
+              "hex": "#ffffff",
+              "a": 1
+            },
+            "imageRef": null,
+            "scaleMode": null,
+            "gradientStops": null
+          }
+        ]
+      },
+      {
+        "id": "I79:110;695:1532",
+        "name": "arrow-quiet",
+        "type": "INSTANCE",
+        "depth": 4,
+        "visible": true,
+        "x": 273,
+        "y": 16,
+        "w": 14,
+        "h": 14,
+        "autoLayout": {
+          "mode": "HORIZONTAL",
+          "gap": 1.4292793273925781,
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "primary": "CENTER",
+          "counter": "CENTER"
+        }
+      },
+      {
+        "id": "I79:110;695:1532;967:2413",
+        "name": "icon",
+        "type": "GROUP",
+        "depth": 5,
+        "visible": true,
+        "x": 1,
+        "y": 2,
+        "w": 12,
+        "h": 10
+      },
+      {
+        "id": "I79:110;695:1532;13:122",
+        "name": "icon-seed",
+        "type": "VECTOR",
+        "depth": 6,
+        "visible": true,
+        "x": 1,
+        "y": 6,
+        "w": 6,
+        "h": 3
+      },
+      {
+        "id": "I79:110;695:1532;13:123",
+        "name": "icon-arrow",
+        "type": "VECTOR",
+        "depth": 6,
+        "visible": true,
+        "x": 8,
+        "y": 2,
+        "w": 5,
+        "h": 10,
+        "radius": 0.7146396636962891
+      },
+      {
+        "id": "79:113",
+        "name": "play",
+        "type": "INSTANCE",
+        "depth": 2,
+        "visible": true,
+        "x": 1329,
+        "y": 669,
+        "w": 47,
+        "h": 47,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": false,
+            "opacity": 1,
+            "color": {
+              "hex": "#ffffff",
+              "a": 1
+            },
+            "imageRef": null,
+            "scaleMode": null,
+            "gradientStops": null
+          }
+        ]
+      },
+      {
+        "id": "I79:113;34:108",
+        "name": "play",
+        "type": "VECTOR",
+        "depth": 3,
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "w": 47,
+        "h": 47
+      }
+    ]
+  },
+  "console": [],
+  "ms": 9,
+  "executed": true,
+  "mode": "statement",
+  "fileContext": {
+    "fileName": "Website Syntonia2",
+    "fileKey": "NInjODHyOOjIitF3lq4Vpe"
+  }
+}

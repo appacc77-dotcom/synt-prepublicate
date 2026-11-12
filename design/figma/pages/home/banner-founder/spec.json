@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:56:45.956Z"
+  },
+  "section": {
+    "id": "79:114",
+    "name": "banner-founder",
+    "w": 1440,
+    "h": 525
+  },
+  "fingerprint": "ad6372bc",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 5,
+    "images": 1,
+    "icons": 0,
+    "iconInstances": 0,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "3a7446e94010240d3f5a62f03f4a26e16c3c9045",
+        "file": "design/figma/assets/img/3a7446e94010.jpg",
+        "bytes": 179207,
+        "usedBy": "banner-founder"
+      }
+    ],
+    "icons": []
+  },
+  "nodes": [
+    {
+      "id": "79:114",
+      "name": "banner-founder",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 780,
+      "w": 1440,
+      "h": 525,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0.000333590927766636
+            ],
+            [
+              0,
+              0.6481481194496155,
+              0.08135105669498444
+            ]
+          ],
+          "imageHash": "3a7446e94010240d3f5a62f03f4a26e16c3c9045",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          24,
+          0,
+          24
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:9",
+        "paddingLeft": "VariableID:2:9",
+        "paddingRight": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "695:1984",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 165,
+      "w": 1280,
+      "h": 195,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "maxWidth": "VariableID:42:34"
+      }
+    },
+    {
+      "id": "148:594",
+      "name": "banner-quote",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 642,
+      "h": 195,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "MAX"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "79:115",
+      "name": "banner-title",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 642,
+      "h": 120,
+      "text": "Перемены в жизни начинаются изнутри",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "79:276",
+      "name": "banner-signature",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 328,
+      "y": 136,
+      "w": 314,
+      "h": 59,
+      "text": "by Ekaterina Lebedeva",
+      "styleName": "signature",
+      "fontFamily": "Hurricane",
+      "fontStyle": "Regular",
+      "fontSize": 42,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 139.9999976158142
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 5
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

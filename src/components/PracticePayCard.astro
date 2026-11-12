@@ -1,0 +1,303 @@
+---
+/**
+ * Карточка платной практики (`practice-card-pay`), 624×371.
+ *
+ * Используется двумя секциями: `practice-pay` и `kody-practice-pay` — в файле
+ * это один и тот же компонент, различаются только данные.
+ *
+ * Фото стоит слева и берётся из заливки: FILL → cover, CROP → вырез по
+ * матрице (см. `src/lib/fill.mjs`).
+ */
+import { backgroundOf } from '../lib/fill.mjs';
+import { figmaOnly } from '../lib/flags.mjs';
+
+interface Card {
+  id: string;
+  image: string;
+  crop?: number[][];
+  title: string[];
+  text: string[];
+  time: string;
+  price: string;
+  titleWidth: number;
+  titleSize: number;
+  titleLine: number;
+  titleHeight: number;
+  textWidth: number;
+}
+
+interface Props {
+  card: Card;
+}
+
+const { card } = Astro.props;
+
+// Волна одинаковая во всех карточках: рисуется столбиками, как в макете.
+import watchIcon from '../assets/svg/watch.svg?raw';
+
+const bars = Array.from({ length: 48 }, (_, i) => {
+  const wave = Math.abs(Math.sin(i * 0.7) * Math.cos(i * 0.31));
+  return Math.max(3, Math.round(wave * 22));
+});
+---
+
+<article class="pay" data-figma-node={card.id}>
+  <div
+    class="pay__media"
+    style={`background: ${backgroundOf({ url: card.image, scaleMode: card.crop ? 'CROP' : 'FILL', imageTransform: card.crop })}`}
+  />
+  <div class="pay__body">
+    <h3
+      class="pay__title"
+      style={`width: ${card.titleWidth}px; font-size: ${card.titleSize}px; line-height: ${card.titleLine}px; height: ${card.titleHeight}px`}
+    >
+      {card.title.map((line, i) => (
+        <>
+          {i > 0 && <br />}
+          {line}
+        </>
+      ))}
+    </h3>
+    <p class="pay__text" style={`width: ${card.textWidth}px`}>
+      {card.text.map((line, i) => (
+        <>
+          {i > 0 && <br />}
+          {line}
+        </>
+      ))}
+    </p>
+
+    <div class="pay__sound">
+      <span class="pay__caption">ФРАГМЕНТ ПРАКТИКИ</span>
+      <div class="pay__road">
+        <button class="pay__play" type="button" aria-label="Слушать фрагмент" aria-pressed="false" data-play>
+          <span class="pay__triangle" aria-hidden="true" />
+        </button>
+        <div class="pay__wave" aria-hidden="true">
+          {bars.map((h) => <span class="pay__bar" style={`height: ${h}px`} />)}
+        </div>
+        <span class="pay__length">1:23</span>
+      </div>
+    </div>
+
+    <div class="pay__action">
+      <button class="pay__buy" type="button" aria-describedby={`buy-note-${card.id.replace(':', '-')}`}>
+        <span>Купить</span>
+        <span class="pay__arrow" aria-hidden="true">→</span>
+      </button>
+      <div class="pay__meta">
+        <span class="pay__watch" aria-hidden="true" set:html={watchIcon} />
+        <span class="pay__time">{card.time}</span>
+        <span class="pay__dot" aria-hidden="true" />
+        <span class="pay__price">{card.price}</span>
+      </div>
+    </div>
+    {!figmaOnly && (
+    <p class="pay__note" data-invented="pay-not-connected" id={`buy-note-${card.id.replace(':', '-')}`} hidden>
+      Оплата не подключена: в макете нет сценария покупки.
+    </p>
+    )}
+  </div>
+</article>
+
+<style>
+  .pay {
+    display: flex;
+    width: 624px;
+    height: 371px;
+    border-radius: 16px;
+    /* Градиент карточки: #fbf8f1 0 % → rgba(138,133,96,0.05) 60,2 %, угол 297°. */
+    background: linear-gradient(297deg, #fbf8f1 0%, rgb(138 133 96 / 5%) 60.2%);
+    overflow: hidden;
+  }
+
+  .pay__media {
+    flex: none;
+    width: 236px;
+    height: 371px;
+  }
+
+  .pay__body {
+    position: relative;
+    box-sizing: border-box;
+    width: 388px;
+    height: 371px;
+    padding: 32px;
+  }
+
+  .pay__title {
+    height: 84px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .pay__text {
+    height: 52px;
+    margin: 24px 0 0;
+    font-size: 17px;
+    line-height: 26px;
+    color: var(--color-text-primary);
+  }
+
+  .pay__sound {
+    margin-top: 32px;
+  }
+
+  .pay__caption {
+    display: block;
+    width: 160px;
+    white-space: nowrap;
+    height: 17px;
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent-muted);
+  }
+
+  .pay__road {
+    position: relative;
+    width: 324px;
+    height: 54px;
+    margin-top: 4px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+  }
+
+  .pay__play {
+    position: absolute;
+    left: 13px;
+    top: 7px;
+    width: 41px;
+    height: 41px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+  }
+
+  .pay__triangle {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid var(--color-border);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  .pay__wave {
+    position: absolute;
+    left: 65px;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 202px;
+    height: 28px;
+    overflow: hidden;
+  }
+
+  .pay__bar {
+    flex: none;
+    width: 2px;
+    background: var(--color-accent);
+  }
+
+  /* time-part (447:1801): рамка 32×21 с обводкой accent, текст 19×14 внутри. */
+  .pay__length {
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 21px;
+    border: 1px solid var(--color-accent);
+    border-radius: 3px;
+    font-size: 9.58px;
+    line-height: 14px;
+    color: var(--color-accent);
+  }
+
+  .pay__action {
+    position: absolute;
+    left: 32px;
+    top: 307px;
+    display: flex;
+    align-items: center;
+    width: 266px;
+    height: 33px;
+  }
+
+  .pay__buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: 85px;
+    height: 33px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 3px;
+    background: var(--color-accent) url('/img/btn-texture.webp') center / cover no-repeat;
+    font-family: var(--font-golos-text);
+    font-size: 12.45px;
+    line-height: 21px;
+    color: var(--color-text-on-image);
+    cursor: pointer;
+  }
+
+  .pay__arrow {
+    font-size: 12px;
+  }
+
+  .pay__note {
+    position: absolute;
+    left: 32px;
+    bottom: 8px;
+    width: 320px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--color-text-secondary);
+  }
+
+  .pay__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 32px;
+  }
+
+  .pay__watch {
+    display: flex;
+    flex: none;
+    width: 13px;
+    height: 14px;
+  }
+
+  .pay__watch svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pay__time,
+  .pay__price {
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    color: var(--color-text-primary);
+  }
+
+  .pay__dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--color-text-primary);
+  }
+</style>

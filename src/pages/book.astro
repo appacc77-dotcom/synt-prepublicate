@@ -1,0 +1,23 @@
+---
+/**
+ * Страница книги. Узел секции: book → book-hero `1109:1112`.
+ *
+ * Появилась в файле 12.11.2026: кадр `book` на странице Library — отдельный
+ * экран, а не часть библиотеки. Header и Footer переиспользуются.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import BookHero from '../components/BookHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Коды построения реальности — Syntonia"
+  description="Авторская книга Екатерины Лебедевой: семь состояний, которые формируют внутренние сценарии."
+>
+  <main class="page">
+    <Header />
+    <BookHero />
+    <Footer />
+  </main>
+</BaseLayout>

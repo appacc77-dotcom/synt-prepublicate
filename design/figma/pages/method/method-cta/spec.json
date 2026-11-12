@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:58:05.519Z"
+  },
+  "section": {
+    "id": "334:992",
+    "name": "method-cta",
+    "w": 1440,
+    "h": 499
+  },
+  "fingerprint": "6bc0dbe9",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 10,
+    "images": 2,
+    "icons": 0,
+    "iconInstances": 0,
+    "states": 2
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "85c77b1e3d8db34725804e9b16262b5c894f0bed",
+        "file": "design/figma/assets/img/85c77b1e3d8d.png",
+        "bytes": 2310088,
+        "usedBy": "method-cta"
+      },
+      {
+        "hash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+        "file": "design/figma/assets/img/1434b5611dfb.png",
+        "bytes": 2781852,
+        "usedBy": "btn-primary"
+      }
+    ],
+    "icons": []
+  },
+  "nodes": [
+    {
+      "id": "334:992",
+      "name": "method-cta",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 1877,
+      "w": 1440,
+      "h": 499,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              0.9326388835906982,
+              0,
+              0.06751467287540436
+            ],
+            [
+              0,
+              0.57623690366745,
+              0.18336006999015808
+            ]
+          ],
+          "imageHash": "85c77b1e3d8db34725804e9b16262b5c894f0bed",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          96,
+          24,
+          96,
+          24
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:13",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:13"
+      }
+    },
+    {
+      "id": "775:1680",
+      "name": "cta-inner",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 96,
+      "w": 1280,
+      "h": 307,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          64
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "clips": false,
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "335:993",
+      "name": "cta-content",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 64,
+      "y": 0,
+      "w": 491,
+      "h": 307,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "335:995",
+      "name": "cta-title",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 491,
+      "h": 96,
+      "text": "Глубинные изменения начинаются с одного шага",
+      "styleName": "H3",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 38,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "335:997",
+      "name": "cta-text",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 128,
+      "w": 491,
+      "h": 102,
+      "text": "Выберите точку входа, которая подходит вам прямо сейчас, и начните путь к ясности, внутренней опоре и подлинной жизни.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "335:998",
+      "name": "btn-group",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 262,
+      "w": 387,
+      "h": 45,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "335:999",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 219,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Начать с точки входа",
+        "show arrow#16:0": false,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I335:999;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 187,
+      "h": 29,
+      "text": "Начать с точки входа",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "335:1000",
+      "name": "btn-secondary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 227,
+      "y": 0,
+      "w": 160,
+      "h": 45,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16",
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I335:1000;5:33",
+      "name": "Узнать метод",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 128,
+      "h": 29,
+      "text": "Задать вопрос",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1046 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:56:49.248Z"
+  },
+  "section": {
+    "id": "79:173",
+    "name": "entry",
+    "w": 1440,
+    "h": 892
+  },
+  "fingerprint": "49ebaa28",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 23,
+    "images": 2,
+    "icons": 1,
+    "iconInstances": 1,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+        "file": "design/figma/assets/img/1434b5611dfb.png",
+        "bytes": 2781852,
+        "usedBy": "btn-primary"
+      },
+      {
+        "hash": "1496059238fbe3bc5d5de0a77060293c84f8c312",
+        "file": "design/figma/assets/img/1496059238fb.jpg",
+        "bytes": 158714,
+        "usedBy": "entry-photo"
+      }
+    ],
+    "icons": [
+      {
+        "node": "I79:185;14:128",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-right.svg",
+        "bytes": 3980
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "79:173",
+      "name": "entry",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 5363,
+      "w": 1440,
+      "h": 892,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#efe7d7",
+                "a": 1
+              }
+            },
+            {
+              "position": 0.494,
+              "color": {
+                "hex": "#fcf9f2",
+                "a": 1
+              }
+            },
+            {
+              "position": 1,
+              "color": {
+                "hex": "#fffcf6",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              -0.9442242383956909,
+              0.11319899559020996,
+              0.903868556022644
+            ],
+            [
+              -0.11319898068904877,
+              -0.36230960488319397,
+              0.7423631548881531
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          96,
+          24,
+          96,
+          24
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:11",
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:13",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:13"
+      }
+    },
+    {
+      "id": "79:174",
+      "name": "heading-block",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 439,
+      "y": 96,
+      "w": 563,
+      "h": 102,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "79:175",
+      "name": "entry-title",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 126,
+      "y": 0,
+      "w": 312,
+      "h": 60,
+      "text": "С чего начать",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "79:176",
+      "name": "entry-lead",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 68,
+      "w": 563,
+      "h": 34,
+      "text": "Бережно и точно. Ясность в том, что с тобой происходит.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "79:177",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 246,
+      "w": 1280,
+      "h": 550,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "maxWidth": "VariableID:42:34"
+      }
+    },
+    {
+      "id": "79:178",
+      "name": "entry-text",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 81,
+      "w": 640,
+      "h": 389,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          32,
+          64,
+          32,
+          64
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "itemSpacing": "VariableID:2:10",
+        "paddingLeft": "VariableID:2:12",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:12",
+        "paddingBottom": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "79:180",
+      "name": "entry-name",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 64,
+      "y": 32,
+      "w": 220,
+      "h": 48,
+      "text": "Точка входа",
+      "styleName": "H3",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 38,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "79:183",
+      "name": "entry-desc",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 64,
+      "y": 112,
+      "w": 512,
+      "h": 102,
+      "text": "Первая встреча. Ты увидишь, из какого состояния сейчас строится твоя жизнь, и почувствуешь, как звучит эта работа, прежде чем идти дальше.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "816:2246",
+      "name": "meta",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 64,
+      "y": 246,
+      "w": 512,
+      "h": 34,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "816:2247",
+      "name": "meta-item",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 75,
+      "h": 34,
+      "text": "Онлайн",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#7a756d",
+            "a": 1
+          },
+          "variable": "text-secondary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:27"
+        ]
+      }
+    },
+    {
+      "id": "816:2249",
+      "name": "dot-l",
+      "type": "ELLIPSE",
+      "depth": 4,
+      "visible": true,
+      "x": 83,
+      "y": 16,
+      "w": 3,
+      "h": 3,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#7a756d",
+            "a": 1
+          },
+          "variable": "text-secondary"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:27"
+        ]
+      }
+    },
+    {
+      "id": "816:2248",
+      "name": "meta-item",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 94,
+      "y": 0,
+      "w": 90,
+      "h": 34,
+      "text": "30 минут",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#7a756d",
+            "a": 1
+          },
+          "variable": "text-secondary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:27"
+        ]
+      }
+    },
+    {
+      "id": "79:184",
+      "name": "btn-group",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 64,
+      "y": 312,
+      "w": 431,
+      "h": 45,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "79:185",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 241,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Начать с точки входа",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I79:185;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 187,
+      "h": 29,
+      "text": "Начать с точки входа",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I79:185;14:128",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 211,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I79:185;14:128;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 6,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I79:185;14:128;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I79:185;14:128;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "79:186",
+      "name": "btn-secondary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 249,
+      "y": 0,
+      "w": 182,
+      "h": 45,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16",
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I79:186;5:33",
+      "name": "Узнать метод",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 150,
+      "h": 29,
+      "text": "Форматы работы",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "79:187",
+      "name": "entry-photo",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 640,
+      "y": 0,
+      "w": 640,
+      "h": 550,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              7.409602176267072e-8
+            ],
+            [
+              0,
+              1.1458330154418945,
+              -0.07291656732559204
+            ]
+          ],
+          "imageHash": "1496059238fbe3bc5d5de0a77060293c84f8c312",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        },
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.11999999731779099,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          48,
+          96,
+          48,
+          96
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL"
+      },
+      "grow": 1,
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:13",
+        "paddingTop": "VariableID:2:11",
+        "paddingRight": "VariableID:2:13",
+        "paddingBottom": "VariableID:2:11",
+        "topRightRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17",
+        "fills": [
+          "VariableID:706:447"
+        ]
+      }
+    },
+    {
+      "id": "79:189",
+      "name": "entry-photo-text",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 96,
+      "y": 48,
+      "w": 448,
+      "h": 110,
+      "text": "Рядом, даже на расстоянии",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 42,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 129.99999523162842
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 5
+      },
+      "autoResize": "HEIGHT",
+      "lines": [
+        "Рядом,",
+        "даже на расстоянии"
+      ],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

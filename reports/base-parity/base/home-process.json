@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-11T15:19:02.159Z",
+  "section": {
+    "id": "79:166",
+    "name": "process",
+    "w": 1440,
+    "h": 1429
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 25,
+  "nodes": 25,
+  "coverage": 100,
+  "markedRatio": 100,
+  "tolerance": 1,
+  "worstDelta": 0.5
+}

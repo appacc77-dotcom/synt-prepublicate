@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "note": "Реестр изобретённого: всё на сайте, чего нет в макете. Каждая запись — с причиной и номером решения. Элемент в разметке помечается data-invented=\"<id>\"; ворота registry не дают появиться пометке без записи и записи без пометки. Анимации ведутся в design/motion/motion.json и здесь представлены одной записью-ссылкой. origin: invented — придумано студией; external — взято не из макета (старый сайт, заказчик); designer — ждёт макета от дизайнера.",
+  "entries": [
+    {
+      "id": "header-dropdown-open",
+      "what": "Открытое состояние меню «О проекте»",
+      "file": "src/components/Header.astro",
+      "selector": ".header__menu",
+      "marker": true,
+      "origin": "invented",
+      "decisions": [
+        76
+      ],
+      "checkedBy": "interactive (живой элемент), глазом",
+      "stage2": "заменить на макет открытого nav-dropdown, когда дизайнер его нарисует",
+      "billable": false,
+      "enhancement": "header-dropdown"
+    },
+    {
+      "id": "header-mobile-panel",
+      "what": "Панель мобильного меню под бургером",
+      "file": "src/components/Header.astro",
+      "selector": ".header__mobile",
+      "marker": true,
+      "origin": "invented",
+      "decisions": [
+        166,
+        343
+      ],
+      "checkedBy": "interactive, глазом",
+      "stage2": "заменить на макет мобильного меню (D-2)",
+      "billable": false,
+      "enhancement": "header-mobile-panel"
+    },
+    {
+      "id": "pay-not-connected",
+      "what": "Строка «Оплата не подключена» под кнопкой «Купить» в карточке практики",
+      "file": "src/components/PracticePayCard.astro",
+      "selector": ".pay__note",
+      "marker": true,
+      "origin": "invented",
+      "decisions": [
+        292
+      ],
+      "checkedBy": "interactive",
+      "stage2": "подключить оплату — этап 2/3, решение владельца",
+      "billable": true,
+      "enhancement": "pay-note"
+    },
+    {
+      "id": "package-not-connected",
+      "what": "Строка «Оплата не подключена» в пакетах",
+      "file": "src/components/PracticePackage.astro",
+      "selector": ".ppkg__note",
+      "marker": true,
+      "origin": "invented",
+      "decisions": [
+        292
+      ],
+      "checkedBy": "interactive",
+      "stage2": "подключить оплату — этап 2/3, решение владельца",
+      "billable": true,
+      "enhancement": "package-note"
+    },
+    {
+      "id": "motion",
+      "what": "Анимации и переходы (лента отзывов, наведение, раскрытие)",
+      "file": "design/motion/motion.json",
+      "selector": null,
+      "marker": false,
+      "origin": "invented",
+      "decisions": [
+        114
+      ],
+      "checkedBy": "motion, motion-manifest",
+      "stage2": "сверить с дизайнером или заменить на прототип Figma",
+      "billable": false,
+      "enhancement": "motion"
+    },
+    {
+      "id": "booking-thanks-page",
+      "what": "Страница «Заявка отправлена» после формы — в макете её нет",
+      "file": "src/pages/spasibo.astro",
+      "selector": ".thanks",
+      "marker": false,
+      "origin": "invented",
+      "decisions": [
+        395
+      ],
+      "checkedBy": "publish",
+      "stage2": "адрес возврата сервиса форм",
+      "billable": true,
+      "enhancement": "form-behaviour"
+    },
+    {
+      "id": "booking-form-not-sent",
+      "what": "Подсказка «Пока не работает: отправка появится позже» в форме заявки",
+      "file": "src/components/BookingFormats.astro",
+      "selector": ".bformats__note",
+      "marker": true,
+      "origin": "invented",
+      "decisions": [
+        362,
+        415
+      ],
+      "checkedBy": "interactive",
+      "stage2": "сервис форм выключен вместе с Netlify; адресат и валидация — решение владельца",
+      "billable": true,
+      "enhancement": "form-behaviour"
+    }
+  ]
+}

@@ -1,0 +1,2570 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:57:46.228Z"
+  },
+  "section": {
+    "id": "217:238",
+    "name": "founder-hero",
+    "w": 1440,
+    "h": 839
+  },
+  "fingerprint": "ead70b3f",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 66,
+    "images": 3,
+    "icons": 3,
+    "iconInstances": 3,
+    "states": 5
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "f27a790620c67b235444661df6f93738a78c643d",
+        "file": "design/figma/assets/img/f27a790620c6.png",
+        "bytes": 3546548,
+        "usedBy": "founder-photo"
+      },
+      {
+        "hash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+        "file": "design/figma/assets/img/1434b5611dfb.png",
+        "bytes": 2781852,
+        "usedBy": "btn-primary"
+      },
+      {
+        "hash": "dd1931fd9fd08dbbb28468195a4ae3306b02300c",
+        "file": "design/figma/assets/img/dd1931fd9fd0.jpg",
+        "bytes": 172964,
+        "usedBy": "founder-panel"
+      }
+    ],
+    "icons": [
+      {
+        "node": "I217:245;826:2428",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "down"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-down.svg",
+        "bytes": 3987
+      },
+      {
+        "node": "I233:296;217:248",
+        "component": "play",
+        "variant": {},
+        "file": "design/figma/assets/svg/play.svg",
+        "bytes": 3734
+      },
+      {
+        "node": "I217:260;851:475",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-right.svg",
+        "bytes": 3975
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "217:238",
+      "name": "founder-hero",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 839,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e1d6c6",
+            "a": 1
+          },
+          "variable": "bg-muted"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "limits": {
+        "maxW": 1440
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:23"
+        ]
+      }
+    },
+    {
+      "id": "217:239",
+      "name": "founder-photo",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 876,
+      "h": 839,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              0.5962967276573181,
+              0,
+              0.19655632972717285
+            ],
+            [
+              0,
+              1.0655673742294312,
+              -0.06531286984682083
+            ]
+          ],
+          "imageHash": "f27a790620c67b235444661df6f93738a78c643d",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        },
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.11999999731779099,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          48,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "grow": 1,
+      "bound": {
+        "paddingBottom": "VariableID:2:11",
+        "fills": [
+          "VariableID:706:447"
+        ]
+      }
+    },
+    {
+      "id": "217:240",
+      "name": "founder-content",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 231,
+      "w": 478,
+      "h": 560,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          48,
+          0,
+          48
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10",
+        "paddingLeft": "VariableID:2:11",
+        "paddingRight": "VariableID:2:11"
+      }
+    },
+    {
+      "id": "217:241",
+      "name": "founder-text",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 48,
+      "y": 0,
+      "w": 382,
+      "h": 324,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "217:242",
+      "name": "founder-name",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 382,
+      "h": 128,
+      "text": "Екатерина Лебедева",
+      "styleName": "H1",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "217:243",
+      "name": "founder-role",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 160,
+      "w": 382,
+      "h": 64,
+      "text": "Психолог. Основатель Syntonia. Автор метода",
+      "styleName": "founder-role",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 135.0000023841858
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "217:244",
+      "name": "founder-quote",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 256,
+      "w": 382,
+      "h": 68,
+      "text": "Я не работаю вокруг проблемы. Я веду к её источнику.",
+      "styleName": "quote-founder",
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 139.9999976158142
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "217:245",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 48,
+      "y": 356,
+      "w": 195,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Услышать голос",
+        "show arrow#16:0": true,
+        "theme": "arrow-down",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I217:245;209:139",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 141,
+      "h": 29,
+      "text": "Услышать голос",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:245;826:2428",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 165,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "down"
+      }
+    },
+    {
+      "id": "I217:245;826:2428;756:1695",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 5,
+      "visible": true,
+      "x": 12,
+      "y": 1,
+      "w": 12,
+      "h": 10,
+      "rotation": -90
+    },
+    {
+      "id": "I217:245;826:2428;755:2855",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 8,
+      "y": 1,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "rotation": -90,
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:245;826:2428;755:2856",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 12,
+      "y": 8,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "rotation": -90,
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "233:296",
+      "name": "player",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 48,
+      "y": 433,
+      "w": 344,
+      "h": 127,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.3499999940395355,
+          "color": {
+            "hex": "#433d34",
+            "a": 0.35
+          },
+          "variable": "bg-glass-dark"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17",
+        "fills": [
+          "VariableID:827:2861"
+        ]
+      },
+      "props": {
+        "teaser#233:1": "Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей жизнью управляет не только то, что вы осознаёте.",
+        "time#233:0": "1:25"
+      }
+    },
+    {
+      "id": "I233:296;217:247",
+      "name": "player-row",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 16,
+      "w": 312,
+      "h": 47,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I233:296;217:248",
+      "name": "player-play",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "clips": false
+    },
+    {
+      "id": "I233:296;217:248;34:108",
+      "name": "play",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:296;217:249",
+      "name": "player-wave",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 55,
+      "y": 9,
+      "w": 222,
+      "h": 29,
+      "clips": false
+    },
+    {
+      "id": "I233:296;217:249;212:97",
+      "name": "wave-sound",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 222,
+      "h": 29,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:296;217:250",
+      "name": "player-time",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 286,
+      "y": 13,
+      "w": 26,
+      "h": 20,
+      "text": "1:25",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:296;217:251",
+      "name": "player-teaser",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 71,
+      "w": 312,
+      "h": 40,
+      "text": "Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей жизнью управляет не только то, что вы осознаёте.",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "217:252",
+      "name": "founder-aside",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 876,
+      "y": 0,
+      "w": 564,
+      "h": 839,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#2d2822",
+            "a": 1
+          },
+          "variable": "bg-dark"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          128,
+          24,
+          24,
+          24
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:14",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:9",
+        "fills": [
+          "VariableID:223:346"
+        ]
+      }
+    },
+    {
+      "id": "217:253",
+      "name": "founder-panel",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 24,
+      "y": 128,
+      "w": 516,
+      "h": 687,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 0.8500000238418579,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              1,
+              0,
+              -0.00047955545596778393
+            ],
+            [
+              0,
+              0.8685057163238525,
+              0.06549521535634995
+            ]
+          ],
+          "imageHash": "dd1931fd9fd08dbbb28468195a4ae3306b02300c",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "primary": "MAX",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:11",
+        "paddingLeft": "VariableID:2:10",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:10",
+        "paddingBottom": "VariableID:2:10",
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17"
+      }
+    },
+    {
+      "id": "217:254",
+      "name": "founder-accordion",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 32,
+      "y": 32,
+      "w": 452,
+      "h": 530,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "217:255",
+      "name": "bio-item",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 452,
+      "h": 218,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      },
+      "props": {
+        "text#826:9": "Меня всегда интересовала глубина человеческой природы: как в одной личности переплетаются сила и уязвимость, осознанность и запутанность, желание жить и при этом разрушать себя.\nПочему человек может искренне хотеть перемен, стараться, искать, пробовать — и всё равно снова упираться в ту же невозможность что-то изменить.",
+        "number#826:6": "01",
+        "title#826:3": "Видеть глубже",
+        "divider#826:0": true,
+        "state": "open"
+      }
+    },
+    {
+      "id": "I217:255;212:194",
+      "name": "bio-head",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 452,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I217:255;212:197",
+      "name": "bio-label",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 188,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I217:255;212:189",
+      "name": "bio-mark",
+      "type": "RECTANGLE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 3,
+      "h": 24,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I217:255;212:192",
+      "name": "bio-title",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 11,
+      "y": 0,
+      "w": 177,
+      "h": 29,
+      "text": "Видеть глубже",
+      "styleName": "founder-acc-title",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 25,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:255;212:193",
+      "name": "bio-num",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 431,
+      "y": 5,
+      "w": 21,
+      "h": 20,
+      "text": "01",
+      "styleName": "script-s",
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 27,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "RIGHT",
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:255;212:198",
+      "name": "bio-text",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 45,
+      "w": 452,
+      "h": 156,
+      "text": "Меня всегда интересовала глубина человеческой природы: как в одной личности переплетаются сила и уязвимость, осознанность и запутанность, желание жить и при этом разрушать себя.\nПочему человек может искренне хотеть перемен, стараться, искать, пробовать — и всё равно снова упираться в ту же невозможность что-то изменить.",
+      "styleName": null,
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 145.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "paragraphSpacing": 16,
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ],
+        "paragraphSpacing": [
+          "VariableID:2:8"
+        ]
+      }
+    },
+    {
+      "id": "I217:255;212:200",
+      "name": "divider",
+      "type": "RECTANGLE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 217,
+      "w": 452,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e7e0d4",
+            "a": 1
+          },
+          "variable": "border"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:33"
+        ]
+      }
+    },
+    {
+      "id": "217:256",
+      "name": "bio-item",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 242,
+      "w": 452,
+      "h": 46,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      },
+      "props": {
+        "text#826:9": "Меня всегда интересовала глубина человеческой природы: как в одной личности переплетаются сила и уязвимость, осознанность и запутанность, желание жить и при этом разрушать себя.\nПочему человек может искренне хотеть перемен, стараться, искать, пробовать — и всё равно снова упираться в ту же невозможность что-то изменить.",
+        "title#826:3": "Путь в профессию",
+        "number#826:6": "02",
+        "divider#826:0": true,
+        "state": "closed"
+      }
+    },
+    {
+      "id": "I217:256;212:217",
+      "name": "bio-head",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 452,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I217:256;212:218",
+      "name": "bio-label",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 235,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I217:256;212:219",
+      "name": "bio-mark",
+      "type": "RECTANGLE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 3,
+      "h": 24,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I217:256;212:220",
+      "name": "bio-title",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 11,
+      "y": 0,
+      "w": 224,
+      "h": 29,
+      "text": "Путь в профессию",
+      "styleName": "founder-acc-title",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 25,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:256;212:222",
+      "name": "bio-num",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 429,
+      "y": 5,
+      "w": 23,
+      "h": 20,
+      "text": "02",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 27,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "RIGHT",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:256;212:224",
+      "name": "divider",
+      "type": "RECTANGLE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 45,
+      "w": 452,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e7e0d4",
+            "a": 1
+          },
+          "variable": "border"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:33"
+        ]
+      }
+    },
+    {
+      "id": "217:257",
+      "name": "bio-item",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 312,
+      "w": 452,
+      "h": 46,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      },
+      "props": {
+        "text#826:9": "Меня всегда интересовала глубина человеческой природы: как в одной личности переплетаются сила и уязвимость, осознанность и запутанность, желание жить и при этом разрушать себя.\nПочему человек может искренне хотеть перемен, стараться, искать, пробовать — и всё равно снова упираться в ту же невозможность что-то изменить.",
+        "title#826:3": "Суть моего взгляда",
+        "number#826:6": "03",
+        "divider#826:0": true,
+        "state": "closed"
+      }
+    },
+    {
+      "id": "I217:257;212:217",
+      "name": "bio-head",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 452,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I217:257;212:218",
+      "name": "bio-label",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 243,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I217:257;212:219",
+      "name": "bio-mark",
+      "type": "RECTANGLE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 3,
+      "h": 24,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I217:257;212:220",
+      "name": "bio-title",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 11,
+      "y": 0,
+      "w": 232,
+      "h": 29,
+      "text": "Суть моего взгляда",
+      "styleName": "founder-acc-title",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 25,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:257;212:222",
+      "name": "bio-num",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 429,
+      "y": 5,
+      "w": 23,
+      "h": 20,
+      "text": "03",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 27,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "RIGHT",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:257;212:224",
+      "name": "divider",
+      "type": "RECTANGLE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 45,
+      "w": 452,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e7e0d4",
+            "a": 1
+          },
+          "variable": "border"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:33"
+        ]
+      }
+    },
+    {
+      "id": "217:258",
+      "name": "bio-item",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 382,
+      "w": 452,
+      "h": 46,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      },
+      "props": {
+        "text#826:9": "Меня всегда интересовала глубина человеческой природы: как в одной личности переплетаются сила и уязвимость, осознанность и запутанность, желание жить и при этом разрушать себя.\nПочему человек может искренне хотеть перемен, стараться, искать, пробовать — и всё равно снова упираться в ту же невозможность что-то изменить.",
+        "title#826:3": "Ясность рядом",
+        "number#826:6": "04",
+        "divider#826:0": true,
+        "state": "closed"
+      }
+    },
+    {
+      "id": "I217:258;212:217",
+      "name": "bio-head",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 452,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I217:258;212:218",
+      "name": "bio-label",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 191,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I217:258;212:219",
+      "name": "bio-mark",
+      "type": "RECTANGLE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 3,
+      "h": 24,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I217:258;212:220",
+      "name": "bio-title",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 11,
+      "y": 0,
+      "w": 180,
+      "h": 29,
+      "text": "Ясность рядом",
+      "styleName": "founder-acc-title",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 25,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:258;212:222",
+      "name": "bio-num",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 428,
+      "y": 5,
+      "w": 24,
+      "h": 20,
+      "text": "04",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 27,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "RIGHT",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:258;212:224",
+      "name": "divider",
+      "type": "RECTANGLE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 45,
+      "w": 452,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e7e0d4",
+            "a": 1
+          },
+          "variable": "border"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:33"
+        ]
+      }
+    },
+    {
+      "id": "217:259",
+      "name": "bio-item",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 452,
+      "w": 452,
+      "h": 46,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      },
+      "props": {
+        "text#826:9": "Меня всегда интересовала глубина человеческой природы: как в одной личности переплетаются сила и уязвимость, осознанность и запутанность, желание жить и при этом разрушать себя.\nПочему человек может искренне хотеть перемен, стараться, искать, пробовать — и всё равно снова упираться в ту же невозможность что-то изменить.",
+        "title#826:3": "Пространство Syntonia",
+        "number#826:6": "05",
+        "divider#826:0": true,
+        "state": "closed"
+      }
+    },
+    {
+      "id": "I217:259;212:217",
+      "name": "bio-head",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 452,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false
+    },
+    {
+      "id": "I217:259;212:218",
+      "name": "bio-label",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 294,
+      "h": 29,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I217:259;212:219",
+      "name": "bio-mark",
+      "type": "RECTANGLE",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 3,
+      "w": 3,
+      "h": 24,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I217:259;212:220",
+      "name": "bio-title",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 11,
+      "y": 0,
+      "w": 283,
+      "h": 29,
+      "text": "Пространство Syntonia",
+      "styleName": "founder-acc-title",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 25,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:259;212:222",
+      "name": "bio-num",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 429,
+      "y": 5,
+      "w": 23,
+      "h": 20,
+      "text": "05",
+      "styleName": null,
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 27,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 117.99999475479126
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "RIGHT",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:259;212:224",
+      "name": "divider",
+      "type": "RECTANGLE",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 45,
+      "w": 452,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#e7e0d4",
+            "a": 1
+          },
+          "variable": "border"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:33"
+        ]
+      }
+    },
+    {
+      "id": "217:260",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 32,
+      "y": 610,
+      "w": 207,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          24,
+          8,
+          24
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "с чего начать",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "true",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I217:260;851:474",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 24,
+      "y": 8,
+      "w": 137,
+      "h": 29,
+      "text": "с чего начать",
+      "styleName": "button-caps",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "textCase": "UPPER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:260;851:475",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 169,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I217:260;851:475;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 5,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I217:260;851:475;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I217:260;851:475;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 6,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

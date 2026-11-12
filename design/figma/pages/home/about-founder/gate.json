@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:07.092Z",
+  "section": {
+    "id": "79:148",
+    "name": "about-founder",
+    "w": 1440,
+    "h": 757
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 16,
+  "nodes": 21,
+  "coverage": 100,
+  "markedRatio": 76.2,
+  "tolerance": 1,
+  "worstDelta": 0.5
+}

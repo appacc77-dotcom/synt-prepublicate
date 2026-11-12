@@ -1,0 +1,590 @@
+---
+/**
+ * Экран результата теста (`542:3151`, 1440×1302).
+ *
+ * В файле семь состояний результата, но различных содержимых два: «Код Боли»
+ * (в двух редакциях — «ты» и «вы») и «Код Гордыни»; четыре состояния —
+ * копии, одно пустое. Здесь собрана редакция «ты» как наиболее полная.
+ *
+ * Какой ответ ведёт к какому результату, в макете не задано: соответствие
+ * «ответ → код» записано в FIGMA-ISSUES. Пока показывается этот экран.
+ */
+interface Props {
+  node?: string;
+  hidden?: boolean;
+}
+
+// По умолчанию экран результата скрыт: он показывается после ответа или по
+// ?result=1 (для замера). Иначе он висел бы на странице под вопросом.
+const { node = '542:3151', hidden = true } = Astro.props;
+
+const profit = [
+  'Уходит тяжесть, появляется внутренняя опора',
+  'Прошлое перестаёт управлять настоящим',
+  'Возвращаются силы и желание жить',
+  'Открывается пространство для новых возможностей',
+  'Ты снова чувствуешь связь с собой',
+];
+---
+
+<section class="qres" data-figma-node={node} hidden={hidden}>
+  <div class="qres__container" data-figma-node="542:3152">
+    <div class="qres__top" data-figma-node="549:499">
+      <div class="qres__head" data-figma-node="542:3154">
+        <span class="qres__eyebrow" data-figma-node="542:3156">ТВОЙ результат</span>
+        <h1 class="qres__title" data-figma-node="542:3158" data-code-name>Код Боли</h1>
+        <p class="qres__lead" data-figma-node="542:3160">
+          Это состояние сейчас сильнее всего влияет на вашу жизнь.
+        </p>
+      </div>
+
+      <div class="qres__block" data-figma-node="623:1125">
+        <div class="qres__desc" data-figma-node="623:1126">
+          <div class="qres__about">
+            <span class="qres__label" data-figma-node="623:1128">о Твоём состоянии</span>
+            <p class="qres__about-title" data-figma-node="623:1129">
+              Ты многое чувствуешь<br />и глубоко переживаешь
+            </p>
+            <p class="qres__about-text" data-figma-node="623:1130">
+              Глубинно внутри тебя ощущение утраты, усталости, разочарования. Прошлый опыт всё ещё отзывается, и
+              кажется, что это мешает двигаться дальше. Ты склонна держать боль в себе, стараетешься быть сильной для
+              других, но при этом тебе важно, чтобы тебя увидели и поняли.
+            </p>
+            <p class="qres__about-text qres__about-text--narrow" data-figma-node="623:1131">
+              Это не слабость, а показатель твоей глубокой чувствительности. Именно она делает тебя живой, настоящей,
+              способной на близость и искренность. Сейчас для тебя особенно важно бережно поддержать себя и вернуть
+              контакт со своими чувствами.
+            </p>
+          </div>
+
+          <div class="qres__profit" data-figma-node="623:1132">
+            <span class="qres__label qres__label--wide" data-figma-node="623:1133">
+              ЧТО МЕНЯЕТСЯ, КОГДА ТЫ РАБОТАЕШЬ С ЭТИМ СОСТОЯНИЕМ
+            </span>
+            <ul class="qres__profit-list" data-figma-node="623:1134">
+              {profit.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        <div class="qres__media" data-figma-node="623:1135">
+          <div class="qres__media-image" />
+          <div class="qres__quote" data-figma-node="623:1136">
+            <p class="qres__quote-text" data-figma-node="623:1137">
+              «Боль — это не конец. Это дверь к более глубокой близости с собой.»
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qres__practice" data-figma-node="549:498">
+      <div class="qres__practice-media" data-figma-node="549:500">
+        <div class="qres__practice-image" data-figma-node="549:502">
+          {/* Известный долг INV-quiz-play: аудиофайла в макете нет. Пока его
+              нет, кнопка честно говорит об этом подсказкой, которая исчезает.
+              Пометка долга остаётся: звук так и не играет. */}
+          <button class="qres__play" type="button" aria-label="Слушать практику" data-inert-ok="INV-quiz-play" data-play>
+            <span class="qres__play-triangle" aria-hidden="true" />
+          </button>
+          <span class="qres__play-note" role="status" aria-live="polite" data-play-note></span>
+        </div>
+        <div class="qres__practice-desc" data-figma-node="549:503">
+          <span class="qres__practice-label" data-figma-node="549:504">практика в подарок</span>
+          <div class="qres__practice-body">
+            <span class="qres__practice-title" data-figma-node="549:505">Код Боли</span>
+            <span class="qres__practice-time" data-figma-node="549:506">Аудиопрактика</span>
+            <span class="qres__practice-time">≈ 25 минут</span>
+          </div>
+          <p class="qres__practice-more" data-figma-node="549:509">
+            Мягкая практика, которая поможет вам прожить чувства,<br />
+            освободить внутреннее напряжение и сделать первый шаг к себе.
+          </p>
+        </div>
+      </div>
+
+      <span class="qres__divine" aria-hidden="true" />
+
+      <div class="qres__subscribe" data-figma-node="549:501">
+        <span class="qres__subscribe-label" data-figma-node="549:520">
+          Зарегистрируйся, чтобы начать прослушивание.
+        </span>
+        <form class="qres__subscribe-form">
+          <input class="qres__email" type="email" placeholder="Ваш email" aria-label="Ваш email" />
+          <button class="qres__submit" type="submit" data-submit-label>Практика для вас</button>
+        </form>
+        <label class="qres__agree">
+          <input type="checkbox" />
+          <span>Я согласен(а) с политикой конфиденциальности и обработкой персональных данных.</span>
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qres__final" data-figma-node="550:553">
+    <p class="qres__final-title" data-figma-node="550:554">Это только начало.</p>
+    <p class="qres__final-text" data-figma-node="550:555">Внутри вас больше ресурса, чем кажется.</p>
+  </div>
+</section>
+
+<style>
+  .qres {
+    position: relative;
+    width: 100%;
+    height: 1302px;
+    background: var(--color-bg-page);
+    padding-top: 128px;
+    box-sizing: border-box;
+  }
+
+  .qres__container {
+    position: relative;
+    width: 1280px;
+    height: 1061px;
+    margin: 0 auto;
+  }
+
+  .qres__top {
+    position: relative;
+    width: 1184px;
+    height: 805px;
+    margin-left: 48px;
+  }
+
+  .qres__head {
+    position: relative;
+    width: 384px;
+    height: 138px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .qres__eyebrow {
+    display: block;
+    width: 129px;
+    height: 26px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 26px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-text-primary);
+  }
+
+  .qres__title {
+    width: 213px;
+    height: 60px;
+    margin: 16px auto 0;
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .qres__lead {
+    width: 384px;
+    height: 20px;
+    margin: 16px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__block {
+    position: absolute;
+    left: 82px;
+    top: 170px;
+    display: flex;
+    width: 1020px;
+    height: 635px;
+    border-radius: 16px;
+    background: var(--color-bg-page);
+  }
+
+  .qres__desc {
+    width: 541px;
+    height: 603px;
+    margin: 16px 0 0 16px;
+  }
+
+  .qres__about {
+    margin: 16px 0 0 16px;
+  }
+
+  .qres__label {
+    display: block;
+    width: 145px;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-text-secondary);
+  }
+
+  .qres__about-title {
+    width: 336px;
+    height: 78px;
+    margin: 24px 0 0;
+    font-family: var(--font-literata);
+    font-size: 29px;
+    line-height: 38.6px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .qres__about-text {
+    width: 486px;
+    margin: 24px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__about-text--narrow {
+    width: 455px;
+  }
+
+  .qres__profit {
+    width: 406px;
+    height: 166px;
+    margin: 48px 0 0 16px;
+  }
+
+  .qres__label--wide {
+    width: 406px;
+  }
+
+  .qres__profit-list {
+    width: 362px;
+    height: 130px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    line-height: 26px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__profit-list li {
+    position: relative;
+    padding-left: 14px;
+  }
+
+  /* В макете список с маркерами, а не с тире. */
+  .qres__profit-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-primary);
+  }
+
+  .qres__media {
+    position: relative;
+    width: 415px;
+    height: 603px;
+    margin: 16px 0 0 32px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-bg-muted);
+  }
+
+  .qres__media-image {
+    width: 415px;
+    height: 603px;
+    background-image: url('/img/quiz-result-media.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .qres__quote {
+    position: absolute;
+    left: 16px;
+    top: 483px;
+    width: 383px;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 32px 24px 0;
+    /* Заливки у рамки цитаты в макете нет: текст лежит прямо на фотографии. */
+  }
+
+  .qres__quote-text {
+    width: 293px;
+    height: 56px;
+    margin: 0;
+    /* В макете цитата набрана Great Vibes, а не Lora. */
+    font-family: var(--font-great-vibes);
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__practice {
+    position: relative;
+    width: 1169px;
+    height: 184px;
+    margin: 24px 0 0 56px;
+    border-radius: 16px;
+    background: var(--color-bg-page);
+  }
+
+  .qres__practice-media {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    display: flex;
+    gap: 24px;
+    width: 571px;
+    height: 136px;
+  }
+
+  .qres__practice-image {
+    flex: none;
+    position: relative;
+    width: 120px;
+    height: 136px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url('/img/quiz-result-media.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Подсказка «пока не работает»: всплывает над кнопкой и исчезает сама. */
+  .qres__play-note {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 8px;
+    transform: translateX(-50%) translateY(4px);
+    padding: 6px 10px;
+    border-radius: var(--radius-s);
+    background: var(--color-bg-dark);
+    color: var(--color-text-on-image);
+    font-size: 13px;
+    line-height: 18px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity var(--motion-fast) var(--ease-out),
+      transform var(--motion-fast) var(--ease-out);
+  }
+
+  .qres__play-note.is-visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .qres__play {
+    position: absolute;
+    left: 42px;
+    top: 52px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    /* Из макета: заливка #c9bea4 с прозрачностью 45 % и белая обводка. */
+    border: 1px solid var(--color-text-on-image);
+    border-radius: 50%;
+    background: rgb(201 190 164 / 45%);
+    cursor: pointer;
+  }
+
+  .qres__play-triangle {
+    /* Треугольник по центру круга 38×38: 12×16 → отступы 13 и 11. */
+    position: absolute;
+    left: 13px;
+    top: 11px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid var(--color-text-on-image);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  .qres__practice-desc {
+    width: 427px;
+  }
+
+  .qres__practice-label {
+    display: block;
+    width: 128px;
+    height: 22px;
+    font-size: 11px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .qres__practice-body {
+    position: relative;
+    height: 54px;
+    margin-top: 8px;
+  }
+
+  .qres__practice-title {
+    display: block;
+    width: 99px;
+    height: 28px;
+    font-family: var(--font-literata);
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__practice-time {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    font-size: 13px;
+    line-height: 26px;
+    color: var(--color-text-secondary);
+  }
+
+  .qres__practice-time + .qres__practice-time {
+    left: 115px;
+  }
+
+  .qres__practice-more {
+    width: 428px;
+    height: 36px;
+    margin: 16px 0 0;
+    font-size: 13px;
+    line-height: 17.5px;
+    color: var(--color-text-secondary);
+  }
+
+  .qres__divine {
+    position: absolute;
+    left: 627px;
+    top: 24px;
+    width: 1px;
+    height: 136px;
+    background: var(--color-border);
+  }
+
+  .qres__subscribe {
+    position: absolute;
+    left: 660px;
+    top: 24px;
+    width: 485px;
+    height: 124px;
+  }
+
+  .qres__subscribe-label {
+    display: block;
+    width: 313px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__subscribe-form {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .qres__email {
+    box-sizing: border-box;
+    width: 236px;
+    height: 57px;
+    padding: 0 9px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-text-on-image);
+    font-family: var(--font-golos-text);
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__submit {
+    width: 234px;
+    height: 55px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--color-accent);
+    font-family: var(--font-golos-text);
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--color-text-on-image);
+    cursor: pointer;
+  }
+
+  .qres__agree {
+    position: relative;
+    display: block;
+    width: 441px;
+    margin-top: 16px;
+    padding-left: 16px;
+    font-size: 10px;
+    line-height: 15px;
+    color: var(--color-text-secondary);
+  }
+
+  .qres__agree input {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    margin: 0;
+  }
+
+  .qres__final {
+    position: absolute;
+    left: 0;
+    top: 1189px;
+    width: 1440px;
+    height: 113px;
+    /* BACKGROUND_BLUR 6 из спеки. */
+    backdrop-filter: blur(6px);
+  }
+
+  .qres__final-title {
+    position: absolute;
+    left: 586px;
+    top: 16px;
+    width: 268px;
+    height: 39px;
+    margin: 0;
+    /* Текст занимает 268,8 px: в макете он в одну строку. */
+    white-space: nowrap;
+    font-family: var(--font-literata);
+    font-size: 29px;
+    line-height: 38.6px;
+    color: var(--color-text-primary);
+  }
+
+  .qres__final-text {
+    position: absolute;
+    left: 513px;
+    top: 63px;
+    width: 415px;
+    height: 34px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+</style>
+
+<script>
+  // Дополнение слоя 2: в режиме «только из макета» поведение выключено
+  // целиком — не только разметка, но и обработчики.
+  if (document.documentElement.dataset.enhancements === 'on') {
+    // Аудиофайла в макете нет: кнопка прослушивания говорит об этом подсказкой,
+    // которая исчезает сама. Долг INV-quiz-play остаётся открытым.
+    for (const button of document.querySelectorAll('[data-play]')) {
+      const note = button.parentElement?.querySelector('[data-play-note]');
+      if (!note) continue;
+      button.addEventListener('click', () => {
+        note.textContent = 'Пока не работает: аудио появится позже';
+        note.classList.add('is-visible');
+        clearTimeout(note.hideTimer);
+        note.hideTimer = setTimeout(() => note.classList.remove('is-visible'), 3200);
+      });
+    }
+  }
+</script>

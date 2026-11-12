@@ -1,0 +1,382 @@
+---
+import { figmaOnly } from '../lib/flags.mjs';
+/**
+ * Секция `practice-package` (414:2107), 1440×1533: три пакета практик.
+ *
+ * Карточки разной высоты (818, 774, 1114) и стоят по верхнему краю. Внутри —
+ * заголовок, подпись, разделитель, аккордеон со списком практик, строка
+ * доступа, цена со зачёркнутой старой и кнопка.
+ *
+ * В файле у первых двух карточек список раскрыт, у третьей — свёрнут.
+ */
+interface Props {
+  node?: string;
+}
+
+const { node = '414:2107' } = Astro.props;
+
+const cards = [
+  {
+    id: '414:2244',
+    height: 818,
+    title: ['Коды построения', 'реальности'],
+    subtitle: ['7 глубоких состояний для внутренней', 'работы и изменений.'],
+    accordion: '7 практик',
+    open: true,
+    items: [
+      'Код Тепла. Активация',
+      'Код Боли. Возвращение к себе',
+      'Код Страха. Право двигаться вперёд',
+      'Код Гнева. Сила без борьбы',
+      'Код Негодования. Перестать спорить с прошлым',
+      'Код Гордыни. Выход из внутреннего холода',
+      'Код Растерянности. Возвращение ясности',
+    ],
+    access: 'Доступ на 12 месяцев',
+    price: '160 $',
+    old: 'вместо 214 $',
+  },
+  {
+    id: '427:1247',
+    height: 774,
+    title: ['Живая жизнь'],
+    subtitle: ['7 глубоких практик для более живого', 'контакта с собой.'],
+    accordion: '7 практик',
+    open: true,
+    items: [
+      'Жизнь на разрыве. Найти выход',
+      'Разрешить себе больше. Деньги, реализация, масштаб',
+      'Возвращение близости. Внутренние преграды в отношениях',
+      'Держаться — это работа. Стоять — это состояние',
+      'Тело не молчит. Услышать внутренний смысл',
+      'Связь с Высшим проявлением',
+      'Вернуться к радости',
+    ],
+    access: 'Доступ на 12 месяцев',
+    price: '240 $',
+    old: 'вместо 314 $',
+  },
+  {
+    id: '427:1280',
+    height: 1114,
+    title: ['Пространство', 'практик Syntonia'],
+    subtitle: ['Все платные практики + эксклюзив и только в этом пакете практика:', '«Войти в своё желаемое будущее»'],
+    accordion: '15 практик',
+    open: false,
+    items: [
+      'Войти в своё желаемое будущее',
+      'Код Тепла. Активация',
+      'Код Боли. Возвращение к себе',
+      'Код Страха. Право двигаться вперёд',
+      'Код Гнева. Сила без борьбы',
+      'Код Негодования. Перестать спорить с прошлым',
+      'Код Гордыни. Выход из внутреннего холода',
+      'Код Растерянности. Возвращение ясности',
+      'Жизнь на разрыве. Найти выход',
+      'Разрешить себе больше. Деньги, реализация, масштаб',
+      'Возвращение близости. Внутренние преграды в отношениях',
+      'Держаться — это работа. Стоять — это состояние',
+      'Тело не молчит. Услышать внутренний смысл',
+      'Связь с Высшим проявлением',
+      'Вернуться к радости',
+    ],
+    access: 'Доступ на 12 месяцев',
+    price: '360 $',
+    old: 'вместо 460 $',
+  },
+];
+---
+
+<section class="ppkg" data-figma-node={node}>
+  <div class="ppkg__container" data-figma-node="414:2108">
+    <div class="ppkg__head" data-figma-node="414:2109">
+      <h2 class="ppkg__title" data-figma-node="414:2110">Пакеты</h2>
+      <p class="ppkg__subtitle" data-figma-node="414:2111">
+        Тщательно подобранные варианты доступа к практикам и состояниям, чтобы вы могли выбрать свой ритм и глубину.
+      </p>
+    </div>
+
+    <div class="ppkg__grid" data-figma-node="414:2112">
+      {cards.map((card) => (
+        <article class="pack" data-figma-node={card.id} style={`height: ${card.height}px`}>
+          <h3 class="pack__title">
+            {card.title.map((line, i) => (
+              <>
+                {i > 0 && <br />}
+                {line}
+              </>
+            ))}
+          </h3>
+          <p class="pack__subtitle">
+            {card.subtitle.map((line, i) => (
+              <>
+                {i > 0 && <br />}
+                {line}
+              </>
+            ))}
+          </p>
+
+          <span class="pack__divider" aria-hidden="true" />
+
+          <button class="pack__accord" type="button" aria-expanded={card.open ? 'true' : 'false'} data-accord>
+            <span class="pack__accord-icon" aria-hidden="true" />
+            <span class="pack__accord-label">{card.accordion}</span>
+            <span class="pack__accord-arrow" aria-hidden="true">⌄</span>
+          </button>
+
+          <ul class="pack__list" data-list hidden={!card.open}>
+            {card.items.map((item) => <li>{item}</li>)}
+          </ul>
+
+          <div class="pack__foot">
+            <span class="pack__access">{card.access}</span>
+            <div class="pack__prices">
+              <span class="pack__price">{card.price}</span>
+              <span class="pack__old">{card.old}</span>
+            </div>
+            <button class="pack__btn" type="button" aria-describedby="pack-note">Открыть пространство</button>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    {!figmaOnly && (
+    <p class="ppkg__note" data-invented="package-not-connected" id="pack-note" data-note hidden>
+      Оплата не подключена: в макете нет сценария покупки.
+    </p>
+    )}
+  </div>
+</section>
+
+<script>
+  // Дополнение слоя 2: в режиме «только из макета» поведение выключено
+  // целиком — не только разметка, но и обработчики.
+  if (document.documentElement.dataset.enhancements === 'on') {
+    const section = document.querySelector('.ppkg');
+    if (section) {
+      // Аккордеон: список раскрыт у первых двух карточек, у третьей свёрнут.
+      for (const button of section.querySelectorAll('[data-accord]')) {
+        button.addEventListener('click', () => {
+          const open = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!open));
+          const list = button.parentElement.querySelector('[data-list]');
+          if (list) list.hidden = open;
+        });
+      }
+      // Оплаты в макете нет: кнопка показывает это, а не молчит.
+      for (const button of section.querySelectorAll('.pack__btn')) {
+        button.addEventListener('click', () => {
+          const note = section.querySelector('[data-note]');
+          if (note) note.hidden = !note.hidden;
+        });
+      }
+    }
+  }
+</script>
+
+<style>
+  .ppkg {
+    position: relative;
+    width: 100%;
+    height: 1533px;
+    /* Фон — фото с вырезом: размер 1/масштаб, позиция e/(1−a). */
+    background: url('/img/voices-bg.webp') 43.10% 74.62% / 208.32% 110.85% no-repeat;
+  }
+
+  .ppkg__container {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 1469px;
+    margin: 0 auto;
+    padding-top: 64px;
+  }
+
+  .ppkg__head {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 163px;
+    padding-top: 16px;
+  }
+
+  .ppkg__title {
+    width: 239px;
+    height: 81px;
+    margin: 0 auto;
+    font-family: var(--font-literata);
+    font-size: 65px;
+    line-height: 81.25px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .ppkg__subtitle {
+    width: 1160px;
+    height: 34px;
+    margin: 16px 0 0 60px;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .ppkg__note {
+    width: 1280px;
+    margin: 24px 0 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  .ppkg__grid {
+    display: flex;
+    gap: 32px;
+    width: 1280px;
+    margin-top: 64px;
+  }
+
+  .pack {
+    position: relative;
+    box-sizing: border-box;
+    flex: none;
+    width: 405px;
+    padding: 32px;
+    border-radius: 16px;
+    background: var(--color-bg-page);
+    /* Тень из макета: radius 24, offset 2/4, spread 4, #6b6357 @35 %.
+       Геометрия её не видит — карточка без тени проходила ворота. */
+    box-shadow: 2px 4px 24px 4px rgba(107, 99, 87, 0.35);
+  }
+
+  /* У второй и третьей карточек не заливка, а градиент. */
+  .pack:nth-child(2) {
+    background: linear-gradient(14deg, #fbf8f1 0%, #ebe1ce 100%);
+  }
+
+  .pack:nth-child(3) {
+    background: linear-gradient(6deg, #f4eee3 0%, #dfcba6 100%);
+  }
+
+  .pack__title {
+    width: 341px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 29px;
+    line-height: 39px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  .pack__subtitle {
+    width: 341px;
+    margin: 24px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-text-primary);
+  }
+
+  .pack__divider {
+    display: block;
+    width: 341px;
+    height: 1px;
+    margin-top: 24px;
+    background: var(--color-border);
+  }
+
+  .pack__accord {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 341px;
+    height: 34px;
+    margin-top: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .pack__accord-icon {
+    width: 22px;
+    height: 10px;
+    border-top: 1px solid var(--color-text-primary);
+    border-bottom: 1px solid var(--color-text-primary);
+  }
+
+  .pack__accord-label {
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .pack__accord-arrow {
+    margin-left: auto;
+    color: var(--color-text-primary);
+    transition: transform var(--motion-fast) var(--ease-out);
+  }
+
+  .pack__accord[aria-expanded='true'] .pack__accord-arrow {
+    transform: rotate(180deg);
+  }
+
+  .pack__list {
+    width: 341px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-primary);
+  }
+
+  .pack__list li + li {
+    margin-top: 8px;
+  }
+
+  .pack__foot {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    width: 341px;
+  }
+
+  .pack__access {
+    display: block;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .pack__prices {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .pack__price {
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 57px;
+    color: var(--color-text-primary);
+  }
+
+  .pack__old {
+    font-size: 29px;
+    line-height: 39px;
+    color: var(--color-text-secondary);
+    text-decoration: line-through;
+  }
+
+  .pack__btn {
+    width: 341px;
+    height: 45px;
+    margin-top: 24px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--color-accent);
+    font-family: var(--font-golos-text);
+    font-size: 17px;
+    line-height: 29px;
+    color: var(--color-text-on-image);
+    cursor: pointer;
+  }
+</style>

@@ -1,0 +1,584 @@
+{
+  "updates": [
+    {
+      "cardId": "c-3fea934a",
+      "fields": {
+        "title": "Shared · Шапка",
+        "unit": "component",
+        "gate": "G1",
+        "spec": "docs/site-structure.md",
+        "crop": "public/structure/header-figma.jpg",
+        "figmaNode": "167:641",
+        "files": [
+          "src/components/SiteHeader.astro"
+        ],
+        "report": "reports/layout/shell.md",
+        "tag": "shared",
+        "priority": "high",
+        "dod": [
+          "меню 1440/768/390",
+          "Escape/клик вне/ссылка",
+          "aria-current и фокус",
+          "якоря #voices/#faq",
+          "бургер ≥44 px"
+        ],
+        "description": "Приёмка RED. Меню 7 nav-ссылок + CTA (отчёт говорил 8 + CTA); битые якоря #voices/#faq; бургер 32×21; фокус после Escape; контракт G1. Карта: /structure.html#block-header."
+      }
+    },
+    {
+      "cardId": "c-9bd44e5b",
+      "fields": {
+        "title": "Method · Hero",
+        "unit": "block",
+        "gate": "G2",
+        "figmaNode": "323:423",
+        "crop": "public/structure/method-hero-ref.jpg",
+        "spec": "docs/site-structure.md",
+        "files": [
+          "src/components/MethodHero.astro"
+        ],
+        "report": "reports/layout/method.md",
+        "tag": "method",
+        "priority": "high",
+        "dod": [
+          "высота 2737/800",
+          "1440/390 без переполнения",
+          "консоль 0",
+          "отчёт с числами"
+        ],
+        "description": "Приёмка RED: эталон — старая сборка, не Figma; width 219/160 без waiver; отчёт неполон. Блок Hero. Карта: /structure.html#block-method-hero."
+      }
+    }
+  ],
+  "creates": [
+    {
+      "title": "Home · Hero",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-hero-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Hero.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-hero",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Hero. Первый экран: H1, лид, CTA на quiz, play. Эталон — Figma-кроп public/structure/home-hero-figma.jpg, текущая реализация — public/structure/home-hero-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-hero."
+    },
+    {
+      "title": "Home · Banner founder",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-banner-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/BannerFounder.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-banner",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Banner founder. Баннер с основателем и подписью. Эталон — Figma-кроп public/structure/home-banner-figma.jpg, текущая реализация — public/structure/home-banner-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-banner."
+    },
+    {
+      "title": "Home · Pain",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-pain-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Pain.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-pain",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Pain. Список того, что мешает; подводит к методу. Эталон — Figma-кроп public/structure/home-pain-figma.jpg, текущая реализация — public/structure/home-pain-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-pain."
+    },
+    {
+      "title": "Home · Method",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-method-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Method.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-method",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Method. Четыре шага метода. Эталон — Figma-кроп public/structure/home-method-figma.jpg, текущая реализация — public/structure/home-method-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-method."
+    },
+    {
+      "title": "Home · Quiz",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-quiz-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Quiz.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-quiz",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Quiz. Лид-магнит: вопрос 1 из 9. Эталон — Figma-кроп public/structure/home-quiz-figma.jpg, текущая реализация — public/structure/home-quiz-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-quiz."
+    },
+    {
+      "title": "Home · About founder",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-founder-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/AboutFounder.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-founder",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · About founder. Карточка основателя с цитатой. Эталон — Figma-кроп public/structure/home-founder-figma.jpg, текущая реализация — public/structure/home-founder-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-founder."
+    },
+    {
+      "title": "Home · Process",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-process-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Process.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-process",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Process. Три stage-карточки. Эталон — Figma-кроп public/structure/home-process-figma.jpg, текущая реализация — public/structure/home-process-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-process."
+    },
+    {
+      "title": "Home · Entry",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-entry-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Entry.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-entry",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Entry. Точка входа: текст, фото, две кнопки. Эталон — Figma-кроп public/structure/home-entry-figma.jpg, текущая реализация — public/structure/home-entry-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-entry."
+    },
+    {
+      "title": "Home · Formats",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-formats-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Formats.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-formats",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Formats. Пять форматов, слайдер и табы. Эталон — Figma-кроп public/structure/home-formats-figma.jpg, текущая реализация — public/structure/home-formats-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-formats."
+    },
+    {
+      "title": "Home · Voices",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-voices-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Voices.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-voices",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Voices. 12 отзывов, карусель. Эталон — Figma-кроп public/structure/home-voices-figma.jpg, текущая реализация — public/structure/home-voices-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-voices."
+    },
+    {
+      "title": "Home · Library",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-library-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Library.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-library",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Library. Промо книги и журналов. Эталон — Figma-кроп public/structure/home-library-figma.jpg, текущая реализация — public/structure/home-library-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-library."
+    },
+    {
+      "title": "Home · Air photo",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-air-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/AirPhoto.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-air",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · Air photo. Полноэкранный портрет. Эталон — Figma-кроп public/structure/home-air-figma.jpg, текущая реализация — public/structure/home-air-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-air."
+    },
+    {
+      "title": "Home · FAQ",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "home",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-faq-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Faq.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-home-faq",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Блок Home · FAQ. Аккордеон из пяти вопросов. Эталон — Figma-кроп public/structure/home-faq-figma.jpg, текущая реализация — public/structure/home-faq-site.jpg. Если видишь расхождение — перетащи карточку в «В работе». Карта: /structure.html#block-home-faq."
+    },
+    {
+      "title": "Shared · Подвал",
+      "column": "done",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "shared",
+      "unit": "block",
+      "gate": "G2",
+      "crop": "public/structure/home-footer-figma.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/Footer.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-footer",
+        "1440/390 без переполнения",
+        "консоль 0"
+      ],
+      "report": "reports/blocks/home.md",
+      "description": "Общий подвал. Эталон — public/structure/home-footer-figma.jpg, реализация — public/structure/home-footer-site.jpg. Известный хвост Δ 8,41. Карта: /structure.html#block-footer."
+    },
+    {
+      "title": "Method · Principles",
+      "column": "progress",
+      "assignee": "agent",
+      "priority": "high",
+      "tag": "method",
+      "unit": "block",
+      "gate": "G2",
+      "figmaNode": "323:871",
+      "crop": "public/structure/method-principles-ref.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/MethodPrinciples.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-method-principles",
+        "1440/390 без переполнения",
+        "консоль 0",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/method.md",
+      "description": "Блок Method · Principles. Три принципа метода. Приёмка RED: эталон — старая сборка, не Figma; width 219/160 без waiver. Карта: /structure.html#block-method-principles."
+    },
+    {
+      "title": "Method · CTA",
+      "column": "progress",
+      "assignee": "agent",
+      "priority": "high",
+      "tag": "method",
+      "unit": "block",
+      "gate": "G2",
+      "figmaNode": "334:992",
+      "crop": "public/structure/method-cta-ref.jpg",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/components/MethodCta.astro"
+      ],
+      "dod": [
+        "сверить с /structure.html#block-method-cta",
+        "1440/390 без переполнения",
+        "консоль 0",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/method.md",
+      "description": "Блок Method · Method CTA. CTA на точку входа и вопрос. Приёмка RED: эталон — старая сборка, не Figma; width 219/160 без waiver. Карта: /structure.html#block-method-cta."
+    },
+    {
+      "title": "Page · Мастера",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/masters.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#masters",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Первый экран, команда, дополнительный блок. Карта: /structure.html#masters."
+    },
+    {
+      "title": "Page · Пространство практики",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/practice.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#practice",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Hero, бесплатный вход, quiz, платные практики, пакет, info. Карта: /structure.html#practice."
+    },
+    {
+      "title": "Page · Библиотека",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/library.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#library",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Hero, книга, журнал, выпуски + journal states. Карта: /structure.html#library."
+    },
+    {
+      "title": "Page · Запись",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/booking.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#booking",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Hero и форматы; нужна точка отправки формы. Карта: /structure.html#booking."
+    },
+    {
+      "title": "Page · Quiz",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "medium",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/quiz.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#quiz",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Вопросы и результаты; нужен полный набор вопросов. Карта: /structure.html#quiz."
+    },
+    {
+      "title": "Page · Публичная оферта",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "low",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/offer.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#offer",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Юридический текст без макета. Карта: /structure.html#offer."
+    },
+    {
+      "title": "Page · Политика конфиденциальности",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "low",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/privacy.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#privacy",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Юридический текст без макета. Карта: /structure.html#privacy."
+    },
+    {
+      "title": "Page · Согласие на обработку",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "low",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/consent.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#consent",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Юридический текст без макета. Карта: /structure.html#consent."
+    },
+    {
+      "title": "Page · 404",
+      "column": "backlog",
+      "assignee": "agent",
+      "priority": "low",
+      "tag": "page",
+      "unit": "page",
+      "gate": "G2",
+      "spec": "docs/site-structure.md",
+      "files": [
+        "src/pages/404.astro"
+      ],
+      "dod": [
+        "собрать по /structure.html#404",
+        "1440/390 без переполнения",
+        "build/console",
+        "отчёт с числами"
+      ],
+      "report": "reports/layout/pages.md",
+      "description": "Страница ошибки без макета. Карта: /structure.html#404."
+    }
+  ]
+}

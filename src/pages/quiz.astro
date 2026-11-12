@@ -1,0 +1,53 @@
+---
+/**
+ * Страница теста состояния. Узлы: quiz-section `529:119`, header `530:552`,
+ * footer `531:142` — шапка и подвал те же компоненты, что на главной.
+ *
+ * В файле нарисован один вопрос из девяти; вопросы 2–9 отсутствуют, поэтому
+ * страница показывает спроектированный экран, а не выдуманный поток.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import QuizTest from '../components/QuizTest.astro';
+import QuizResult from '../components/QuizResult.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Тест состояния — Syntonia"
+  description="Девять вопросов о том, что вы чувствуете сейчас. Три минуты."
+>
+  <main class="page">
+    <Header />
+    <QuizTest />
+    <QuizResult />
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  /* Шапка позиционируется абсолютно: ей нужен позиционированный родитель. */
+  .page {
+    position: relative;
+  }
+</style>
+
+<script>
+  // ?result=1 (или ?result=pride) показывает экран результата сразу: так его
+  // можно замерить. Набор текстов тот же, что в макете для этого кода.
+  const variant = new URLSearchParams(location.search).get('result');
+  if (variant) {
+    const question = document.querySelector('.qtest');
+    const result = document.querySelector('.qres');
+    if (question) question.hidden = true;
+    if (result) {
+      result.hidden = false;
+      if (variant === 'pride') {
+        const title = result.querySelector('.qres__title');
+        const action = result.querySelector('[data-submit-label]');
+        if (title) title.textContent = 'Код Гордыни';
+        if (action) action.textContent = 'Практика для тебя';
+      }
+    }
+  }
+</script>

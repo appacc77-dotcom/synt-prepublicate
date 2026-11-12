@@ -1,0 +1,80 @@
+---
+/**
+ * Секция `booking-hero` (383:287), 1440×509: фото, заголовок и лид.
+ *
+ * Фон — CROP [[1, 0, −0.0002], [0, 0.6281, 0.1262]]: размер 100 % × 159,2 %,
+ * позиция по вертикали 33,9 %. Поверх — чёрный слой с прозрачностью 12 %
+ * (второй слой заливки в файле).
+ */
+interface Props {
+  node?: string;
+}
+
+const { node = '383:287' } = Astro.props;
+---
+
+<section class="bhero" data-figma-node={node}>
+  <div class="bhero__container" data-figma-node="383:760">
+    <div class="bhero__content" data-figma-node="383:756">
+      <h1 class="bhero__title" data-figma-node="383:757">Форматы работы</h1>
+      <p class="bhero__lead" data-figma-node="383:758">
+        Форматы различаются по глубине запроса, длительности и степени сопровождения.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bhero {
+    position: relative;
+    width: 100%;
+    height: 509px;
+    background-image: url('/img/booking-hero.webp');
+    /* CROP: 100 % × 159,2 %, позиция 0 % 33,9 %. */
+    background-size: 100% 159.2%;
+    background-position: 0% 33.9%;
+    background-repeat: no-repeat;
+  }
+
+  /* Второй слой заливки — чёрный с прозрачностью 12 %. */
+  .bhero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 12%);
+    pointer-events: none;
+  }
+
+  .bhero__container {
+    position: absolute;
+    left: 80px;
+    top: 281px;
+    width: 1280px;
+    height: 164px;
+  }
+
+  .bhero__content {
+    width: 550px;
+    height: 164px;
+  }
+
+  .bhero__title {
+    width: 550px;
+    height: 64px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 400;
+    color: var(--color-text-on-image);
+  }
+
+  .bhero__lead {
+    width: 550px;
+    height: 68px;
+    margin: 32px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-image);
+  }
+</style>

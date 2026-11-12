@@ -1,0 +1,532 @@
+/**
+ * Мобильный слой: 768 и 390 (решение 409).
+ *
+ * Макетов этих ширин дизайнер не делал — это наши дополнения, а не перенос.
+ * Поэтому всё живёт под `[data-enhancements='on']`: при выключенных
+ * дополнениях страница остаётся ровно той, что собрана из макета 1440.
+ *
+ * Правила пишутся по компонентам, а не глобально: попытка снять
+ * `position: absolute` у всего сразу сломала основу (решение 412) — 26 из 37
+ * компонентов ставят координаты inline-стилями из спеки, и без
+ * пер-компонентной раскладки секция превращается в кашу.
+ */
+
+@media (max-width: 768px) {
+  /* --- Шапка ------------------------------------------------------------ */
+  /* Шапка не липкая: при sticky она перекрывает первый экран, и заголовок
+     hero начинается под ней. На мобильном она едет вместе с контентом. */
+  [data-enhancements='on'] .header {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0;
+  }
+
+  [data-enhancements='on'] .header__inner {
+    height: auto;
+    padding: 12px 16px;
+    border-radius: 0;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  /* На узком экране навигация живёт в бургере: у неё своя панель. */
+  [data-enhancements='on'] .header__nav {
+    display: none !important;
+  }
+
+  [data-enhancements='on'] .header__logo img {
+    width: 132px;
+    height: auto;
+  }
+
+  [data-enhancements='on'] .header__actions {
+    gap: 8px;
+  }
+
+  /* Кнопка «личная встреча» на узком экране уступает место иконкам. */
+  [data-enhancements='on'] .header__actions .btn-primary,
+  [data-enhancements='on'] .header__action-label {
+    display: none !important;
+  }
+
+  /* --- Hero ------------------------------------------------------------- */
+  [data-enhancements='on'] .hero {
+    height: auto !important;
+  }
+
+  [data-enhancements='on'] .hero__video {
+    min-height: 0 !important;
+    padding: 24px 16px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+
+  [data-enhancements='on'] .hero__content {
+    width: 100%;
+    gap: 20px;
+  }
+
+  [data-enhancements='on'] .hero__title,
+  [data-enhancements='on'] .hero__lead {
+    width: 100%;
+  }
+
+  [data-enhancements='on'] .hero__play-wrap {
+    align-self: flex-end;
+  }
+
+  /* --- Подвал ----------------------------------------------------------- */
+  [data-enhancements='on'] .footer {
+    padding: 40px 16px 24px;
+  }
+
+  [data-enhancements='on'] .footer__inner {
+    width: 100%;
+  }
+
+  [data-enhancements='on'] .footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: auto;
+  }
+
+  [data-enhancements='on'] .footer__col {
+    width: 100%;
+  }
+
+  /* Юридическая строка в подвале — в одну линию не влезает: пусть переносится. */
+  [data-enhancements='on'] .footer__legal {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  [data-enhancements='on'] .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Общая сетка ------------------------------------------------------ */
+  [data-enhancements='on'] {
+    /* Контейнер макета — 1280 при окне 1440; на узком экране он должен
+       сжиматься, иначе любая секция шире экрана. */
+    --container-max: 100%;
+  }
+
+  /* --- Типографика ------------------------------------------------------ */
+  [data-enhancements='on'] .t-h1 {
+    font-size: clamp(32px, 9vw, 44px) !important;
+    line-height: 1.08 !important;
+  }
+
+  [data-enhancements='on'] .t-h2 {
+    font-size: clamp(26px, 7vw, 34px) !important;
+    line-height: 1.15 !important;
+  }
+
+  [data-enhancements='on'] .t-h3 {
+    font-size: clamp(22px, 5.5vw, 28px) !important;
+    line-height: 1.2 !important;
+  }
+
+  [data-enhancements='on'] .t-h4,
+  [data-enhancements='on'] .t-h5,
+  [data-enhancements='on'] .t-h6 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+
+  [data-enhancements='on'] .t-body,
+  [data-enhancements='on'] .t-body-s,
+  [data-enhancements='on'] .t-body-tight {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* --- Секции на flex: снять фиксированную высоту и большие поля -------- */
+  [data-enhancements='on'] .banner,
+  [data-enhancements='on'] .pain,
+  [data-enhancements='on'] .method,
+  [data-enhancements='on'] .quiz,
+  [data-enhancements='on'] .formats,
+  [data-enhancements='on'] .voices,
+  [data-enhancements='on'] .about,
+  [data-enhancements='on'] .entry,
+  [data-enhancements='on'] .air,
+  [data-enhancements='on'] .process {
+    min-height: 0 !important;
+    padding: 48px 16px !important;
+    height: auto !important;
+  }
+
+  /* --- Секции с абсолютными координатами из спеки ----------------------- */
+  /* Их содержимое позиционировано inline; на узком экране оставляем поток,
+     но только внутри самой секции и только для её детей. */
+  [data-enhancements='on'] .formats__panel,
+  [data-enhancements='on'] .voices__track {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ни один элемент секции не шире экрана: в макете много фиксированных
+     ширин (600 у текста, 1280 у контейнера), и без этого они вылезают.
+     max-width безопасен для абсолютного позиционирования — координаты
+     остаются, ширина подстраивается. */
+  [data-enhancements='on'] section *,
+  [data-enhancements='on'] section *::before,
+  [data-enhancements='on'] section *::after {
+    max-width: 100% !important;
+  }
+
+  /* Картинки-фоны (position: absolute; inset: 0) не трогаем: им нужен
+     height: 100 %, иначе обложка схлопывается. */
+  [data-enhancements='on'] section img:not([class*='__bg']) {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Секции в две колонки: складываются друг под друга ---------------- */
+  [data-enhancements='on'] .pain__container,
+  [data-enhancements='on'] .method__container,
+  [data-enhancements='on'] .about__container,
+  [data-enhancements='on'] .quiz__container,
+  [data-enhancements='on'] .quiz__inner,
+  [data-enhancements='on'] .entry__container,
+  [data-enhancements='on'] .process__container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  [data-enhancements='on'] .pain__list {
+    width: 100%;
+    gap: 16px;
+  }
+
+  [data-enhancements='on'] .list-item__text {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Process: этапы в колонку, картинка после текста ------------------- */
+  [data-enhancements='on'] .stage {
+    flex-direction: column !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    gap: 16px !important;
+  }
+
+  /* Чередование сторон в макете — на телефоне оно только путает: всегда
+     текст сверху, картинка снизу. */
+  [data-enhancements='on'] .stage[data-order='image-first'] .stage__image {
+    order: 0 !important;
+  }
+
+  [data-enhancements='on'] .stage__content,
+  [data-enhancements='on'] .stage__title,
+  [data-enhancements='on'] .stage__text {
+    width: 100% !important;
+  }
+
+  [data-enhancements='on'] .stage__image {
+    width: 100% !important;
+    height: 220px !important;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Formats: вкладки в столбик, панель под ними ---------------------- */
+  [data-enhancements='on'] .formats__tabs {
+    flex-direction: column !important;
+    min-height: 0 !important;
+    width: 100% !important;
+  }
+
+  [data-enhancements='on'] .format-tab {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  /* --- FAQ: интро и список друг под другом ----------------------------- */
+  [data-enhancements='on'] .faq__container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 24px !important;
+  }
+
+  [data-enhancements='on'] .faq__intro,
+  [data-enhancements='on'] .faq__list,
+  [data-enhancements='on'] .faq__item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- About: карточка фото+текст в колонку ----------------------------- */
+  [data-enhancements='on'] .about__card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  [data-enhancements='on'] .about__photo {
+    width: 100% !important;
+    height: 320px !important;
+    background-size: cover !important;
+    background-position: 50% 30% !important;
+  }
+
+  [data-enhancements='on'] .about__text,
+  [data-enhancements='on'] .about__content,
+  [data-enhancements='on'] .about__head {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Formats: счётчик форматов не должен висеть справа за экраном ---- */
+  [data-enhancements='on'] .formats__counter {
+    position: static !important;
+    width: 100% !important;
+    text-align: left !important;
+    margin-top: 16px;
+  }
+
+  /* --- Voices: карусель листается по одной карточке --------------------- */
+  /* Окно карусели в макете 1392 и не обрезает: ленту режет край секции.
+     На телефоне окно равно экрану и обрезает само — иначе лента из 12
+     карточек растягивает документ. */
+  [data-enhancements='on'] .voices {
+    overflow: hidden !important;
+  }
+
+  [data-enhancements='on'] .voices__viewport {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  [data-enhancements='on'] .voice {
+    width: min(320px, 82vw) !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  [data-enhancements='on'] .voice__body,
+  [data-enhancements='on'] .voice__head {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Последняя страховка от горизонтальной прокрутки: `clip` обрезает
+     вылезающее по горизонтали, но, в отличие от hidden, не делает страницу
+     скролл-контейнером. Всё, что важнее линии края, обязано быть в потоке —
+     см. правила выше; это не замена им, а защита от случайного сдвига. */
+  [data-enhancements='on'] .page {
+    overflow-x: clip;
+  }
+}
+
+@media (max-width: 768px) {
+  /* В макете подзаголовок входа стоит одной строкой (nowrap 563 px). На
+     телефоне строка обязана переноситься — иначе она уезжает за экран. */
+  [data-enhancements='on'] .entry__lead {
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  /* Кнопки в ряд на 390 не помещаются: ставим их друг под друга и на всю
+     ширину — так текст не рвётся по словам, а палец попадает с первого раза. */
+  [data-enhancements='on'] .entry__buttons,
+  [data-enhancements='on'] .hero__content > .btn-primary,
+  [data-enhancements='on'] .formats__actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  [data-enhancements='on'] .btn-primary,
+  [data-enhancements='on'] .btn-quiet {
+    width: 100% !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    text-align: center;
+  }
+
+  [data-enhancements='on'] .btn-primary__label,
+  [data-enhancements='on'] .btn-quiet__label {
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Hero внутренних страниц (booking, practice, masters, library,
+         method): заголовок и подзаголовок стоят абсолютом друг на друге,
+         потому что высоты в макете фиксированные. На телефоне — поток. --- */
+  [data-enhancements='on'] .bhero,
+  [data-enhancements='on'] .phero,
+  [data-enhancements='on'] .mhero,
+  [data-enhancements='on'] .lhero,
+  [data-enhancements='on'] .method-hero {
+    height: auto !important;
+    min-height: 360px !important;
+    padding: 32px 20px !important;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  [data-enhancements='on'] .bhero__container,
+  [data-enhancements='on'] .phero__container,
+  [data-enhancements='on'] .mhero__content,
+  [data-enhancements='on'] .lhero__container,
+  [data-enhancements='on'] .lhero__content {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  [data-enhancements='on'] .bhero__content,
+  [data-enhancements='on'] .mhero__title,
+  [data-enhancements='on'] .mhero__desc,
+  [data-enhancements='on'] .bhero__title,
+  [data-enhancements='on'] .bhero__lead,
+  [data-enhancements='on'] .lhero__title,
+  [data-enhancements='on'] .lhero__lead {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(32px, 9vw, 44px) !important;
+    line-height: 1.1 !important;
+  }
+
+  [data-enhancements='on'] .bhero__lead,
+  [data-enhancements='on'] .lhero__lead {
+    margin-top: 16px !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Шкала форматов: подписи расходятся по краям --------------------- */
+  [data-enhancements='on'] .bformats__scale {
+    padding: 0 !important;
+    gap: 8px;
+  }
+
+  [data-enhancements='on'] .bformats__scale-label {
+    font-size: 10px !important;
+    letter-spacing: 0.08em !important;
+    white-space: nowrap;
+  }
+
+  /* Внутренние отступы панели форматов на телефоне уже: в макете 96 px. */
+  [data-enhancements='on'] .bformats__container,
+  [data-enhancements='on'] .bformats__layout,
+  [data-enhancements='on'] .bformats__list {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Страница книги: обложка сверху, текст под ней -------------------- */
+  [data-enhancements='on'] .book {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  [data-enhancements='on'] .book__frame,
+  [data-enhancements='on'] .book__container,
+  [data-enhancements='on'] .book__intro,
+  [data-enhancements='on'] .book__info,
+  [data-enhancements='on'] .book__toc {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+    padding: 0 !important;
+  }
+
+  [data-enhancements='on'] .book__container {
+    padding: 24px 20px 40px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  [data-enhancements='on'] .book__cover {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4;
+    background-size: contain !important;
+    background-position: 50% 50% !important;
+    background-color: var(--color-bg-page);
+  }
+
+  /* Тексты в макете стоят абсолютом по y из 1440: на телефоне — поток. */
+  [data-enhancements='on'] .book__eyebrow,
+  [data-enhancements='on'] .book__title,
+  [data-enhancements='on'] .book__author,
+  [data-enhancements='on'] .book__desc,
+  [data-enhancements='on'] .book__cta {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 0 12px !important;
+  }
+
+  [data-enhancements='on'] .book__title {
+    font-size: clamp(30px, 8.5vw, 40px) !important;
+    line-height: 1.1 !important;
+  }
+
+  [data-enhancements='on'] .book__toc {
+    padding: 24px 16px !important;
+    margin-top: 16px;
+  }
+
+  [data-enhancements='on'] .book__toc-title {
+    position: static !important;
+    margin: 0 0 12px !important;
+    font-size: 28px !important;
+  }
+
+  [data-enhancements='on'] .book__toc-list {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}

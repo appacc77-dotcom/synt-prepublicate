@@ -1,0 +1,152 @@
+---
+/**
+ * Секция `library-book` (267:953), 1440×882: обложка книги слева, текст и
+ * кнопка справа.
+ */
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '267:953' } = Astro.props;
+---
+
+<section class="lbook" data-figma-node={node}>
+  <div class="lbook__container" data-figma-node="267:954">
+    <div class="lbook__image" data-figma-node="267:955" />
+
+    <div class="lbook__content" data-figma-node="267:956">
+      <span class="lbook__eyebrow" data-figma-node="267:958">авторская книга</span>
+
+      <div class="lbook__heading" data-figma-node="854:2487">
+        <h2 class="lbook__title" data-figma-node="267:966">Коды построения реальности. 7 состояний жизни</h2>
+        <p class="lbook__author" data-figma-node="272:975">Екатерина Лебедева</p>
+      </div>
+
+      <p class="lbook__desc" data-figma-node="267:967">
+        Книга о семи состояниях, которые формируют внутренние сценарии человека и влияют на выбор, отношения и ход
+        жизни. Внутри — авторская система, соединяющая психологию, научные опоры, тонкий план и бережные практики для
+        самостоятельной внутренней работы.
+      </p>
+
+      <a class="lbook__btn" href="/book.html" data-figma-node="272:1009">
+        <span class="lbook__label" data-figma-node="I272:1009;851:474">читать онлайн</span>
+        <ArrowQuiet size={14} />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lbook {
+    position: relative;
+    width: 100%;
+    height: 882px;
+    background: var(--color-bg-page);
+    box-sizing: border-box;
+    /* Отступ секции — padding: margin первого блока схлопывается. */
+    padding-top: 128px;
+  }
+
+  .lbook__container {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 626px;
+    margin: 0 auto;
+  }
+
+  .lbook__image {
+    position: absolute;
+    left: 80px;
+    top: 128px;
+    width: 662px;
+    height: 626px;
+    /* CROP: размер 1/масштаб, позиция e/(1−a). */
+    background: url('/img/library-book.jpg') 72.10% 0.00% / 119.01% 100% no-repeat;
+  }
+
+  .lbook__content {
+    position: absolute;
+    left: 806px;
+    top: 128px;
+    width: 554px;
+    height: 626px;
+  }
+
+  .lbook__eyebrow {
+    display: block;
+    width: 239px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-accent-muted);
+  }
+
+  .lbook__heading {
+    width: 554px;
+    height: 235px;
+    margin-top: 32px;
+  }
+
+  .lbook__title {
+    width: 554px;
+    height: 180px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+    color: var(--color-text-heading);
+  }
+
+  .lbook__author {
+    width: 285px;
+    height: 39px;
+    margin: 16px 0 0;
+    font-family: var(--font-literata);
+    font-size: 29px;
+    line-height: 38.6px;
+    color: var(--color-text-heading);
+  }
+
+  .lbook__desc {
+    width: 554px;
+    height: 204px;
+    margin: 32px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .lbook__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 221px;
+    height: 61px;
+    margin-top: 32px;
+    padding: 0 24px;
+    border-radius: 4px;
+    background: var(--color-accent) url('/img/btn-texture.webp') center / cover no-repeat;
+    text-decoration: none;
+  }
+
+  .lbook__label {
+    flex: none;
+    width: 151px;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: var(--color-text-on-image);
+  }
+
+  .lbook__btn :global(svg) {
+    display: block;
+    color: var(--color-text-on-image);
+  }
+</style>

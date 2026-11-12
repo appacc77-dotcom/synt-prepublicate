@@ -1,0 +1,3286 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:57:00.852Z"
+  },
+  "section": {
+    "id": "102:220",
+    "name": "formats",
+    "w": 1440,
+    "h": 1164
+  },
+  "fingerprint": "f95f393f",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 76,
+    "images": 3,
+    "icons": 3,
+    "iconInstances": 3,
+    "states": 5
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "2667c37472ee6c9af720e380d8107b6e16eee6b0",
+        "file": "design/figma/assets/img/2667c37472ee.png",
+        "bytes": 1869884,
+        "usedBy": "formats"
+      },
+      {
+        "hash": "74c15c87615539ec7cc05109667d7e84fd04662f",
+        "file": "design/figma/assets/img/74c15c876155.png",
+        "bytes": 2034748,
+        "usedBy": "formats-slider"
+      },
+      {
+        "hash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+        "file": "design/figma/assets/img/1434b5611dfb.png",
+        "bytes": 2781852,
+        "usedBy": "btn-primary"
+      }
+    ],
+    "icons": [
+      {
+        "node": "102:228",
+        "component": "slider-arrow",
+        "variant": {
+          "direction": "prev"
+        },
+        "file": "design/figma/assets/svg/slider-arrow-prev.svg",
+        "bytes": 19227
+      },
+      {
+        "node": "102:229",
+        "component": "slider-arrow",
+        "variant": {
+          "direction": "next"
+        },
+        "file": "design/figma/assets/svg/slider-arrow-next.svg",
+        "bytes": 19219
+      },
+      {
+        "node": "I709:1504;708:1417;14:128",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "right"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-right.svg",
+        "bytes": 3980
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "102:220",
+      "name": "formats",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 6255,
+      "w": 1440,
+      "h": 1164,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "2667c37472ee6c9af720e380d8107b6e16eee6b0",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          96,
+          24,
+          96,
+          24
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:11",
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:13",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:13"
+      }
+    },
+    {
+      "id": "102:221",
+      "name": "heading-block",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 24,
+      "y": 96,
+      "w": 1392,
+      "h": 102,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "102:222",
+      "name": "formats-title",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 498,
+      "y": 0,
+      "w": 396,
+      "h": 60,
+      "text": "Форматы работы",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "102:223",
+      "name": "formats-lead",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 275,
+      "y": 68,
+      "w": 842,
+      "h": 34,
+      "text": "Форматы различаются по глубине запроса, длительности и степени сопровождения.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "102:224",
+      "name": "formats-panel",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 246,
+      "w": 1280,
+      "h": 740,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#f4eee3",
+            "a": 1
+          },
+          "variable": "bg-surface"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 16,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:18",
+        "topRightRadius": "VariableID:2:18",
+        "bottomLeftRadius": "VariableID:2:18",
+        "bottomRightRadius": "VariableID:2:18",
+        "fills": [
+          "VariableID:2:22"
+        ]
+      }
+    },
+    {
+      "id": "102:225",
+      "name": "formats-slider",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 8,
+      "y": 8,
+      "w": 1264,
+      "h": 420,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0.00004162470577284694
+            ],
+            [
+              0,
+              0.5953322649002075,
+              0.2029506266117096
+            ]
+          ],
+          "imageHash": "74c15c87615539ec7cc05109667d7e84fd04662f",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          32,
+          24,
+          32,
+          24
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "CENTER"
+      },
+      "radius": 12,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:10",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:10",
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17",
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "102:226",
+      "name": "slide-counter",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 608,
+      "y": 359,
+      "w": 47,
+      "h": 36,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.75,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.75
+          },
+          "variable": "bg-glass-strong"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          4,
+          8,
+          4,
+          8
+        ],
+        "primary": "CENTER",
+        "counter": "MAX"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "absolute": true,
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:6",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:6",
+        "fills": [
+          "VariableID:709:1578"
+        ]
+      }
+    },
+    {
+      "id": "102:227",
+      "name": "1/5",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 4,
+      "w": 31,
+      "h": 28,
+      "text": "1/5",
+      "styleName": "quote",
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 139.9999976158142
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "102:228",
+      "name": "slider-arrow",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 24,
+      "y": 186,
+      "w": 48,
+      "h": 48,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.75,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.75
+          },
+          "variable": "bg-glass-strong"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          17.984169006347656,
+          7.852242469787598,
+          17.984169006347656,
+          7.852242469787598
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG"
+      },
+      "clips": false,
+      "rotation": 0,
+      "bound": {
+        "fills": [
+          "VariableID:709:1578"
+        ]
+      },
+      "props": {
+        "direction": "prev"
+      }
+    },
+    {
+      "id": "I102:228;709:1589",
+      "name": "arrow",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 40,
+      "y": 19,
+      "w": 32,
+      "h": 10,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "rotation": -180
+    },
+    {
+      "id": "I102:228;709:1590",
+      "name": "Vector 4",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 4,
+      "w": 27,
+      "h": 3,
+      "radius": 0.5065962672233582,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 2,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I102:228;709:1591",
+      "name": "Vector 3",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 27,
+      "y": 0,
+      "w": 5,
+      "h": 10,
+      "radius": 0.5065962672233582,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 2,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I102:228;709:1592",
+      "name": "outline",
+      "type": "VECTOR",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "absolute": true,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "102:229",
+      "name": "slider-arrow",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 1192,
+      "y": 186,
+      "w": 48,
+      "h": 48,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.75,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.75
+          },
+          "variable": "bg-glass-strong"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          17.984169006347656,
+          7.852242469787598,
+          17.984169006347656,
+          7.852242469787598
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "fills": [
+          "VariableID:709:1578"
+        ]
+      },
+      "props": {
+        "direction": "next"
+      }
+    },
+    {
+      "id": "I102:229;11:17",
+      "name": "arrow",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 19,
+      "w": 32,
+      "h": 10,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false
+    },
+    {
+      "id": "I102:229;11:14",
+      "name": "Vector 4",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 4,
+      "w": 27,
+      "h": 3,
+      "radius": 0.5065962672233582,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 2,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I102:229;11:13",
+      "name": "Vector 3",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 27,
+      "y": 0,
+      "w": 5,
+      "h": 10,
+      "radius": 0.5065962672233582,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 2,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I102:229;11:15",
+      "name": "outline",
+      "type": "VECTOR",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "absolute": true,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "102:230",
+      "name": "formats-tabs",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 8,
+      "y": 436,
+      "w": 1264,
+      "h": 296,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH"
+    },
+    {
+      "id": "709:1504",
+      "name": "format-tab",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 335,
+      "h": 296,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.55
+          },
+          "variable": "bg-glass"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 16,
+        "pad": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17",
+        "fills": [
+          "VariableID:709:1577"
+        ],
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      },
+      "props": {
+        "price#709:14": "$50",
+        "divider#709:20": true,
+        "duration#709:11": "30 мин",
+        "desc#709:17": "Первая встреча. Твоё понимание, что мешает и куда двигаться. Дальше выбор за тобой.",
+        "title#709:8": "Точка входа",
+        "number#709:2": "01",
+        "state": "active"
+      }
+    },
+    {
+      "id": "I709:1504;708:1408",
+      "name": "tab-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 16,
+      "w": 169,
+      "h": 56,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I709:1504;708:1409",
+      "name": "tab-number",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "clips": false,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1410",
+      "name": "tab-number-text",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "text": "01",
+      "styleName": "number",
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "textAlignV": "CENTER",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1411",
+      "name": "tab-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 40,
+      "y": 0,
+      "w": 129,
+      "h": 56,
+      "text": "Точка входа",
+      "styleName": "H5",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 22,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1412",
+      "name": "tab-desc",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 88,
+      "w": 303,
+      "h": 95,
+      "text": "Первая встреча. Твоё понимание, что мешает и куда двигаться. Дальше выбор за тобой.",
+      "styleName": "body-s",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 135.0000023841858
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1413",
+      "name": "tab-meta",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 199,
+      "w": 87,
+      "h": 20,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I709:1504;708:1414",
+      "name": "tab-duration",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 45,
+      "h": 20,
+      "text": "30 мин",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1415",
+      "name": "dot",
+      "type": "ELLIPSE",
+      "depth": 5,
+      "visible": true,
+      "x": 53,
+      "y": 9,
+      "w": 2,
+      "h": 2,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1416",
+      "name": "tab-price",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 63,
+      "y": 0,
+      "w": 24,
+      "h": 20,
+      "text": "$50",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1417",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 16,
+      "y": 235,
+      "w": 211,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Перейти к записи",
+        "show arrow#16:0": true,
+        "theme": "light",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I709:1504;708:1417;4:16",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 157,
+      "h": 29,
+      "text": "Перейти к записи",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1417;14:128",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 5,
+      "visible": true,
+      "x": 181,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "right"
+      }
+    },
+    {
+      "id": "I709:1504;708:1417;14:128;967:2413",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 6,
+      "visible": true,
+      "x": 1,
+      "y": 2,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "id": "I709:1504;708:1417;14:128;13:122",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 1,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I709:1504;708:1417;14:128;13:123",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 7,
+      "visible": true,
+      "x": 8,
+      "y": 2,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "709:1520",
+      "name": "format-tab",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 335,
+      "y": 0,
+      "w": 232,
+      "h": 296,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          16,
+          8,
+          16,
+          8
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "grow": 1,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:8"
+      },
+      "props": {
+        "desc#709:17": "Первая встреча, чтобы увидеть главное, прояснить запрос и понять, куда двигаться дальше.",
+        "divider#709:20": false,
+        "price#709:14": "$230",
+        "duration#709:11": "2 часа",
+        "title#709:8": "Индивидуальная мастер-сессия",
+        "number#709:2": "02",
+        "state": "default"
+      }
+    },
+    {
+      "id": "I709:1520;708:1425",
+      "name": "tab-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 16,
+      "w": 216,
+      "h": 50,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I709:1520;708:1426",
+      "name": "tab-number",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "clips": false,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1520;708:1427",
+      "name": "tab-number-text",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "text": "02",
+      "styleName": null,
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "textAlignV": "CENTER",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1520;708:1428",
+      "name": "tab-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 40,
+      "y": 0,
+      "w": 176,
+      "h": 50,
+      "text": "Индивидуальная мастер-сессия",
+      "styleName": "H6",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "I709:1520;708:1429",
+      "name": "tab-meta",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 252,
+      "w": 104,
+      "h": 28,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "I709:1520;708:1430",
+      "name": "duration-pill",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.55
+          },
+          "variable": "bg-glass"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          4,
+          8,
+          4,
+          8
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:6",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:6",
+        "fills": [
+          "VariableID:709:1577"
+        ],
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I709:1520;708:1431",
+      "name": "tab-duration",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 8,
+      "y": 4,
+      "w": 40,
+      "h": 20,
+      "text": "2 часа",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1520;708:1432",
+      "name": "tab-price",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 72,
+      "y": 4,
+      "w": 32,
+      "h": 20,
+      "text": "$230",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "709:1544",
+      "name": "format-tab",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 567,
+      "y": 0,
+      "w": 232,
+      "h": 296,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          16,
+          8,
+          16,
+          8
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "grow": 1,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:8"
+      },
+      "props": {
+        "desc#709:17": "Первая встреча, чтобы увидеть главное, прояснить запрос и понять, куда двигаться дальше.",
+        "divider#709:20": true,
+        "price#709:14": "$650",
+        "duration#709:11": "3 х 2 часа",
+        "title#709:8": "Программа 3 встречи",
+        "number#709:2": "03",
+        "state": "default"
+      }
+    },
+    {
+      "id": "I709:1544;708:1425",
+      "name": "tab-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 16,
+      "w": 216,
+      "h": 50,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I709:1544;708:1426",
+      "name": "tab-number",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "clips": false,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1544;708:1427",
+      "name": "tab-number-text",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "text": "03",
+      "styleName": null,
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "textAlignV": "CENTER",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1544;708:1428",
+      "name": "tab-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 40,
+      "y": 0,
+      "w": 176,
+      "h": 50,
+      "text": "Программа 3 встречи",
+      "styleName": "H6",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "HEIGHT",
+      "nbsp": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "I709:1544;708:1429",
+      "name": "tab-meta",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 252,
+      "w": 126,
+      "h": 28,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "I709:1544;708:1430",
+      "name": "duration-pill",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 78,
+      "h": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.55
+          },
+          "variable": "bg-glass"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          4,
+          8,
+          4,
+          8
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:6",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:6",
+        "fills": [
+          "VariableID:709:1577"
+        ],
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I709:1544;708:1431",
+      "name": "tab-duration",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 8,
+      "y": 4,
+      "w": 62,
+      "h": 20,
+      "text": "3 х 2 часа",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1544;708:1432",
+      "name": "tab-price",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 94,
+      "y": 4,
+      "w": 32,
+      "h": 20,
+      "text": "$650",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1544;708:1436",
+      "name": "tab-divider",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 10,
+      "w": 1,
+      "h": 296,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "absolute": true,
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "709:1554",
+      "name": "format-tab",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 800,
+      "y": 0,
+      "w": 232,
+      "h": 296,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          16,
+          8,
+          16,
+          8
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "grow": 1,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:8"
+      },
+      "props": {
+        "desc#709:17": "Первая встреча, чтобы увидеть главное, прояснить запрос и понять, куда двигаться дальше.",
+        "divider#709:20": true,
+        "price#709:14": "$1050",
+        "duration#709:11": "5 х 2 часа",
+        "title#709:8": "Программа 5 встреч",
+        "number#709:2": "04",
+        "state": "default"
+      }
+    },
+    {
+      "id": "I709:1554;708:1425",
+      "name": "tab-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 16,
+      "w": 216,
+      "h": 50,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I709:1554;708:1426",
+      "name": "tab-number",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "clips": false,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1554;708:1427",
+      "name": "tab-number-text",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "text": "04",
+      "styleName": null,
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "textAlignV": "CENTER",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1554;708:1428",
+      "name": "tab-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 40,
+      "y": 0,
+      "w": 176,
+      "h": 50,
+      "text": "Программа 5 встреч",
+      "styleName": "H6",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "HEIGHT",
+      "nbsp": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "I709:1554;708:1429",
+      "name": "tab-meta",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 252,
+      "w": 132,
+      "h": 28,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "I709:1554;708:1430",
+      "name": "duration-pill",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 77,
+      "h": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.55
+          },
+          "variable": "bg-glass"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          4,
+          8,
+          4,
+          8
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:6",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:6",
+        "fills": [
+          "VariableID:709:1577"
+        ],
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I709:1554;708:1431",
+      "name": "tab-duration",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 8,
+      "y": 4,
+      "w": 61,
+      "h": 20,
+      "text": "5 х 2 часа",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1554;708:1432",
+      "name": "tab-price",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 93,
+      "y": 4,
+      "w": 39,
+      "h": 20,
+      "text": "$1050",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1554;708:1436",
+      "name": "tab-divider",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 10,
+      "w": 1,
+      "h": 296,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "absolute": true,
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "709:1564",
+      "name": "format-tab",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 1032,
+      "y": 0,
+      "w": 232,
+      "h": 296,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "pad": [
+          16,
+          8,
+          16,
+          8
+        ],
+        "primary": "SPACE_BETWEEN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "FILL"
+      },
+      "align": "STRETCH",
+      "grow": 1,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:8"
+      },
+      "props": {
+        "desc#709:17": "Первая встреча, чтобы увидеть главное, прояснить запрос и понять, куда двигаться дальше.",
+        "divider#709:20": true,
+        "price#709:14": "$110",
+        "duration#709:11": "60 минут",
+        "title#709:8": "Сопровождение",
+        "number#709:2": "05",
+        "state": "default"
+      }
+    },
+    {
+      "id": "I709:1564;708:1425",
+      "name": "tab-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 16,
+      "w": 216,
+      "h": 32,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I709:1564;708:1426",
+      "name": "tab-number",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "strokeWeight": 1,
+      "clips": false,
+      "bound": {
+        "strokes": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1564;708:1427",
+      "name": "tab-number-text",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "text": "05",
+      "styleName": null,
+      "fontFamily": "Lora",
+      "fontStyle": "Italic",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "textAlignV": "CENTER",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#5a5a36",
+            "a": 1
+          },
+          "variable": "accent"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:29"
+        ]
+      }
+    },
+    {
+      "id": "I709:1564;708:1428",
+      "name": "tab-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 40,
+      "y": 0,
+      "w": 176,
+      "h": 25,
+      "text": "Сопровождение",
+      "styleName": "H6",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "I709:1564;708:1429",
+      "name": "tab-meta",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 8,
+      "y": 252,
+      "w": 120,
+      "h": 28,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "I709:1564;708:1430",
+      "name": "duration-pill",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 75,
+      "h": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.550000011920929,
+          "color": {
+            "hex": "#ffffff",
+            "a": 0.55
+          },
+          "variable": "bg-glass"
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          4,
+          8,
+          4,
+          8
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 999,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "strokeWeight": 1,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "paddingLeft": "VariableID:2:7",
+        "paddingTop": "VariableID:2:6",
+        "paddingRight": "VariableID:2:7",
+        "paddingBottom": "VariableID:2:6",
+        "fills": [
+          "VariableID:709:1577"
+        ],
+        "strokes": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "I709:1564;708:1431",
+      "name": "tab-duration",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 8,
+      "y": 4,
+      "w": 59,
+      "h": 20,
+      "text": "60 минут",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlignV": "CENTER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1564;708:1432",
+      "name": "tab-price",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 91,
+      "y": 4,
+      "w": 29,
+      "h": 20,
+      "text": "$110",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "I709:1564;708:1436",
+      "name": "tab-divider",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 10,
+      "w": 1,
+      "h": 296,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "absolute": true,
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "741:1194",
+      "name": "formats-note",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 24,
+      "y": 1034,
+      "w": 1392,
+      "h": 34,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "741:1196",
+      "name": "formats-note-text",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1392,
+      "h": 34,
+      "text": "Переход к записи ни к чему не обязывает: сначала ты можешь задать вопросы, оплата идёт последним шагом.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textAlign": "CENTER",
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#7a756d",
+            "a": 1
+          },
+          "variable": "text-secondary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:27"
+        ]
+      }
+    }
+  ]
+}

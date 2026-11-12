@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:58:02.818Z"
+  },
+  "section": {
+    "id": "323:871",
+    "name": "method-about",
+    "w": 1440,
+    "h": 1077
+  },
+  "fingerprint": "0bc487ec",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 18,
+    "images": 0,
+    "icons": 0,
+    "iconInstances": 0,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [],
+    "icons": []
+  },
+  "nodes": [
+    {
+      "id": "323:871",
+      "name": "method-about",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 800,
+      "w": 1440,
+      "h": 1077,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#eae6d9",
+                "a": 1
+              }
+            },
+            {
+              "position": 0.5,
+              "color": {
+                "hex": "#fbf8f1",
+                "a": 1
+              }
+            },
+            {
+              "position": 1,
+              "color": {
+                "hex": "#ecdcc5",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              6.123234262925839e-17,
+              1,
+              0
+            ],
+            [
+              -1,
+              6.123234262925839e-17,
+              1
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          96,
+          24,
+          96,
+          24
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:13",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:13"
+      }
+    },
+    {
+      "id": "329:902",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 96,
+      "w": 1280,
+      "h": 885,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "maxWidth": "VariableID:42:34"
+      }
+    },
+    {
+      "id": "330:938",
+      "name": "method-list",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 249,
+      "y": 0,
+      "w": 783,
+      "h": 885,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 64,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "330:945",
+      "name": "method-item",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 783,
+      "h": 275,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "337:1055",
+      "name": "method-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 534,
+      "h": 73,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "BASELINE"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "337:1053",
+      "name": "method-num",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 4,
+      "w": 42,
+      "h": 69,
+      "text": "01",
+      "styleName": "script-xl",
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "330:946",
+      "name": "method-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 74,
+      "y": 0,
+      "w": 460,
+      "h": 60,
+      "text": "Глубинный уровень",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "330:947",
+      "name": "method-text",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 105,
+      "w": 783,
+      "h": 170,
+      "text": "В основе метода лежит работа с устойчивыми метапрограммами, состояниями и внутренними кодами, которые закрепляются в психике, теле, восприятии, энергетическом поле, генетической памяти и во внутреннем устройстве человека. Именно этот глубинный уровень влияет на чувства, реакции, выбор, отношения и повторяющиеся сценарии.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "773:1656",
+      "name": "method-item",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 339,
+      "w": 783,
+      "h": 275,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "773:1657",
+      "name": "method-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 520,
+      "h": 73,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "BASELINE"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "773:1658",
+      "name": "method-num",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 4,
+      "w": 47,
+      "h": 69,
+      "text": "02",
+      "styleName": "script-xl",
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "773:1659",
+      "name": "method-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 79,
+      "y": 0,
+      "w": 441,
+      "h": 60,
+      "text": "Целостный подход",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "773:1660",
+      "name": "method-text",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 105,
+      "w": 783,
+      "h": 170,
+      "text": "Syntonia соединяет психологическую точность, коучинговую направленность, работу с эмоциональным и телесным опытом, внимание к подсознательным причинам, тонкому плану и внутренней духовной природе человека. Такой подход позволяет работать не только с тем, что проявлено на поверхности, но и с той внутренней структурой, из которой это возникает.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    },
+    {
+      "id": "773:1667",
+      "name": "method-item",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 678,
+      "w": 783,
+      "h": 207,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "773:1668",
+      "name": "method-head",
+      "type": "FRAME",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 657,
+      "h": 73,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "BASELINE"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "773:1669",
+      "name": "method-num",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 4,
+      "w": 46,
+      "h": 69,
+      "text": "03",
+      "styleName": "script-xl",
+      "fontFamily": "Great Vibes",
+      "fontStyle": "Regular",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#8a8560",
+            "a": 1
+          },
+          "variable": "accent-muted"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:31"
+        ]
+      }
+    },
+    {
+      "id": "773:1670",
+      "name": "method-title",
+      "type": "TEXT",
+      "depth": 5,
+      "visible": true,
+      "x": 78,
+      "y": 0,
+      "w": 579,
+      "h": 60,
+      "text": "Практический результат",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#3a2214",
+            "a": 1
+          },
+          "variable": "text-heading"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:25"
+        ]
+      }
+    },
+    {
+      "id": "773:1671",
+      "name": "method-text",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 105,
+      "w": 783,
+      "h": 102,
+      "text": "В практике это означает не только понимание причины, но и постепенную перенастройку глубинного внутреннего устройства человека, включая слои подсознания, которые лежат в основе восприятия, выбора и жизненного пути.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#433d34",
+            "a": 1
+          },
+          "variable": "text-primary"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:26"
+        ]
+      }
+    }
+  ]
+}

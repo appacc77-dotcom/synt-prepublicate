@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-09T04:26:11.624Z",
+  "section": {
+    "id": "335:1020",
+    "name": "footer",
+    "w": 1440,
+    "h": 361
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 31,
+  "nodes": 31,
+  "coverage": 100,
+  "markedRatio": 100,
+  "tolerance": 1,
+  "worstDelta": 0.9799999999999969
+}

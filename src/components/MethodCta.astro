@@ -1,0 +1,144 @@
+---
+/**
+ * Секция `method-cta` (334:992), 1440×499: текст слева, две кнопки, фото справа.
+ *
+ * Раскладка из спеки:
+ *   method-cta — 1440×499, заливка CROP (фото прижато вправо)
+ *   container  — 80, 96, 1280×307
+ *   content    — 64, 0, 491×307: заголовок 491×96 (Literata 38/48),
+ *                текст 0,128 491×102 (Golos 20/34), кнопки 0,262 387×45
+ */
+import { backgroundOf } from '../lib/fill.mjs';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '334:992' } = Astro.props;
+
+// CROP из спеки: формула проекта, а не подбор на глаз.
+const bg = backgroundOf({
+  url: '/img/method-cta-bg.webp',
+  scaleMode: 'CROP',
+  imageTransform: [
+    [0.9326388835906982, 0, 0.06751467287540436],
+    [0, 0.57623690366745, 0.18336006999015808],
+  ],
+});
+---
+
+<section class="mcta" style={`background: ${bg}`} data-figma-node={node}>
+  <div class="mcta__container" data-figma-node="775:1680">
+    <div class="mcta__content" data-figma-node="335:993">
+      <h2 class="mcta__title" data-figma-node="335:995">
+        Глубинные изменения начинаются с одного шага
+      </h2>
+      <p class="mcta__text" data-figma-node="335:997">
+        Выберите точку входа, которая подходит вам прямо сейчас, и начните путь к ясности, внутренней опоре и
+        подлинной жизни.
+      </p>
+      <div class="mcta__buttons" data-figma-node="335:998">
+        {/* Кнопки со своей вёрсткой: в наборе они 74 px высотой, а в секции
+            по спеке 45 — компонент набора сюда не подходит. */}
+        {/* Стрелки в кнопке нет: в макете слой `arrow-quiet` скрыт
+            (`visible: false`), хотя лежит внутри инстанса. */}
+        <a class="mcta__btn mcta__btn--primary" href="/booking.html" data-figma-node="335:999">
+          <span class="mcta__label">Начать с точки входа</span>
+        </a>
+        <a class="mcta__btn mcta__btn--secondary" href="/booking.html" data-figma-node="335:1000">
+          <span class="mcta__label mcta__label--accent">Задать вопрос</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mcta {
+    position: relative;
+    width: 100%;
+    height: 499px;
+    /* Фон ставится инлайном: значение считает backgroundOf по матрице спеки. */
+  }
+
+  .mcta__container {
+    position: absolute;
+    left: 80px;
+    top: 96px;
+    width: 1280px;
+    height: 307px;
+  }
+
+  .mcta__content {
+    position: absolute;
+    left: 64px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 491px;
+    height: 307px;
+  }
+
+  .mcta__title {
+    width: 491px;
+    height: 96px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: var(--color-text-primary);
+  }
+
+  .mcta__text {
+    width: 491px;
+    height: 102px;
+    margin: 32px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-primary);
+  }
+
+  .mcta__buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    width: 387px;
+    height: 45px;
+  }
+
+  .mcta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .mcta__btn--primary {
+    width: 219px;
+    background: var(--color-accent) url('/img/btn-texture.webp') center / cover no-repeat;
+  }
+
+  .mcta__btn--secondary {
+    width: 160px;
+    border: 1px solid var(--color-accent);
+  }
+
+  .mcta__label {
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    color: var(--color-text-on-image);
+  }
+
+  .mcta__label--accent {
+    color: var(--color-accent);
+  }
+</style>

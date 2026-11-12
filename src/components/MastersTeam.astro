@@ -1,0 +1,388 @@
+---
+/**
+ * Секция `masters-team` (217:345), 1440×2066: заголовок «Один путь. Много
+ * голосов», разделитель с солнцем и две карточки мастеров.
+ *
+ * Карточка 1280×730: фото 570 слева, контент 710 справа (имя, роль, описание,
+ * кнопка, плеер). Фон карточки — линейный градиент из файла:
+ * #e1d6c6 (0) → #6b6357 (0,488) → #3a3323 (0,995), направление вправо.
+ *
+ * Фото — CROP со своими матрицами у каждой карточки, поэтому размер и позиция
+ * считаются отдельно (как в masters-more: общей формулы нет).
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+import ArrowQuiet from './ds/arrow-quiet.astro';
+import wave from '../icons/wave.svg?raw';
+import playBtn from '../icons/play-btn.svg?raw';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '217:345' } = Astro.props;
+
+const masters = [
+  {
+    name: 'Наталья Уолс',
+    role: 'Мастер Syntonia',
+    about:
+      'Мне близка практическая сторона перемен: как от понимания перейти к действию. Я помогаю увидеть, что мешает двигаться дальше, собрать ясный план и пройти этот путь до результата в своём темпе.',
+    time: '1:14',
+    photo: '/img/master-265473b3.webp',
+    // CROP [[0.4044, 0, 0.4196], [0, 0.6903, 0.1298]]
+    size: '247.3% 144.9%',
+    position: '70.4% 41.9%',
+    node: '233:332',
+  },
+  {
+    name: 'Ангелина Гебо',
+    role: 'Мастер Syntonia',
+    about:
+      'Я помогаю справиться с душевными переживаниями и внутренними противоречиями, выстроить отношения с собой и телом. Вместе мы распутываем то, что стало сложным, и яснее видим связь между внутренним состоянием и тем, что происходит в жизни.',
+    time: '1:34',
+    photo: '/img/master-2dbb2865.webp',
+    // CROP [[0.9538, 0, 0.0459], [0, 1, −0.0007]]
+    size: '104.8% 100%',
+    position: '99.2% 0%',
+    node: '233:368',
+  },
+];
+---
+
+<section class="team" data-figma-node={node}>
+  <div class="team__container" data-figma-node="223:351">
+    <div class="team__head" data-figma-node="232:266">
+      <div class="team__intro" data-figma-node="232:260">
+        <h2 class="team__title" data-figma-node="223:348">Один путь. Много голосов</h2>
+        <p class="team__desc" data-figma-node="223:349">
+          Syntonia – это пространство глубины и ясности.<br />
+          Здесь работают мастера, которым можно доверять.<br />
+          Каждый – со своей историей, опытом и способом быть рядом.<br />
+          Выбирайте того, с кем созвучно именно вам.
+        </p>
+      </div>
+      <div class="team__divider" data-figma-node="233:277">
+        <span class="team__divider-line" />
+        <span class="team__sun" aria-hidden="true" />
+        <span class="team__divider-line" />
+      </div>
+    </div>
+
+    <div class="team__block" data-figma-node="225:235">
+      <p class="team__eyebrow" data-figma-node="224:234">Другие мастера Syntonia</p>
+
+      <div class="team__list" data-figma-node="233:391">
+        {masters.map((m) => (
+          <article class="master" data-figma-node={m.node}>
+            <div
+              class="master__photo"
+              style={`background-image: url('${m.photo}'); background-size: ${m.size}; background-position: ${m.position}`}
+            >
+              <span class="master__photo-shade" aria-hidden="true" />
+            </div>
+            <div class="master__content">
+              <div class="master__head">
+                <h3 class="master__name">{m.name}</h3>
+                <p class="master__role">{m.role}</p>
+              </div>
+              <p class="master__about">{m.about}</p>
+              <div class="master__cta">
+                <BtnPrimary href="/#home-voices" label="Услышать голос" theme="light" size="L" compact />
+              </div>
+              <div class="master__player">
+                <div class="master__player-row">
+                  <button class="master__play" type="button" aria-label={`Слушать ${m.name}`} data-play>
+                    <span class="master__play-icon" set:html={playBtn} />
+                  </button>
+                  <span class="master__wave" set:html={wave} />
+                  <span class="master__time">{m.time}</span>
+                </div>
+                <p class="master__note" role="status" aria-live="polite" data-note></p>
+                <p class="master__teaser">
+                  Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей
+                  жизнью управляет не только то, что вы осознаёте.
+                </p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Аудиозаписей в макете нет: кнопка не притворяется плеером, а говорит об этом.
+  for (const button of document.querySelectorAll('[data-play]')) {
+    const player = button.closest('.master__player');
+    const note = player?.querySelector('[data-note]');
+    button.addEventListener('click', () => {
+      if (!note) return;
+      note.textContent = 'Запись пока не приложена.';
+      note.classList.add('is-visible');
+    });
+  }
+</script>
+
+<style>
+  .team {
+    position: relative;
+    width: 100%;
+    height: 2066px;
+    background: var(--color-bg-dark);
+  }
+
+  .team__container {
+    box-sizing: border-box;
+    width: 1280px;
+    height: 2066px;
+    /* padding, а не margin у первого блока: иначе отступ схлопывается
+       с секцией и всё съезжает на 64 px вверх. */
+    padding-top: 64px;
+    margin: 0 auto;
+  }
+
+  .team__head {
+    width: 1280px;
+    height: 225px;
+  }
+
+  .team__intro {
+    display: flex;
+    gap: 128px;
+    width: 1083px;
+    height: 136px;
+  }
+
+  .team__title {
+    width: 341px;
+    height: 120px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+    color: var(--color-bg-muted);
+  }
+
+  .team__desc {
+    width: 614px;
+    height: 136px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-bg-muted);
+  }
+
+  .team__divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 1280px;
+    height: 25px;
+    margin-top: 64px;
+  }
+
+  .team__divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--color-line-on-dark);
+  }
+
+  .team__sun {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--color-accent-muted);
+  }
+
+  .team__block {
+    width: 1280px;
+    margin-top: 96px;
+  }
+
+  .team__eyebrow {
+    width: 355px;
+    height: 30px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    /* Трекинг из файла: 16 % от 20 px = 0,16em, а не 0,06em. */
+    letter-spacing: 0.16em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--color-bg-muted);
+  }
+
+  .team__list {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    margin-top: 32px;
+  }
+
+  .master {
+    display: flex;
+    width: 1280px;
+    height: 730px;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Градиент карточки из файла: #e1d6c6 → #6b6357 → #3a3323, вправо. */
+    background: linear-gradient(90deg, #e1d6c6 0%, #6b6357 48.8%, #3a3323 99.5%);
+  }
+
+  .master__photo {
+    position: relative;
+    width: 570px;
+    height: 730px;
+    background-repeat: no-repeat;
+  }
+
+  /* Поверх фото — градиент #3a2214 → #6b6357 вправо с прозрачностью 15 %
+     (значение из заливки в файле, не на глаз). */
+  .master__photo-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #3a2214 0%, #6b6357 100%);
+    opacity: 0.15;
+  }
+
+  .master__content {
+    position: relative;
+    width: 710px;
+    height: 730px;
+  }
+
+  .master__head {
+    position: absolute;
+    left: 48px;
+    top: 48px;
+    width: 397px;
+    height: 196px;
+  }
+
+  .master__name {
+    width: 280px;
+    height: 138px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 55px;
+    line-height: 69px;
+    font-weight: 400;
+    color: var(--color-text-on-dark);
+  }
+
+  .master__role {
+    width: 163px;
+    height: 34px;
+    margin: 24px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-dark);
+  }
+
+  .master__about {
+    position: absolute;
+    left: 48px;
+    top: 276px;
+    width: 614px;
+    height: 170px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-dark);
+  }
+
+  .master__cta {
+    position: absolute;
+    left: 48px;
+    top: 478px;
+  }
+
+  .master__player {
+    position: absolute;
+    left: 48px;
+    top: 555px;
+    width: 343px;
+    height: 127px;
+    border-radius: 12px;
+    background: var(--color-bg-glass-dark);
+    backdrop-filter: blur(10px);
+  }
+
+  .master__player-row {
+    position: relative;
+    height: 47px;
+    margin: 16px 16px 0;
+  }
+
+  .master__play {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 47px;
+    height: 47px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .master__play-icon :global(svg) {
+    display: block;
+  }
+
+  .master__wave {
+    position: absolute;
+    left: 55px;
+    top: 9px;
+    display: block;
+    width: 222px;
+    height: 29px;
+    color: var(--color-text-on-image);
+  }
+
+  .master__wave :global(svg) {
+    display: block;
+    width: 222px;
+    height: 29px;
+  }
+
+  .master__time {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-on-image);
+  }
+
+  .master__note {
+    position: absolute;
+    left: 16px;
+    bottom: 4px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 14px;
+    color: var(--color-text-on-image);
+    opacity: 0;
+    transition: opacity var(--motion-fast) var(--ease-out);
+  }
+
+  .master__note.is-visible {
+    opacity: 0.8;
+  }
+
+  .master__teaser {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 311px;
+    height: 40px;
+    margin: 8px 16px 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-text-on-image);
+  }
+</style>

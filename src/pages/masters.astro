@@ -1,0 +1,31 @@
+---
+/**
+ * Страница мастеров. Узлы: founder-hero `217:238`, masters-team `217:345`,
+ * masters-more `256:374`, header `217:261`, footer `233:401`.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import FounderHero from '../components/FounderHero.astro';
+import MastersTeam from '../components/MastersTeam.astro';
+import MastersMore from '../components/MastersMore.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Мастера — Syntonia"
+  description="Один путь. Много голосов. Мастера Syntonia — со своей историей, опытом и способом быть рядом."
+>
+  <main class="page">
+    <Header />
+    <FounderHero />
+    <MastersTeam />
+    <MastersMore />
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+</style>

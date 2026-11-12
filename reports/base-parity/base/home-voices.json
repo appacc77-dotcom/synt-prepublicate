@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-11T18:24:47.511Z",
+  "section": {
+    "id": "116:246",
+    "name": "voices",
+    "w": 1440,
+    "h": 920
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 35,
+  "nodes": 70,
+  "coverage": 100,
+  "markedRatio": 50,
+  "tolerance": 1,
+  "worstDelta": 0.5300000000000011
+}

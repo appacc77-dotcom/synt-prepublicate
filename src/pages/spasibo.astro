@@ -1,0 +1,77 @@
+---
+/**
+ * «Заявка отправлена» — страница после формы (решение 395).
+ *
+ * В макете её нет: сервис форм хостинга возвращает человека на свой адрес,
+ * и без этой страницы он упирался бы в 404. Регистр реестра изобретённого:
+ * `booking-thanks-page`.
+ *
+ * Страница не индексируется: это итог действия, а не раздел сайта.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BtnPrimary from '../components/ds/btn-primary.astro';
+import BtnQuiet from '../components/ds/btn-quiet.astro';
+---
+
+<BaseLayout title="Заявка отправлена — Syntonia" description="Заявка ушла, ответ придёт на почту." noindex>
+  <main class="page">
+    <Header />
+    <section class="thanks">
+      <div class="thanks__inner">
+        <p class="thanks__eyebrow t-caption">Заявка</p>
+        <h1 class="thanks__title t-h1">Заявка отправлена</h1>
+        <p class="thanks__text t-body">
+          Она уже у нас. Ответ придёт на почту, которую вы указали, — обычно в течение дня.
+          Если за сутки ответа нет, напишите нам отдельно: письма иногда попадают в спам.
+        </p>
+        <div class="thanks__actions">
+          <BtnPrimary href="/" label="На главную" theme="light" size="L" />
+          <BtnQuiet href="/booking.html" label="Форматы работы" />
+        </div>
+      </div>
+    </section>
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    position: relative;
+  }
+
+  .thanks {
+    display: flex;
+    justify-content: center;
+    min-height: 720px;
+    padding: 160px 80px 120px;
+    background: var(--color-bg-page);
+  }
+
+  .thanks__inner {
+    width: 720px;
+  }
+
+  .thanks__eyebrow {
+    margin: 0 0 24px;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.16em;
+  }
+
+  .thanks__title {
+    margin: 0 0 24px;
+    color: var(--color-text-primary);
+  }
+
+  .thanks__text {
+    margin: 0 0 40px;
+    color: var(--color-text-secondary);
+  }
+
+  .thanks__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+</style>

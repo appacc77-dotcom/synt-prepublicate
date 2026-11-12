@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:20.258Z",
+  "section": {
+    "id": "79:137",
+    "name": "quiz",
+    "w": 1440,
+    "h": 550
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 12,
+  "nodes": 17,
+  "coverage": 100,
+  "markedRatio": 70.6,
+  "tolerance": 1,
+  "worstDelta": 1
+}

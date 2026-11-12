@@ -1,0 +1,48 @@
+---
+/**
+ * Btn-quiet — набор `btn-quiet`, вариант `style: underline, size: L`.
+ *
+ * Из спеки: 240×41, без паддинга, gap 8, подпись стиля `button-m` (24 px)
+ * с подчёркиванием, стрелка accent 19×19.
+ */
+import ArrowQuiet from './arrow-quiet.astro';
+
+interface Props {
+  label: string;
+  href?: string;
+  node?: string;
+}
+
+const { label, href = '#', node } = Astro.props;
+---
+
+<a class="btn-quiet" href={href} data-figma-node={node}>
+  <span class="btn-quiet__label t-button-m">{label}</span>
+  <ArrowQuiet size={19} />
+</a>
+
+<style>
+  .btn-quiet {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-s);
+    color: var(--color-accent);
+    transition: opacity var(--motion-fast) var(--ease-out);
+  }
+
+  .btn-quiet:hover {
+    opacity: 0.7;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-quiet {
+      transition: none;
+    }
+  }
+
+  /* Вариант style=underline: линия под текстом. Рамка добавляла 1 px к высоте
+     (42 вместо 41) — inset-тень рисует так же, но в раскладке не участвует. */
+  .btn-quiet__label {
+    box-shadow: inset 0 -1px 0 currentColor;
+  }
+</style>

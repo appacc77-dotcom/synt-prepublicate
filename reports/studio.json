@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-11T19:04:52.217Z",
+  "sections": {
+    "withGate": 47,
+    "coverageMedian": 100,
+    "markedRatioMedian": 60,
+    "redGates": 0
+  },
+  "debts": {
+    "total": 38,
+    "open": 31,
+    "openByOwner": {
+      "designer": 28,
+      "studio": 1,
+      "owner": 2
+    }
+  },
+  "invented": {
+    "total": 6
+  },
+  "lastRun": {
+    "id": "20261111-190422-64657",
+    "at": null,
+    "status": "PASS",
+    "profile": null,
+    "units": 47,
+    "red": null
+  }
+}

@@ -1,0 +1,94 @@
+---
+/**
+ * Banner-founder — секция `banner-founder` (79:114), фрейм `main` (79:103).
+ *
+ * Геометрия с живого узла: 1440×525, фон-фотография с заливкой CROP,
+ * контейнер 1280×195 по центру, цитата 642 с подписью справа.
+ *
+ * Раскладка из спеки:
+ *   banner-founder — VERTICAL, gap 24, pad 0 24, primary CENTER, counter CENTER
+ *   container      — VERTICAL, gap 0, primary MIN, counter MIN, maxW 1280
+ *   banner-quote   — VERTICAL, gap 16, primary CENTER, counter MAX (подпись вправо)
+ *   banner-title   — ширина FIXED 642, высота HUG
+ *   banner-signature — HUG/HUG, прижата вправо
+ */
+interface Props {
+  title: string;
+  signature: string;
+}
+
+const { title, signature } = Astro.props;
+---
+
+<section class="banner" id="home-banner-founder" data-figma-node="79:114">
+  <div class="banner__container" data-figma-node="695:1984">
+    <div class="banner__quote" data-figma-node="148:594">
+      <h2 class="banner__title t-h2" data-figma-node="79:115">{title}</h2>
+      <p class="banner__signature t-signature" data-figma-node="79:276">{signature}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* banner-founder (79:114): фрейм 1440×525 с заливкой-фотографией. */
+  .banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-l);
+    min-height: 525px;
+    padding: 0 var(--space-l);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Фон отдельным слоем: фильтр задел бы текст. */
+  .banner::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: '';
+    background-image: url('/img/banner-founder.jpg');
+    background-repeat: no-repeat;
+    /* imageTransform: [[1, 0, 0.00033], [0, 0.6481, 0.0814]]
+       ширина 100 %/1, высота 100 %/0.6481 = 154.32 %,
+       сдвиг по y 0.0814/(1−0.6481) = 23.13 %, по x сдвига нет (m00 = 1). */
+    background-size: 100% 154.32%;
+    background-position: 0% 23.13%;
+  }
+
+  /* container (695:1984): VERTICAL, counter MIN — содержимое от левого края. */
+  .banner__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: var(--container-max);
+  }
+
+  /* banner-quote (148:594): VERTICAL, gap 16, primary CENTER, counter MAX —
+     подпись прижата вправо внутри цитаты. */
+  .banner__quote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: var(--space-m);
+  }
+
+  /* banner-title (79:115): ширина FIXED 642, высота по тексту. */
+  .banner__title {
+    width: 642px;
+    color: var(--color-text-on-image);
+  }
+
+  /* banner-signature (79:276): HUG по обеим осям, цвет из заливки.
+     Браузер добавляет трекинг и после последней буквы, Figma — нет: без
+     компенсации подпись шире эталона на 1,81 px и уезжает влево. */
+  .banner__signature {
+    margin-right: -0.05em;
+    color: var(--color-text-on-image);
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+/**
+ * Btn-secondary — набор `btn-secondary` (167:641), вариант по умолчанию.
+ *
+ * Из спеки: 182×45, паддинг 8/16, радиус 4, обводка 1 px цветом accent,
+ * текст стиля `button` (17 px, интерлиньяж 170 %, трекинг 3 %) без капса.
+ */
+interface Props {
+  label: string;
+  href?: string;
+  node?: string;
+}
+
+const { label, href = '#', node } = Astro.props;
+---
+
+<a class="btn-secondary" href={href} data-figma-node={node}>
+  <span class="btn-secondary__label t-button">{label}</span>
+</a>
+
+<style>
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-s);
+    padding: var(--space-s) var(--space-m);
+    /* В Figma обводка INSIDE и высоту не растит: рамка давала 47 вместо 45.
+       inset-тень рисует её так же, но не участвует в раскладке. */
+    box-shadow: inset 0 0 0 1px var(--color-accent);
+    border-radius: var(--radius-s);
+    color: var(--color-accent);
+  }
+
+  .btn-secondary__label {
+    display: block;
+  }
+</style>

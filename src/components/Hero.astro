@@ -1,0 +1,190 @@
+---
+/**
+ * Hero — секция `hero` (79:105), фрейм `main` (79:103) страницы Home.
+ *
+ * Геометрия с живого узла: 1440×780, padding 64, контент 600×369 прижат к низу
+ * (y = 780 − 64 − 369 = 347), gap 32, play 47×47 в правом нижнем углу.
+ * Контент приходит пропсами: компонент не знает, какая это страница.
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+import Play from './ds/play.astro';
+
+interface Props {
+  title: string;
+  lead: string;
+  ctaLabel: string;
+  ctaHref: string;
+  playLabel?: string;
+}
+
+const {
+  title,
+  lead,
+  ctaLabel,
+  ctaHref,
+  playLabel = 'Смотреть видео',
+} = Astro.props;
+---
+
+<section class="hero" id="home-hero" data-figma-node="79:105">
+  <div class="hero__video" data-figma-node="79:106">
+    <img
+      class="hero__bg"
+      src="/img/hero.jpg"
+      alt=""
+      width="1440"
+      height="780"
+      fetchpriority="high"
+    />
+    <div class="hero__overlay" data-figma-node="767:2219"></div>
+
+    <div class="hero__content" data-figma-node="79:107">
+      <h1 class="hero__title t-h1" data-figma-node="79:108">{title}</h1>
+      <p class="hero__lead t-body" data-figma-node="79:109">{lead}</p>
+      <BtnPrimary href={ctaHref} label={ctaLabel} node="79:110" />
+    </div>
+
+    {/* Видео в файле нет, но кнопка должна честно сказать об этом, а не
+        молчать. Клик показывает подсказку. */}
+    <div class="hero__play-wrap">
+      <button class="hero__play" type="button" aria-label={playLabel} data-play>
+        <Play node="79:113" />
+      </button>
+
+      {/* Подсказка — у самой кнопки, а не полосой на пол экрана. */}
+      <div class="hero__toast t-caption" role="status" aria-live="polite" data-toast></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* hero (79:105) — фрейм фиксированной высоты 780, раскладки нет. */
+  .hero {
+    position: relative;
+  }
+
+  /* hero-video (79:106): HORIZONTAL, gap 32, pad 64, primary MAX → space-between,
+     counter MAX → align-items: flex-end. Паддинг живёт здесь, не на секции. */
+  .hero__video {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-xl);
+    min-height: 780px;
+    padding: var(--space-3xl);
+    overflow: hidden;
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--color-overlay-dark);
+  }
+
+  /* hero-content (79:107): VERTICAL, gap 32, HUG — ширина равна самому широкому
+     ребёнку, а он 600. */
+  .hero__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    width: 600px;
+    max-width: 100%;
+    /* counter MIN → по левому краю: кнопка не растягивается на ширину колонки. */
+    align-items: flex-start;
+  }
+
+  /* hero-title (79:108): ширина FIXED 600, высота HUG. */
+  .hero__title {
+    width: 600px;
+    max-width: 100%;
+  }
+
+  /* hero-lead (79:109): FILL — тянется на всю ширину колонки. */
+  .hero__lead {
+    width: 100%;
+  }
+
+  .hero__title,
+  .hero__lead {
+    color: var(--color-text-on-image);
+  }
+
+  /* play (79:113): обычный ребёнок слоя, а не абсолют — место задаёт space-between. */
+  .hero__play-wrap {
+    /* Обёртка держит кнопку и подсказку: без позиционирования кнопка рисуется
+       под абсолютным оверлеем и не принимает клики. */
+    position: relative;
+    z-index: 1;
+    flex: none;
+    display: flex;
+  }
+
+  .hero__play {
+    flex: none;
+    width: 47px;
+    height: 47px;
+  }
+
+  /* Подсказка о том, чего ещё нет: маленькая, у кнопки, со стрелкой вниз. */
+  .hero__toast {
+    position: absolute;
+    bottom: calc(100% + var(--space-s));
+    left: 50%;
+    width: max-content;
+    max-width: 200px;
+    padding: var(--space-s) var(--space-m);
+    color: var(--color-text-on-image);
+    background: var(--color-bg-inverse);
+    border-radius: var(--radius-s);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
+    opacity: 0;
+    transform: translate(-50%, var(--space-xs));
+    pointer-events: none;
+    transition:
+      opacity var(--motion-fast) var(--ease-out),
+      transform var(--motion-fast) var(--ease-out);
+  }
+
+  /* Стрелка на кнопку. */
+  .hero__toast::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 5px solid transparent;
+    border-top-color: var(--color-bg-inverse);
+    transform: translateX(-50%);
+  }
+
+  .hero__toast--visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+</style>
+
+
+<script>
+  const play = document.querySelector('[data-play]');
+  const toast = document.querySelector('[data-toast]');
+  let timer;
+
+  play?.addEventListener('click', () => {
+    if (!toast) return;
+    toast.textContent = 'Видео ещё не загружено — появится позже.';
+    toast.classList.add('hero__toast--visible');
+    window.clearTimeout(timer);
+    timer = window.setTimeout(() => {
+      toast.classList.remove('hero__toast--visible');
+    }, 4000);
+  });
+</script>

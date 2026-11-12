@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-12T21:57:06.130Z",
+  "section": "hero",
+  "nodeId": "79:105",
+  "total": 2,
+  "states": [
+    {
+      "id": "79:105",
+      "images": [],
+      "texts": [],
+      "props": []
+    },
+    {
+      "id": "409:243",
+      "images": [
+        {
+          "name": "hero",
+          "from": "d9e7807131e8d888df6e3420f206d419139b25b8",
+          "to": "f1353fcfbdc3804aa5ceeffb3f04b8a822b99402"
+        }
+      ],
+      "texts": [
+        {
+          "name": "Info section title",
+          "from": "Состояние, из которого строится жизнь",
+          "to": "Пространство практики\nSyntonia"
+        },
+        {
+          "name": "dedciption title",
+          "from": "Когда меняется внутреннее основание, меняются выборы, отношения, энергия и жизнь.",
+          "to": "Практики для самостоятельной внутренней работы, восстановления состояния и бережного движения в глубину."
+        },
+        {
+          "name": "nav-link",
+          "from": "Узнать свой код реальности",
+          "to": "О проекте"
+        }
+      ],
+      "props": [
+        {
+          "name": "header",
+          "changed": {
+            "theme": {
+              "from": "muted",
+              "to": "dark"
+            },
+            "shape": {
+              "to": "floating"
+            }
+          }
+        },
+        {
+          "name": "nav-icon",
+          "changed": {
+            "direction": {
+              "from": "right",
+              "to": "down"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

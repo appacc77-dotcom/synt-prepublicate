@@ -1,0 +1,2298 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:57:57.157Z"
+  },
+  "section": {
+    "id": "217:345",
+    "name": "masters-team",
+    "w": 1440,
+    "h": 2066
+  },
+  "fingerprint": "d31f646a",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 56,
+    "images": 3,
+    "icons": 3,
+    "iconInstances": 5,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "265473b3ff807a2dd76c1b3e7a5516224a616338",
+        "file": "design/figma/assets/img/265473b3ff80.png",
+        "bytes": 2296488,
+        "usedBy": "master-photo"
+      },
+      {
+        "hash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+        "file": "design/figma/assets/img/1434b5611dfb.png",
+        "bytes": 2781852,
+        "usedBy": "btn-primary"
+      },
+      {
+        "hash": "2dbb286550d58691d171d198d558ef10b9d1878a",
+        "file": "design/figma/assets/img/2dbb286550d5.png",
+        "bytes": 2114930,
+        "usedBy": "master-photo"
+      }
+    ],
+    "icons": [
+      {
+        "node": "I233:277;233:273",
+        "component": "sun-vabisabi",
+        "variant": {},
+        "file": "design/figma/assets/svg/sun-vabisabi.svg",
+        "bytes": 209593
+      },
+      {
+        "node": "I233:332;233:287;826:2428",
+        "component": "arrow-quiet",
+        "variant": {
+          "color": "white",
+          "direction": "down"
+        },
+        "file": "design/figma/assets/svg/arrow-quiet-white-down.svg",
+        "bytes": 3978
+      },
+      {
+        "node": "I233:332;233:322;217:248",
+        "component": "play",
+        "variant": {},
+        "file": "design/figma/assets/svg/play.svg",
+        "bytes": 3730
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "217:345",
+      "name": "masters-team",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 839,
+      "w": 1440,
+      "h": 2066,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#2d2822",
+            "a": 1
+          },
+          "variable": "bg-dark"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          0,
+          24,
+          0,
+          24
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "limits": {
+        "maxW": 1440
+      },
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingRight": "VariableID:2:9",
+        "fills": [
+          "VariableID:223:346"
+        ],
+        "strokes": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "223:351",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 0,
+      "w": 1280,
+      "h": 2066,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 96,
+        "pad": [
+          64,
+          0,
+          64,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:13",
+        "paddingTop": "VariableID:2:12",
+        "paddingBottom": "VariableID:2:12",
+        "maxWidth": "VariableID:42:34"
+      }
+    },
+    {
+      "id": "232:266",
+      "name": "team-head",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 64,
+      "w": 1280,
+      "h": 225,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 64,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "232:260",
+      "name": "team-intro",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1083,
+      "h": 136,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 128,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:14"
+      }
+    },
+    {
+      "id": "223:348",
+      "name": "team-title",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 341,
+      "h": 120,
+      "text": "Один путь. Много голосов",
+      "styleName": "H2",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "223:349",
+      "name": "team-desc",
+      "type": "TEXT",
+      "depth": 4,
+      "visible": true,
+      "x": 469,
+      "y": 0,
+      "w": 614,
+      "h": 136,
+      "text": "Syntonia – это пространство глубины и ясности.\nЗдесь работают мастера, которым можно доверять.\nКаждый – со своей историей, опытом и способом быть рядом.\nВыбирайте того, с кем созвучно именно вам.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "233:277",
+      "name": "divider-sun",
+      "type": "INSTANCE",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 200,
+      "w": 1280,
+      "h": 25,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:8"
+      }
+    },
+    {
+      "id": "I233:277;232:259",
+      "name": "divider-line",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 12,
+      "w": 612,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "I233:277;233:273",
+      "name": "sun-vabisabi",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 628,
+      "y": 0,
+      "w": 25,
+      "h": 25,
+      "clips": false
+    },
+    {
+      "id": "I233:277;233:273;233:271",
+      "name": "sun",
+      "type": "VECTOR",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 25,
+      "h": 25,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "I233:277;232:264",
+      "name": "divider-line",
+      "type": "RECTANGLE",
+      "depth": 4,
+      "visible": true,
+      "x": 668,
+      "y": 12,
+      "w": 612,
+      "h": 1,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "grow": 1,
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "225:235",
+      "name": "team-block",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 385,
+      "w": 1280,
+      "h": 1617,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "224:234",
+      "name": "eyebrow",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 355,
+      "h": 30,
+      "text": "Другие мастера Syntonia",
+      "styleName": "eyebrow",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 16
+      },
+      "textCase": "UPPER",
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "233:391",
+      "name": "team-list",
+      "type": "FRAME",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 62,
+      "w": 1280,
+      "h": 1555,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 96,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:13"
+      }
+    },
+    {
+      "id": "233:332",
+      "name": "master-card",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 730,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#e1d6c6",
+                "a": 1
+              }
+            },
+            {
+              "position": 0.488,
+              "color": {
+                "hex": "#6b6357",
+                "a": 1
+              }
+            },
+            {
+              "position": 0.995,
+              "color": {
+                "hex": "#3a3323",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17"
+      },
+      "props": {
+        "role#833:12": "Мастер Syntonia",
+        "description#233:3": "Мне близка практическая сторона перемен: как от понимания перейти к действию. Я помогаю увидеть, что мешает двигаться дальше, собрать ясный план и пройти этот путь до результата в своём темпе.",
+        "name#233:2": "Наталья Уолс"
+      }
+    },
+    {
+      "id": "I233:332;231:236",
+      "name": "master-photo",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 570,
+      "h": 730,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              0.40439000725746155,
+              0,
+              0.4195602238178253
+            ],
+            [
+              0,
+              0.690285325050354,
+              0.12978895008563995
+            ]
+          ],
+          "imageHash": "265473b3ff807a2dd76c1b3e7a5516224a616338",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        },
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 0.15000000596046448,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#3a2214",
+                "a": 1
+              }
+            },
+            {
+              "position": 1,
+              "color": {
+                "hex": "#6b6357",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.4329662024974823,
+              -1.5517903406703226e-8,
+              2.285647449085104e-9
+            ],
+            [
+              5.3452891002336855e-9,
+              0.633967399597168,
+              0.1828913390636444
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "FILL"
+      },
+      "align": "STRETCH"
+    },
+    {
+      "id": "I233:332;231:237",
+      "name": "master-content",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 570,
+      "y": 0,
+      "w": 710,
+      "h": 730,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          48,
+          48,
+          48,
+          48
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10",
+        "paddingLeft": "VariableID:2:11",
+        "paddingTop": "VariableID:2:11",
+        "paddingRight": "VariableID:2:11",
+        "paddingBottom": "VariableID:2:11"
+      }
+    },
+    {
+      "id": "I233:332;231:240",
+      "name": "master-head",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 48,
+      "w": 397,
+      "h": 196,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "I233:332;231:238",
+      "name": "master-name",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 280,
+      "h": 138,
+      "text": "Наталья Уолс",
+      "styleName": "master-name",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;231:239",
+      "name": "master-role",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 162,
+      "w": 163,
+      "h": 34,
+      "text": "Мастер Syntonia",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:285",
+      "name": "master-about",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 276,
+      "w": 614,
+      "h": 170,
+      "text": "Мне близка практическая сторона перемен: как от понимания перейти к действию. Я помогаю увидеть, что мешает двигаться дальше, собрать ясный план и пройти этот путь до результата в своём темпе.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:287",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 478,
+      "w": 195,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Услышать голос",
+        "show arrow#16:0": true,
+        "theme": "arrow-down",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I233:332;233:287;209:139",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 141,
+      "h": 29,
+      "text": "Услышать голос",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:287;826:2428",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 165,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "down"
+      }
+    },
+    {
+      "id": "I233:332;233:287;826:2428;756:1695",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 8,
+      "visible": true,
+      "x": 12,
+      "y": 1,
+      "w": 12,
+      "h": 10,
+      "rotation": -90
+    },
+    {
+      "id": "I233:332;233:287;826:2428;755:2855",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 8,
+      "y": 1,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "rotation": -90,
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:287;826:2428;755:2856",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 12,
+      "y": 8,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "rotation": -90,
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:322",
+      "name": "player",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 555,
+      "w": 343,
+      "h": 127,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.3499999940395355,
+          "color": {
+            "hex": "#433d34",
+            "a": 0.35
+          },
+          "variable": "bg-glass-dark"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17",
+        "fills": [
+          "VariableID:827:2861"
+        ]
+      },
+      "props": {
+        "teaser#233:1": "Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей жизнью управляет не только то, что вы осознаёте.",
+        "time#233:0": "1:14"
+      }
+    },
+    {
+      "id": "I233:332;233:322;217:247",
+      "name": "player-row",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 16,
+      "y": 16,
+      "w": 311,
+      "h": 47,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I233:332;233:322;217:248",
+      "name": "player-play",
+      "type": "INSTANCE",
+      "depth": 8,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "clips": false
+    },
+    {
+      "id": "I233:332;233:322;217:248;34:108",
+      "name": "play",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:322;217:249",
+      "name": "player-wave",
+      "type": "INSTANCE",
+      "depth": 8,
+      "visible": true,
+      "x": 55,
+      "y": 9,
+      "w": 222,
+      "h": 29,
+      "clips": false
+    },
+    {
+      "id": "I233:332;233:322;217:249;212:97",
+      "name": "wave-sound",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 222,
+      "h": 29,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:322;217:250",
+      "name": "player-time",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 286,
+      "y": 13,
+      "w": 25,
+      "h": 20,
+      "text": "1:14",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:332;233:322;217:251",
+      "name": "player-teaser",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 16,
+      "y": 71,
+      "w": 311,
+      "h": 40,
+      "text": "Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей жизнью управляет не только то, что вы осознаёте.",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "233:368",
+      "name": "master-card",
+      "type": "INSTANCE",
+      "depth": 4,
+      "visible": true,
+      "x": 0,
+      "y": 826,
+      "w": 1280,
+      "h": 730,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#e1d6c6",
+                "a": 1
+              }
+            },
+            {
+              "position": 0.488,
+              "color": {
+                "hex": "#6b6357",
+                "a": 1
+              }
+            },
+            {
+              "position": 0.995,
+              "color": {
+                "hex": "#3a3323",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17"
+      },
+      "props": {
+        "role#833:12": "Мастер Syntonia",
+        "description#233:3": "Я помогаю справиться с душевными переживаниями и внутренними противоречиями, выстроить отношения с собой и телом. Вместе мы распутываем то, что стало сложным, и яснее видим связь между внутренним состоянием и тем, что происходит в жизни.",
+        "name#233:2": "Ангелина Гебо"
+      }
+    },
+    {
+      "id": "I233:368;231:236",
+      "name": "master-photo",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 570,
+      "h": 730,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              0.9537728428840637,
+              0,
+              0.04588453844189644
+            ],
+            [
+              0,
+              1,
+              -0.0006550820544362068
+            ]
+          ],
+          "imageHash": "2dbb286550d58691d171d198d558ef10b9d1878a",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        },
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 0.15000000596046448,
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": {
+                "hex": "#3a2214",
+                "a": 1
+              }
+            },
+            {
+              "position": 1,
+              "color": {
+                "hex": "#6b6357",
+                "a": 1
+              }
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.4329662024974823,
+              -1.5517903406703226e-8,
+              2.285647449085104e-9
+            ],
+            [
+              5.3452891002336855e-9,
+              0.633967399597168,
+              0.1828913390636444
+            ]
+          ]
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 10,
+        "pad": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "FILL"
+      },
+      "align": "STRETCH"
+    },
+    {
+      "id": "I233:368;231:237",
+      "name": "master-content",
+      "type": "FRAME",
+      "depth": 5,
+      "visible": true,
+      "x": 570,
+      "y": 0,
+      "w": 710,
+      "h": 730,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          48,
+          48,
+          48,
+          48
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10",
+        "paddingLeft": "VariableID:2:11",
+        "paddingTop": "VariableID:2:11",
+        "paddingRight": "VariableID:2:11",
+        "paddingBottom": "VariableID:2:11"
+      }
+    },
+    {
+      "id": "I233:368;231:240",
+      "name": "master-head",
+      "type": "FRAME",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 48,
+      "w": 397,
+      "h": 196,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 24,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:9"
+      }
+    },
+    {
+      "id": "I233:368;231:238",
+      "name": "master-name",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 280,
+      "h": 138,
+      "text": "Ангелина Гебо",
+      "styleName": "master-name",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 55,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 125
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;231:239",
+      "name": "master-role",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 0,
+      "y": 162,
+      "w": 163,
+      "h": 34,
+      "text": "Мастер Syntonia",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#c9bea4",
+            "a": 1
+          },
+          "variable": "thread"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:49:55"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:285",
+      "name": "master-about",
+      "type": "TEXT",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 276,
+      "w": 614,
+      "h": 170,
+      "text": "Я помогаю справиться с душевными переживаниями и внутренними противоречиями, выстроить отношения с собой и телом. Вместе мы распутываем то, что стало сложным, и яснее видим связь между внутренним состоянием и тем, что происходит в жизни.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:287",
+      "name": "btn-primary",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 478,
+      "w": 195,
+      "h": 45,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "1434b5611dfb11cee1ee7c8021b5b872608cdd62",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "radius": 4,
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:7",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:7",
+        "topLeftRadius": "VariableID:2:16",
+        "topRightRadius": "VariableID:2:16",
+        "bottomLeftRadius": "VariableID:2:16",
+        "bottomRightRadius": "VariableID:2:16"
+      },
+      "props": {
+        "text#30:0": "Услышать голос",
+        "show arrow#16:0": true,
+        "theme": "arrow-down",
+        "caps": "false",
+        "size": "L"
+      }
+    },
+    {
+      "id": "I233:368;233:287;209:139",
+      "name": "btn-label",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 16,
+      "y": 8,
+      "w": 141,
+      "h": 29,
+      "text": "Услышать голос",
+      "styleName": "button",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 3
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:287;826:2428",
+      "name": "arrow-quiet",
+      "type": "INSTANCE",
+      "depth": 7,
+      "visible": true,
+      "x": 165,
+      "y": 16,
+      "w": 14,
+      "h": 14,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 1.4292793273925781,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "CENTER",
+        "counter": "CENTER"
+      },
+      "clips": false,
+      "props": {
+        "color": "white",
+        "direction": "down"
+      }
+    },
+    {
+      "id": "I233:368;233:287;826:2428;756:1695",
+      "name": "icon",
+      "type": "GROUP",
+      "depth": 8,
+      "visible": true,
+      "x": 12,
+      "y": 1,
+      "w": 12,
+      "h": 10,
+      "rotation": -90
+    },
+    {
+      "id": "I233:368;233:287;826:2428;755:2855",
+      "name": "icon-seed",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 8,
+      "y": 1,
+      "w": 6,
+      "h": 3,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "rotation": -90,
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:287;826:2428;755:2856",
+      "name": "icon-arrow",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 12,
+      "y": 8,
+      "w": 5,
+      "h": 10,
+      "radius": 0.7146396636962891,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 3,
+      "strokeAlign": "CENTER",
+      "rotation": -90,
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:322",
+      "name": "player",
+      "type": "INSTANCE",
+      "depth": 6,
+      "visible": true,
+      "x": 48,
+      "y": 555,
+      "w": 343,
+      "h": 127,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.3499999940395355,
+          "color": {
+            "hex": "#433d34",
+            "a": 0.35
+          },
+          "variable": "bg-glass-dark"
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "pad": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primary": "CENTER",
+        "counter": "MIN"
+      },
+      "radius": 12,
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "itemSpacing": "VariableID:2:7",
+        "paddingLeft": "VariableID:2:8",
+        "paddingTop": "VariableID:2:8",
+        "paddingRight": "VariableID:2:8",
+        "paddingBottom": "VariableID:2:8",
+        "topLeftRadius": "VariableID:2:17",
+        "topRightRadius": "VariableID:2:17",
+        "bottomLeftRadius": "VariableID:2:17",
+        "bottomRightRadius": "VariableID:2:17",
+        "fills": [
+          "VariableID:827:2861"
+        ]
+      },
+      "props": {
+        "teaser#233:1": "Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей жизнью управляет не только то, что вы осознаёте.",
+        "time#233:0": "1:14"
+      }
+    },
+    {
+      "id": "I233:368;233:322;217:247",
+      "name": "player-row",
+      "type": "FRAME",
+      "depth": 7,
+      "visible": true,
+      "x": 16,
+      "y": 16,
+      "w": 311,
+      "h": 47,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:7"
+      }
+    },
+    {
+      "id": "I233:368;233:322;217:248",
+      "name": "player-play",
+      "type": "INSTANCE",
+      "depth": 8,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "clips": false
+    },
+    {
+      "id": "I233:368;233:322;217:248;34:108",
+      "name": "play",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 47,
+      "h": 47,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "strokeWeight": 1.5,
+      "strokeAlign": "CENTER",
+      "bound": {
+        "strokes": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:322;217:249",
+      "name": "player-wave",
+      "type": "INSTANCE",
+      "depth": 8,
+      "visible": true,
+      "x": 55,
+      "y": 9,
+      "w": 222,
+      "h": 29,
+      "clips": false
+    },
+    {
+      "id": "I233:368;233:322;217:249;212:97",
+      "name": "wave-sound",
+      "type": "VECTOR",
+      "depth": 9,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 222,
+      "h": 29,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:322;217:250",
+      "name": "player-time",
+      "type": "TEXT",
+      "depth": 8,
+      "visible": true,
+      "x": 286,
+      "y": 13,
+      "w": 25,
+      "h": 20,
+      "text": "1:14",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "WIDTH_AND_HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "I233:368;233:322;217:251",
+      "name": "player-teaser",
+      "type": "TEXT",
+      "depth": 7,
+      "visible": true,
+      "x": 16,
+      "y": 71,
+      "w": 311,
+      "h": 40,
+      "text": "Можно многое понимать про себя и всё равно жить в одном и том же круге событий. Потому что вашей жизнью управляет не только то, что вы осознаёте.",
+      "styleName": "caption",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

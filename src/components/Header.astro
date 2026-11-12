@@ -1,0 +1,448 @@
+---
+/**
+ * Header — секция `header` (79:104), вариант `theme=dark, shape=floating`.
+ *
+ * `node` — id инстанса на конкретной странице: в спеке первой секции шапка
+ * лежит своим узлом (например, `410:1381` на странице практик), и замер
+ * сверяет именно его. По умолчанию — исходный набор.
+
+ *
+ * Геометрия с живого узла: 1424×92, стоит с отступом 8 от края и перекрывает
+ * первую секцию — это плавающая шапка, а не блок в потоке.
+ *
+ * Раскладка из спеки:
+ *   header        — HORIZONTAL, pad 0, CENTER/CENTER, радиус 16
+ *   header-inner  — HORIZONTAL, pad 16/32, SPACE_BETWEEN/CENTER,
+ *                   фон bg-header, BACKGROUND_BLUR 10
+ *   nav           — HORIZONTAL, gap 24, MIN/CENTER, тянется (FILL)
+ *   header-actions— HORIZONTAL, gap 16, MAX/CENTER, тянется (FILL)
+ *
+ * Позиции 32 / 628 / 796 получаются из space-between: nav и actions по 596,
+ * логотип 168, свободного места нет — поэтому gap 10 из спеки не работает.
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+import { figmaOnly } from '../lib/flags.mjs';
+
+// Адреса пунктов: в макете их нет, есть только подписи. Ведём туда, где
+// содержание действительно живёт (решение 414).
+const links = [
+  { text: 'О проекте', node: 'I79:104;167:645', dropdown: true, href: '/#home-about-founder' },
+  { text: 'Понять себя', node: 'I79:104;167:647', dropdown: false, href: '/quiz.html' },
+  { text: 'Пространство практики', node: 'I79:104;167:648', dropdown: false, href: '/practice.html' },
+];
+
+/**
+ * Содержимое выпадающего меню. В макете открытого состояния нет — это
+ * изобретение (decisions.md, #76): пункты взяты из реальных страниц файла.
+ */
+const dropdownItems = [
+  { text: 'Мастера', href: '/masters.html' },
+  { text: 'Метод', href: '/method.html' },
+  { text: 'Библиотека', href: '/library.html' },
+];
+
+interface Props {
+  node?: string;
+  /**
+   * Отступ от верхнего края. В файле он разный: 8 на главной и большинстве
+   * страниц, 10 на странице практик (FIGMA-ISSUES №18). Ставит страница —
+   * компонент не знает, где стоит.
+   */
+  offsetTop?: number;
+}
+
+const { node = '79:104', offsetTop = 8 } = Astro.props;
+---
+
+<section class="header" id="home-header" data-figma-node={node} data-overlay style={`--header-top: ${offsetTop}px`}>
+  <div class="header__inner" data-figma-node="I79:104;167:642">
+    <nav class="header__nav" data-figma-node="I79:104;167:643">
+      {links.map((link) =>
+        link.dropdown ? (
+          <details class="header__dropdown" data-figma-node="I79:104;167:644" data-dropdown>
+            <summary class="header__dropdown-button">
+              <span class="header__link t-body" data-figma-node={link.node}>{link.text}</span>
+              <img
+                class="header__chevron"
+                data-figma-node="I79:104;760:560"
+                src="/svg/arrow-quiet-white-down.svg"
+                alt=""
+                width="14"
+                height="14"
+              />
+            </summary>
+            {!figmaOnly && (
+            <ul class="header__menu" data-invented="header-dropdown-open">
+              {dropdownItems.map((item) => (
+                <li><a class="header__menu-link t-body" href={item.href}>{item.text}</a></li>
+              ))}
+            </ul>
+            )}
+          </details>
+        ) : (
+          <a class="header__link t-body" href={link.href} data-figma-node={link.node}>{link.text}</a>
+        ),
+      )}
+    </nav>
+
+    <a class="header__logo" href="/" aria-label="Syntonia — на главную">
+      <img
+        data-figma-node="I79:104;167:650"
+        src="/svg/logo-evolution.svg"
+        alt="Syntonia"
+        width="168"
+        height="60"
+      />
+    </a>
+
+    <div class="header__actions" data-figma-node="I79:104;167:651">
+      <div class="header__btn-group" data-figma-node="I79:104;167:652">
+        <BtnPrimary
+          href="/booking.html"
+          label="личная встреча"
+          theme="light"
+          size="L"
+          caps
+          compact
+          node="I79:104;167:653"
+        />
+        <button class="header__login" type="button" data-figma-node="I79:104;167:654" aria-label="Личный кабинет">
+          <!-- Figma отдаёт SVG 19×22: обводка выходит за контур 17×20.
+               Если вписать в 17×20, иконка сжимается до 89 %. -->
+          <img src="/svg/profil.svg" alt="" width="19" height="22" />
+        </button>
+      </div>
+
+      <button
+        class="header__burger"
+        type="button"
+        data-figma-node="I79:104;167:655"
+        aria-label="Меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="header__line"></span>
+        <span class="header__line"></span>
+        <span class="header__line"></span>
+      </button>
+    </div>
+  </div>
+
+  {/* Мобильное меню: в макете только закрытое состояние (одна иконка бургера).
+      Панель — изобретение, устройство взято по образцу десктопного меню. */}
+  {!figmaOnly && (
+  <nav class="header__mobile" data-invented="header-mobile-panel" id="mobile-menu" aria-label="Меню" hidden data-mobile>
+    <ul class="header__mobile-list">
+      <li>
+        <a class="header__mobile-link t-body" href="/#home-about-founder">О проекте</a>
+        <ul class="header__mobile-sub">
+          {dropdownItems.map((item) => (
+            <li><a class="header__mobile-link t-body" href={item.href}>{item.text}</a></li>
+          ))}
+        </ul>
+      </li>
+      {links.filter((link) => !link.dropdown).map((link) => (
+        <li><a class="header__mobile-link t-body" href={link.href}>{link.text}</a></li>
+      ))}
+    </ul>
+  </nav>
+  )}
+</section>
+
+<style>
+  /* header (79:104): плавающая шапка поверх первой секции. */
+  .header {
+    position: absolute;
+    z-index: 20;
+    top: var(--header-top, var(--space-s));
+    left: var(--space-s);
+    /* 1424 = 1440 − 16 при окне макета. На широком окне шапка тянется, иначе
+       справа от неё оставалась полоса: 1424 фиксированных при окне 1512. */
+    width: calc(100% - var(--space-s) * 2);
+    height: 92px;
+    /* overflow не скрываем: из шапки выпадает меню. Радиус — на внутреннем слое. */
+    border-radius: var(--radius-l);
+  }
+
+  /* header-inner (I79:104;167:642): фон из токена и размытие под ним. */
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: var(--space-m) var(--space-xl);
+    background: var(--color-bg-header);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-l);
+  }
+
+  /* nav: тянется, элементы слева. */
+  .header__nav {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    gap: var(--space-l);
+  }
+
+  .header__dropdown {
+    position: relative;
+    width: fit-content;
+  }
+
+  .header__link {
+    color: var(--color-text-on-image);
+    white-space: nowrap;
+  }
+
+  .header__chevron {
+    display: block;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* details вместо button+hidden: открытие работает без JS, а панель и шеврон
+     анимируются — у hidden перехода нет. */
+
+  .header__dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  /* Убираем треугольник, который браузер рисует у summary. */
+  .header__dropdown-button::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Шеврон разворачивается при открытии. */
+  .header__chevron {
+    transition: transform var(--motion-fast) var(--ease-out);
+  }
+
+  .header__dropdown[open] .header__chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Панель меню: те же токены, что у шапки, чтобы не выглядела чужой. */
+  /* Закрытое меню недоступно и для фокуса: у details содержимое не всегда
+     убирается из потока фокуса. */
+  .header__menu {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    animation: motion-rise var(--motion-base) var(--ease-out) both;
+    top: calc(100% + var(--space-s));
+    left: 0;
+    z-index: 30;
+    min-width: 200px;
+    margin: 0;
+    padding: var(--space-s);
+    list-style: none;
+    background: var(--color-bg-header);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-m);
+  }
+
+  .header__dropdown[open] .header__menu {
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .header__menu-link {
+    display: block;
+    padding: var(--space-xs) var(--space-s);
+    color: var(--color-text-on-image);
+    border-radius: var(--radius-xs);
+    white-space: nowrap;
+  }
+
+  .header__menu-link:hover {
+    background: var(--color-line-on-dark);
+  }
+
+  .header__logo {
+    display: block;
+    flex: none;
+  }
+
+  .header__logo img {
+    display: block;
+    width: 168px;
+    height: 60px;
+  }
+
+  /* header-actions: тянется, содержимое прижато вправо. */
+  .header__actions {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-m);
+  }
+
+  .header__btn-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+  }
+
+  .header__login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    background: transparent;
+    /* Обводка из спеки: 1,5 px, цвет белый (не line-on-dark). */
+    border: 1.5px solid var(--color-text-on-image);
+    border-radius: var(--radius-s);
+    cursor: pointer;
+  }
+
+  .header__login img {
+    display: block;
+  }
+
+  /* Панель меню: выпадает из-под бургера, шириной в список, а не в экран. */
+  .header__mobile {
+    position: absolute;
+    top: calc(100% + var(--space-s));
+    right: var(--space-m);
+    z-index: 2;
+    width: min(280px, calc(100% - var(--space-m) * 2));
+    max-height: calc(100vh - 140px);
+    padding: var(--space-s) 0;
+    overflow: auto;
+    /* Плотный фон: панель висит над фото, и сквозь 0.85 просвечивало пятном.
+       Тот же цвет, но непрозрачный — --color-bg-inverse. */
+    background: var(--color-bg-inverse);
+    border-radius: var(--radius-m);
+    box-shadow: 0 12px 32px rgb(0 0 0 / 24%);
+    animation: panel-rise var(--motion-base) var(--ease-out) both;
+  }
+
+  @keyframes panel-rise {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .header__mobile-list,
+  .header__mobile-sub {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .header__mobile-sub {
+    /* Без своих отступов: у пунктов уже есть 8 px по вертикали, а отступ
+       слева ставил подпункты на 32 px против 16 px у остальных, плюс 4 px
+       сверху и снизу ломали шаг (54 вместо 50). Все пункты с одного края. */
+    padding: 0;
+  }
+
+  .header__mobile-link {
+    display: block;
+    padding: var(--space-s) var(--space-m);
+    color: var(--color-text-on-image);
+    transition:
+      background-color var(--motion-fast) var(--ease-out),
+      opacity var(--motion-fast) var(--ease-out);
+  }
+
+  .header__mobile-link:hover {
+    background: rgb(255 255 255 / 8%);
+  }
+
+  .header__mobile-sub .header__mobile-link {
+    opacity: 0.75;
+  }
+
+  /* burger (I79:104;167:655): три полосы 38×3 с шагом 8. */
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    width: 38px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .header__line {
+    display: block;
+    width: 38px;
+    height: 3px;
+    background: var(--color-text-on-image);
+    border-radius: var(--radius-s);
+    transition:
+      transform var(--motion-base) var(--ease-out),
+      opacity var(--motion-fast) var(--ease-out);
+  }
+
+  /* Открытое меню: полосы складываются в крестик. Смещение — половина шага
+     плюс половина толщины: (8 + 3) = 11 px. */
+  .header__burger[aria-expanded='true'] .header__line:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .header__burger[aria-expanded='true'] .header__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__burger[aria-expanded='true'] .header__line:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+</style>
+
+<script>
+  // Дополнение слоя 2: в режиме «только из макета» поведение выключено
+  // целиком — не только разметка, но и обработчики.
+  if (document.documentElement.dataset.enhancements === 'on') {
+    // Выпадающее меню на <details>: браузер открывает сам, мы только закрываем
+    // по клику вне и по Esc. Изобретено: в макете открытых состояний нет.
+    const dropdown = document.querySelector('[data-dropdown]');
+    const burger = document.querySelector('[data-burger]');
+
+    const mobile = document.querySelector('[data-mobile]');
+
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') !== 'true';
+      burger.setAttribute('aria-expanded', String(open));
+      if (mobile) mobile.hidden = !open;
+      document.documentElement.classList.toggle('is-menu-open', open);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (dropdown?.open && !dropdown.contains(event.target)) dropdown.open = false;
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && dropdown?.open) {
+        dropdown.open = false;
+        dropdown.querySelector('summary')?.focus();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      closeDropdown();
+      burger?.setAttribute('aria-expanded', 'false');
+      document.documentElement.classList.remove('is-menu-open');
+    });
+  }
+</script>

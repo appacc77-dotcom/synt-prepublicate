@@ -1,0 +1,222 @@
+[
+ {
+  "spec": "design/figma/pages/book/book-hero/spec.json",
+  "url": "/book.html"
+ },
+ {
+  "spec": "design/figma/pages/booking/booking-formats/spec.json",
+  "url": "/booking.html"
+ },
+ {
+  "spec": "design/figma/pages/booking/booking-hero/spec.json",
+  "url": "/booking.html"
+ },
+ {
+  "spec": "design/figma/pages/booking/footer/spec.json",
+  "url": "/booking.html",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/booking/header/spec.json",
+  "url": "/booking.html",
+  "root": "79:104",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/home/about-founder/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/air-photo/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/banner-founder/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/entry/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/faq/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/footer/spec.json",
+  "url": "/",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/home/formats/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/header/spec.json",
+  "url": "/",
+  "root": "79:104",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/home/hero/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/library/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/method/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/pain/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/process/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/quiz/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/home/voices/spec.json",
+  "url": "/"
+ },
+ {
+  "spec": "design/figma/pages/library/footer/spec.json",
+  "url": "/library.html",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/library/header/spec.json",
+  "url": "/library.html",
+  "root": "267:923",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/library/library-book/spec.json",
+  "url": "/library.html"
+ },
+ {
+  "spec": "design/figma/pages/library/library-hero/spec.json",
+  "url": "/library.html"
+ },
+ {
+  "spec": "design/figma/pages/library/library-issues/spec.json",
+  "url": "/library.html"
+ },
+ {
+  "spec": "design/figma/pages/library/library-journal/spec.json",
+  "url": "/library.html"
+ },
+ {
+  "spec": "design/figma/pages/masters/footer/spec.json",
+  "url": "/masters.html",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/masters/founder-hero/spec.json",
+  "url": "/masters.html"
+ },
+ {
+  "spec": "design/figma/pages/masters/header/spec.json",
+  "url": "/masters.html",
+  "root": "79:104",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/masters/masters-more/spec.json",
+  "url": "/masters.html"
+ },
+ {
+  "spec": "design/figma/pages/masters/masters-team/spec.json",
+  "url": "/masters.html"
+ },
+ {
+  "spec": "design/figma/pages/method/footer/spec.json",
+  "url": "/method.html",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/method/header/spec.json",
+  "url": "/method.html",
+  "root": "79:104",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/method/method-about/spec.json",
+  "url": "/method.html"
+ },
+ {
+  "spec": "design/figma/pages/method/method-cta/spec.json",
+  "url": "/method.html"
+ },
+ {
+  "spec": "design/figma/pages/method/method-hero/spec.json",
+  "url": "/method.html"
+ },
+ {
+  "spec": "design/figma/pages/practice/footer/spec.json",
+  "url": "/practice.html",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/practice/hero/spec.json",
+  "url": "/practice.html",
+  "root": "409:243",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/practice/info-section/spec.json",
+  "url": "/practice.html"
+ },
+ {
+  "spec": "design/figma/pages/practice/kody-practice-pay/spec.json",
+  "url": "/practice.html"
+ },
+ {
+  "spec": "design/figma/pages/practice/practice-free/spec.json",
+  "url": "/practice.html"
+ },
+ {
+  "spec": "design/figma/pages/practice/practice-package/spec.json",
+  "url": "/practice.html"
+ },
+ {
+  "spec": "design/figma/pages/practice/practice-pay/spec.json",
+  "url": "/practice.html"
+ },
+ {
+  "spec": "design/figma/pages/practice/quiz/spec.json",
+  "url": "/practice.html"
+ },
+ {
+  "spec": "design/figma/pages/quiz/footer/spec.json",
+  "url": "/quiz.html",
+  "root": "148:561",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/quiz/header/spec.json",
+  "url": "/quiz.html",
+  "root": "79:104",
+  "bySuffix": true
+ },
+ {
+  "spec": "design/figma/pages/quiz/quiz-result/spec.json",
+  "url": "/quiz.html?result=1"
+ },
+ {
+  "spec": "design/figma/pages/quiz/quiz-section/spec.json",
+  "url": "/quiz.html"
+ }
+]

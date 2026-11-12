@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:56:31.484Z"
+  },
+  "section": {
+    "id": "383:287",
+    "name": "booking-hero",
+    "w": 1440,
+    "h": 509
+  },
+  "fingerprint": "ed8b7750",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 5,
+    "images": 1,
+    "icons": 0,
+    "iconInstances": 0,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "f413d0e835eb669a8900269db12d6d0c56c4944c",
+        "file": "design/figma/assets/img/f413d0e835eb.png",
+        "bytes": 3114278,
+        "usedBy": "booking-hero"
+      }
+    ],
+    "icons": []
+  },
+  "nodes": [
+    {
+      "id": "383:287",
+      "name": "booking-hero",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 509,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "CROP",
+          "imageTransform": [
+            [
+              1,
+              0,
+              -0.00024643202777951956
+            ],
+            [
+              0,
+              0.6280611753463745,
+              0.12617497146129608
+            ]
+          ],
+          "imageHash": "f413d0e835eb669a8900269db12d6d0c56c4944c",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        },
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.11999999731779099,
+          "color": {
+            "hex": "#000000",
+            "a": 1
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "pad": [
+          64,
+          24,
+          64,
+          24
+        ],
+        "primary": "MAX",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingLeft": "VariableID:2:9",
+        "paddingTop": "VariableID:2:12",
+        "paddingRight": "VariableID:2:9",
+        "paddingBottom": "VariableID:2:12",
+        "fills": [
+          "VariableID:706:447"
+        ]
+      }
+    },
+    {
+      "id": "383:760",
+      "name": "container",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 80,
+      "y": 281,
+      "w": 1280,
+      "h": 164,
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "CENTER"
+      },
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "clips": false,
+      "limits": {
+        "maxW": 1280
+      },
+      "bound": {
+        "maxWidth": "VariableID:42:34"
+      }
+    },
+    {
+      "id": "383:756",
+      "name": "booking-hero-content",
+      "type": "FRAME",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 550,
+      "h": 164,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "383:757",
+      "name": "booking-hero-title",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 550,
+      "h": 64,
+      "text": "Форматы работы",
+      "styleName": "H1",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "383:758",
+      "name": "booking-hero-desc",
+      "type": "TEXT",
+      "depth": 3,
+      "visible": true,
+      "x": 0,
+      "y": 96,
+      "w": 550,
+      "h": 68,
+      "text": "Форматы различаются по глубине запроса, длительности и степени сопровождения.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

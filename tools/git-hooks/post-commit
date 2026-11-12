@@ -1,0 +1,46 @@
+#!/bin/sh
+# Пуш после коммита — если GitHub доступен.
+#
+# Правило проекта: коммит и пуш — один шаг. Если сети или remote нет,
+# коммит остаётся локальным, а пуш пропускается с предупреждением:
+# молча терять работу хуже, чем показать, что она не уехала.
+#
+# Хук не блокирует коммит: любой сбой здесь — предупреждение, не ошибка.
+#
+# Пушится только зелёное: последний прогон `conveyor check --all` должен быть
+# PASS, полным, на чистом дереве и на том же содержимом, что сейчас
+# (`node tools/conveyor.mjs push-ok`). Иначе коммит остаётся локальным.
+# Обойти осознанно: CONVEYOR_PUSH=force git commit ...
+
+remote=$(git remote 2>/dev/null | head -1)
+if [ -z "$remote" ]; then
+  exit 0
+fi
+
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+if [ "$branch" = "HEAD" ]; then
+  exit 0
+fi
+
+if [ "$CONVEYOR_PUSH" != "force" ]; then
+  if ! reason=$(node tools/conveyor.mjs push-ok 2>&1); then
+    printf '\n  пуш пропущен: %s\n' "$reason"
+    printf '  сначала: node tools/conveyor.mjs check --all; отправить вручную: git push %s %s\n\n' "$remote" "$branch"
+    exit 0
+  fi
+fi
+
+# Быстрая проверка доступности: без сети ls-remote падает за секунды.
+if ! git ls-remote --exit-code --heads "$remote" >/dev/null 2>&1; then
+  printf '\n  пуш пропущен: %s недоступен. Коммит локальный.\n' "$remote"
+  printf '  отправить позже: git push %s %s\n\n' "$remote" "$branch"
+  exit 0
+fi
+
+if git push "$remote" "$branch" >/dev/null 2>&1; then
+  printf '  запушено: %s → %s\n' "$branch" "$remote"
+else
+  printf '\n  пуш не прошёл. Коммит локальный, повторить: git push %s %s\n\n' "$remote" "$branch"
+fi
+
+exit 0

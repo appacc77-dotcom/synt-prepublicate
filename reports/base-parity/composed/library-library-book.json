@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-08T13:21:24.324Z",
+  "section": {
+    "id": "267:953",
+    "name": "library-book",
+    "w": 1440,
+    "h": 882
+  },
+  "ok": true,
+  "red": 0,
+  "unknown": 0,
+  "missing": [],
+  "marked": 11,
+  "nodes": 15,
+  "coverage": 100,
+  "markedRatio": 73.3,
+  "tolerance": 1,
+  "worstDelta": 0
+}

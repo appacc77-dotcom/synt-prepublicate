@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "file": {
+    "name": "Website Syntonia-2",
+    "key": "ZKFou1NieRz33oI4A9oXsL",
+    "at": "2026-11-12T21:58:07.935Z"
+  },
+  "section": {
+    "id": "323:423",
+    "name": "method-hero",
+    "w": 1440,
+    "h": 800
+  },
+  "fingerprint": "02f20535",
+  "cloudVersion": "2418696346917289452",
+  "counts": {
+    "nodes": 4,
+    "images": 1,
+    "icons": 0,
+    "iconInstances": 0,
+    "states": 1
+  },
+  "assets": {
+    "crop": "crop.png",
+    "images": [
+      {
+        "hash": "d214a9704d8a9c120cc36decac8b65fb97cdd86b",
+        "file": "design/figma/assets/img/d214a9704d8a.png",
+        "bytes": 1886434,
+        "usedBy": "method-hero"
+      }
+    ],
+    "icons": []
+  },
+  "nodes": [
+    {
+      "id": "323:423",
+      "name": "method-hero",
+      "type": "FRAME",
+      "depth": 0,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 800,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "scaleMode": "FILL",
+          "imageTransform": [
+            [
+              1,
+              0,
+              -0.000346354820067063
+            ],
+            [
+              0,
+              0.9871295094490051,
+              0.006524031516164541
+            ]
+          ],
+          "imageHash": "d214a9704d8a9c120cc36decac8b65fb97cdd86b",
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          }
+        }
+      ],
+      "autoLayout": {
+        "mode": "HORIZONTAL",
+        "gap": 0,
+        "pad": [
+          64,
+          64,
+          64,
+          64
+        ],
+        "primary": "MIN",
+        "counter": "MAX"
+      },
+      "sizing": {
+        "h": "FILL"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "paddingLeft": "VariableID:2:12",
+        "paddingTop": "VariableID:2:12",
+        "paddingRight": "VariableID:2:12",
+        "paddingBottom": "VariableID:2:12"
+      }
+    },
+    {
+      "id": "323:862",
+      "name": "hero-content",
+      "type": "FRAME",
+      "depth": 1,
+      "visible": true,
+      "x": 64,
+      "y": 470,
+      "w": 600,
+      "h": 266,
+      "autoLayout": {
+        "mode": "VERTICAL",
+        "gap": 32,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primary": "MIN",
+        "counter": "MIN"
+      },
+      "sizing": {
+        "h": "HUG",
+        "v": "HUG"
+      },
+      "clips": false,
+      "bound": {
+        "itemSpacing": "VariableID:2:10"
+      }
+    },
+    {
+      "id": "323:863",
+      "name": "hero-title",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "w": 600,
+      "h": 64,
+      "text": "Метод Syntonia",
+      "styleName": "H1",
+      "fontFamily": "Literata",
+      "fontStyle": "Light",
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "v": "HUG"
+      },
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    },
+    {
+      "id": "323:864",
+      "name": "hero-desc",
+      "type": "TEXT",
+      "depth": 2,
+      "visible": true,
+      "x": 0,
+      "y": 96,
+      "w": 600,
+      "h": 170,
+      "text": "Syntonia — это глубинный метод работы с человеком как с целостной системой. Он объединяет науку, психологическую точность и тонкое видение внутренней природы, чтобы помогать возвращать себе подлинное состояние и жизненную силу.",
+      "styleName": "body",
+      "fontFamily": "Golos Text",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 170.00000476837158
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "autoResize": "HEIGHT",
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "color": {
+            "hex": "#ffffff",
+            "a": 1
+          },
+          "variable": "text-on-image"
+        }
+      ],
+      "sizing": {
+        "h": "FILL",
+        "v": "HUG"
+      },
+      "align": "STRETCH",
+      "bound": {
+        "fills": [
+          "VariableID:2:20"
+        ]
+      }
+    }
+  ]
+}

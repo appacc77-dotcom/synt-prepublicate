@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-09T21:35:45.181Z",
+  "section": {
+    "id": "29:2054",
+    "name": "logo-gold",
+    "w": 400,
+    "h": 143
+  },
+  "ok": false,
+  "error": "root-not-found",
+  "red": 0,
+  "unknown": 0,
+  "missing": [
+    {
+      "id": "29:2054",
+      "name": "logo-gold"
+    }
+  ],
+  "marked": 0,
+  "nodes": 2,
+  "coverage": 0,
+  "markedRatio": 0,
+  "tolerance": 1,
+  "worstDelta": 0
+}

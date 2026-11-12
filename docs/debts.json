@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "note": "Реестр долгов этапа 1: всё, что не закрыто переносом и ждёт дизайнера, заказчика, владельца или студию. Закрытие этапа 1 = отчёт по этому реестру (node tools/status.mjs). Статусы: open — не начато, waiting — ждём ответа, done — закрыто, rejected — отклонено. blocksRelease — без ответа сдавать нельзя.",
+  "statuses": [
+    "open",
+    "waiting",
+    "done",
+    "rejected"
+  ],
+  "owners": [
+    "designer",
+    "client",
+    "owner",
+    "studio"
+  ],
+  "debts": [
+    {
+      "id": "FI-1",
+      "title": "Каждый пятый текст живёт без стиля",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#1",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-2",
+      "title": "Половина градиентов — без стиля заливки",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#2",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-3",
+      "title": "У стилей нет описаний",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#3",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-4",
+      "title": "Локальные переопределения поверх стиля",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#4",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-5",
+      "title": "Смешанные стили внутри одного абзаца",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#5",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-6",
+      "title": "Имена по умолчанию и повторы",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#6",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-7",
+      "title": "Секции не выстроены в один столбец",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#7",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-8",
+      "title": "Фотографии выгружаются в PNG",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#8",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-9",
+      "title": "Размеры текста не совпадают с браузерными на доли пикселя",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#9",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-10",
+      "title": "Настоящий текст лежит не в той секции",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#10",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-11",
+      "title": "Описания не помещаются в фиксированную высоту",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#11",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-12",
+      "title": "Фотографии в Display P3",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#12",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-13",
+      "title": "Иконки без общего компонента",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#13",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-14",
+      "title": "Карусель отзывов: двенадцать вариантов расходятся между собой",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#14",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-15",
+      "title": "air-photo: кроп ярче, чем даёт корректный пересчёт цвета",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#15",
+      "decisions": [],
+      "blocksRelease": false,
+      "note": "Решение 09.11.2026: перезалить фото air-photo в sRGB. В проекте перезалито (public/img/air-photo.jpg), в файле Figma остался P3 — долг держится за файлом."
+    },
+    {
+      "id": "FI-16",
+      "title": "Квиз: девять вопросов заявлены, нарисован один",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#16",
+      "decisions": [
+        261
+      ],
+      "blocksRelease": false,
+      "note": "Заказчик 09.11.2026: тест задуман на девять вопросов, подпись не меняем. Вопросы 2–9 нужны от дизайнера; срок неизвестен."
+    },
+    {
+      "id": "FI-17",
+      "title": "Квиз набран размерами вне текстовых стилей",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#17",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-18",
+      "title": "Шапка стоит на разной высоте на разных страницах",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#18",
+      "decisions": [],
+      "blocksRelease": false,
+      "note": "Решение 09.11.2026: выровнять y шапки на 8 во всех инстансах. В вёрстке уже 8 — правка нужна в файле."
+    },
+    {
+      "id": "FI-19",
+      "title": "Форматы: цена в панели не совпадает с карточкой",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#19",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-20",
+      "title": "Форматы: три разных подписи одного и того же",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#20",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-21",
+      "title": "Форматы: длительность первой карточки в разных состояниях",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#21",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-quiz-chain",
+      "title": "Квиз: цепочка вопросов и результатов не задана",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#квиз-цепочка-не-задана",
+      "decisions": [
+        261
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "FI-24",
+      "title": "Пакеты: две версии цен",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/FIGMA-ISSUES.md#24",
+      "decisions": [
+        302
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "D-1",
+      "title": "236 инстансов отмасштабированы, у 65 размер переопределён",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "done",
+      "source": "docs/decisions.md",
+      "decisions": [
+        1
+      ],
+      "blocksRelease": true,
+      "note": "Решение 09.11.2026: вариант В — нормализовать к ближайшему варианту и зафиксировать отклонение. Но снимок файла от 09.11 03:56 показывает scaledCount 0: похоже, дизайнер уже сбросил масштаб. Нужна живая проверка через мост, чтобы закрыть долг.",
+      "resolution": "Живая сверка 09.11.2026 через мост: `npm run intake` → инстансов 1145, отмасштабированных 0. Дизайнер сбросил масштаб. Долг закрыт по факту, а не по снимку."
+    },
+    {
+      "id": "D-2",
+      "title": "Мобильных и планшетных макетов нет (только 1440)",
+      "owner": "designer",
+      "kind": "scope",
+      "status": "waiting",
+      "source": "docs/decisions.md",
+      "decisions": [
+        2
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "D-3",
+      "title": "Канонический фрейм не помечен на Practice и Quiz",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "done",
+      "source": "docs/decisions.md",
+      "decisions": [
+        3
+      ],
+      "blocksRelease": true,
+      "resolution": "Заказчик 09.11.2026 подтвердил: эталоны — Practice 408:241 «practice-page» 1440×9291 и Quiz 529:118 «quiz» 1440×1218. Зафиксировано в design/figma/project.json (frames)."
+    },
+    {
+      "id": "D-4",
+      "title": "Override геометрии у 405 инстансов",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/decisions.md",
+      "decisions": [
+        4
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "D-5",
+      "title": "Цены форматов: файл и старый сайт расходятся",
+      "owner": "client",
+      "kind": "content",
+      "status": "done",
+      "source": "docs/decisions.md",
+      "decisions": [
+        5
+      ],
+      "blocksRelease": false,
+      "resolution": "Заказчик 09.11.2026: цены в макете верные. Сайт уже совпадает с файлом ($50/$230/$560/$1050/$110) — правка не нужна."
+    },
+    {
+      "id": "D-6",
+      "title": "Длительности практик — заглушки",
+      "owner": "client",
+      "kind": "content",
+      "status": "done",
+      "source": "docs/decisions.md",
+      "decisions": [
+        6
+      ],
+      "blocksRelease": false,
+      "resolution": "Заказчик 09.11.2026: везде 52 минуты. В файле так и есть: платные практики 52, бесплатные 9/11/8/14 — они короткие по замыслу, менять не стали."
+    },
+    {
+      "id": "D-7",
+      "title": "Матрицы вариантов на канвасе: какой фрейм канонический",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/decisions.md",
+      "decisions": [
+        7
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "D-8",
+      "title": "Наборы с безымянными вариантами (Property 1=…)",
+      "owner": "designer",
+      "kind": "figma",
+      "status": "open",
+      "source": "docs/decisions.md",
+      "decisions": [
+        8
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "BL-4",
+      "title": "Ошибка моста не должна выглядеть дефектом: отделить «не смогли спросить» от расхождения",
+      "owner": "studio",
+      "kind": "tool",
+      "status": "open",
+      "source": "docs/BACKLOG.md#4",
+      "decisions": [],
+      "blocksRelease": false
+    },
+    {
+      "id": "BL-5",
+      "title": "Пиксель как приёмка с калиброванным порогом",
+      "owner": "studio",
+      "kind": "tool",
+      "status": "done",
+      "source": "docs/BACKLOG.md#5",
+      "decisions": [
+        370
+      ],
+      "blocksRelease": false,
+      "resolution": "Решение 370 (09.11.2026): пиксель остаётся сигналом, пороги не включаются. Разброс задаёт фото в кадре, а не качество вёрстки: порог 3,5 покраснел бы на девяти секциях с совпадающей раскладкой, 6,0 замолчал бы дефект в секции без фото. Данные — docs/PIXEL-CALIBRATION.md."
+    },
+    {
+      "id": "BL-6",
+      "title": "Мобильных раскладок нет — решение дизайнера (см. D-2)",
+      "owner": "designer",
+      "kind": "scope",
+      "status": "waiting",
+      "source": "docs/BACKLOG.md#6",
+      "decisions": [
+        2,
+        186
+      ],
+      "blocksRelease": false
+    },
+    {
+      "id": "INV-booking-form",
+      "title": "Форма заявки на «Форматах»: сообщение «не отправляется» без записи в журнале решений",
+      "owner": "owner",
+      "kind": "scope",
+      "status": "waiting",
+      "source": "design/figma/invented.json#booking-form-not-sent",
+      "decisions": [
+        362
+      ],
+      "blocksRelease": false,
+      "note": "Показываем подсказку «Пока не работает» и убираем её сами. Отправка — этап 2.",
+      "fix": "Netlify удалён (решение 415), сервис форм выключен: форма снова честно говорит «пока не работает». Нужен новый канал заявок — российский сервис форм или почтовый шлюз.",
+      "gate": "interactive проверяет подсказку; отправки нет намеренно"
+    },
+    {
+      "id": "INV-quiz-play",
+      "title": "Кнопка «Слушать практику» на экране результата ничего не делает",
+      "owner": "owner",
+      "kind": "site",
+      "status": "waiting",
+      "source": "tools/check-interactive.mjs",
+      "decisions": [
+        362
+      ],
+      "blocksRelease": false,
+      "note": "Кнопка показывает подсказку «Пока не работает». Аудио — когда появится файл."
+    },
+    {
+      "id": "BL-7",
+      "title": "Повторная выгрузка теряет иконки",
+      "status": "done",
+      "owner": "studio",
+      "why": "Перевыгрузка двух секций уменьшила число иконок: practice/quiz 1 → 0, practice/practice-package 5 → 2, при том что инстансы в файле на месте (проверено мостом 11.11.2026: I410:1371;14:128 arrow-quiet виден). Похоже на молчаливый сбой при поиске иконок — тот же класс, что BL-4: отказ моста выглядит как изменение макета.",
+      "fix": "fetch-svg получал 20 с и под нагрузкой не успевал: иконка молча выпадала, спека перезаписывалась. Теперь таймаут настраивается (FIGMA_ICON_TIMEOUT_MS, по умолчанию 45 с), сбой иконки останавливает выгрузку до записи спеки, а уменьшение числа иконок против прошлой выгрузки — отказ (обходится --allow-icon-loss). Проверено: practice/quiz 0 → 1, practice-package 2 → 5. Попутно: states-exclude.json — ручные исключения состояний больше не затираются выгрузкой.",
+      "gate": "проверка в самом export-section: сбой или уменьшение — код 1, спека не перезаписана"
+    },
+    {
+      "id": "BL-8",
+      "title": "Витрина генератора попадает в сборку сайта",
+      "status": "done",
+      "owner": "studio",
+      "why": "Черновик разметки (решение 388) живёт на /gen.html и собирается в dist/ вместе с сайтом. Страница помечена noindex, но физически публикуется: в выдачу не попадёт, а по ссылке открывается. Для студии это не страшно, для клиента — лишнее.",
+      "fix": "Витрина удалена вместе с калибровочными секциями: /gen.html и src/components/_gen/** больше не собираются (14 страниц вместо 15). Черновик собирается по требованию и в репозиторий страницу не возвращает.",
+      "gate": "проверяется сборкой: dist/gen.html отсутствует"
+    },
+    {
+      "id": "INV-quiz-states",
+      "kind": "content",
+      "owner": "studio",
+      "status": "open",
+      "what": "Состояния квиза: 43 текста вариантов результата не собраны в вёрстке",
+      "why": "В файле у quiz-section несколько вариантов результата (коды боли, описания состояний), в компоненте собран только один экран",
+      "fix": "Собрать варианты из states.json: тексты и разметка по узлам, переключение по результату",
+      "gate": "states",
+      "found": "2026-11-13"
+    },
+    {
+      "id": "INV-formats-states",
+      "kind": "content",
+      "owner": "studio",
+      "status": "open",
+      "what": "Состояния home/formats: текст «30 минут…» есть в файле, нет в вёрстке",
+      "why": "Пять вариантов формы заявки в файле, в компоненте один",
+      "fix": "Собрать контент вариантов из spec.json → states",
+      "gate": "states",
+      "found": "2026-11-13"
+    }
+  ]
+}

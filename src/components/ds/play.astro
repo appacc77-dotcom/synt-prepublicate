@@ -1,0 +1,31 @@
+---
+/**
+ * play — набор Figma `play` (34:109).
+ * Вектор выгружен с живого узла 79:113 через figma-agent.
+ */
+import play from '../../assets/play.svg?raw';
+
+interface Props {
+  /** id инстанса в Figma — по нему элемент находит замер. */
+  node?: string;
+}
+
+const { node } = Astro.props;
+---
+
+<span class="play" data-figma-node={node} set:html={play} />
+
+<style>
+  :global(.play) {
+    display: block;
+    width: 47px;
+    height: 47px;
+  }
+
+  /* SVG выгружен 48×48 при узле 47×47 — размер задаёт узел, а не файл. */
+  :global(.play > svg) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>

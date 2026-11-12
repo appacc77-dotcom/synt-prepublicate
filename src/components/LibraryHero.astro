@@ -1,0 +1,103 @@
+---
+/**
+ * Секция `library-hero` (267:451), 1440×820.
+ *
+ * Фон — FILL (cover по центру) и второй слой: чёрный с прозрачностью 12 %.
+ */
+import ArrowQuiet from './ds/arrow-quiet.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '267:451' } = Astro.props;
+---
+
+<section class="lhero" data-figma-node={node}>
+  <div class="lhero__content" data-figma-node="267:908">
+    <h1 class="lhero__title" data-figma-node="267:909">Библиотека Syntonia</h1>
+    <p class="lhero__lead" data-figma-node="267:910">
+      Ответьте на несколько вопросов, чтобы лучше понять своё текущее состояние и то, что стоит за ним.
+    </p>
+    <a class="lhero__btn" href="/quiz.html" data-figma-node="267:911">
+      <span class="lhero__label" data-figma-node="I267:911;4:16">Увидеть, из чего строится ваша реальность</span>
+      <ArrowQuiet size={14} />
+    </a>
+  </div>
+</section>
+
+<style>
+  .lhero {
+    position: relative;
+    width: 100%;
+    height: 820px;
+    background-image: url('/img/library-hero.webp');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  /* Второй слой заливки — чёрный 12 %. */
+  .lhero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 12%);
+    pointer-events: none;
+  }
+
+  .lhero__content {
+    position: absolute;
+    left: 96px;
+    top: 419px;
+    width: 538px;
+    height: 305px;
+  }
+
+  .lhero__title {
+    width: 538px;
+    height: 128px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 400;
+    color: var(--color-text-on-image);
+  }
+
+  .lhero__lead {
+    width: 538px;
+    height: 68px;
+    margin: 32px 0 0;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-text-on-image);
+  }
+
+  .lhero__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    width: 440px;
+    height: 45px;
+    margin-top: 32px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: var(--color-accent-muted);
+    text-decoration: none;
+  }
+
+  .lhero__label {
+    width: 386px;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: var(--color-text-on-image);
+  }
+
+  .lhero__btn :global(svg) {
+    display: block;
+    color: var(--color-text-on-image);
+  }
+</style>

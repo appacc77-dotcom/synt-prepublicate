@@ -1,0 +1,230 @@
+---
+/**
+ * Секция `book` → `book-hero` (1109:1112), 1440×1866 — страница книги.
+ *
+ * Спека снята из архива `.fig` (`fig-kiwi export`), потому что мост был
+ * офлайн. Из архива же взяты обложка и главы оглавления: главы лежат
+ * в символе `toc-group` и в инстансах не раскрываются.
+ *
+ * Чего ждём от Figma: кроп секции и пиксельная сверка (решение 410).
+ */
+import BtnPrimary from './ds/btn-primary.astro';
+
+interface Props {
+  node?: string;
+}
+
+const { node = '1109:1112' } = Astro.props;
+
+// Главы — из символа `toc-group` архива, в порядке макета.
+const chapters = [
+  'Введение',
+  'Наука и Душа',
+  'Коды построения реальности',
+  'Заключение',
+  'Использованная литература',
+  'Заметка об ответственности',
+  'Памятка бережной практики',
+  'SOS-алгоритм (для случаев перегруза)',
+  'Когда нужна помощь специалиста',
+];
+---
+
+<section class="book" data-figma-node={node}>
+  <div class="book__frame" data-figma-node="1109:1051">
+  <div class="book__container" data-figma-node="1109:1052">
+    <div class="book__intro" data-figma-node="1109:1054">
+      <div class="book__cover" data-figma-node="1109:1055" style="background-image:url('/img/book-cover.jpg')" />
+
+      <div class="book__info" data-figma-node="1109:1056">
+        <p class="book__eyebrow" data-figma-node="1124:1714">авторская книга</p>
+        <h1 class="book__title" data-figma-node="1109:1058">
+          Коды построения реальности. 7&nbsp;состояний жизни
+        </h1>
+        <p class="book__author" data-figma-node="1109:1059">Екатерина Лебедева</p>
+        <p class="book__desc" data-figma-node="1109:1060">
+          Книга о семи состояниях, которые формируют внутренние сценарии человека и влияют на выбор,
+          отношения и ход жизни. Внутри — авторская система, соединяющая психологию, научные опоры,
+          тонкий план и бережные практики для самостоятельной внутренней работы.
+        </p>
+        <div class="book__cta">
+          <BtnPrimary href="/booking.html" label="Купить книгу" theme="dark" size="L" />
+        </div>
+      </div>
+    </div>
+
+    <div class="book__toc" data-figma-node="1109:1062">
+      <h2 class="book__toc-title" data-figma-node="1109:1063">Содержание</h2>
+      <ol class="book__toc-list">
+        {chapters.map((chapter, i) => (
+          <li class="book__toc-row">
+            <span class="book__toc-num">{String(i + 1).padStart(2, '0')}</span>
+            <span class="book__toc-name">{chapter}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+  </div>
+</section>
+
+<style>
+  .book {
+    position: relative;
+    width: 100%;
+    height: 1866px;
+    background: var(--color-bg-dark);
+  }
+
+  /* Секция в спеке — `book-hero` 1440×1866 на нулевой позиции внутри кадра
+     `book`; координаты детей считаются от неё. */
+  .book__frame {
+    position: absolute;
+    inset: 0;
+  }
+
+  .book__container {
+    position: absolute;
+    left: 80px;
+    top: 128px;
+    width: 1280px;
+    height: 1674px;
+  }
+
+  .book__intro {
+    position: absolute;
+    left: 0;
+    top: 51px;
+    width: 1280px;
+    height: 561px;
+  }
+
+  .book__cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 420px;
+    height: 561px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .book__info {
+    position: absolute;
+    left: 484px;
+    top: 0;
+    width: 600px;
+    height: 561px;
+  }
+
+  .book__eyebrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 600px;
+    margin: 0;
+    font-family: var(--font-golos-text);
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-accent-muted);
+  }
+
+  .book__title {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    margin: 0;
+    width: 600px;
+    font-family: var(--font-literata);
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--color-text-on-dark);
+  }
+
+  .book__author {
+    position: absolute;
+    left: 0;
+    top: 270px;
+    width: 600px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.25;
+    color: var(--color-thread);
+  }
+
+  .book__desc {
+    position: absolute;
+    left: 0;
+    top: 322px;
+    margin: 0;
+    width: 600px;
+    font-family: var(--font-golos-text);
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--color-text-on-dark);
+  }
+
+  .book__cta {
+    position: absolute;
+    left: 0;
+    top: 516px;
+  }
+
+  .book__toc {
+    position: absolute;
+    left: 0;
+    top: 644px;
+    width: 1280px;
+    height: 1030px;
+    padding: 32px 96px 64px;
+    background: var(--color-bg-page);
+  }
+
+  .book__toc-title {
+    position: absolute;
+    left: 96px;
+    top: 32px;
+    margin: 0;
+    font-family: var(--font-literata);
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.25;
+    color: var(--color-thread);
+  }
+
+  .book__toc-list {
+    position: absolute;
+    left: 96px;
+    top: 104px;
+    width: 1088px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .book__toc-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-accent-muted);
+  }
+
+  .book__toc-num {
+    font-family: var(--font-golos-text);
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+  }
+
+  .book__toc-name {
+    font-family: var(--font-literata);
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--color-text-primary);
+  }
+</style>
