@@ -377,3 +377,25 @@ API, картинки и тексты с `.fig`. Недоступность вс
 npm run links                     # все внутренние ссылки ведут на существующие страницы
 curl -s -o /dev/null -w '%{http_code}' https://appacc77-dotcom.github.io/
 ```
+
+## Второй адрес: пре-публикация
+
+Кроме основного зеркала есть репозиторий `synt-prepublicate` — в нём лежит и
+мастерская (ветка `main`), и собранный сайт (ветка `site`):
+
+| | |
+|---|---|
+| сайт | https://appacc77-dotcom.github.io/synt-prepublicate/ |
+| мастерская | https://github.com/appacc77-dotcom/synt-prepublicate (main) |
+| выпуск | та же репозитория, ветка `site` |
+
+Адрес не в корне домена, поэтому выпуск собирается с префиксом пути:
+
+```bash
+node tools/site-export.mjs --base /synt-prepublicate --push \
+  --mirror https://github.com/appacc77-dotcom/synt-prepublicate.git --mirror-branch site
+```
+
+`--base` переписывает абсолютные адреса в сборке (`href`, `src`, `url()` в CSS):
+без него картинки и стили уезжают на корень домена и дают 404 — на этом
+сломалась первая публикация.
