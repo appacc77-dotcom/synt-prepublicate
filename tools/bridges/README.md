@@ -75,4 +75,7 @@ node tools/bridges/compare.mjs --a /tmp/figma-home.json --b /tmp/figcraft-home.j
 
 # пиксель по всем собранным секциям: кроп Figma ↔ рендер FigCraft
 node tools/bridges/pixel-parity.mjs --fig /path/to/file.fig --out reports/pixel-parity.md
+
+# пиксель по страницам целиком: PNG обоих мостов
+node tools/bridges/page-parity.mjs --fig /path/to/file.fig --out reports/page-parity.md --dir /tmp/page-parity
 ```
