@@ -72,4 +72,7 @@ node tools/bridge.mjs figcraft png --fig <file> --node <id> --out /tmp/figcraft-
 node tools/bridge.mjs figcraft timing --fig <file> --page Home
 
 node tools/bridges/compare.mjs --a /tmp/figma-home.json --b /tmp/figcraft-home.json
+
+# пиксель по всем собранным секциям: кроп Figma ↔ рендер FigCraft
+node tools/bridges/pixel-parity.mjs --fig /path/to/file.fig --out reports/pixel-parity.md
 ```
