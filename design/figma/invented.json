@@ -108,6 +108,21 @@
       "stage2": "сервис форм выключен вместе с Netlify; адресат и валидация — решение владельца",
       "billable": true,
       "enhancement": "form-behaviour"
+    },
+    {
+      "id": "quiz-form-not-sent",
+      "what": "Подсказка «Пока не работает: подписка появится позже» на кнопке формы подписки в тесте",
+      "file": "src/components/QuizResult.astro",
+      "selector": ".qres__submit",
+      "marker": true,
+      "origin": "invented",
+      "decisions": [
+        420
+      ],
+      "checkedBy": "interactive",
+      "stage2": "канал подписки и политика конфиденциальности — решение владельца; до этого форма не отправляет",
+      "billable": true,
+      "enhancement": "form-behaviour"
     }
   ]
 }

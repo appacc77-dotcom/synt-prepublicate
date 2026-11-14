@@ -440,8 +440,11 @@ const { node = '79:104', offsetTop = 8 } = Astro.props;
 
     document.addEventListener('keydown', (event) => {
       if (event.key !== 'Escape') return;
-      closeDropdown();
+      // Мобильная панель закрывается здесь же: раньше тут стоял вызов
+      // несуществующей closeDropdown(), и Escape падал с ReferenceError,
+      // оставляя меню открытым (реестр ISS-023).
       burger?.setAttribute('aria-expanded', 'false');
+      if (mobile) mobile.hidden = true;
       document.documentElement.classList.remove('is-menu-open');
     });
   }

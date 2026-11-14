@@ -111,7 +111,12 @@ const profit = [
         </span>
         <form class="qres__subscribe-form">
           <input class="qres__email" type="email" placeholder="Ваш email" aria-label="Ваш email" />
-          <button class="qres__submit" type="submit" data-submit-label>Практика для вас</button>
+          {/* Подписки нет: канала не существует, а политики конфиденциальности
+              нет вовсе. До решения 420 submit перезагружал страницу и терял
+              экран результата. Врать «ушло» нельзя — решения 362/415. */}
+          <button class="qres__submit" type="submit" data-submit-label data-invented="quiz-form-not-sent"
+            >Практика для вас</button
+          >
         </form>
         <label class="qres__agree">
           <input type="checkbox" />
@@ -584,6 +589,24 @@ const profit = [
         note.classList.add('is-visible');
         clearTimeout(note.hideTimer);
         note.hideTimer = setTimeout(() => note.classList.remove('is-visible'), 3200);
+      });
+    }
+
+    // Форма подписки не отправляется (решение 420). Раньше submit перезагружал
+    // страницу: экран результата пропадал, а адрес получал пустой «?».
+    // Подсказка — в самой кнопке: новый элемент сдвинул бы абсолютную раскладку.
+    const subscribeForm = document.querySelector('.qres__subscribe-form');
+    if (subscribeForm) {
+      const submit = subscribeForm.querySelector('[data-submit-label]');
+      const original = submit?.textContent ?? '';
+      subscribeForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!submit) return;
+        submit.textContent = 'Пока не работает: подписка появится позже';
+        clearTimeout(submit.hideTimer);
+        submit.hideTimer = setTimeout(() => {
+          submit.textContent = original;
+        }, 3200);
       });
     }
   }
