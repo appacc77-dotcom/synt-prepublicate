@@ -79,6 +79,10 @@ node tools/bridges/pixel-parity.mjs --fig /path/to/file.fig --out reports/pixel-
 # данные дизайн-системы: имена токенов, стилей, компонентов, осей вариантов
 node tools/bridges/data-parity.mjs --fig /path/to/file.fig --out reports/data-parity.md
 
+# привязки токенов по узлам + файл-сопоставление id/путей/словаря
+node tools/bridges/bindings-parity.mjs --fig /path/to/file.fig \
+  --json reports/bindings-map.json --md docs/BINDINGS-MAP.md
+
 # пиксель по страницам целиком: PNG обоих мостов
 node tools/bridges/page-parity.mjs --fig /path/to/file.fig --out reports/page-parity.md --dir /tmp/page-parity
 ```
